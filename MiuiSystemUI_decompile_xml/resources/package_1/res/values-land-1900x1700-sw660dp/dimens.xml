@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="classic_text_area_small_margin_start_end">168.0dp</dimen>
+  <dimen name="classic_time_area_small_margin_start_end">165.0dp</dimen>
+  <dimen name="miui_magazine_a_clock_margin_bottom">122.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_end">105.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_start">105.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_end">173.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_start">173.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_notification_margin_start">160.0dp</dimen>
+  <dimen name="notification_bottom_smart_frame">247.0dp</dimen>
+</resources>

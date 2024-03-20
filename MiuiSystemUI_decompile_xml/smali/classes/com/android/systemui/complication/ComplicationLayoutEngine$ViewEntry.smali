@@ -1,0 +1,10 @@
+.class public abstract Lcom/android/systemui/complication/ComplicationLayoutEngine$ViewEntry;
+.super Ljava/lang/Object;
+.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+
+# interfaces
+.implements Ljava/lang/Comparable;
+
+
+# instance fields
+.field public final mView:Landroid/view/View;

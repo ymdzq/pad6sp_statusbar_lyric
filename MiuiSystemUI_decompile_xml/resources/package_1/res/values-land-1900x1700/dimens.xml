@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="height_a">325.0dp</dimen>
+  <dimen name="height_b">250.0dp</dimen>
+  <dimen name="layout_padding_left_a_h">24.0dp</dimen>
+  <dimen name="layout_padding_right_a">36.0dp</dimen>
+  <dimen name="layout_padding_right_a_h">28.0dp</dimen>
+  <dimen name="layout_padding_top_a">78.0dp</dimen>
+  <dimen name="layout_padding_top_a_h">76.0dp</dimen>
+  <dimen name="layout_padding_top_b">357.0dp</dimen>
+  <dimen name="lineheight">85.0dp</dimen>
+  <dimen name="linespacing_h">17.0dp</dimen>
+  <dimen name="textsize_a_h">83.0dp</dimen>
+  <dimen name="textsize_a_v">64.0dp</dimen>
+  <dimen name="textsize_b">70.0dp</dimen>
+  <dimen name="width_a">340.0dp</dimen>
+  <dimen name="width_a_h">392.0dp</dimen>
+  <dimen name="width_b">320.0dp</dimen>
+</resources>

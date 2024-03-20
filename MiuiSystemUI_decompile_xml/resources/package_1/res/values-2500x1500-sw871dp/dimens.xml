@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="classic_text_area_margin_top_has_face">100.0dp</dimen>
+  <dimen name="miui_magazine_a_clock_margin_bottom">215.0dp</dimen>
+  <dimen name="miui_magazine_a_clock_notification_margin_top">80.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_end">70.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_margin_start">70.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_end">54.0dp</dimen>
+  <dimen name="miui_magazine_b_clock_notification_margin_start">54.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_notification_margin_top">103.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_style1_margin_top">103.0dp</dimen>
+  <dimen name="miui_magazine_c_clock_style2_margin_top">103.5dp</dimen>
+  <dimen name="miui_rhombus_small_clock_margin_top">100.0dp</dimen>
+  <dimen name="miui_smart_frame_clock_margin_start">31.0dp</dimen>
+  <dimen name="miui_smart_frame_clock_margin_top">174.0dp</dimen>
+  <dimen name="miui_smart_frame_clock_width">556.0dp</dimen>
+  <dimen name="notification_bottom_classic">209.0dp</dimen>
+  <dimen name="notification_bottom_classic_plus">230.0dp</dimen>
+  <dimen name="notification_bottom_magazine_a">240.0dp</dimen>
+  <dimen name="notification_bottom_magazine_c">231.0dp</dimen>
+  <dimen name="notification_bottom_smart_frame">359.0dp</dimen>
+</resources>

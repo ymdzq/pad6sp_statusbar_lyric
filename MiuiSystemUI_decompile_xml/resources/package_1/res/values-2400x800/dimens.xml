@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<resources>
+  <dimen name="doodle_width">814.95dp</dimen>
+  <dimen name="height_a">260.0dp</dimen>
+  <dimen name="height_b">237.5dp</dimen>
+  <dimen name="layout_padding_left_a_h">22.0dp</dimen>
+  <dimen name="layout_padding_right_a">24.0dp</dimen>
+  <dimen name="layout_padding_right_a_h">26.0dp</dimen>
+  <dimen name="layout_padding_top_a">112.0dp</dimen>
+  <dimen name="layout_padding_top_a_h">108.0dp</dimen>
+  <dimen name="layout_padding_top_b">483.0dp</dimen>
+  <dimen name="lineheight">81.0dp</dimen>
+  <dimen name="linespacing_h">14.0dp</dimen>
+  <dimen name="sf_shape_height">395.0dp</dimen>
+  <dimen name="sf_shape_margin_bottom">116.0dp</dimen>
+  <dimen name="sf_shape_margin_left">0.0dp</dimen>
+  <dimen name="sf_shape_margin_top">240.0dp</dimen>
+  <dimen name="sf_shape_width">313.0dp</dimen>
+  <dimen name="textsize_a_h">66.4dp</dimen>
+  <dimen name="textsize_a_v">51.2dp</dimen>
+  <dimen name="textsize_b">66.5dp</dimen>
+  <dimen name="width_a">272.0dp</dimen>
+  <dimen name="width_a_h">320.0dp</dimen>
+  <dimen name="width_b">304.0dp</dimen>
+</resources>
