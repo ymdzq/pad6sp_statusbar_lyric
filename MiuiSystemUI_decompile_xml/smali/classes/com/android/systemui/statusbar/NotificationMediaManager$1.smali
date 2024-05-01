@@ -1,5 +1,5 @@
 .class public final Lcom/android/systemui/statusbar/NotificationMediaManager$1;
-.super Landroid/media/session/MediaController$Callback;
+.super Lcom/android/systemui/statusbar/lyrics/MiuiLyricCallback;
 .source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 
