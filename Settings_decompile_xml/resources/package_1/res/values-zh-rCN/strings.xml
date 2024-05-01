@@ -4424,6 +4424,10 @@ U盘备份恢复：
   <string name="interesting_title">趣味拟物</string>
   <string name="internal_auto_rotate_title">内屏方向锁定</string>
   <string name="internal_storage">内部存储空间</string>
+  <string name="international_lyra_account_ap_summary">附近的同账号平板或电脑可以直接开启并连接本设备热点</string>
+  <string name="international_lyra_account_ap_title">网络共享</string>
+  <string name="international_lyra_auto_connect_summary">附近有同账号无网设备需要联网时，自动开启并连接本设备个人热点</string>
+  <string name="international_lyra_auto_connect_title">自动开启热点</string>
   <string name="internet_connectivity_panel_title">互联网连接</string>
   <string name="invalid_location">安装位置无效。</string>
   <string name="invalid_size_value">无法计算软件包的大小。</string>
@@ -8646,7 +8650,7 @@ U盘备份恢复：
   <string name="sound_effects_enable_title">点按提示音</string>
   <string name="sound_haptic_settings">声音与触感</string>
   <string name="sound_mode">声音模式</string>
-  <string name="string_0x7f132301">声音</string>
+  <string name="string_0x7f132305">声音</string>
   <string name="sound_settings_tab_haptic">触感</string>
   <string name="sound_settings_tab_sound">声音</string>
   <string name="sound_stereo_mode_summary">仅在使用喇叭播放时生效</string>
@@ -10576,8 +10580,8 @@ U盘备份恢复：
   <string name="wifi_scan_throttling">WLAN 扫描调节</string>
   <string name="wifi_scan_throttling_summary">降低耗电量以及改善网络性能</string>
   <string name="wifi_security">安全性</string>
-  <string name="string_0x7f132a82">WAPI CERT</string>
-  <string name="string_0x7f132a83">WAPI PSK</string>
+  <string name="string_0x7f132a86">WAPI CERT</string>
+  <string name="string_0x7f132a87">WAPI PSK</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192 位</string>
   <string name="wifi_security_eap_wpa">WPA-Enterprise</string>

@@ -324,150 +324,6 @@
     "alias": "res/color/settingslib_switch_track_outline_color.xml"
   },
   {
-    "name": "res/drawable/$$wifi_metered__1__0.xml",
-    "alias": "res/drawable/drawable_0x7f08000c.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__1.xml",
-    "alias": "res/drawable/drawable_0x7f08000d.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__10.xml",
-    "alias": "res/drawable/drawable_0x7f08000e.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__2.xml",
-    "alias": "res/drawable/drawable_0x7f08000f.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__3.xml",
-    "alias": "res/drawable/drawable_0x7f080010.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__4.xml",
-    "alias": "res/drawable/drawable_0x7f080011.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__5.xml",
-    "alias": "res/drawable/drawable_0x7f080012.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__6.xml",
-    "alias": "res/drawable/drawable_0x7f080013.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__7.xml",
-    "alias": "res/drawable/drawable_0x7f080014.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__8.xml",
-    "alias": "res/drawable/drawable_0x7f080015.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__1__9.xml",
-    "alias": "res/drawable/drawable_0x7f080016.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__2__0.xml",
-    "alias": "res/drawable/drawable_0x7f080017.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__2__1.xml",
-    "alias": "res/drawable/drawable_0x7f080018.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__2__2.xml",
-    "alias": "res/drawable/drawable_0x7f080019.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__3__0.xml",
-    "alias": "res/drawable/drawable_0x7f08001a.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__3__1.xml",
-    "alias": "res/drawable/drawable_0x7f08001b.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__3__2.xml",
-    "alias": "res/drawable/drawable_0x7f08001c.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__3__3.xml",
-    "alias": "res/drawable/drawable_0x7f08001d.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__0.xml",
-    "alias": "res/drawable/drawable_0x7f08001e.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__1.xml",
-    "alias": "res/drawable/drawable_0x7f08001f.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__10.xml",
-    "alias": "res/drawable/drawable_0x7f080020.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__2.xml",
-    "alias": "res/drawable/drawable_0x7f080021.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__3.xml",
-    "alias": "res/drawable/drawable_0x7f080022.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__4.xml",
-    "alias": "res/drawable/drawable_0x7f080023.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__5.xml",
-    "alias": "res/drawable/drawable_0x7f080024.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__6.xml",
-    "alias": "res/drawable/drawable_0x7f080025.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__7.xml",
-    "alias": "res/drawable/drawable_0x7f080026.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__8.xml",
-    "alias": "res/drawable/drawable_0x7f080027.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__4__9.xml",
-    "alias": "res/drawable/drawable_0x7f080028.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__5__0.xml",
-    "alias": "res/drawable/drawable_0x7f080029.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__5__1.xml",
-    "alias": "res/drawable/drawable_0x7f08002a.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__5__2.xml",
-    "alias": "res/drawable/drawable_0x7f08002b.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__6__0.xml",
-    "alias": "res/drawable/drawable_0x7f08002c.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__6__1.xml",
-    "alias": "res/drawable/drawable_0x7f08002d.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__6__2.xml",
-    "alias": "res/drawable/drawable_0x7f08002e.xml"
-  },
-  {
-    "name": "res/drawable/$$wifi_metered__6__3.xml",
-    "alias": "res/drawable/drawable_0x7f08002f.xml"
-  },
-  {
     "name": "res/drawable/ic_usb_MIDI.xml",
     "alias": "res/drawable/drawable_0x7f080ae8.xml"
   },
@@ -8521,7 +8377,7 @@
   },
   {
     "name": "res/drawable-nxhdpi-v4/credentials_image_22081212ug-art.xml",
-    "alias": "res/drawable-440dpi/drawable_0x7f0803e9.xml"
+    "alias": "res/drawable-440dpi/credentials_image_22081212ug-art.xml"
   },
   {
     "name": "res/drawable-nxhdpi-v4/credentials_image_22081212ug.xml",
@@ -11525,51 +11381,51 @@
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__10__0.xml",
-    "alias": "res/drawable/drawable_0x7f080000.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__10__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__11__0.xml",
-    "alias": "res/drawable/drawable_0x7f080001.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__11__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__12__0.xml",
-    "alias": "res/drawable/drawable_0x7f080002.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__12__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__1__0.xml",
-    "alias": "res/drawable/drawable_0x7f080003.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__1__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__2__0.xml",
-    "alias": "res/drawable/drawable_0x7f080004.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__2__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__3__0.xml",
-    "alias": "res/drawable/drawable_0x7f080005.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__3__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__4__0.xml",
-    "alias": "res/drawable/drawable_0x7f080006.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__4__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__5__0.xml",
-    "alias": "res/drawable/drawable_0x7f080007.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__5__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__6__0.xml",
-    "alias": "res/drawable/drawable_0x7f080008.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__6__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__7__0.xml",
-    "alias": "res/drawable/drawable_0x7f080009.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__7__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__8__0.xml",
-    "alias": "res/drawable/drawable_0x7f08000a.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__8__0.xml"
   },
   {
     "name": "res/drawable-v21/$$sud_fourcolor_progress_bar__9__0.xml",
-    "alias": "res/drawable/drawable_0x7f08000b.xml"
+    "alias": "res/drawable/$$sud_fourcolor_progress_bar__9__0.xml"
   },
   {
     "name": "res/drawable-v21/$sud_fourcolor_progress_bar__0.xml",

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;
 .super Ljava/lang/Object;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/DarkIconDispatcher$DarkReceiver;
@@ -489,12 +489,22 @@
     iput p3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
 
     .line 18
-    :cond_0
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->applyNotificationIconsTint()V
+    goto :goto_0
 
     .line 20
+    :cond_0
+    const/4 p1, -0x1
+
+    .line 21
+    iput p1, p0, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->mIconTint:I
+
+    .line 22
+    :goto_0
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;->applyNotificationIconsTint()V
+
+    .line 24
     return-void
-    .line 23
+    .line 27
 .end method
 
 .method public final onDemoModeFinished()V

@@ -4113,7 +4113,7 @@
       <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                  android:value="true" />
     </activity>
-    <activity-alias android:label="@string/string_0x7f132301"
+    <activity-alias android:label="@string/string_0x7f132305"
                     android:name="com.android.settings.SoundSettings"
                     android:exported="true"
                     android:targetActivity="com.android.settings.MiuiSoundSettingsActivity">

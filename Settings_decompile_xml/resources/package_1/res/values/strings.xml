@@ -4968,6 +4968,10 @@ Open Xiaomi Cloud and restore items from there.</string>
   <string name="interesting_title">Realistic touch</string>
   <string name="internal_auto_rotate_title">Lock orientation for inner screen</string>
   <string name="internal_storage">Internal storage</string>
+  <string name="international_lyra_account_ap_summary">Allow nearby tablets and computers signed in to your account to turn on and connect to this device's hotspot automatically</string>
+  <string name="international_lyra_account_ap_title">Network sync</string>
+  <string name="international_lyra_auto_connect_summary">When a nearby device is signed in to your account and needs to connect to the internet, turn on and connect to this device's hotspot automatically</string>
+  <string name="international_lyra_auto_connect_title">Automatically connect to hotspot</string>
   <string name="internet_connectivity_panel_title">Internet connectivity</string>
   <string name="invalid_location">Install location isn’t valid.</string>
   <string name="invalid_size_value">Couldn’t compute package size.</string>
@@ -9393,7 +9397,7 @@ Withdraw consent to %s now?</string>
   <string name="sound_effects_enable_title">Tap sounds</string>
   <string name="sound_haptic_settings">Sound &amp; touch</string>
   <string name="sound_mode">Sound options</string>
-  <string name="string_0x7f132301">Sound</string>
+  <string name="string_0x7f132305">Sound</string>
   <string name="sound_settings_tab_haptic">Touch</string>
   <string name="sound_settings_tab_sound">Sound</string>
   <string name="sound_stereo_mode_summary">Only available when you play sound with speaker</string>
@@ -11416,8 +11420,8 @@ Allow this for all apps that want to scan?</string>
   <string name="wifi_scan_throttling">WLAN scan throttling</string>
   <string name="wifi_scan_throttling_summary">Reduces battery drain &amp; improves network performance</string>
   <string name="wifi_security">Security</string>
-  <string name="string_0x7f132a82">WAPI CERT</string>
-  <string name="string_0x7f132a83">WAPI PSK</string>
+  <string name="string_0x7f132a86">WAPI CERT</string>
+  <string name="string_0x7f132a87">WAPI PSK</string>
   <string name="wifi_security_dpp">DPP</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192-bit</string>
@@ -11448,8 +11452,8 @@ Allow this for all apps that want to scan?</string>
   <string name="wifi_security_short_wpa">WPA</string>
   <string name="wifi_security_short_wpa2">WPA2</string>
   <string name="wifi_security_short_wpa_wpa2">WPA/WPA2</string>
-  <string name="string_0x7f132aa2">WAPI CERT</string>
-  <string name="string_0x7f132aa3">WAPI PSK</string>
+  <string name="string_0x7f132aa6">WAPI CERT</string>
+  <string name="string_0x7f132aa7">WAPI PSK</string>
   <string name="wifi_security_wep">WEP</string>
   <string name="wifi_security_wpa">WPA-Personal</string>
   <string name="wifi_security_wpa2">WPA2-Personal</string>

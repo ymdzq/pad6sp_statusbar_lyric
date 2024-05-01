@@ -456,7 +456,7 @@
 .method public static getRsaDefaultBrowser(Landroid/content/Context;)Ljava/lang/String;
     .locals 3
 
-    .line 308
+    .line 309
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x0
@@ -465,7 +465,7 @@
 
     return-object v1
 
-    .line 311
+    .line 312
     :cond_0
     invoke-static {}, Lcom/android/settings/RegionUtils;->isGoogleClientRegion()Z
 
@@ -475,7 +475,7 @@
 
     const-string v0, "com.mi.globalbrowser"
 
-    .line 313
+    .line 314
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isApplicationInstalled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
@@ -493,7 +493,7 @@
     :cond_1
     const-string v0, "com.android.browser"
 
-    .line 316
+    .line 317
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isApplicationInstalled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
@@ -508,7 +508,7 @@
 
     return-object v0
 
-    .line 320
+    .line 321
     :cond_2
     invoke-static {}, Lcom/android/settings/RegionUtils;->isGMSDefault()Z
 
@@ -518,7 +518,7 @@
 
     const-string v0, "com.android.chrome"
 
-    .line 321
+    .line 322
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isApplicationInstalled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v2
@@ -540,7 +540,7 @@
 .method public static isAppInstalled(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 2
 
-    .line 348
+    .line 349
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -551,7 +551,7 @@
 
     return v1
 
-    .line 353
+    .line 354
     :cond_0
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -582,14 +582,14 @@
 .method private static isCanSetDefaultBrowser(Landroid/content/Context;)Z
     .locals 2
 
-    .line 288
+    .line 289
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 291
+    .line 292
     invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
 
     move-result p0
@@ -603,13 +603,13 @@
     :cond_0
     const/4 p0, 0x0
 
-    .line 293
+    .line 294
     :goto_0
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v1, "current default brwoser is "
+    const-string v1, "current default browser is "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -623,7 +623,7 @@
 
     invoke-static {v1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
+    .line 295
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -642,7 +642,7 @@
 
     goto :goto_1
 
-    .line 301
+    .line 302
     :cond_1
     invoke-static {}, Lcom/android/settings/applications/DefaultAppsHelper;->isAtLeastS()Z
 
@@ -725,7 +725,7 @@
 .end method
 
 .method public static loadDefaultBrowser(Landroid/content/Context;)V
-    .locals 2
+    .locals 3
 
     .line 277
     invoke-static {p0}, Lcom/android/settings/applications/DefaultAppsHelper;->getRsaDefaultBrowser(Landroid/content/Context;)Ljava/lang/String;
@@ -733,6 +733,25 @@
     move-result-object v0
 
     .line 278
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "rsa default browser is "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string v2, "DefaultAppsHelper"
+
+    invoke-static {v2, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 279
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -741,7 +760,7 @@
 
     return-void
 
-    .line 281
+    .line 282
     :cond_0
     invoke-static {p0}, Lcom/android/settings/applications/DefaultAppsHelper;->isCanSetDefaultBrowser(Landroid/content/Context;)Z
 
@@ -749,10 +768,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 282
+    .line 283
     invoke-static {p0, v0}, Lcom/android/settings/applications/DefaultAppsHelper;->setDefaultBrowser(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 283
+    .line 284
     new-instance p0, Ljava/lang/StringBuilder;
 
     invoke-direct {p0}, Ljava/lang/StringBuilder;-><init>()V
@@ -771,9 +790,7 @@
 
     move-result-object p0
 
-    const-string v0, "DefaultAppsHelper"
-
-    invoke-static {v0, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
     return-void
@@ -1089,12 +1106,12 @@
 .method public static setDefaultBrowser(Landroid/content/Context;Ljava/lang/String;)V
     .locals 3
 
-    .line 330
+    .line 331
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v0
 
-    .line 331
+    .line 332
     invoke-static {p0, p1}, Lcom/android/settings/applications/defaultapps/DefaultBrowserPicker;->addBrowserRoleHolderAsUser(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
@@ -1105,7 +1122,7 @@
 
     const-string p0, "addBrowserRoleHolderAsUser success"
 
-    .line 332
+    .line 333
     invoke-static {v2, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     goto :goto_0
@@ -1113,7 +1130,7 @@
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 334
+    .line 335
     invoke-virtual {p0}, Landroid/content/Context;->getUserId()I
 
     move-result p0
@@ -1125,7 +1142,7 @@
     :cond_1
     const-string p0, "Can not get PackageManager!"
 
-    .line 336
+    .line 337
     invoke-static {v2, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
     :goto_0

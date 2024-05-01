@@ -1317,7 +1317,7 @@
 
 .field public static final credentials_image_22081212ug:I = 0x7f0803e8 # @drawable/credentials_image_22081212ug 'res/drawable-440dpi/credentials_image_22081212ug.xml'
 
-.field public static final credentials_image_22081212ug_art:I = 0x7f0803e9 # @drawable/drawable_0x7f0803e9 'res/drawable-440dpi/drawable_0x7f0803e9.xml'
+.field public static final credentials_image_22081212ug_art:I = 0x7f0803e9 # @drawable/credentials_image_22081212ug-art 'res/drawable-440dpi/credentials_image_22081212ug-art.xml'
 
 .field public static final credentials_image_22081281ac:I = 0x7f0803ea # @drawable/credentials_image_22081281ac 'res/drawable-440dpi/credentials_image_22081281ac.xml'
 

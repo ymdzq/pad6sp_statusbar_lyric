@@ -18,22 +18,22 @@
 
 .field public static final exposed_dropdown_menu_content_description:I = 0x7f130e2c # @string/exposed_dropdown_menu_content_description 'Show dropdown menu'
 
-.field public static final item_view_role_description:I = 0x7f13127c # @string/item_view_role_description 'Tab'
+.field public static final item_view_role_description:I = 0x7f131280 # @string/item_view_role_description 'Tab'
 
-.field public static final mtrl_chip_close_icon_content_description:I = 0x7f1318a0 # @string/mtrl_chip_close_icon_content_description 'Remove %1$s'
+.field public static final mtrl_chip_close_icon_content_description:I = 0x7f1318a4 # @string/mtrl_chip_close_icon_content_description 'Remove %1$s'
 
-.field public static final mtrl_picker_announce_current_selection:I = 0x7f1318a5 # @string/mtrl_picker_announce_current_selection 'Current selection: %1$s'
+.field public static final mtrl_picker_announce_current_selection:I = 0x7f1318a9 # @string/mtrl_picker_announce_current_selection 'Current selection: %1$s'
 
-.field public static final mtrl_picker_day_of_week_column_header:I = 0x7f1318ab # @string/mtrl_picker_day_of_week_column_header 'Column of days: %1$s'
+.field public static final mtrl_picker_day_of_week_column_header:I = 0x7f1318af # @string/mtrl_picker_day_of_week_column_header 'Column of days: %1$s'
 
-.field public static final mtrl_picker_navigate_to_year_description:I = 0x7f1318b0 # @string/mtrl_picker_navigate_to_year_description 'Navigate to year %1$s'
+.field public static final mtrl_picker_navigate_to_year_description:I = 0x7f1318b4 # @string/mtrl_picker_navigate_to_year_description 'Navigate to year %1$s'
 
-.field public static final mtrl_picker_toggle_to_calendar_input_mode:I = 0x7f1318be # @string/mtrl_picker_toggle_to_calendar_input_mode 'Switch to calendar input mode'
+.field public static final mtrl_picker_toggle_to_calendar_input_mode:I = 0x7f1318c2 # @string/mtrl_picker_toggle_to_calendar_input_mode 'Switch to calendar input mode'
 
-.field public static final mtrl_picker_toggle_to_day_selection:I = 0x7f1318bf # @string/mtrl_picker_toggle_to_day_selection 'Tap to switch to selecting a day'
+.field public static final mtrl_picker_toggle_to_day_selection:I = 0x7f1318c3 # @string/mtrl_picker_toggle_to_day_selection 'Tap to switch to selecting a day'
 
-.field public static final mtrl_picker_toggle_to_text_input_mode:I = 0x7f1318c0 # @string/mtrl_picker_toggle_to_text_input_mode 'Switch to text input mode'
+.field public static final mtrl_picker_toggle_to_text_input_mode:I = 0x7f1318c4 # @string/mtrl_picker_toggle_to_text_input_mode 'Switch to text input mode'
 
-.field public static final mtrl_picker_toggle_to_year_selection:I = 0x7f1318c1 # @string/mtrl_picker_toggle_to_year_selection 'Tap to switch to selecting a year'
+.field public static final mtrl_picker_toggle_to_year_selection:I = 0x7f1318c5 # @string/mtrl_picker_toggle_to_year_selection 'Tap to switch to selecting a year'
 
-.field public static final password_toggle_content_description:I = 0x7f131b78 # @string/password_toggle_content_description 'Show password'
+.field public static final password_toggle_content_description:I = 0x7f131b7c # @string/password_toggle_content_description 'Show password'

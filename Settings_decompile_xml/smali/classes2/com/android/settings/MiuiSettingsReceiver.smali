@@ -1386,6 +1386,65 @@
     return-void
 .end method
 
+.method private setDefaultBrowserIfNeeded(Landroid/content/Context;)V
+    .locals 3
+
+    const-string p0, "MiuiSettingsReceiver"
+
+    .line 970
+    :try_start_0
+    invoke-static {}, Landroid/app/ActivityThread;->getPackageManager()Landroid/content/pm/IPackageManager;
+
+    move-result-object v0
+
+    .line 971
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "isFirstBoot="
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-interface {v0}, Landroid/content/pm/IPackageManager;->isFirstBoot()Z
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 972
+    invoke-interface {v0}, Landroid/content/pm/IPackageManager;->isFirstBoot()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 973
+    invoke-static {p1}, Lcom/android/settings/applications/DefaultAppsHelper;->loadDefaultBrowser(Landroid/content/Context;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception p1
+
+    const-string/jumbo v0, "setDefaultBrowserIfNeeded: "
+
+    .line 976
+    invoke-static {p0, v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
+
+    :cond_0
+    :goto_0
+    return-void
+.end method
+
 .method private setDefaultHostapdConfig(Landroid/content/Context;)V
     .locals 7
 
@@ -2701,25 +2760,22 @@
     invoke-static {p1}, Lcom/android/settings/DefalutApplicationLoader;->load(Landroid/content/Context;)V
 
     .line 353
-    invoke-static {p1}, Lcom/android/settings/applications/DefaultAppsHelper;->loadDefaultBrowser(Landroid/content/Context;)V
-
-    .line 354
     invoke-static {p1}, Lcom/android/settings/applications/DefaultAppsHelper;->loadDefaultVideoPlayer(Landroid/content/Context;)V
 
-    .line 355
+    .line 354
     invoke-static {p1}, Lcom/android/settings/applications/DefaultAppsHelper;->loadDefaultAssistant(Landroid/content/Context;)V
 
     const-string/jumbo p2, "onReceive: PROVISION_COMPLETE_BROADCAST"
 
-    .line 358
+    .line 357
     invoke-static {v6, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 359
+    .line 358
     sget-boolean p2, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
 
     if-nez p2, :cond_16
 
-    .line 360
+    .line 359
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p2
@@ -2730,14 +2786,14 @@
 
     invoke-static {p2, v0, v1}, Landroid/provider/Settings$Global;->putString(Landroid/content/ContentResolver;Ljava/lang/String;Ljava/lang/String;)Z
 
-    .line 363
+    .line 362
     :cond_16
     invoke-static {v5}, Lcom/android/settings/report/InternationalCompat;->enableNetworkRequest(Z)V
 
-    .line 364
+    .line 363
     invoke-direct {p0, p1}, Lcom/android/settings/MiuiSettingsReceiver;->initZenModeDefaultValues(Landroid/content/Context;)V
 
-    .line 366
+    .line 365
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2755,19 +2811,19 @@
     :cond_17
     const-string v0, "com.android.updater.action.TOGGLE_SUPERSCRIPT"
 
-    .line 367
+    .line 366
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_18
 
-    .line 368
+    .line 367
     invoke-virtual {p2}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
     move-result-object p0
 
-    .line 369
+    .line 368
     invoke-static {p1, p0}, Lcom/android/settings/device/UpdateBroadcastManager;->toggleSuperscript(Landroid/content/Context;Landroid/os/Bundle;)V
 
     goto/16 :goto_6
@@ -2775,7 +2831,7 @@
     :cond_18
     const-string v0, "com.xiaomi.account.action.MODIFY_SAFE_PHONE"
 
-    .line 370
+    .line 369
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2784,7 +2840,7 @@
 
     const-string p0, "bind_phone_type"
 
-    .line 373
+    .line 372
     invoke-virtual {p2, p0, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
@@ -2798,7 +2854,7 @@
     :cond_19
     move p2, v7
 
-    .line 376
+    .line 375
     :goto_4
     invoke-static {p1, p2}, Lcom/android/settings/notify/SettingsNotifyHelper;->setPhoneRecycled(Landroid/content/Context;Z)V
 
@@ -2809,11 +2865,11 @@
     :cond_1a
     move v5, v7
 
-    .line 379
+    .line 378
     :goto_5
     invoke-static {p1, v2, v5}, Lcom/android/settings/device/UpdateBroadcastManager;->updateSuperscript(Landroid/content/Context;IZ)V
 
-    .line 382
+    .line 381
     new-instance p1, Ljava/lang/StringBuilder;
 
     invoke-direct {p1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2835,14 +2891,14 @@
     :cond_1b
     const-string/jumbo v0, "miui.intent.action.ACCESSIBILITY_MENU_INIT"
 
-    .line 383
+    .line 382
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1c
 
-    .line 384
+    .line 383
     sput-boolean v5, Lcom/android/settings/accessibility/accessibilitymenu/AccessibilityMenuService;->isReceiveA11yMenuInitBrodcast:Z
 
     goto/16 :goto_6
@@ -2850,7 +2906,7 @@
     :cond_1c
     const-string v0, "easy_mode_update_font"
 
-    .line 385
+    .line 384
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2859,7 +2915,7 @@
 
     const-string/jumbo p0, "status"
 
-    .line 386
+    .line 385
     sget-object v0, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
     invoke-virtual {p2, p0, v0}, Landroid/content/Intent;->getExtra(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
@@ -2872,7 +2928,7 @@
 
     move-result p0
 
-    .line 387
+    .line 386
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p2
@@ -2887,13 +2943,13 @@
 
     const/16 p2, 0xf
 
-    .line 388
+    .line 387
     :cond_1d
     invoke-static {p1, p2}, Lcom/android/settings/display/LargeFontUtils;->sendUiModeChangeMessage(Landroid/content/Context;I)Z
 
     if-nez p0, :cond_2f
 
-    .line 390
+    .line 389
     invoke-static {p1, v4}, Lcom/android/settings/banner/HomePageBannerHelper;->queryAndSaveBannerOnBg(Landroid/content/Context;Lcom/android/settings/banner/HomePageBannerHelper$BannerCallback;)V
 
     goto/16 :goto_6
@@ -2901,7 +2957,7 @@
     :cond_1e
     const-string/jumbo v0, "miui.intent.action.MUSIC_UNMUTE_BY_USER_DONE"
 
-    .line 392
+    .line 391
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2910,10 +2966,10 @@
 
     const-string p0, "Receive ACTION_MUSIC_UNMUTE_BY_USER_DONE!!!"
 
-    .line 393
+    .line 392
     invoke-static {v6, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 394
+    .line 393
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2927,14 +2983,14 @@
     :cond_1f
     const-string/jumbo v0, "miui.intent.action.START_TALKBACK"
 
-    .line 396
+    .line 395
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_20
 
-    .line 397
+    .line 396
     invoke-static {p1}, Lcom/android/settings/accessibility/utils/MiuiAccessibilityUtils;->enableAccessibility(Landroid/content/Context;)V
 
     goto/16 :goto_6
@@ -2942,7 +2998,7 @@
     :cond_20
     const-string/jumbo v0, "miui.intent.action.HIGH_REFRESH_OPTIONS"
 
-    .line 398
+    .line 397
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2951,14 +3007,14 @@
 
     const-string p0, " ACTION_HIGH_REFRESH_OPTIONS received "
 
-    .line 399
+    .line 398
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string p0, "NewRefreshRateFragment"
 
     const-string p1, "HighRefreshPreference"
 
-    .line 400
+    .line 399
     invoke-static {p0, p1}, Lcom/android/settingslib/util/OneTrackInterfaceUtils;->trackPreferenceClick(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_6
@@ -2966,7 +3022,7 @@
     :cond_21
     const-string/jumbo v0, "miui.intent.action.HIGH_REFRESH_SWITCH"
 
-    .line 402
+    .line 401
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -2975,24 +3031,24 @@
 
     const-string p0, " ACTION_HIGH_REFRESH_SWITCH received "
 
-    .line 403
+    .line 402
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p0, "packagename"
 
-    .line 404
+    .line 403
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     const-string/jumbo p1, "state"
 
-    .line 405
+    .line 404
     invoke-virtual {p2, p1, v5}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result p1
 
-    .line 406
+    .line 405
     invoke-static {p0, p1}, Lcom/android/settingslib/util/OneTrackInterfaceUtils;->trackSwitchEvent(Ljava/lang/String;Z)V
 
     goto/16 :goto_6
@@ -3000,7 +3056,7 @@
     :cond_22
     const-string/jumbo v0, "miui.intent.action.HIGH_REFRESH_STATISTICS"
 
-    .line 408
+    .line 407
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3009,19 +3065,19 @@
 
     const-string p0, " ACTION_HIGH_REFRESH_STATISTICS received "
 
-    .line 409
+    .line 408
     invoke-static {v6, p0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
     const-string/jumbo p0, "packagelist"
 
-    .line 410
+    .line 409
     invoke-virtual {p2, p0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object p0
 
     if-eqz p0, :cond_23
 
-    .line 411
+    .line 410
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v7
@@ -3034,7 +3090,7 @@
     :cond_24
     const-string v0, "android.telephony.action.CARRIER_SIGNAL_REQUEST_NETWORK_FAILED"
 
-    .line 413
+    .line 412
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3045,12 +3101,12 @@
 
     const-string p0, "android.telephony.extra.DATA_FAIL_CAUSE"
 
-    .line 414
+    .line 413
     invoke-virtual {p2, p0, v7}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p0
 
-    .line 416
+    .line 415
     new-instance p2, Ljava/lang/StringBuilder;
 
     invoke-direct {p2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3083,7 +3139,7 @@
 
     if-ne p0, p2, :cond_2f
 
-    .line 423
+    .line 422
     :cond_25
     invoke-static {p1, v2, v2}, Lcom/android/settings/MiuiSettingsReceiver;->configCustomWifi(Landroid/content/Context;II)V
 
@@ -3092,7 +3148,7 @@
     :cond_26
     const-string v0, "android.intent.action.ACTION_DEFAULT_DATA_SUBSCRIPTION_CHANGED"
 
-    .line 425
+    .line 424
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -3101,12 +3157,12 @@
 
     const-string/jumbo v0, "subscription"
 
-    .line 426
+    .line 425
     invoke-virtual {p2, v0, v8}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result p2
 
-    .line 427
+    .line 426
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3123,15 +3179,15 @@
 
     invoke-static {v6, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 428
+    .line 427
     iget v0, p0, Lcom/android/settings/MiuiSettingsReceiver;->mLastSubId:I
 
     if-eq p2, v0, :cond_2f
 
-    .line 429
+    .line 428
     iput p2, p0, Lcom/android/settings/MiuiSettingsReceiver;->mLastSubId:I
 
-    .line 430
+    .line 429
     invoke-static {p1, v2, v5}, Lcom/android/settings/MiuiSettingsReceiver;->configCustomWifi(Landroid/content/Context;II)V
 
     goto/16 :goto_6
@@ -3139,14 +3195,14 @@
     :cond_27
     const-string/jumbo v0, "miui.intent.action.settings.SPEED_MODE_CLOSED"
 
-    .line 432
+    .line 431
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_28
 
-    .line 433
+    .line 432
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -3155,7 +3211,7 @@
 
     invoke-static {p0, p2, v7}, Landroid/provider/Settings$System;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 434
+    .line 433
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -3168,14 +3224,14 @@
 
     const-string/jumbo p0, "notification"
 
-    .line 436
+    .line 435
     invoke-virtual {p1, p0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/NotificationManager;
 
-    .line 437
+    .line 436
     sget p1, Lcom/android/settings/R$string;->speed_mode_noti_title:I
 
     invoke-virtual {p0, v4, p1}, Landroid/app/NotificationManager;->cancel(Ljava/lang/String;I)V
@@ -3185,25 +3241,28 @@
     :cond_28
     const-string v0, "android.intent.action.LOCKED_BOOT_COMPLETED"
 
-    .line 438
+    .line 437
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_29
 
+    const-string/jumbo p2, "onReceive: ACTION_LOCKED_BOOT_COMPLETED"
+
+    .line 438
+    invoke-static {v6, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
     .line 439
     invoke-direct {p0, p1}, Lcom/android/settings/MiuiSettingsReceiver;->SaveSystemStatusWhenBootAction(Landroid/content/Context;)V
 
-    const-string/jumbo p2, "onReceive: ACTION_LOCKED_BOOT_COMPLETED setExternalRamStatus"
-
-    .line 440
-    invoke-static {v6, p2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
     const-string/jumbo p2, "miui.action.LOCKED_WAKE_CLOCK"
 
-    .line 441
+    .line 440
     invoke-direct {p0, p1, p2}, Lcom/android/settings/MiuiSettingsReceiver;->sendBroadcastToDeskClock(Landroid/content/Context;Ljava/lang/String;)V
+
+    .line 441
+    invoke-direct {p0, p1}, Lcom/android/settings/MiuiSettingsReceiver;->setDefaultBrowserIfNeeded(Landroid/content/Context;)V
 
     goto/16 :goto_6
 

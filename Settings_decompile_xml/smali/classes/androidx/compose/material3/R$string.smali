@@ -52,26 +52,26 @@
 
 .field public static final expanded:I = 0x7f130e29 # @string/expanded 'Expanded'
 
-.field public static final search_bar_search:I = 0x7f131f7e # @string/search_bar_search 'Search'
+.field public static final search_bar_search:I = 0x7f131f82 # @string/search_bar_search 'Search'
 
-.field public static final snackbar_dismiss:I = 0x7f1322b9 # @string/snackbar_dismiss 'Dismiss'
+.field public static final snackbar_dismiss:I = 0x7f1322bd # @string/snackbar_dismiss 'Dismiss'
 
-.field public static final suggestions_available:I = 0x7f13246a # @string/suggestions_available 'Suggestions below'
+.field public static final suggestions_available:I = 0x7f13246e # @string/suggestions_available 'Suggestions below'
 
-.field public static final time_picker_am:I = 0x7f132585 # @string/time_picker_am 'AM'
+.field public static final time_picker_am:I = 0x7f132589 # @string/time_picker_am 'AM'
 
-.field public static final time_picker_hour_24h_suffix:I = 0x7f132587 # @string/time_picker_hour_24h_suffix '%1$d hours'
+.field public static final time_picker_hour_24h_suffix:I = 0x7f13258b # @string/time_picker_hour_24h_suffix '%1$d hours'
 
-.field public static final time_picker_hour_selection:I = 0x7f132588 # @string/time_picker_hour_selection 'Select hour'
+.field public static final time_picker_hour_selection:I = 0x7f13258c # @string/time_picker_hour_selection 'Select hour'
 
-.field public static final time_picker_hour_suffix:I = 0x7f132589 # @string/time_picker_hour_suffix '%1$d o'clock'
+.field public static final time_picker_hour_suffix:I = 0x7f13258d # @string/time_picker_hour_suffix '%1$d o'clock'
 
-.field public static final time_picker_minute_selection:I = 0x7f13258c # @string/time_picker_minute_selection 'Select minutes'
+.field public static final time_picker_minute_selection:I = 0x7f132590 # @string/time_picker_minute_selection 'Select minutes'
 
-.field public static final time_picker_minute_suffix:I = 0x7f13258d # @string/time_picker_minute_suffix '%1$d minutes'
+.field public static final time_picker_minute_suffix:I = 0x7f132591 # @string/time_picker_minute_suffix '%1$d minutes'
 
-.field public static final time_picker_period_toggle_description:I = 0x7f13258e # @string/time_picker_period_toggle_description 'Select AM or PM'
+.field public static final time_picker_period_toggle_description:I = 0x7f132592 # @string/time_picker_period_toggle_description 'Select AM or PM'
 
-.field public static final time_picker_pm:I = 0x7f13258f # @string/time_picker_pm 'PM'
+.field public static final time_picker_pm:I = 0x7f132593 # @string/time_picker_pm 'PM'
 
-.field public static final tooltip_long_press_label:I = 0x7f1325c7 # @string/tooltip_long_press_label 'Show tooltip'
+.field public static final tooltip_long_press_label:I = 0x7f1325cb # @string/tooltip_long_press_label 'Show tooltip'

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/NotificationIconContainer;
 .super Landroid/view/ViewGroup;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 
 # static fields
@@ -742,332 +742,338 @@
     add-float/2addr v6, v10
 
     .line 172
-    const/high16 v10, 0x40400000    # 3.0f
+    float-to-double v10, v6
 
     .line 173
-    mul-float/2addr v6, v10
+    const-wide/high16 v12, 0x4004000000000000L    # 2.5
 
-    .line 175
-    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->setXTranslation(F)V
+    .line 174
+    mul-double/2addr v10, v12
 
     .line 176
+    double-to-float v6, v10
+
+    .line 177
+    invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->setXTranslation(F)V
+
+    .line 178
     if-eqz v7, :cond_b
 
-    .line 179
+    .line 181
     iget-boolean v10, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIsShowingOverflowDot:Z
 
-    .line 181
+    .line 183
     if-nez v10, :cond_b
 
-    .line 183
+    .line 185
     iget v10, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconSize:I
 
-    .line 185
+    .line 187
     div-int/2addr v10, v9
 
-    .line 187
+    .line 189
     int-to-float v10, v10
 
-    .line 188
+    .line 190
     add-float/2addr v10, v0
 
-    .line 189
+    .line 191
     add-float/2addr v10, v6
 
-    .line 190
+    .line 192
     cmpg-float v10, v10, v3
 
-    .line 191
+    .line 193
     if-gez v10, :cond_b
 
-    .line 193
+    .line 195
     iput v8, v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;->visibleState:I
 
-    .line 195
+    .line 197
     iput-boolean v8, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIsShowingOverflowDot:Z
 
-    .line 197
+    .line 199
     iget v10, v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;->iconAppearAmount:F
 
-    .line 199
+    .line 201
     mul-float/2addr v6, v10
 
-    .line 201
+    .line 203
     add-float/2addr v6, v0
 
-    .line 202
+    .line 204
     iput-object v4, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mLastVisibleIconState:Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
-    .line 203
+    .line 205
     move v0, v6
 
-    .line 205
+    .line 207
     goto :goto_6
 
-    .line 206
+    .line 208
     :cond_b
     iput v9, v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;->visibleState:I
 
-    .line 207
+    .line 209
     :goto_6
     add-int/lit8 v2, v2, 0x1
 
-    .line 209
+    .line 211
     goto :goto_5
 
-    .line 211
+    .line 213
     :cond_c
     if-lez v1, :cond_d
 
-    .line 212
+    .line 214
     add-int/lit8 v0, v1, -0x1
 
-    .line 214
+    .line 216
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 216
+    .line 218
     move-result-object v0
 
-    .line 219
+    .line 221
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconStates:Ljava/util/HashMap;
 
-    .line 220
+    .line 222
     invoke-virtual {v2, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
+    .line 224
     move-result-object v0
 
-    .line 225
+    .line 227
     check-cast v0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
-
-    .line 226
-    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mLastVisibleIconState:Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
     .line 228
-    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconStates:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mLastVisibleIconState:Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
     .line 230
-    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+    iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconStates:Ljava/util/HashMap;
 
     .line 232
+    invoke-virtual {p0, v5}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
+
+    .line 234
     move-result-object v2
 
-    .line 235
+    .line 237
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
+    .line 238
     move-result-object v0
 
-    .line 239
+    .line 241
     check-cast v0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
-    .line 240
+    .line 242
     iput-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mFirstVisibleIconState:Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
-    .line 242
+    .line 244
     :cond_d
     invoke-virtual {p0}, Landroid/view/ViewGroup;->isLayoutRtl()Z
 
-    .line 244
+    .line 246
     move-result v0
 
-    .line 247
+    .line 249
     if-eqz v0, :cond_e
 
-    .line 248
+    .line 250
     move v0, v5
 
-    .line 250
+    .line 252
     :goto_7
     if-ge v0, v1, :cond_e
 
-    .line 251
+    .line 253
     invoke-virtual {p0, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 253
+    .line 255
     move-result-object v2
 
-    .line 256
+    .line 258
     iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconStates:Ljava/util/HashMap;
 
-    .line 257
+    .line 259
     invoke-virtual {v3, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
+    .line 261
     move-result-object v3
 
-    .line 262
+    .line 264
     check-cast v3, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
-    .line 263
+    .line 265
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getWidth()I
 
-    .line 265
+    .line 267
     move-result v4
 
-    .line 268
+    .line 270
     int-to-float v4, v4
 
-    .line 269
+    .line 271
     iget v6, v3, Lcom/android/systemui/statusbar/notification/stack/ViewState;->mXTranslation:F
 
-    .line 270
+    .line 272
     sub-float/2addr v4, v6
 
-    .line 272
+    .line 274
     invoke-virtual {v2}, Landroid/view/View;->getWidth()I
 
-    .line 273
+    .line 275
     move-result v2
 
-    .line 276
+    .line 278
     int-to-float v2, v2
 
-    .line 277
+    .line 279
     sub-float/2addr v4, v2
 
-    .line 278
+    .line 280
     invoke-virtual {v3, v4}, Lcom/android/systemui/statusbar/notification/stack/ViewState;->setXTranslation(F)V
 
-    .line 279
+    .line 281
     add-int/lit8 v0, v0, 0x1
 
-    .line 282
+    .line 284
     goto :goto_7
 
-    .line 284
+    .line 286
     :cond_e
     invoke-virtual {p0}, Landroid/view/ViewGroup;->getVisibility()I
 
-    .line 285
+    .line 287
     move-result v0
 
-    .line 288
+    .line 290
     const/16 v2, 0x8
 
-    .line 289
+    .line 291
     if-eq v0, v2, :cond_10
 
-    .line 291
+    .line 293
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mMultiTaskStatusBarDotsAreaControllerFactory:Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaControllerFactory;
 
-    .line 293
+    .line 295
     if-eqz v0, :cond_10
 
-    .line 295
+    .line 297
     iget-object v0, v0, Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaControllerFactory;->mMultiTaskStatusBarDotsAreaController:Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaController;
 
-    .line 297
+    .line 299
     invoke-interface {v0}, Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaController;->hasDots()Z
 
-    .line 299
+    .line 301
     move-result v2
 
-    .line 302
+    .line 304
     if-eqz v2, :cond_10
 
-    .line 303
+    .line 305
     iget-object v2, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mViewLocation:[I
 
-    .line 305
+    .line 307
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getLocationOnScreen([I)V
 
-    .line 307
+    .line 309
     move v2, v5
 
-    .line 310
+    .line 312
     :goto_8
     if-ge v2, v1, :cond_10
 
-    .line 311
+    .line 313
     invoke-virtual {p0, v2}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
-    .line 313
+    .line 315
     move-result-object v3
 
-    .line 316
+    .line 318
     iget-object v4, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mIconStates:Ljava/util/HashMap;
 
-    .line 317
+    .line 319
     invoke-virtual {v4, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 319
+    .line 321
     move-result-object v4
 
-    .line 322
+    .line 324
     check-cast v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;
 
-    .line 323
+    .line 325
     if-eqz v4, :cond_f
 
-    .line 325
+    .line 327
     iget v6, v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;->visibleState:I
 
-    .line 327
+    .line 329
     if-eq v6, v9, :cond_f
 
-    .line 329
+    .line 331
     iget-object v6, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mTempChildLocation:[I
 
-    .line 331
+    .line 333
     iget-object v7, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mViewLocation:[I
 
-    .line 333
+    .line 335
     aget v7, v7, v5
 
-    .line 335
+    .line 337
     int-to-float v7, v7
 
-    .line 337
+    .line 339
     iget v10, v4, Lcom/android/systemui/statusbar/notification/stack/ViewState;->mXTranslation:F
 
-    .line 338
+    .line 340
     add-float/2addr v7, v10
 
-    .line 340
+    .line 342
     float-to-int v7, v7
 
-    .line 341
+    .line 343
     aput v7, v6, v5
 
-    .line 342
+    .line 344
     invoke-virtual {v3}, Landroid/view/View;->getWidth()I
 
-    .line 344
+    .line 346
     move-result v3
-
-    .line 347
-    add-int/2addr v3, v7
-
-    .line 348
-    aput v3, v6, v8
 
     .line 349
-    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mTempChildLocation:[I
+    add-int/2addr v3, v7
+
+    .line 350
+    aput v3, v6, v8
 
     .line 351
-    invoke-interface {v0, v3}, Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaController;->overlapArea([I)Z
+    iget-object v3, p0, Lcom/android/systemui/statusbar/phone/NotificationIconContainer;->mTempChildLocation:[I
 
     .line 353
+    invoke-interface {v0, v3}, Lcom/android/systemui/statusbar/policy/MultiTaskStatusBarDotsAreaController;->overlapArea([I)Z
+
+    .line 355
     move-result v3
 
-    .line 356
+    .line 358
     if-eqz v3, :cond_f
 
-    .line 357
+    .line 359
     iput v9, v4, Lcom/android/systemui/statusbar/phone/NotificationIconContainer$IconState;->visibleState:I
 
-    .line 359
+    .line 361
     :cond_f
     add-int/lit8 v2, v2, 0x1
 
-    .line 361
+    .line 363
     goto :goto_8
 
-    .line 363
+    .line 365
     :cond_10
     return-void
-    .line 364
+    .line 366
 .end method
 
 .method public final calculateWidthFor(F)F

@@ -40,4 +40,4 @@
 
 .field public static final abc_toolbar_collapse_description:I = 0x7f130045 # @string/abc_toolbar_collapse_description 'Collapse'
 
-.field public static final search_menu_title:I = 0x7f131fc0 # @string/search_menu_title 'Search'
+.field public static final search_menu_title:I = 0x7f131fc4 # @string/search_menu_title 'Search'

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;
 .super Ljava/lang/Object;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 
 # static fields
@@ -8892,7 +8892,7 @@
     move-result v0
 
     .line 7
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     .line 8
     iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;
@@ -8920,7 +8920,7 @@
     move-result v2
 
     .line 25
-    if-ge v1, v2, :cond_7
+    if-ge v1, v2, :cond_8
 
     .line 26
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->keyAt(I)I
@@ -8938,7 +8938,7 @@
     move-result-object v3
 
     .line 37
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
     .line 38
     iget-object v4, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeController:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
@@ -8956,297 +8956,346 @@
     move-result v4
 
     .line 49
-    const-string v5, "MiuiFreeformModeAvoidAlgorithm"
+    const-string v5, "Skip auto layout anim because task="
 
     .line 50
-    if-nez v4, :cond_4
+    const-string v6, "MiuiFreeformModeAvoidAlgorithm"
 
     .line 52
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+    if-nez v4, :cond_5
 
     .line 54
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+
+    .line 56
     move-result v4
-
-    .line 57
-    const/4 v6, 0x4
-
-    .line 58
-    if-eq v4, v6, :cond_4
 
     .line 59
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+    const/4 v7, 0x4
+
+    .line 60
+    if-eq v4, v7, :cond_5
 
     .line 61
-    move-result v4
-
-    .line 64
-    const/16 v6, 0xe
-
-    .line 65
-    if-eq v4, v6, :cond_4
-
-    .line 67
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalState()Z
-
-    .line 69
-    move-result v4
-
-    .line 72
-    if-nez v4, :cond_0
-
-    .line 73
-    goto/16 :goto_1
-
-    .line 75
-    :cond_0
-    new-instance v4, Landroid/graphics/Rect;
-
-    .line 77
-    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
-
-    .line 79
-    move-result-object v6
-
-    .line 82
-    check-cast v6, Landroid/graphics/Rect;
-
-    .line 83
-    invoke-direct {v4, v6}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
-
-    .line 85
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
-
-    .line 88
-    move-result-object v6
-
-    .line 91
-    const/16 v7, 0x14
-
-    .line 92
-    if-ne v2, p1, :cond_2
-
-    .line 94
-    if-lez p2, :cond_5
-
-    .line 96
-    new-instance v2, Landroid/graphics/Rect;
-
-    .line 98
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
-
-    .line 100
-    invoke-virtual {v3, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setLastBounds(Landroid/graphics/Rect;)V
-
-    .line 103
-    iget v2, v4, Landroid/graphics/Rect;->left:I
-
-    .line 106
-    iget v4, v4, Landroid/graphics/Rect;->top:I
-
-    .line 108
-    invoke-virtual {v6, v2, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    .line 110
-    invoke-virtual {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationBounds(Landroid/graphics/Rect;)V
-
-    .line 113
-    if-ne p2, v7, :cond_1
-
-    .line 116
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBaseBound()V
-
-    .line 118
-    :cond_1
-    iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeController:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
-
-    .line 121
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getMiuiFreeformModeGestureHandler()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;
-
-    .line 123
-    move-result-object v2
-
-    .line 126
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;->getMiuiFreefromAnimation()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;
-
-    .line 127
-    move-result-object v2
-
-    .line 130
-    invoke-virtual {v2, p2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->startGestureAnimation(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
-
-    .line 131
-    goto :goto_2
-
-    .line 134
-    :cond_2
-    iget v2, v4, Landroid/graphics/Rect;->left:I
-
-    .line 135
-    iget v4, v4, Landroid/graphics/Rect;->top:I
-
-    .line 137
-    invoke-virtual {v6, v2, v4}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    .line 139
-    invoke-virtual {v3, v6}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationBounds(Landroid/graphics/Rect;)V
-
-    .line 142
-    new-instance v2, Landroid/graphics/Rect;
-
-    .line 145
-    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
-
-    .line 147
-    invoke-virtual {v3, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setLastBounds(Landroid/graphics/Rect;)V
-
-    .line 150
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBaseBound()V
-
-    .line 153
     invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
 
-    .line 156
-    move-result v2
+    .line 63
+    move-result v4
 
-    .line 159
-    const/16 v4, 0xd
+    .line 66
+    const/16 v7, 0xe
 
-    .line 160
-    if-ne v2, v4, :cond_3
+    .line 67
+    if-eq v4, v7, :cond_5
 
-    .line 162
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
+    .line 69
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isNormalState()Z
 
-    .line 164
+    .line 71
+    move-result v4
+
+    .line 74
+    if-nez v4, :cond_0
+
+    .line 75
+    goto/16 :goto_1
+
+    .line 77
+    :cond_0
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->isFreeformEludeAnimation()Z
+
+    .line 79
+    move-result v4
+
+    .line 82
+    if-eqz v4, :cond_1
+
+    .line 83
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+
+    .line 85
+    move-result v4
+
+    .line 88
+    const/16 v7, 0xf
+
+    .line 89
+    if-eq v4, v7, :cond_1
+
+    .line 91
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    .line 93
+    invoke-direct {v3, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 95
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 98
+    const-string v2, "  in eludestatus "
+
+    .line 101
+    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 103
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 106
     move-result-object v2
 
-    .line 167
-    iget v2, v2, Landroid/graphics/Rect;->left:I
+    .line 109
+    invoke-static {v6, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 168
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+    .line 110
+    goto/16 :goto_2
 
-    .line 170
-    move-result-object v4
+    .line 113
+    :cond_1
+    new-instance v4, Landroid/graphics/Rect;
 
-    .line 173
-    iget v4, v4, Landroid/graphics/Rect;->left:I
+    .line 115
+    invoke-virtual {v0, v2}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    .line 174
-    if-ne v2, v4, :cond_3
+    .line 117
+    move-result-object v5
 
-    .line 176
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
+    .line 120
+    check-cast v5, Landroid/graphics/Rect;
 
-    .line 178
-    move-result-object v2
+    .line 121
+    invoke-direct {v4, v5}, Landroid/graphics/Rect;-><init>(Landroid/graphics/Rect;)V
 
-    .line 181
-    iget v2, v2, Landroid/graphics/Rect;->top:I
+    .line 123
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBounds()Landroid/graphics/Rect;
 
-    .line 182
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+    .line 126
+    move-result-object v5
 
-    .line 184
-    move-result-object v4
+    .line 129
+    const/16 v7, 0x14
 
-    .line 187
+    .line 130
+    if-ne v2, p1, :cond_3
+
+    .line 132
+    if-lez p2, :cond_6
+
+    .line 134
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 136
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+
+    .line 138
+    invoke-virtual {v3, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setLastBounds(Landroid/graphics/Rect;)V
+
+    .line 141
+    iget v2, v4, Landroid/graphics/Rect;->left:I
+
+    .line 144
     iget v4, v4, Landroid/graphics/Rect;->top:I
 
-    .line 188
-    if-ne v2, v4, :cond_3
+    .line 146
+    invoke-virtual {v5, v2, v4}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 190
-    const-string v2, "Skip auto layout anim because start position and end position are the same, besides current animation is moveToFront"
+    .line 148
+    invoke-virtual {v3, v5}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationBounds(Landroid/graphics/Rect;)V
 
-    .line 192
-    invoke-static {v5, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    .line 151
+    if-ne p2, v7, :cond_2
 
-    .line 194
-    goto :goto_2
+    .line 154
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBaseBound()V
 
-    .line 197
-    :cond_3
+    .line 156
+    :cond_2
     iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeController:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
 
-    .line 198
+    .line 159
     invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getMiuiFreeformModeGestureHandler()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;
 
-    .line 200
+    .line 161
     move-result-object v2
 
-    .line 203
+    .line 164
     invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;->getMiuiFreefromAnimation()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;
 
-    .line 204
+    .line 165
     move-result-object v2
 
-    .line 207
-    invoke-virtual {v2, v7, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->startGestureAnimation(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
+    .line 168
+    invoke-virtual {v2, p2, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->startGestureAnimation(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
 
-    .line 208
+    .line 169
     goto :goto_2
 
+    .line 172
+    :cond_3
+    iget v2, v4, Landroid/graphics/Rect;->left:I
+
+    .line 173
+    iget v4, v4, Landroid/graphics/Rect;->top:I
+
+    .line 175
+    invoke-virtual {v5, v2, v4}, Landroid/graphics/Rect;->offsetTo(II)V
+
+    .line 177
+    invoke-virtual {v3, v5}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setDestinationBounds(Landroid/graphics/Rect;)V
+
+    .line 180
+    new-instance v2, Landroid/graphics/Rect;
+
+    .line 183
+    invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
+
+    .line 185
+    invoke-virtual {v3, v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setLastBounds(Landroid/graphics/Rect;)V
+
+    .line 188
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->setBaseBound()V
+
+    .line 191
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+
+    .line 194
+    move-result v2
+
+    .line 197
+    const/16 v4, 0xd
+
+    .line 198
+    if-ne v2, v4, :cond_4
+
+    .line 200
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
+
+    .line 202
+    move-result-object v2
+
+    .line 205
+    iget v2, v2, Landroid/graphics/Rect;->left:I
+
+    .line 206
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
+
+    .line 208
+    move-result-object v4
+
     .line 211
-    :cond_4
-    :goto_1
-    const-string v4, "Skip auto layout anim because task="
+    iget v4, v4, Landroid/graphics/Rect;->left:I
 
     .line 212
-    const-string v6, " is gesture controlled or in animation "
+    if-ne v2, v4, :cond_4
 
     .line 214
-    invoke-static {v4, v2, v6}, Landroidx/appcompat/widget/SuggestionsAdapter$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getBasedBounds()Landroid/graphics/Rect;
 
     .line 216
     move-result-object v2
 
     .line 219
-    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+    iget v2, v2, Landroid/graphics/Rect;->top:I
 
     .line 220
-    move-result v3
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
 
-    .line 223
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 222
+    move-result-object v4
 
-    .line 224
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 225
+    iget v4, v4, Landroid/graphics/Rect;->top:I
 
-    .line 227
-    move-result-object v2
+    .line 226
+    if-ne v2, v4, :cond_4
+
+    .line 228
+    const-string v2, "Skip auto layout anim because start position and end position are the same, besides current animation is moveToFront"
 
     .line 230
-    invoke-static {v5, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+    invoke-static {v6, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 231
+    .line 232
+    goto :goto_2
+
+    .line 235
+    :cond_4
+    iget-object v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeController:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;
+
+    .line 236
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeController;->getMiuiFreeformModeGestureHandler()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;
+
+    .line 238
+    move-result-object v2
+
+    .line 241
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeGestureHandler;->getMiuiFreefromAnimation()Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;
+
+    .line 242
+    move-result-object v2
+
+    .line 245
+    invoke-virtual {v2, v7, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAnimation;->startGestureAnimation(ILcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;)V
+
+    .line 246
+    goto :goto_2
+
+    .line 249
     :cond_5
+    :goto_1
+    const-string v4, " is gesture controlled or in animation "
+
+    .line 250
+    invoke-static {v5, v2, v4}, Landroidx/appcompat/widget/SuggestionsAdapter$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ILjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 252
+    move-result-object v2
+
+    .line 255
+    invoke-virtual {v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getAnimationType()I
+
+    .line 256
+    move-result v3
+
+    .line 259
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    .line 260
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 263
+    move-result-object v2
+
+    .line 266
+    invoke-static {v6, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 267
+    :cond_6
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
-    .line 234
+    .line 270
     goto/16 :goto_0
 
-    .line 236
-    :cond_6
+    .line 272
+    :cond_7
     iget-object p2, p0, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->mMiuiFreeformModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;
 
-    .line 238
+    .line 274
     invoke-virtual {p2, p1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;->getMiuiFreeformTaskInfo(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
 
-    .line 240
+    .line 276
     move-result-object p1
 
-    .line 243
+    .line 279
     const/4 p2, 0x1
 
-    .line 244
+    .line 280
     invoke-virtual {p0, p1, p2, p2}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeAvoidAlgorithm;->doAvoidanceOfCorner(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;ZZ)V
 
-    .line 245
-    :cond_7
+    .line 281
+    :cond_8
     return-void
-    .line 248
+    .line 284
 .end method
 
 .method public doAvoidanceOfCorner(Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;ZZ)V

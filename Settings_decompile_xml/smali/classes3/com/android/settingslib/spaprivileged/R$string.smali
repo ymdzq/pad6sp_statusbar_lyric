@@ -22,12 +22,12 @@
 
 .field public static final install_type_instant:I = 0x7f131250 # @string/install_type_instant 'Instant app'
 
-.field public static final menu_hide_system:I = 0x7f131647 # @string/menu_hide_system 'Hide system'
+.field public static final menu_hide_system:I = 0x7f13164b # @string/menu_hide_system 'Hide system'
 
-.field public static final menu_show_system:I = 0x7f13166a # @string/menu_show_system 'Show system'
+.field public static final menu_show_system:I = 0x7f13166e # @string/menu_show_system 'Show system'
 
-.field public static final no_applications:I = 0x7f1319d7 # @string/no_applications 'No apps.'
+.field public static final no_applications:I = 0x7f1319db # @string/no_applications 'No apps.'
 
-.field public static final summary_placeholder:I = 0x7f13246f # @string/summary_placeholder ' '
+.field public static final summary_placeholder:I = 0x7f132473 # @string/summary_placeholder ' '
 
-.field public static final version_text:I = 0x7f1327de # @string/version_text 'version %1$s'
+.field public static final version_text:I = 0x7f1327e2 # @string/version_text 'version %1$s'

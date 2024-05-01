@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;
 .super Ljava/lang/Object;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/DisplayChangeController$OnDisplayChangingListener;
@@ -484,7 +484,7 @@
 .end method
 
 .method private onDisplayChanged(I)V
-    .locals 5
+    .locals 3
 
     .line 1
     if-eqz p1, :cond_0
@@ -513,86 +513,80 @@
 
     .line 14
     :cond_1
-    iget v1, p1, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+    iget v0, p1, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
 
     .line 15
-    iget v2, p1, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+    iget v1, p1, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
 
     .line 17
-    iget v3, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
+    iget v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
 
     .line 19
-    if-eq v1, v3, :cond_3
+    if-eq v0, v2, :cond_3
 
     .line 21
-    iget v3, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
+    iget v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
 
     .line 23
-    if-ne v2, v3, :cond_2
+    if-ne v1, v2, :cond_2
 
     .line 25
     goto :goto_0
 
     .line 27
     :cond_2
-    iput v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
+    iput v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
 
     .line 28
-    iput v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
+    iput v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
 
     .line 30
-    iget v1, p1, Lcom/android/wm/shell/common/DisplayLayout;->mNavBarFrameHeight:I
+    iget v0, p1, Lcom/android/wm/shell/common/DisplayLayout;->mNavBarFrameHeight:I
 
     .line 32
-    iput v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mNavBarHeight:I
+    iput v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mNavBarHeight:I
 
     .line 34
-    iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mContext:Landroid/content/Context;
+    iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mContext:Landroid/content/Context;
 
     .line 36
-    iget v2, p1, Lcom/android/wm/shell/common/DisplayLayout;->mRotation:I
+    iget v1, p1, Lcom/android/wm/shell/common/DisplayLayout;->mRotation:I
 
     .line 38
-    invoke-static {v1, v2}, Lcom/android/internal/policy/SystemBarUtils;->getStatusBarHeightForRotation(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/android/internal/policy/SystemBarUtils;->getStatusBarHeightForRotation(Landroid/content/Context;I)I
 
     .line 40
-    move-result v1
+    move-result v0
 
     .line 43
-    iput v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mStatusBarHeight:I
+    iput v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mStatusBarHeight:I
 
     .line 44
-    iget-object v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mMiuiInfinityModeThermalArea:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;
+    iget-object v0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mMiuiInfinityModeThermalArea:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;
 
     .line 46
-    new-instance v2, Landroid/graphics/Rect;
+    iget v1, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
 
     .line 48
-    iget v3, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
+    iget v2, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayWidth:I
 
     .line 50
-    iget v4, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mDisplayHeight:I
+    invoke-virtual {v0, v1, v2}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->setDisplayArea(II)V
 
     .line 52
-    invoke-direct {v2, v0, v0, v3, v4}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 54
-    invoke-virtual {v1, v2}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeThermalArea;->setGlobalThermalArea(Landroid/graphics/Rect;)V
-
-    .line 57
     invoke-virtual {p0}, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->updateDraggableAreas()V
 
-    .line 60
+    .line 55
     iget-object p0, p0, Lcom/android/wm/shell/miuifreeform/MiuiInfinityModeController;->mMiuiInfinityModeSizesPolicy:Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeLevelPolicyCompat;
 
-    .line 63
+    .line 58
     invoke-virtual {p0, p1}, Lcom/android/wm/shell/miuifreeform/infinitymode/MiuiInfinityModeLevelPolicyCompat;->policyUpdateByDisplayChanged(Lcom/android/wm/shell/common/DisplayLayout;)V
 
-    .line 65
+    .line 60
     :cond_3
     :goto_0
     return-void
-    .line 68
+    .line 63
 .end method
 
 .method private onInit()V

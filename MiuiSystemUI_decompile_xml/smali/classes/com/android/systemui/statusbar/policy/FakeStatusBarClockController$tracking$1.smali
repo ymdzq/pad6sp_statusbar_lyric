@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;
 .super Ljava/lang/Object;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 # interfaces
 .implements Ljava/lang/Runnable;
@@ -64,62 +64,50 @@
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
     .line 16
-    if-nez v0, :cond_0
-
-    .line 18
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimPending:Z
-
-    .line 20
     if-eqz v0, :cond_1
 
-    .line 22
+    .line 18
     :cond_0
     move v1, v2
 
-    .line 24
+    .line 20
     :cond_1
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->setClockShow(Z)V
 
-    .line 25
+    .line 21
     return-void
 
-    .line 28
+    .line 24
     :goto_0
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;->this$0:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
 
-    .line 29
+    .line 25
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
 
-    .line 31
+    .line 27
     if-nez v0, :cond_2
 
-    .line 33
+    .line 29
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
-    .line 35
-    if-nez v0, :cond_2
-
-    .line 37
-    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimPending:Z
-
-    .line 39
+    .line 31
     if-eqz v0, :cond_3
 
-    .line 41
+    .line 33
     :cond_2
     move v1, v2
 
-    .line 43
+    .line 35
     :cond_3
     invoke-virtual {p0, v1}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->setClockShow(Z)V
 
-    .line 44
+    .line 36
     return-void
 
-    .line 47
+    .line 39
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
     .end packed-switch
-    .line 48
+    .line 40
 .end method

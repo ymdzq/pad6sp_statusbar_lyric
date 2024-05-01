@@ -2,6 +2,6 @@
 <preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
   <header android:icon="@drawable/ic_sound_settings"
           android:id="@id/sound_settings"
-          android:title="@string/string_0x7f132301"
+          android:title="@string/string_0x7f132305"
           android:fragment="com.android.settings.MiuiSoundSettings" />
 </preference-headers>

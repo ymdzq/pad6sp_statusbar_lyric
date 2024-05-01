@@ -4839,6 +4839,11 @@
               "preference_key": "ex_func_mi_cloud_service", 
               "is_checkbox": "true", 
               "resource": "micloud_service_title"
+            }, 
+            {
+              "preference_key": "ex_func_game_booster", 
+              "is_checkbox": "true", 
+              "resource": "game_booster_title"
             }
           ]
         }, 

@@ -3972,6 +3972,10 @@ b. شىياۋمى ياردەمچىسى ئارقىلىق زاپاسلانغان �
   <string name="interesting_title">قىزىقارلىق تەقلىد قىلىش</string>
   <string name="internal_auto_rotate_title">ئىچكى ئېكران يۆنىلىشىنى قۇلۇپلاش</string>
   <string name="internal_storage">ئىچىدىكى ساقلاش بوشلۇقى</string>
+  <string name="international_lyra_account_ap_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق تاختا كومپىيۇتېر ياكى كومپىيۇتېردا بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئېچىپ ئۇلىغىلى بولىدۇ</string>
+  <string name="international_lyra_account_ap_title">تور ئورتاقلىشىش</string>
+  <string name="international_lyra_auto_connect_summary">ئەتراپتىكى ئوخشاش ھېساباتلىق ئۈسكۈنىدە تور بولمىغاندا، بۇ ئۈسكۈنىدىكى قىزىق نۇقتىنى ئاپتوماتىك ئېچىپ ئۇلىسا بولىدۇ</string>
+  <string name="international_lyra_auto_connect_title">قىزىق نۇقتىنى ئاپتوماتىك ئېچىش</string>
   <string name="internet_connectivity_panel_title">تورغا ئۇلاش</string>
   <string name="invalid_location">قاچىلاش ئورنى ئىناۋەتسىز</string>
   <string name="invalid_size_value">ئەپ بولىقىنىڭ چوڭلۇقىنى ھېسابلاشقا بولمىدى</string>
@@ -7815,7 +7819,7 @@ CONTEXTEDIT</string>
   <string name="sound_effects_enable_title">ئەسكەرتىش ئاۋازىنى چېكىش</string>
   <string name="sound_haptic_settings">ئاۋاز ۋە سەزگۈ</string>
   <string name="sound_mode">ئاۋاز ھالىتى</string>
-  <string name="string_0x7f132301">ئاۋاز</string>
+  <string name="string_0x7f132305">ئاۋاز</string>
   <string name="sound_settings_tab_haptic">باسما سەزگۈ</string>
   <string name="sound_settings_tab_sound">ئاۋاز</string>
   <string name="sound_stereo_mode_summary">پەقەت كانايدا قويغاندا ئىشلىتىلىدۇ</string>
@@ -9598,8 +9602,8 @@ CONTEXTEDIT</string>
   <string name="wifi_scan_throttling">WLAN تەكشۈرۈشنى تەڭشەش</string>
   <string name="wifi_scan_throttling_summary">توك سەرپ بولۇشنى تۆۋەنلىتىدۇ ھەمدە تور ئىقتىدارىنى ياخشىلايدۇ</string>
   <string name="wifi_security">بىخەتەرلىك</string>
-  <string name="string_0x7f132a82">WAPI(CERT)</string>
-  <string name="string_0x7f132a83">WAPI(PSK)</string>
+  <string name="string_0x7f132a86">WAPI(CERT)</string>
+  <string name="string_0x7f132a87">WAPI(PSK)</string>
   <string name="wifi_security_eap">WPA/WPA2/WPA3-Enterprise</string>
   <string name="wifi_security_eap_suiteb">WPA3-Enterprise 192 خانىلىق</string>
   <string name="wifi_security_eap_wpa">WPA-Enterprise</string>

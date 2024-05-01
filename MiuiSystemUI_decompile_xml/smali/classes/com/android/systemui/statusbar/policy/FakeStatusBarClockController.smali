@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
 .super Ljava/lang/Object;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 # interfaces
 .implements Lcom/android/systemui/Dumpable;
@@ -40,8 +40,6 @@
 .field public endL:I
 
 .field public endT:I
-
-.field public expansionAnimPending:Z
 
 .field public expansionAnimRunning:Z
 
@@ -364,179 +362,164 @@
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 39
-    move-result-object p2
+    move-result-object p1
 
     .line 42
-    const p5, 0x7f0710de    # @dimen/status_bar_icon_height '20.3636dp'
+    const p2, 0x7f0710de    # @dimen/status_bar_icon_height '20.3636dp'
 
     .line 43
-    invoke-virtual {p2, p5}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {p1, p2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     .line 46
-    move-result p2
+    move-result p1
 
     .line 49
-    iput p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarIconHeight:I
+    iput p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarIconHeight:I
 
     .line 50
     filled-new-array {p0}, [Ljava/lang/Object;
 
     .line 52
-    move-result-object p2
+    move-result-object p1
 
     .line 55
-    invoke-static {p2}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    invoke-static {p1}, Lmiuix/animation/Folme;->useValue([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     .line 56
-    move-result-object p2
+    move-result-object p1
 
     .line 59
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->anim:Lmiuix/animation/IStateStyle;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->anim:Lmiuix/animation/IStateStyle;
 
     .line 60
-    new-instance p2, Lmiuix/animation/base/AnimConfig;
+    new-instance p1, Lmiuix/animation/base/AnimConfig;
 
     .line 62
-    invoke-direct {p2}, Lmiuix/animation/base/AnimConfig;-><init>()V
+    invoke-direct {p1}, Lmiuix/animation/base/AnimConfig;-><init>()V
 
     .line 64
-    new-instance p5, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$animConfig$1;
+    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$animConfig$1;
 
     .line 67
-    invoke-direct {p5, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$animConfig$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
+    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$animConfig$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
     .line 69
-    filled-new-array {p5}, [Lmiuix/animation/listener/TransitionListener;
+    filled-new-array {p2}, [Lmiuix/animation/listener/TransitionListener;
 
     .line 72
-    move-result-object p5
-
-    .line 75
-    invoke-virtual {p2, p5}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
-
-    .line 76
     move-result-object p2
 
+    .line 75
+    invoke-virtual {p1, p2}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
+
+    .line 76
+    move-result-object p1
+
     .line 79
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->animConfig:Lmiuix/animation/base/AnimConfig;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->animConfig:Lmiuix/animation/base/AnimConfig;
 
     .line 80
-    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 82
-    const/4 p5, 0x1
+    const/4 p2, 0x1
 
     .line 84
-    invoke-direct {p2, p0, p5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
 
     .line 85
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 88
-    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 90
-    const/4 p5, 0x0
+    const/4 p2, 0x0
 
     .line 92
-    invoke-direct {p2, p0, p5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
 
     .line 93
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 96
-    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 98
-    const/4 p5, 0x2
+    const/4 p2, 0x2
 
     .line 100
-    invoke-direct {p2, p0, p5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
 
     .line 101
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 104
-    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 106
-    const/4 p5, 0x3
+    const/4 p2, 0x3
 
     .line 108
-    invoke-direct {p2, p0, p5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+    invoke-direct {p1, p0, p2}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
 
     .line 109
-    iput-object p2, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 112
     invoke-virtual {p10, p0}, Lcom/android/systemui/dump/DumpManager;->registerDumpable(Lcom/android/systemui/Dumpable;)V
 
     .line 114
-    new-instance p2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$1;
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$1;
 
     .line 117
-    invoke-direct {p2, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
+    invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
     .line 119
     check-cast p6, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;
 
     .line 122
-    invoke-virtual {p6, p2}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
+    invoke-virtual {p6, p1}, Lcom/android/systemui/statusbar/phone/ConfigurationControllerImpl;->addCallback(Ljava/lang/Object;)V
 
     .line 124
-    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 127
-    move-result-object p1
-
-    .line 130
-    invoke-virtual {p1}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    .line 131
-    move-result-object p1
-
-    .line 134
-    iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->oldConfig:Landroid/content/res/Configuration;
-
-    .line 135
     new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$2;
 
-    .line 137
+    .line 127
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$2;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
-    .line 139
+    .line 129
     invoke-virtual {p4, p1}, Lcom/android/systemui/statusbar/policy/HeadsUpManager;->addListener(Lcom/android/systemui/statusbar/policy/OnHeadsUpChangedListener;)V
 
-    .line 142
+    .line 132
     new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$3;
 
-    .line 145
+    .line 135
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$3;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
-    .line 147
+    .line 137
     invoke-interface {p3, p1}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->addCallback(Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;)V
 
-    .line 150
+    .line 140
     new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$leftOrRightListener$1;
 
-    .line 153
+    .line 143
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$leftOrRightListener$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
-    .line 155
+    .line 145
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->leftOrRightListener:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$leftOrRightListener$1;
 
-    .line 158
+    .line 148
     new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$onLayoutChangeListener$1;
 
-    .line 160
+    .line 150
     invoke-direct {p1, p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$onLayoutChangeListener$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
 
-    .line 162
+    .line 152
     iput-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->onLayoutChangeListener:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$onLayoutChangeListener$1;
 
-    .line 165
+    .line 155
     return-void
-    .line 167
+    .line 157
 .end method
 
 .method public static logLoc(Landroid/view/View;Ljava/lang/String;)V
@@ -1100,31 +1083,31 @@
 .end method
 
 .method public final onPanelStretchChanged(FZ)V
-    .locals 25
+    .locals 17
 
     .line 1
     move-object/from16 v0, p0
 
     .line 2
-    move/from16 v8, p1
+    move/from16 v7, p1
 
     .line 4
-    move/from16 v9, p2
+    move/from16 v8, p2
 
     .line 6
     iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
     .line 8
-    const/4 v10, 0x0
+    const/4 v9, 0x0
 
     .line 10
-    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v9}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 11
-    move-result-object v11
+    move-result-object v15
 
     .line 14
-    const/4 v12, 0x0
+    const/4 v14, 0x0
 
     .line 15
     const/4 v13, 0x1
@@ -1133,13 +1116,13 @@
     if-nez v1, :cond_2
 
     .line 17
-    if-eqz v9, :cond_2
+    if-eqz v8, :cond_2
 
     .line 19
     iget v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
 
     .line 21
-    cmpg-float v1, v1, v10
+    cmpg-float v1, v1, v9
 
     .line 23
     if-nez v1, :cond_0
@@ -1152,7 +1135,7 @@
 
     .line 28
     :cond_0
-    move v1, v12
+    move v1, v14
 
     .line 29
     :goto_0
@@ -1181,7 +1164,7 @@
 
     .line 43
     :cond_1
-    move v1, v12
+    move v1, v14
 
     .line 44
     :goto_1
@@ -1198,7 +1181,7 @@
     if-nez v1, :cond_5
 
     .line 51
-    iput-boolean v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
+    iput-boolean v14, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
 
     .line 53
     iget-object v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
@@ -1224,7 +1207,7 @@
     if-eqz v0, :cond_4
 
     .line 67
-    invoke-virtual {v0, v12}, Lcom/android/systemui/statusbar/views/MiuiClock;->setPolicyVisibility(I)V
+    invoke-virtual {v0, v14}, Lcom/android/systemui/statusbar/views/MiuiClock;->setPolicyVisibility(I)V
 
     .line 69
     :cond_4
@@ -1238,324 +1221,327 @@
     const-string v2, "expChange"
 
     .line 75
-    iget-boolean v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimPending:Z
+    iget-boolean v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
 
     .line 77
-    iget-boolean v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
+    iget-boolean v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
 
     .line 79
-    iget-boolean v7, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
-
-    .line 81
     move/from16 v3, p1
 
-    .line 83
+    .line 81
     move/from16 v4, p2
 
-    .line 85
-    invoke-virtual/range {v1 .. v7}, Lcom/android/systemui/log/FakeStatusBarClockLogger;->logStateChange(Ljava/lang/String;FZZZZ)V
+    .line 83
+    invoke-virtual/range {v1 .. v6}, Lcom/android/systemui/log/FakeStatusBarClockLogger;->logStateChange(Ljava/lang/String;FZZZ)V
 
-    .line 87
+    .line 85
     iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
-    .line 90
-    if-ne v1, v9, :cond_6
+    .line 88
+    if-ne v1, v8, :cond_6
 
-    .line 92
+    .line 90
     goto :goto_3
 
-    .line 94
+    .line 92
     :cond_6
-    iput-boolean v9, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
+    iput-boolean v8, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
-    .line 95
+    .line 93
     const-wide/16 v1, 0x1000
 
-    .line 97
+    .line 95
     const-string v3, "fake-tracking"
 
-    .line 99
-    invoke-static {v1, v2, v3, v9}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
+    .line 97
+    invoke-static {v1, v2, v3, v8}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
-    .line 101
+    .line 99
     iget-object v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->commandQueue:Lcom/android/systemui/statusbar/CommandQueue;
 
-    .line 104
-    invoke-virtual {v1, v12}, Lcom/android/systemui/statusbar/CommandQueue;->recomputeDisableFlags(I)V
+    .line 102
+    invoke-virtual {v1, v14}, Lcom/android/systemui/statusbar/CommandQueue;->recomputeDisableFlags(I)V
 
-    .line 106
-    if-nez v9, :cond_8
+    .line 104
+    if-nez v8, :cond_8
+
+    .line 107
+    iput v14, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->drawCount:I
 
     .line 109
-    iput v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->drawCount:I
-
-    .line 111
     iget-object v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
 
-    .line 113
+    .line 111
     if-eqz v1, :cond_7
 
-    .line 115
+    .line 113
     invoke-virtual {v1}, Landroid/widget/TextView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
-    .line 117
+    .line 115
     move-result-object v1
 
-    .line 120
+    .line 118
     if-eqz v1, :cond_7
 
-    .line 121
+    .line 119
     iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->onDrawListener:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$onDrawListener$1;
 
-    .line 123
+    .line 121
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 125
+    .line 123
     :cond_7
     new-instance v1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;
 
-    .line 128
-    invoke-direct {v1, v0, v12}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+    .line 126
+    invoke-direct {v1, v0, v14}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
 
-    .line 130
+    .line 128
     const-wide/16 v2, 0x1f4
 
-    .line 133
+    .line 131
     iget-object v4, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->uiHandler:Landroid/os/Handler;
 
-    .line 135
+    .line 133
     invoke-virtual {v4, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 137
+    .line 135
     goto :goto_3
 
-    .line 140
+    .line 138
     :cond_8
     invoke-virtual {v0, v13}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->setClockShow(Z)V
 
-    .line 141
+    .line 139
     :goto_3
     const/high16 v1, 0x3f800000    # 1.0f
 
+    .line 142
+    cmpg-float v2, v7, v1
+
     .line 144
-    cmpg-float v14, v8, v1
+    if-gez v2, :cond_9
 
     .line 146
-    if-gez v14, :cond_9
+    move v3, v13
 
     .line 148
-    move v2, v13
-
-    .line 150
     goto :goto_4
 
-    .line 151
+    .line 149
     :cond_9
-    move v2, v12
+    move v3, v14
 
-    .line 152
+    .line 150
     :goto_4
-    iget-object v15, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->anim:Lmiuix/animation/IStateStyle;
+    iget-object v4, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->anim:Lmiuix/animation/IStateStyle;
+
+    .line 151
+    if-eqz v3, :cond_13
 
     .line 153
-    if-eqz v2, :cond_13
+    iget-boolean v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
 
     .line 155
-    iget-boolean v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
+    if-nez v5, :cond_13
 
     .line 157
-    if-nez v3, :cond_13
-
-    .line 159
     iput-boolean v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
 
-    .line 161
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
-
-    .line 163
-    const-string/jumbo v7, "statusBarClock"
-
-    .line 165
-    if-eqz v2, :cond_a
-
-    .line 168
-    move-object v10, v7
-
-    .line 170
-    goto :goto_7
-
-    .line 171
-    :cond_a
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->layoutInflater$delegate:Lkotlin/Lazy;
-
-    .line 172
-    invoke-interface {v2}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
-
-    .line 174
-    move-result-object v2
-
-    .line 177
-    check-cast v2, Landroid/view/LayoutInflater;
-
-    .line 178
-    const v3, 0x7f0d01c9    # @layout/miui_ns_fake_status_bar_clock 'res/layout/miui_ns_fake_status_bar_clock.xml'
-
-    .line 180
-    const/4 v4, 0x0
-
-    .line 183
-    invoke-virtual {v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
-
-    .line 184
-    move-result-object v2
-
-    .line 187
-    check-cast v2, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
-
-    .line 188
-    iput-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
-
-    .line 190
-    if-nez v2, :cond_b
-
-    .line 192
-    goto :goto_5
-
-    .line 194
-    :cond_b
-    invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setPivotX(F)V
-
-    .line 195
-    :goto_5
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
-
-    .line 198
-    if-nez v2, :cond_c
-
-    .line 200
-    goto :goto_6
-
-    .line 202
-    :cond_c
-    invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setPivotY(F)V
-
-    .line 203
-    :goto_6
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
-
-    .line 206
-    invoke-static {v2, v7}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
-
-    .line 208
-    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->updateCommon()V
-
-    .line 211
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClockContainer:Landroid/view/ViewGroup;
-
-    .line 214
-    if-eqz v2, :cond_d
-
-    .line 216
+    .line 159
     iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
-    .line 218
-    invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    .line 161
+    const-string/jumbo v5, "statusBarClock"
 
-    .line 220
+    .line 163
+    if-eqz v3, :cond_a
+
+    .line 166
+    move v6, v13
+
+    .line 168
+    move v9, v14
+
+    .line 169
+    goto :goto_7
+
+    .line 170
+    :cond_a
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->layoutInflater$delegate:Lkotlin/Lazy;
+
+    .line 171
+    invoke-interface {v3}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
+
+    .line 173
+    move-result-object v3
+
+    .line 176
+    check-cast v3, Landroid/view/LayoutInflater;
+
+    .line 177
+    const v6, 0x7f0d01c9    # @layout/miui_ns_fake_status_bar_clock 'res/layout/miui_ns_fake_status_bar_clock.xml'
+
+    .line 179
+    const/4 v10, 0x0
+
+    .line 182
+    invoke-virtual {v3, v6, v10}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    .line 183
+    move-result-object v3
+
+    .line 186
+    check-cast v3, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+
+    .line 187
+    iput-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+
+    .line 189
+    if-nez v3, :cond_b
+
+    .line 191
+    goto :goto_5
+
+    .line 193
+    :cond_b
+    invoke-virtual {v3, v9}, Landroid/widget/FrameLayout;->setPivotX(F)V
+
+    .line 194
+    :goto_5
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+
+    .line 197
+    if-nez v3, :cond_c
+
+    .line 199
+    goto :goto_6
+
+    .line 201
+    :cond_c
+    invoke-virtual {v3, v9}, Landroid/widget/FrameLayout;->setPivotY(F)V
+
+    .line 202
+    :goto_6
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
+
+    .line 205
+    invoke-static {v3, v5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
+
+    .line 207
+    invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->updateCommon()V
+
+    .line 210
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClockContainer:Landroid/view/ViewGroup;
+
+    .line 213
+    if-eqz v3, :cond_d
+
+    .line 215
+    iget-object v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+
+    .line 217
+    invoke-virtual {v3, v6}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+
+    .line 219
     :cond_d
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
-    .line 223
-    if-eqz v2, :cond_e
+    .line 222
+    if-eqz v3, :cond_e
 
-    .line 225
-    iget-boolean v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
+    .line 224
+    iget-boolean v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
 
-    .line 227
-    invoke-virtual {v2, v3}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->setUseLeft(Z)V
+    .line 226
+    invoke-virtual {v3, v6}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->setUseLeft(Z)V
 
-    .line 229
+    .line 228
     :cond_e
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iget-object v10, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 232
-    iget-object v4, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    .line 231
+    iget-object v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 234
-    iget-object v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    .line 233
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 236
-    move-object v3, v11
+    .line 235
+    move-object v11, v15
+
+    .line 237
+    move v6, v13
 
     .line 238
-    move-object v5, v11
+    move-object v13, v15
 
     .line 239
-    move-object v10, v7
+    move v9, v14
 
     .line 240
-    move-object v7, v11
+    move-object v14, v3
 
     .line 241
-    filled-new-array/range {v2 .. v7}, [Ljava/lang/Object;
+    filled-new-array/range {v10 .. v15}, [Ljava/lang/Object;
 
     .line 242
-    move-result-object v2
+    move-result-object v3
 
     .line 245
-    invoke-interface {v15, v2}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    invoke-interface {v4, v3}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
     .line 246
     :goto_7
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
     .line 249
-    if-nez v2, :cond_f
+    if-nez v3, :cond_f
 
     .line 251
     goto :goto_8
 
     .line 253
     :cond_f
-    invoke-virtual {v2, v12}, Lcom/android/systemui/statusbar/AlphaOptimizedFrameLayout;->setVisibility(I)V
+    invoke-virtual {v3, v9}, Lcom/android/systemui/statusbar/AlphaOptimizedFrameLayout;->setVisibility(I)V
 
     .line 254
     :goto_8
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->nsBigTime:Lcom/android/systemui/statusbar/views/MiuiClock;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->nsBigTime:Lcom/android/systemui/statusbar/views/MiuiClock;
 
     .line 257
-    if-eqz v2, :cond_10
+    if-eqz v3, :cond_10
 
     .line 259
-    const/4 v3, 0x4
+    const/4 v10, 0x4
 
     .line 261
-    invoke-virtual {v2, v3}, Lcom/android/systemui/statusbar/views/MiuiClock;->setPolicyVisibility(I)V
+    invoke-virtual {v3, v10}, Lcom/android/systemui/statusbar/views/MiuiClock;->setPolicyVisibility(I)V
 
     .line 262
     :cond_10
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->nsBigTime:Lcom/android/systemui/statusbar/views/MiuiClock;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->nsBigTime:Lcom/android/systemui/statusbar/views/MiuiClock;
 
     .line 265
-    const-string v3, "bigTimeShow"
+    const-string v10, "bigTimeShow"
 
     .line 267
-    invoke-static {v2, v3}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v10}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
 
     .line 269
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
 
     .line 272
-    const-string/jumbo v3, "statusBarClockShow"
+    const-string/jumbo v10, "statusBarClockShow"
 
     .line 274
-    invoke-static {v2, v3}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v10}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
 
     .line 277
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
 
     .line 280
-    invoke-static {v2, v10}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
+    invoke-static {v3, v5}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logLoc(Landroid/view/View;Ljava/lang/String;)V
 
     .line 282
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->updateCommon()V
@@ -1567,452 +1553,444 @@
     invoke-virtual/range {p0 .. p0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->update()V
 
     .line 291
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
     .line 294
-    if-eqz v2, :cond_11
+    if-eqz v3, :cond_11
 
     .line 296
-    invoke-virtual {v2}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->getClockScale()F
+    invoke-virtual {v3}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->getClockScale()F
 
     .line 298
-    move-result v2
+    move-result v3
 
     .line 301
     goto :goto_9
 
     .line 302
     :cond_11
-    move v2, v1
+    move v3, v1
 
     .line 303
     :goto_9
-    int-to-float v3, v13
+    int-to-float v5, v6
 
     .line 304
-    sub-float/2addr v3, v2
+    sub-float/2addr v5, v3
 
     .line 305
-    iget v4, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
+    iget v10, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
 
     .line 306
-    mul-float v5, v3, v4
+    mul-float v11, v5, v10
 
     .line 308
-    add-float/2addr v5, v2
+    add-float/2addr v11, v3
 
     .line 310
-    invoke-static {v4}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->sinIn(F)F
+    invoke-static {v10}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->sinIn(F)F
 
     .line 311
-    move-result v4
+    move-result v10
 
     .line 314
-    mul-float/2addr v4, v3
+    mul-float/2addr v10, v5
 
     .line 315
-    add-float/2addr v4, v2
+    add-float/2addr v10, v3
 
     .line 316
-    iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startT:I
+    iget v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startT:I
 
     .line 317
-    iget v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endT:I
+    iget v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endT:I
 
     .line 319
-    iget v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
+    iget v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
 
     .line 321
-    invoke-static {v2, v3, v6}, Landroid/util/MathUtils;->lerp(IIF)F
+    invoke-static {v3, v5, v12}, Landroid/util/MathUtils;->lerp(IIF)F
 
     .line 323
-    move-result v2
+    move-result v3
 
     .line 326
-    iget-boolean v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
+    iget-boolean v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
 
     .line 327
-    if-eqz v3, :cond_12
+    if-eqz v5, :cond_12
 
     .line 329
-    iget v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
+    iget v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
 
     .line 331
-    iget v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
+    iget v11, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
 
     .line 333
-    iget v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
+    iget v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
 
     .line 335
-    invoke-static {v3, v5, v6}, Landroid/util/MathUtils;->lerp(IIF)F
+    invoke-static {v5, v11, v12}, Landroid/util/MathUtils;->lerp(IIF)F
 
     .line 337
-    move-result v3
+    move-result v5
 
     .line 340
     goto :goto_a
 
     .line 341
     :cond_12
-    iget v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
+    iget v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
 
     .line 342
-    iget v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startClockW:I
+    iget v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startClockW:I
 
     .line 344
-    add-int/2addr v3, v6
+    add-int/2addr v5, v12
 
     .line 346
-    iget v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
+    iget v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
 
     .line 347
-    iget v7, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endClockW:I
+    iget v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endClockW:I
 
     .line 349
-    add-int/2addr v6, v7
+    add-int/2addr v12, v13
 
     .line 351
-    iget v7, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
+    iget v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeExpansion:F
 
     .line 352
-    invoke-static {v3, v6, v7}, Landroid/util/MathUtils;->lerp(IIF)F
+    invoke-static {v5, v12, v13}, Landroid/util/MathUtils;->lerp(IIF)F
 
     .line 354
-    move-result v3
+    move-result v5
 
     .line 357
-    iget-object v6, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+    iget-object v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
     .line 358
-    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    invoke-static {v12}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 360
-    invoke-virtual {v6}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
+    invoke-virtual {v12}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
     .line 363
-    move-result v6
+    move-result v12
 
     .line 366
-    int-to-float v6, v6
+    int-to-float v12, v12
 
     .line 367
-    mul-float/2addr v6, v5
+    mul-float/2addr v12, v11
 
     .line 368
-    sub-float/2addr v3, v6
+    sub-float/2addr v5, v12
 
     .line 369
     :goto_a
-    iget-object v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iget-object v11, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 370
-    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 372
-    move-result-object v17
+    move-result-object v12
 
     .line 375
-    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iget-object v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 376
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 378
-    move-result-object v19
+    move-result-object v14
 
     .line 381
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    iget-object v15, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
     .line 382
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    invoke-static {v10}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 384
-    move-result-object v21
+    move-result-object v16
 
     .line 387
-    move-object/from16 v16, v5
+    filled-new-array/range {v11 .. v16}, [Ljava/lang/Object;
 
     .line 388
-    move-object/from16 v18, v3
-
-    .line 390
-    move-object/from16 v20, v2
-
-    .line 392
-    filled-new-array/range {v16 .. v21}, [Ljava/lang/Object;
-
-    .line 394
-    move-result-object v2
-
-    .line 397
-    invoke-interface {v15, v2}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
-
-    .line 398
-    goto :goto_b
-
-    .line 401
-    :cond_13
-    if-nez v2, :cond_14
-
-    .line 402
-    iget-boolean v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
-
-    .line 404
-    if-eqz v2, :cond_14
-
-    .line 406
-    iput-boolean v12, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
-
-    .line 408
-    :cond_14
-    :goto_b
-    sget-object v2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->EXPAND_FRACTION_EASE:Lmiuix/animation/utils/EaseManager$EaseStyle;
-
-    .line 410
-    iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
-
-    .line 412
-    if-nez v9, :cond_17
-
-    .line 414
-    if-nez v14, :cond_15
-
-    .line 416
-    move v12, v13
-
-    .line 418
-    :cond_15
-    if-eqz v12, :cond_16
-
-    .line 419
-    filled-new-array {v3}, [Lmiuix/animation/property/FloatProperty;
-
-    .line 421
     move-result-object v3
 
-    .line 424
-    invoke-interface {v15, v2, v3}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
+    .line 391
+    invoke-interface {v4, v3}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    .line 425
+    .line 392
+    goto :goto_b
+
+    .line 395
+    :cond_13
+    move v6, v13
+
+    .line 396
+    move v9, v14
+
+    .line 397
+    if-nez v3, :cond_14
+
+    .line 398
+    iget-boolean v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
+
+    .line 400
+    if-eqz v3, :cond_14
+
+    .line 402
+    iput-boolean v9, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->showing:Z
+
+    .line 404
+    :cond_14
+    :goto_b
+    sget-object v3, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->EXPAND_FRACTION_EASE:Lmiuix/animation/utils/EaseManager$EaseStyle;
+
+    .line 406
+    iget-object v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+
+    .line 408
+    if-nez v8, :cond_17
+
+    .line 410
+    if-nez v2, :cond_15
+
+    .line 412
+    move v14, v6
+
+    .line 414
     goto :goto_c
 
-    .line 428
+    .line 415
+    :cond_15
+    move v14, v9
+
+    .line 416
+    :goto_c
+    if-eqz v14, :cond_16
+
+    .line 417
+    filled-new-array {v5}, [Lmiuix/animation/property/FloatProperty;
+
+    .line 419
+    move-result-object v2
+
+    .line 422
+    invoke-interface {v4, v3, v2}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
+
+    .line 423
+    goto :goto_d
+
+    .line 426
     :cond_16
     sget-object v2, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->EXPAND_FLING_EASE:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
+    .line 427
+    filled-new-array {v5}, [Lmiuix/animation/property/FloatProperty;
+
     .line 429
-    filled-new-array {v3}, [Lmiuix/animation/property/FloatProperty;
-
-    .line 431
     move-result-object v3
 
-    .line 434
-    invoke-interface {v15, v2, v3}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
+    .line 432
+    invoke-interface {v4, v2, v3}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
 
-    .line 435
-    goto :goto_c
-
-    .line 438
-    :cond_17
-    filled-new-array {v3}, [Lmiuix/animation/property/FloatProperty;
-
-    .line 439
-    move-result-object v3
-
-    .line 442
-    invoke-interface {v15, v2, v3}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
-
-    .line 443
-    :goto_c
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
-
-    .line 446
-    if-eqz v2, :cond_18
-
-    .line 448
-    invoke-virtual {v2}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->getClockScale()F
-
-    .line 450
-    move-result v1
-
-    .line 453
-    :cond_18
-    int-to-float v2, v13
-
-    .line 454
-    sub-float/2addr v2, v1
-
-    .line 455
-    mul-float v3, v2, v8
-
-    .line 456
-    add-float/2addr v3, v1
-
-    .line 458
-    invoke-static/range {p1 .. p1}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->sinIn(F)F
-
-    .line 459
-    move-result v4
-
-    .line 462
-    mul-float/2addr v4, v2
-
-    .line 463
-    add-float/2addr v4, v1
-
-    .line 464
-    iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
-
-    .line 465
-    if-eqz v1, :cond_19
-
-    .line 467
-    iget v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
-
-    .line 469
-    iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
-
-    .line 471
-    invoke-static {v1, v2, v8}, Landroid/util/MathUtils;->lerp(IIF)F
-
-    .line 473
-    move-result v1
-
-    .line 476
+    .line 433
     goto :goto_d
 
-    .line 477
+    .line 436
+    :cond_17
+    filled-new-array {v5}, [Lmiuix/animation/property/FloatProperty;
+
+    .line 437
+    move-result-object v2
+
+    .line 440
+    invoke-interface {v4, v3, v2}, Lmiuix/animation/IStateStyle;->setEase(Lmiuix/animation/utils/EaseManager$EaseStyle;[Lmiuix/animation/property/FloatProperty;)Lmiuix/animation/IStateStyle;
+
+    .line 441
+    :goto_d
+    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
+
+    .line 444
+    if-eqz v2, :cond_18
+
+    .line 446
+    invoke-virtual {v2}, Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;->getClockScale()F
+
+    .line 448
+    move-result v1
+
+    .line 451
+    :cond_18
+    int-to-float v2, v6
+
+    .line 452
+    sub-float/2addr v2, v1
+
+    .line 453
+    mul-float v3, v2, v7
+
+    .line 454
+    add-float/2addr v3, v1
+
+    .line 456
+    invoke-static/range {p1 .. p1}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->sinIn(F)F
+
+    .line 457
+    move-result v5
+
+    .line 460
+    mul-float/2addr v5, v2
+
+    .line 461
+    add-float/2addr v5, v1
+
+    .line 462
+    iget-boolean v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->useLeft:Z
+
+    .line 463
+    if-eqz v1, :cond_19
+
+    .line 465
+    iget v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
+
+    .line 467
+    iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
+
+    .line 469
+    invoke-static {v1, v2, v7}, Landroid/util/MathUtils;->lerp(IIF)F
+
+    .line 471
+    move-result v1
+
+    .line 474
+    goto :goto_e
+
+    .line 475
     :cond_19
     iget v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startL:I
 
-    .line 478
+    .line 476
     iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startClockW:I
 
-    .line 480
+    .line 478
     add-int/2addr v1, v2
 
-    .line 482
+    .line 480
     iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endL:I
 
+    .line 481
+    iget v8, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endClockW:I
+
     .line 483
-    iget v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endClockW:I
+    add-int/2addr v2, v8
 
     .line 485
-    add-int/2addr v2, v5
+    invoke-static {v1, v2, v7}, Landroid/util/MathUtils;->lerp(IIF)F
 
-    .line 487
-    invoke-static {v1, v2, v8}, Landroid/util/MathUtils;->lerp(IIF)F
-
-    .line 488
+    .line 486
     move-result v1
 
-    .line 491
+    .line 489
     iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClock:Lcom/android/systemui/controlcenter/phone/widget/NotificationShadeFakeStatusBarClock;
 
-    .line 492
+    .line 490
     invoke-static {v2}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
-    .line 494
+    .line 492
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getMeasuredWidth()I
 
-    .line 497
+    .line 495
     move-result v2
 
-    .line 500
+    .line 498
     int-to-float v2, v2
 
-    .line 501
+    .line 499
     mul-float/2addr v2, v3
 
-    .line 502
+    .line 500
     sub-float/2addr v1, v2
 
-    .line 503
-    :goto_d
+    .line 501
+    :goto_e
     iget v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->startT:I
 
-    .line 504
+    .line 502
     iget v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->endT:I
 
-    .line 506
-    invoke-static {v2, v3, v8}, Landroid/util/MathUtils;->lerp(IIF)F
+    .line 504
+    invoke-static {v2, v3, v7}, Landroid/util/MathUtils;->lerp(IIF)F
 
-    .line 508
+    .line 506
     move-result v2
 
-    .line 511
+    .line 509
     iget-object v3, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 512
+    .line 510
     invoke-static/range {p1 .. p1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 514
-    move-result-object v17
+    .line 512
+    move-result-object v8
 
-    .line 517
-    iget-object v5, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    .line 515
+    iget-object v9, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transXProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 518
+    .line 516
     invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 520
-    move-result-object v19
+    .line 518
+    move-result-object v10
 
-    .line 523
-    iget-object v1, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    .line 521
+    iget-object v11, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->transYProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
 
-    .line 524
+    .line 522
     invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    .line 526
-    move-result-object v21
+    .line 524
+    move-result-object v12
 
-    .line 529
-    iget-object v2, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+    .line 527
+    iget-object v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->scaleProperty:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$scaleProperty$1;
+
+    .line 528
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     .line 530
-    invoke-static {v4}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+    move-result-object v14
 
-    .line 532
-    move-result-object v23
+    .line 533
+    iget-object v15, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->animConfig:Lmiuix/animation/base/AnimConfig;
 
-    .line 535
-    iget-object v4, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->animConfig:Lmiuix/animation/base/AnimConfig;
+    .line 534
+    move-object v7, v3
 
     .line 536
-    move-object/from16 v16, v3
+    filled-new-array/range {v7 .. v15}, [Ljava/lang/Object;
 
-    .line 538
-    move-object/from16 v18, v5
-
-    .line 540
-    move-object/from16 v20, v1
-
-    .line 542
-    move-object/from16 v22, v2
-
-    .line 544
-    move-object/from16 v24, v4
-
-    .line 546
-    filled-new-array/range {v16 .. v24}, [Ljava/lang/Object;
-
-    .line 548
+    .line 537
     move-result-object v1
 
-    .line 551
-    invoke-interface {v15, v1}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
+    .line 540
+    invoke-interface {v4, v1}, Lmiuix/animation/IStateStyle;->to([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    .line 552
-    iput-boolean v13, v0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimPending:Z
+    .line 541
+    invoke-virtual {v0, v6}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->setExpansionAnimRunning(Z)V
 
-    .line 555
+    .line 544
     return-void
-    .line 557
+    .line 547
 .end method
 
 .method public final setClockShow(Z)V
-    .locals 10
+    .locals 9
 
     .line 1
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
@@ -2028,13 +2006,13 @@
     iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
 
     .line 7
-    const-wide/16 v0, 0x1000
+    const-string v0, "fake-clockShow"
 
     .line 9
-    const-string v2, "fake-clockShow"
+    const-wide/16 v1, 0x1000
 
     .line 11
-    invoke-static {v0, v1, v2, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
+    invoke-static {v1, v2, v0, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
     .line 13
     iget-object v3, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->logger:Lcom/android/systemui/log/FakeStatusBarClockLogger;
@@ -2049,97 +2027,187 @@
     iget-boolean v6, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->tracking:Z
 
     .line 22
-    iget-boolean v7, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimPending:Z
+    iget-boolean v7, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
 
     .line 24
-    iget-boolean v8, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
+    iget-boolean v8, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
 
     .line 26
-    iget-boolean v9, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->clockShow:Z
+    invoke-virtual/range {v3 .. v8}, Lcom/android/systemui/log/FakeStatusBarClockLogger;->logStateChange(Ljava/lang/String;FZZZ)V
 
     .line 28
-    invoke-virtual/range {v3 .. v9}, Lcom/android/systemui/log/FakeStatusBarClockLogger;->logStateChange(Ljava/lang/String;FZZZZ)V
-
-    .line 30
     iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->shadeWindowController:Lcom/android/systemui/statusbar/NotificationShadeWindowController;
 
-    .line 33
+    .line 31
     check-cast p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
+    .line 33
+    iget-boolean v0, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mFakeClockShow:Z
+
     .line 35
-    iget-boolean v2, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mFakeClockShow:Z
+    if-ne p1, v0, :cond_1
 
     .line 37
-    if-ne p1, v2, :cond_1
-
-    .line 39
     goto :goto_0
 
-    .line 41
+    .line 39
     :cond_1
-    new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 42
+    .line 40
     const-string v3, "FakeStatusBarClockShow="
 
+    .line 42
+    invoke-direct {v0, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
     .line 44
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    .line 46
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    .line 47
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 49
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 50
+    move-result-object v0
 
-    .line 52
-    move-result-object v2
-
-    .line 55
+    .line 53
     const-string v3, "NotificationShadeWindowController"
 
-    .line 56
-    invoke-static {v3, v2}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
+    .line 54
+    invoke-static {v3, v0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
-    const-string v2, "fake-ClockShow"
+    .line 56
+    const-string v0, "fake-ClockShow"
+
+    .line 59
+    invoke-static {v1, v2, v0, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
 
     .line 61
-    invoke-static {v0, v1, v2, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
-
-    .line 63
     iput-boolean p1, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mFakeClockShow:Z
 
-    .line 66
+    .line 64
     iget-object p1, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mCurrentState:Lcom/android/systemui/shade/NotificationShadeWindowState;
 
-    .line 68
+    .line 66
     invoke-virtual {p0, p1}, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->apply(Lcom/android/systemui/shade/NotificationShadeWindowState;)V
 
-    .line 70
+    .line 68
     iget-object v0, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mBgBlurRadiusListener:Ljava/util/function/Consumer;
 
-    .line 73
+    .line 71
     iget p1, p1, Lcom/android/systemui/shade/NotificationShadeWindowState;->backgroundBlurRadius:I
 
-    .line 75
+    .line 73
     iget-boolean p0, p0, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mFakeClockShow:Z
 
-    .line 77
+    .line 75
     add-int/2addr p1, p0
 
-    .line 79
+    .line 77
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 80
+    .line 78
     move-result-object p0
 
-    .line 83
+    .line 81
     invoke-interface {v0, p0}, Ljava/util/function/Consumer;->accept(Ljava/lang/Object;)V
 
-    .line 84
+    .line 82
     :goto_0
     return-void
-    .line 87
+    .line 85
+.end method
+
+.method public final setExpansionAnimRunning(Z)V
+    .locals 3
+
+    .line 1
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
+
+    .line 2
+    if-ne v0, p1, :cond_0
+
+    .line 4
+    return-void
+
+    .line 6
+    :cond_0
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->expansionAnimRunning:Z
+
+    .line 7
+    const-wide/16 v0, 0x1000
+
+    .line 9
+    const-string v2, "fake-expansionAnimRunning"
+
+    .line 11
+    invoke-static {v0, v1, v2, p1}, Landroid/os/Trace;->traceCounter(JLjava/lang/String;I)V
+
+    .line 13
+    iget-object v0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->commandQueue:Lcom/android/systemui/statusbar/CommandQueue;
+
+    .line 16
+    const/4 v1, 0x0
+
+    .line 18
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/CommandQueue;->recomputeDisableFlags(I)V
+
+    .line 19
+    const/4 v0, 0x1
+
+    .line 22
+    if-nez p1, :cond_2
+
+    .line 23
+    iput v1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->drawCount:I
+
+    .line 25
+    iget-object p1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->statusBarClock:Landroid/widget/TextView;
+
+    .line 27
+    if-eqz p1, :cond_1
+
+    .line 29
+    invoke-virtual {p1}, Landroid/widget/TextView;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    .line 31
+    move-result-object p1
+
+    .line 34
+    if-eqz p1, :cond_1
+
+    .line 35
+    iget-object v1, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->onDrawListener:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$onDrawListener$1;
+
+    .line 37
+    invoke-virtual {p1, v1}, Landroid/view/ViewTreeObserver;->addOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
+
+    .line 39
+    :cond_1
+    new-instance p1, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;
+
+    .line 42
+    invoke-direct {p1, p0, v0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController$tracking$1;-><init>(Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;I)V
+
+    .line 44
+    const-wide/16 v0, 0x1f4
+
+    .line 47
+    iget-object p0, p0, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->uiHandler:Landroid/os/Handler;
+
+    .line 49
+    invoke-virtual {p0, p1, v0, v1}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 51
+    goto :goto_0
+
+    .line 54
+    :cond_2
+    invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->setClockShow(Z)V
+
+    .line 55
+    :goto_0
+    return-void
+    .line 58
 .end method
 
 .method public final setNsBigTime(Lcom/android/systemui/statusbar/views/MiuiClock;)V

@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/statusbar/phone/MiuiPhoneStatusBarView;
 .super Lcom/android/systemui/statusbar/phone/PhoneStatusBarView;
-.source "go/retraceme 623d608ac29d5d485928d38cc0294111d97b9fe221ea295c0bcc70248d1e5027"
+.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/miui/controlcenter/ControlCenterController$UseControlCenterChangeListener;
@@ -1774,7 +1774,7 @@
 .end method
 
 .method public final updateNotificationIconAreaInnnerParent()V
-    .locals 3
+    .locals 4
 
     .line 1
     iget-object v0, p0, Lcom/android/systemui/statusbar/phone/MiuiPhoneStatusBarView;->mNotificationIconAreaInner:Landroid/view/View;
@@ -1852,12 +1852,24 @@
     iget-object p0, p0, Lcom/android/systemui/statusbar/phone/MiuiPhoneStatusBarView;->mNotificationIconAreaInner:Landroid/view/View;
 
     .line 50
-    invoke-virtual {v0, p0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
+    new-instance v1, Landroid/view/ViewGroup$LayoutParams;
 
     .line 52
+    const/4 v2, -0x2
+
+    .line 54
+    const/4 v3, -0x1
+
+    .line 55
+    invoke-direct {v1, v2, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    .line 56
+    invoke-virtual {v0, p0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 59
     :cond_2
     return-void
-    .line 55
+    .line 62
 .end method
 
 .method public final updateResources()V

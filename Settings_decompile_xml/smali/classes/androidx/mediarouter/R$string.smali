@@ -4,6 +4,6 @@
 
 
 # static fields
-.field public static final mr_controller_collapse_group:I = 0x7f131873 # @string/mr_controller_collapse_group 'Collapse'
+.field public static final mr_controller_collapse_group:I = 0x7f131877 # @string/mr_controller_collapse_group 'Collapse'
 
-.field public static final mr_controller_expand_group:I = 0x7f131875 # @string/mr_controller_expand_group 'Expand'
+.field public static final mr_controller_expand_group:I = 0x7f131879 # @string/mr_controller_expand_group 'Expand'
