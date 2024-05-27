@@ -1,6 +1,6 @@
 .class public abstract Lcom/android/systemui/statusbar/notification/NotificationUtil;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # static fields
@@ -3495,29 +3495,207 @@
 
     .line 4
     :cond_0
-    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isFold:Z
+    invoke-static {p0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 5
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+    move-result v0
 
-    .line 7
-    invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+    .line 8
+    if-eqz v0, :cond_1
 
     .line 9
-    move-result-object p0
+    return-void
+
+    .line 11
+    :cond_1
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isFold:Z
 
     .line 12
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 14
+    invoke-virtual {p0}, Landroid/service/notification/StatusBarNotification;->getNotification()Landroid/app/Notification;
+
+    .line 16
+    move-result-object p0
+
+    .line 19
     iget-object p0, p0, Landroid/app/Notification;->extras:Landroid/os/Bundle;
 
-    .line 13
+    .line 20
     const-string v0, "miui.unimportant"
 
-    .line 15
+    .line 22
     invoke-virtual {p0, v0, p1}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 17
+    .line 24
     return-void
-    .line 20
+    .line 27
+.end method
+
+.method public static shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
+    .locals 5
+
+    .line 1
+    const-class v0, Lcom/android/systemui/statusbar/notification/collection/render/GroupMembershipManager;
+
+    .line 2
+    invoke-static {v0}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
+
+    .line 4
+    move-result-object v0
+
+    .line 7
+    check-cast v0, Lcom/android/systemui/statusbar/notification/collection/render/GroupMembershipManager;
+
+    .line 8
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 10
+    invoke-static {v1}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->isFoldEntrance(Lcom/android/systemui/statusbar/notification/ExpandedNotification;)Z
+
+    .line 12
+    move-result v1
+
+    .line 15
+    const/4 v2, 0x1
+
+    .line 16
+    if-nez v1, :cond_3
+
+    .line 17
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 19
+    invoke-static {v1}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->isFold(Lcom/android/systemui/statusbar/notification/ExpandedNotification;)Z
+
+    .line 21
+    move-result v1
+
+    .line 24
+    if-nez v1, :cond_3
+
+    .line 25
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 27
+    invoke-static {v1}, Lcom/android/systemui/media/controls/pipeline/MediaDataManagerKt;->isMediaNotification(Landroid/service/notification/StatusBarNotification;)Z
+
+    .line 29
+    move-result v1
+
+    .line 32
+    if-nez v1, :cond_3
+
+    .line 33
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 35
+    invoke-static {v1}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->canConvert2SystemMediaNotification(Landroid/service/notification/StatusBarNotification;)Z
+
+    .line 37
+    move-result v1
+
+    .line 40
+    if-nez v1, :cond_3
+
+    .line 41
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 43
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/ExpandedNotification;->isFocusNotification()Z
+
+    .line 45
+    move-result v1
+
+    .line 48
+    if-nez v1, :cond_3
+
+    .line 49
+    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
+
+    .line 51
+    invoke-virtual {v1}, Lcom/android/systemui/statusbar/notification/ExpandedNotification;->getPackageName()Ljava/lang/String;
+
+    .line 53
+    move-result-object v1
+
+    .line 56
+    const-string v3, "android"
+
+    .line 57
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 59
+    move-result v3
+
+    .line 62
+    const/4 v4, 0x0
+
+    .line 63
+    if-nez v3, :cond_1
+
+    .line 64
+    const-string v3, "com.android.systemui"
+
+    .line 66
+    invoke-virtual {v3, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    .line 68
+    move-result v1
+
+    .line 71
+    if-eqz v1, :cond_0
+
+    .line 72
+    goto :goto_0
+
+    .line 74
+    :cond_0
+    move v1, v4
+
+    .line 75
+    goto :goto_1
+
+    .line 76
+    :cond_1
+    :goto_0
+    move v1, v2
+
+    .line 77
+    :goto_1
+    if-nez v1, :cond_3
+
+    .line 78
+    invoke-static {p0, v0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->isEmptySummary(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Lcom/android/systemui/statusbar/notification/collection/render/GroupMembershipManager;)Z
+
+    .line 80
+    move-result v0
+
+    .line 83
+    if-nez v0, :cond_3
+
+    .line 84
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isSummaryWithChildren()Z
+
+    .line 86
+    move-result p0
+
+    .line 89
+    if-eqz p0, :cond_2
+
+    .line 90
+    goto :goto_2
+
+    .line 92
+    :cond_2
+    move v2, v4
+
+    .line 93
+    :cond_3
+    :goto_2
+    return v2
+    .line 94
 .end method
 
 .method public static shouldSubstituteSmallIcon(Lcom/android/systemui/statusbar/notification/ExpandedNotification;)Z

@@ -112,27 +112,27 @@
         }
     .end annotation
 
-    .line 1560
+    .line 1563
     iput-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-direct {p0}, Landroidx/recyclerview/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 1561
+    .line 1564
     invoke-virtual {p2}, Landroid/app/Activity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
-    .line 1562
+    .line 1565
     iput-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
-    .line 1563
+    .line 1566
     iput-object p4, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mAuthHelper:Lcom/android/settingslib/accounts/AuthenticatorHelper;
 
     const-string p3, "layout_inflater"
 
-    .line 1564
+    .line 1567
     invoke-virtual {p2, p3}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p3
@@ -141,10 +141,10 @@
 
     iput-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
-    .line 1565
+    .line 1568
     iput-boolean p5, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mIsFrequently:Z
 
-    .line 1566
+    .line 1569
     iget-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p3}, Lcom/android/settings/cust/MiHomeManager;->getInstance(Landroid/content/Context;)Lcom/android/settings/cust/MiHomeManager;
@@ -153,7 +153,7 @@
 
     iput-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mMiHomeManager:Lcom/android/settings/cust/MiHomeManager;
 
-    .line 1568
+    .line 1571
     invoke-virtual {p2}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object p3
@@ -166,14 +166,14 @@
 
     iput-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mLocale:Ljava/util/Locale;
 
-    .line 1570
+    .line 1573
     new-instance p3, Ljava/util/HashMap;
 
     invoke-direct {p3}, Ljava/util/HashMap;-><init>()V
 
     iput-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
-    .line 1571
+    .line 1574
     sget p4, Lcom/android/settings/R$id;->wifi_settings:I
 
     int-to-long p4, p4
@@ -190,7 +190,7 @@
 
     invoke-virtual {p3, p4, p5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1572
+    .line 1575
     iget-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p4, Lcom/android/settings/R$id;->bluetooth_settings:I
@@ -207,7 +207,7 @@
 
     invoke-virtual {p3, p4, p5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1573
+    .line 1576
     iget-object p3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p4, Lcom/android/settings/R$id;->wifi_tether_settings:I
@@ -224,17 +224,17 @@
 
     invoke-virtual {p3, p4, p5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1574
+    .line 1577
     sget-boolean p3, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz p3, :cond_0
 
-    .line 1575
+    .line 1578
     new-instance p3, Lcom/android/settings/accounts/XiaomiAccountStatusController;
 
     invoke-direct {p3, p2, v0}, Lcom/android/settings/accounts/XiaomiAccountStatusController;-><init>(Landroid/content/Context;Landroid/widget/TextView;)V
 
-    .line 1576
+    .line 1579
     iget-object p4, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p5, Lcom/android/settings/R$id;->micloud_settings:I
@@ -247,7 +247,7 @@
 
     invoke-virtual {p4, p5, p3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1577
+    .line 1580
     invoke-virtual {p1}, Landroidx/activity/ComponentActivity;->getLifecycle()Landroidx/lifecycle/Lifecycle;
 
     move-result-object p4
@@ -262,7 +262,7 @@
 
     goto :goto_0
 
-    .line 1579
+    .line 1582
     :cond_0
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
@@ -280,7 +280,7 @@
 
     invoke-virtual {p1, p3, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1581
+    .line 1584
     :cond_1
     :goto_0
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
@@ -299,7 +299,7 @@
 
     invoke-virtual {p1, p3, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1582
+    .line 1585
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p3, Lcom/android/settings/R$id;->my_device:I
@@ -316,7 +316,7 @@
 
     invoke-virtual {p1, p3, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1583
+    .line 1586
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p3, Lcom/android/settings/R$id;->system_apps_updater:I
@@ -335,7 +335,7 @@
 
     invoke-virtual {p1, p3, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1584
+    .line 1587
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     sget p3, Lcom/android/settings/R$id;->msim_settings:I
@@ -352,7 +352,7 @@
 
     invoke-virtual {p1, p3, p4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1585
+    .line 1588
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p1}, Lcom/android/settings/device/MiuiAboutPhoneUtils;->getInstance(Landroid/content/Context;)Lcom/android/settings/device/MiuiAboutPhoneUtils;
@@ -371,7 +371,7 @@
 .method private getHeaderType(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)I
     .locals 4
 
-    .line 1265
+    .line 1268
     iget-object v0, p1, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->fragment:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -384,7 +384,7 @@
 
     return p0
 
-    .line 1267
+    .line 1270
     :cond_0
     iget-wide v0, p1, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -400,7 +400,7 @@
 
     return p0
 
-    .line 1269
+    .line 1272
     :cond_1
     sget v2, Lcom/android/settings/R$id;->mi_account_settings:I
 
@@ -414,7 +414,7 @@
 
     return p0
 
-    .line 1271
+    .line 1274
     :cond_2
     invoke-virtual {p0, v0, v1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->isWirelessHeader(J)Z
 
@@ -426,7 +426,7 @@
 
     return p0
 
-    .line 1273
+    .line 1276
     :cond_3
     iget-wide p0, p1, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -451,7 +451,7 @@
 .method private isAdapterVerticalSummary(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)Z
     .locals 3
 
-    .line 1354
+    .line 1357
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     invoke-static {p0}, Lcom/android/settings/MiuiSettings;->isDeviceAdapterVerticalSummary(Landroid/content/Context;)Z
@@ -462,7 +462,7 @@
 
     if-eqz p0, :cond_1
 
-    .line 1355
+    .line 1358
     iget-wide p0, p1, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
     sget v1, Lcom/android/settings/R$id;->wifi_settings:I
@@ -495,7 +495,7 @@
 
     return-void
 
-    .line 1664
+    .line 1667
     :cond_0
     iget-wide v0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -519,7 +519,7 @@
 
     goto :goto_1
 
-    .line 1669
+    .line 1672
     :cond_1
     sget p0, Lcom/android/settings/R$id;->msim_settings:I
 
@@ -538,7 +538,7 @@
 
     if-eqz p0, :cond_5
 
-    .line 1670
+    .line 1673
     sget p0, Lcom/android/settings/R$id;->mobile_network_settings:I
 
     int-to-long v4, p0
@@ -549,41 +549,41 @@
 
     goto :goto_0
 
-    .line 1676
+    .line 1679
     :cond_3
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
     if-eqz p0, :cond_4
 
-    .line 1677
+    .line 1680
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 1679
+    .line 1682
     :cond_4
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     if-eqz p0, :cond_7
 
-    .line 1680
+    .line 1683
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_2
 
-    .line 1671
+    .line 1674
     :cond_5
     :goto_0
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 1672
+    .line 1675
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
     goto :goto_2
 
-    .line 1665
+    .line 1668
     :cond_6
     :goto_1
     iget-object v0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
@@ -592,14 +592,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 1666
+    .line 1669
     invoke-direct {p0, p2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->isAdapterVerticalSummary(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)Z
 
     move-result p0
 
     if-eqz p0, :cond_7
 
-    .line 1667
+    .line 1670
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {p0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
@@ -616,7 +616,7 @@
 
     return-void
 
-    .line 1486
+    .line 1489
     :cond_0
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
@@ -626,7 +626,7 @@
 
     move-result v0
 
-    .line 1489
+    .line 1492
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v1}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmAccountIconSize(Lcom/android/settings/MiuiSettings;)I
@@ -643,7 +643,7 @@
 
     if-nez v1, :cond_3
 
-    .line 1490
+    .line 1493
     :cond_1
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
@@ -655,7 +655,7 @@
 
     if-eqz v1, :cond_2
 
-    .line 1492
+    .line 1495
     iget-object v2, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -664,7 +664,7 @@
 
     invoke-static {v2, v1}, Lcom/android/settings/MiuiSettings;->-$$Nest$fputmAccountIconSize(Lcom/android/settings/MiuiSettings;I)V
 
-    .line 1494
+    .line 1497
     :cond_2
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -682,7 +682,7 @@
 
     invoke-static {v1, v2}, Lcom/android/settings/MiuiSettings;->-$$Nest$fputmNormalIconSize(Lcom/android/settings/MiuiSettings;I)V
 
-    .line 1497
+    .line 1500
     :cond_3
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -700,7 +700,7 @@
 
     div-float/2addr v1, v3
 
-    .line 1498
+    .line 1501
     iget-object v4, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v4}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmNormalIconSize(Lcom/android/settings/MiuiSettings;)I
@@ -721,7 +721,7 @@
 
     sub-int/2addr v3, v1
 
-    .line 1502
+    .line 1505
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     const/high16 v4, 0x41800000    # 16.0f
@@ -734,7 +734,7 @@
 
     sub-int/2addr v2, v1
 
-    .line 1505
+    .line 1508
     iget-wide v4, p3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
     sget p3, Lcom/android/settings/R$id;->mi_account_settings:I
@@ -747,12 +747,12 @@
 
     if-nez p3, :cond_4
 
-    .line 1506
+    .line 1509
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v3, v1, v2, v1}, Landroid/widget/ImageView;->setPaddingRelative(IIII)V
 
-    .line 1507
+    .line 1510
     invoke-virtual {p2}, Landroid/view/View;->getPaddingTop()I
 
     move-result p0
@@ -765,13 +765,13 @@
 
     goto :goto_0
 
-    .line 1509
+    .line 1512
     :cond_4
     iget-object p1, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p1, v1, v1, p0, v1}, Landroid/widget/ImageView;->setPaddingRelative(IIII)V
 
-    .line 1510
+    .line 1513
     invoke-virtual {p2}, Landroid/view/View;->getPaddingTop()I
 
     move-result p0
@@ -793,7 +793,7 @@
 
     return-void
 
-    .line 1649
+    .line 1652
     :cond_0
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
@@ -803,7 +803,7 @@
 
     if-eqz p0, :cond_2
 
-    .line 1650
+    .line 1653
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object v2
@@ -824,13 +824,13 @@
 
     invoke-virtual {p0, v2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 1652
+    .line 1655
     :cond_2
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
     if-eqz p0, :cond_4
 
-    .line 1653
+    .line 1656
     invoke-virtual {p0}, Landroid/widget/TextView;->getTextColors()Landroid/content/res/ColorStateList;
 
     move-result-object v2
@@ -851,7 +851,7 @@
 
     invoke-virtual {p0, v2}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    .line 1655
+    .line 1658
     :cond_4
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -864,7 +864,7 @@
     :cond_5
     move v0, v1
 
-    .line 1656
+    .line 1659
     :goto_2
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageAlpha(I)V
 
@@ -877,7 +877,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 1590
+    .line 1593
     sget-boolean v0, Lcom/android/settings/utils/TabletUtils;->IS_TABLET:Z
 
     if-nez v0, :cond_0
@@ -892,7 +892,7 @@
 
     goto :goto_0
 
-    .line 1593
+    .line 1596
     :cond_0
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -904,7 +904,7 @@
 
     if-ne v0, p2, :cond_2
 
-    .line 1594
+    .line 1597
     iget-object p2, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {p2}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSelectedView(Lcom/android/settings/MiuiSettings;)Landroid/view/View;
@@ -913,7 +913,7 @@
 
     if-eqz p2, :cond_1
 
-    .line 1595
+    .line 1598
     iget-object p2, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {p2}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSelectedView(Lcom/android/settings/MiuiSettings;)Landroid/view/View;
@@ -922,7 +922,7 @@
 
     invoke-virtual {p2, v1}, Landroid/view/View;->setActivated(Z)V
 
-    .line 1597
+    .line 1600
     :cond_1
     iget-object p2, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -930,7 +930,7 @@
 
     invoke-static {p2, p1}, Lcom/android/settings/MiuiSettings;->-$$Nest$fputmSelectedView(Lcom/android/settings/MiuiSettings;Landroid/view/View;)V
 
-    .line 1598
+    .line 1601
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {p1}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSelectedView(Lcom/android/settings/MiuiSettings;)Landroid/view/View;
@@ -941,7 +941,7 @@
 
     invoke-virtual {p1, p2}, Landroid/view/View;->setActivated(Z)V
 
-    .line 1600
+    .line 1603
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {p1}, Landroid/app/Activity;->isInMultiWindowMode()Z
@@ -958,7 +958,7 @@
 
     if-eqz p1, :cond_3
 
-    .line 1601
+    .line 1604
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {p0}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSelectedView(Lcom/android/settings/MiuiSettings;)Landroid/view/View;
@@ -969,7 +969,7 @@
 
     goto :goto_0
 
-    .line 1604
+    .line 1607
     :cond_2
     iget-object p0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -983,7 +983,7 @@
 .method private updateAdminDisallowItem(IZ)V
     .locals 2
 
-    .line 1256
+    .line 1259
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -996,12 +996,12 @@
 
     if-nez v0, :cond_0
 
-    .line 1258
+    .line 1261
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1260
+    .line 1263
     :cond_0
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
@@ -1013,7 +1013,7 @@
 
     iput-object v0, v1, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->extras:Landroid/os/Bundle;
 
-    .line 1261
+    .line 1264
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1034,17 +1034,17 @@
 .method private updateAdminDisallowedConfig(Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter;)V
     .locals 7
 
-    .line 1233
+    .line 1236
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v1, "no_config_mobile_networks"
 
-    .line 1234
+    .line 1237
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
 
-    .line 1233
+    .line 1236
     invoke-static {v0, v1, v2}, Lcom/android/settingslib/RestrictedLockUtilsInternal;->checkIfRestrictionEnforced(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
 
     move-result-object v0
@@ -1062,18 +1062,18 @@
     :cond_0
     move v0, v2
 
-    .line 1235
+    .line 1238
     :goto_0
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v4, "no_config_tethering"
 
-    .line 1236
+    .line 1239
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v5
 
-    .line 1235
+    .line 1238
     invoke-static {v3, v4, v5}, Lcom/android/settingslib/RestrictedLockUtilsInternal;->checkIfRestrictionEnforced(Landroid/content/Context;Ljava/lang/String;I)Lcom/android/settingslib/RestrictedLockUtils$EnforcedAdmin;
 
     move-result-object v3
@@ -1085,7 +1085,7 @@
     :cond_1
     move v1, v2
 
-    .line 1237
+    .line 1240
     :goto_1
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
@@ -1101,7 +1101,7 @@
 
     goto :goto_4
 
-    .line 1240
+    .line 1243
     :cond_2
     :goto_2
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
@@ -1112,7 +1112,7 @@
 
     if-ge v2, v3, :cond_6
 
-    .line 1241
+    .line 1244
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     invoke-interface {v3, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1125,7 +1125,7 @@
 
     goto :goto_3
 
-    .line 1245
+    .line 1248
     :cond_3
     iget-wide v3, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -1137,15 +1137,15 @@
 
     if-nez v5, :cond_4
 
-    .line 1246
+    .line 1249
     invoke-direct {p0, v2, v0}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->updateAdminDisallowItem(IZ)V
 
-    .line 1247
+    .line 1250
     invoke-virtual {p1, v2}, Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter;->updateItem(I)V
 
     goto :goto_3
 
-    .line 1248
+    .line 1251
     :cond_4
     sget v5, Lcom/android/settings/R$id;->wifi_tether_settings:I
 
@@ -1155,10 +1155,10 @@
 
     if-nez v3, :cond_5
 
-    .line 1249
+    .line 1252
     invoke-direct {p0, v2, v1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->updateAdminDisallowItem(IZ)V
 
-    .line 1250
+    .line 1253
     invoke-virtual {p1, v2}, Lcom/android/settings/MiuiSettings$ProxyHeaderViewAdapter;->updateItem(I)V
 
     :cond_5
@@ -1177,7 +1177,7 @@
 .method public getItem(I)Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;
     .locals 0
 
-    .line 1526
+    .line 1529
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     invoke-interface {p0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -1192,12 +1192,12 @@
 .method public getItemCount()I
     .locals 0
 
-    .line 1545
+    .line 1548
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     if-eqz p0, :cond_0
 
-    .line 1546
+    .line 1549
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -1222,12 +1222,12 @@
 .method public getItemViewType(I)I
     .locals 0
 
-    .line 1516
+    .line 1519
     invoke-virtual {p0, p1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->getItem(I)Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;
 
     move-result-object p1
 
-    .line 1517
+    .line 1520
     invoke-direct {p0, p1}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->getHeaderType(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)I
 
     move-result p0
@@ -1238,14 +1238,14 @@
 .method public isWirelessHeader(J)Z
     .locals 0
 
-    .line 1281
+    .line 1284
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
     move-result-object p0
 
-    .line 1282
+    .line 1285
     invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object p1
@@ -1260,7 +1260,7 @@
 .method public bridge synthetic onBindViewHolder(Landroidx/recyclerview/widget/RecyclerView$ViewHolder;I)V
     .locals 0
 
-    .line 1208
+    .line 1211
     check-cast p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->onBindViewHolder(Lcom/android/settings/MiuiSettings$HeaderViewHolder;I)V
@@ -1279,7 +1279,7 @@
 
     if-ltz v2, :cond_14
 
-    .line 1362
+    .line 1365
     iget-object v3, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mHeaders:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -1290,18 +1290,18 @@
 
     goto/16 :goto_6
 
-    .line 1365
+    .line 1368
     :cond_0
     invoke-virtual {v0, v2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->getItem(I)Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;
 
     move-result-object v3
 
-    .line 1366
+    .line 1369
     invoke-direct {v0, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->getHeaderType(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)I
 
     move-result v4
 
-    .line 1367
+    .line 1370
     iget-object v5, v1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const/16 v6, 0x8
@@ -1336,13 +1336,13 @@
 
     goto/16 :goto_5
 
-    .line 1390
+    .line 1393
     :cond_1
     iget-object v12, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v12, v11, v11, v11, v11}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 1391
+    .line 1394
     iget-object v12, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     iget-wide v13, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
@@ -1359,19 +1359,19 @@
 
     if-eqz v12, :cond_3
 
-    .line 1393
+    .line 1396
     invoke-direct {v0, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->isAdapterVerticalSummary(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)Z
 
     move-result v13
 
     if-eqz v13, :cond_2
 
-    .line 1394
+    .line 1397
     iget-object v13, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v12, v13}, Lcom/android/settings/BaseSettingsController;->setStatusView(Landroid/widget/TextView;)V
 
-    .line 1395
+    .line 1398
     iget-object v12, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     sget v13, Lcom/android/settings/R$style;->Miuix_AppCompat_TextAppearance_PreferenceRight:I
@@ -1380,18 +1380,18 @@
 
     goto :goto_0
 
-    .line 1397
+    .line 1400
     :cond_2
     iget-object v13, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v12, v13}, Lcom/android/settings/BaseSettingsController;->setStatusView(Landroid/widget/TextView;)V
 
-    .line 1398
+    .line 1401
     iget-object v13, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v13, v12}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 1402
+    .line 1405
     :cond_3
     :goto_0
     iget-object v12, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -1400,7 +1400,7 @@
 
     move-result-object v12
 
-    .line 1403
+    .line 1406
     iget-object v13, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v13}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -1419,14 +1419,14 @@
 
     if-eqz v13, :cond_4
 
-    .line 1404
+    .line 1407
     iget-object v13, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->intent:Landroid/content/Intent;
 
     invoke-virtual {v12, v13, v8}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v13
 
-    .line 1405
+    .line 1408
     iget-object v14, v13, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v14, v14, Landroid/content/pm/ActivityInfo;->applicationInfo:Landroid/content/pm/ApplicationInfo;
@@ -1441,7 +1441,7 @@
 
     move-result-object v10
 
-    .line 1406
+    .line 1409
     iget-object v13, v13, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     invoke-virtual {v13, v12}, Landroid/content/pm/ActivityInfo;->loadLabel(Landroid/content/pm/PackageManager;)Ljava/lang/CharSequence;
@@ -1450,7 +1450,7 @@
 
     iput-object v12, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->title:Ljava/lang/CharSequence;
 
-    .line 1407
+    .line 1410
     iget-object v12, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v12}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -1471,7 +1471,7 @@
 
     iput v10, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->iconRes:I
 
-    .line 1409
+    .line 1412
     :cond_4
     iget-wide v12, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -1491,12 +1491,12 @@
 
     if-ne v10, v9, :cond_5
 
-    .line 1410
+    .line 1413
     iget-object v10, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v10, v2}, Lcom/android/settings/MiuiSettings;->-$$Nest$fputmCurrentSelectedHeaderIndex(Lcom/android/settings/MiuiSettings;I)V
 
-    .line 1413
+    .line 1416
     :cond_5
     iget-wide v12, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -1508,7 +1508,7 @@
 
     if-nez v10, :cond_7
 
-    .line 1414
+    .line 1417
     iget-object v10, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1521,7 +1521,7 @@
 
     check-cast v10, Lcom/android/settings/BaseSettingsController;
 
-    .line 1415
+    .line 1418
     iget-object v11, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v11}, Landroid/app/Activity;->getContentResolver()Landroid/content/ContentResolver;
@@ -1534,7 +1534,7 @@
 
     move-result v11
 
-    .line 1417
+    .line 1420
     iget-object v12, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v12}, Lcom/android/settings/device/UpdateBroadcastManager;->getAppsAutoUpdateSuperscript(Landroid/content/Context;)I
@@ -1543,7 +1543,7 @@
 
     add-int/2addr v11, v12
 
-    .line 1418
+    .line 1421
     iget-object v12, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     if-lez v11, :cond_6
@@ -1558,7 +1558,7 @@
     :goto_1
     invoke-virtual {v12, v13}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1419
+    .line 1422
     iget-object v12, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     iget-object v13, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mLocale:Ljava/util/Locale;
@@ -1575,33 +1575,33 @@
 
     invoke-virtual {v12, v11}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1420
+    .line 1423
     iget-object v11, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     sget v12, Lcom/android/settings/R$drawable;->tv_shape_circle:I
 
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 1421
+    .line 1424
     iget-object v11, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     const/16 v12, 0x11
 
     invoke-virtual {v11, v12}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 1422
+    .line 1425
     iget-object v11, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v11, v9}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 1423
+    .line 1426
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     const/high16 v11, 0x41400000    # 12.0f
 
     invoke-virtual {v9, v7, v11}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 1424
+    .line 1427
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     const-string/jumbo v11, "miui-light"
@@ -1612,30 +1612,30 @@
 
     invoke-virtual {v9, v11}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 1425
+    .line 1428
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v10, v9}, Lcom/android/settings/BaseSettingsController;->setStatusView(Landroid/widget/TextView;)V
 
     goto :goto_2
 
-    .line 1426
+    .line 1429
     :cond_7
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     if-eqz v9, :cond_9
 
-    .line 1427
+    .line 1430
     invoke-virtual {v9, v11}, Landroid/widget/TextView;->setBackground(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1428
+    .line 1431
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     const v10, 0x800005
 
     invoke-virtual {v9, v10}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 1429
+    .line 1432
     iget-object v9, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     iget-wide v10, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
@@ -1652,33 +1652,33 @@
 
     if-eqz v9, :cond_9
 
-    .line 1431
+    .line 1434
     invoke-direct {v0, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->isAdapterVerticalSummary(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)Z
 
     move-result v10
 
     if-eqz v10, :cond_8
 
-    .line 1432
+    .line 1435
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v10, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1433
+    .line 1436
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     sget v11, Lcom/android/settings/R$style;->Miuix_AppCompat_TextAppearance_PreferenceRight:I
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    .line 1434
+    .line 1437
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v9, v10}, Lcom/android/settings/BaseSettingsController;->setStatusView(Landroid/widget/TextView;)V
 
     goto :goto_2
 
-    .line 1436
+    .line 1439
     :cond_8
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
@@ -1686,17 +1686,17 @@
 
     invoke-virtual {v10, v11}, Landroid/widget/TextView;->setTextAppearance(I)V
 
-    .line 1437
+    .line 1440
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v10, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1438
+    .line 1441
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v9, v10}, Lcom/android/settings/BaseSettingsController;->setStatusView(Landroid/widget/TextView;)V
 
-    .line 1444
+    .line 1447
     :cond_9
     :goto_2
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
@@ -1713,7 +1713,7 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1445
+    .line 1448
     iget-object v9, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v9}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -1724,32 +1724,32 @@
 
     move-result-object v9
 
-    .line 1446
+    .line 1449
     invoke-static {v9}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v10
 
     if-nez v10, :cond_a
 
-    .line 1447
+    .line 1450
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v10, v8}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1448
+    .line 1451
     iget-object v10, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v10, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_3
 
-    .line 1450
+    .line 1453
     :cond_a
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1452
+    .line 1455
     :goto_3
     invoke-direct {v0, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->isAdapterVerticalSummary(Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)Z
 
@@ -1757,12 +1757,12 @@
 
     if-eqz v9, :cond_b
 
-    .line 1453
+    .line 1456
     iget-object v9, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
     invoke-virtual {v9, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1454
+    .line 1457
     iget-object v6, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->summary:Landroid/widget/TextView;
 
     invoke-virtual {v6, v8}, Landroid/widget/TextView;->setVisibility(I)V
@@ -1772,7 +1772,7 @@
 
     if-ne v4, v6, :cond_c
 
-    .line 1457
+    .line 1460
     iget-object v4, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     iget-wide v9, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
@@ -1787,7 +1787,7 @@
 
     check-cast v4, Lcom/android/settings/BaseSettingsController;
 
-    .line 1458
+    .line 1461
     check-cast v4, Lcom/android/settings/device/DeviceStatusController;
 
     iget-object v6, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
@@ -1796,7 +1796,7 @@
 
     invoke-virtual {v4, v6, v9}, Lcom/android/settings/device/DeviceStatusController;->setUpTextView(Landroid/widget/TextView;Landroid/widget/ImageView;)V
 
-    .line 1460
+    .line 1463
     :cond_c
     iget-wide v9, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -1808,7 +1808,7 @@
 
     if-nez v4, :cond_d
 
-    .line 1461
+    .line 1464
     iget-object v4, v0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-static {v9, v10}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1823,7 +1823,7 @@
 
     if-eqz v4, :cond_d
 
-    .line 1463
+    .line 1466
     check-cast v4, Lcom/android/settings/accounts/XiaomiAccountInfoController;
 
     iget-object v6, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
@@ -1834,16 +1834,16 @@
 
     iget-object v11, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->value:Landroid/widget/TextView;
 
-    .line 1464
+    .line 1467
     invoke-virtual {v4, v6, v9, v10, v11}, Lcom/android/settings/accounts/XiaomiAccountInfoController;->setUpTextView(Landroid/widget/ImageView;Landroid/widget/TextView;Landroid/widget/TextView;Landroid/widget/TextView;)V
 
-    .line 1467
+    .line 1470
     :cond_d
     invoke-direct {v0, v1, v5, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setExtraPadding(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Landroid/view/View;Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)V
 
     goto :goto_5
 
-    .line 1370
+    .line 1373
     :cond_e
     iget-object v4, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
@@ -1859,7 +1859,7 @@
 
     invoke-virtual {v4, v9}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1371
+    .line 1374
     iget-object v4, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {v4}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
@@ -1872,7 +1872,7 @@
 
     if-eqz v4, :cond_f
 
-    .line 1372
+    .line 1375
     iget-object v4, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
     invoke-virtual {v4, v6}, Landroid/widget/TextView;->setVisibility(I)V
@@ -1881,17 +1881,17 @@
 
     const/4 v4, 0x4
 
-    .line 1374
+    .line 1377
     invoke-virtual {v5, v4}, Landroid/view/View;->setImportantForAccessibility(I)V
 
-    .line 1375
+    .line 1378
     sget v4, Lcom/android/settings/R$drawable;->settings_preference_category_bg_no_title:I
 
     invoke-virtual {v5, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
     goto :goto_5
 
-    .line 1378
+    .line 1381
     :cond_f
     iget-object v4, v1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->title:Landroid/widget/TextView;
 
@@ -1901,31 +1901,31 @@
 
     if-nez v2, :cond_10
 
-    .line 1382
+    .line 1385
     sget v4, Lcom/android/settings/R$drawable;->settings_preference_category_bg_first:I
 
     goto :goto_4
 
-    .line 1383
+    .line 1386
     :cond_10
     sget v4, Lcom/android/settings/R$drawable;->settings_preference_category_bg:I
 
-    .line 1381
+    .line 1384
     :goto_4
     invoke-virtual {v5, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 1470
+    .line 1473
     :cond_11
     :goto_5
     invoke-direct/range {p0 .. p2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setSelectedHeaderView(Lcom/android/settings/MiuiSettings$HeaderViewHolder;I)V
 
-    .line 1471
+    .line 1474
     invoke-virtual {v0, v1, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setIcon(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)V
 
-    .line 1472
+    .line 1475
     invoke-direct {v0, v1, v3}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setEnable(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;)V
 
-    .line 1473
+    .line 1476
     iget-object v4, v3, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->extras:Landroid/os/Bundle;
 
     if-eqz v4, :cond_12
@@ -1943,10 +1943,10 @@
     :cond_12
     if-eqz v8, :cond_13
 
-    .line 1475
+    .line 1478
     invoke-direct {v0, v1, v7}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setRestrictionEnforced(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Z)V
 
-    .line 1477
+    .line 1480
     :cond_13
     invoke-virtual {v0, v1, v3, v2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->setClick(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;I)V
 
@@ -1958,7 +1958,7 @@
 .method public bridge synthetic onCreateViewHolder(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/RecyclerView$ViewHolder;
     .locals 0
 
-    .line 1208
+    .line 1211
     invoke-virtual {p0, p1, p2}, Lcom/android/settings/MiuiSettings$HeaderAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lcom/android/settings/MiuiSettings$HeaderViewHolder;
 
     move-result-object p0
@@ -1995,7 +1995,7 @@
 
     if-eq p2, v3, :cond_2
 
-    .line 1331
+    .line 1334
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v3}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
@@ -2004,7 +2004,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 1332
+    .line 1335
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     sget v4, Lcom/android/settings/R$layout;->miuix_preference_navigation_item:I
@@ -2015,7 +2015,7 @@
 
     goto :goto_0
 
-    .line 1334
+    .line 1337
     :cond_0
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -2025,7 +2025,7 @@
 
     move-result-object v0
 
-    .line 1336
+    .line 1339
     :goto_0
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2035,7 +2035,7 @@
 
     if-eqz v1, :cond_9
 
-    .line 1338
+    .line 1341
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2044,7 +2044,7 @@
 
     move-result-object p1
 
-    .line 1339
+    .line 1342
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v3}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
@@ -2053,20 +2053,20 @@
 
     if-eqz v3, :cond_1
 
-    .line 1340
+    .line 1343
     sget v3, Lcom/android/settings/R$layout;->miuix_preference_widget_navigation_item_text:I
 
     invoke-virtual {p1, v3, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     goto/16 :goto_4
 
-    .line 1342
+    .line 1345
     :cond_1
     sget v3, Lcom/android/settings/R$layout;->miuix_preference_widget_text:I
 
     invoke-virtual {p1, v3, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 1343
+    .line 1346
     sget p1, Lcom/android/settings/R$id;->text_right:I
 
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -2075,7 +2075,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 1344
+    .line 1347
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -2092,7 +2092,7 @@
 
     goto/16 :goto_4
 
-    .line 1297
+    .line 1300
     :cond_2
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -2102,7 +2102,7 @@
 
     if-eqz v3, :cond_3
 
-    .line 1298
+    .line 1301
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
     sget v4, Lcom/android/settings/R$layout;->miuix_preference_navigation_item:I
@@ -2113,7 +2113,7 @@
 
     goto :goto_1
 
-    .line 1300
+    .line 1303
     :cond_3
     iget-object v3, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -2123,7 +2123,7 @@
 
     move-result-object v3
 
-    .line 1302
+    .line 1305
     :goto_1
     invoke-virtual {v3, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -2133,7 +2133,7 @@
 
     if-eqz v1, :cond_5
 
-    .line 1304
+    .line 1307
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object p1
@@ -2142,7 +2142,7 @@
 
     move-result-object p1
 
-    .line 1305
+    .line 1308
     iget-object v4, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v4}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
@@ -2151,20 +2151,20 @@
 
     if-eqz v4, :cond_4
 
-    .line 1306
+    .line 1309
     sget v4, Lcom/android/settings/R$layout;->miuix_preference_widget_navigation_item_text:I
 
     invoke-virtual {p1, v4, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     goto :goto_2
 
-    .line 1308
+    .line 1311
     :cond_4
     sget v4, Lcom/android/settings/R$layout;->miuix_preference_widget_text:I
 
     invoke-virtual {p1, v4, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 1309
+    .line 1312
     sget p1, Lcom/android/settings/R$id;->text_right:I
 
     invoke-virtual {v1, p1}, Landroid/view/ViewGroup;->findViewById(I)Landroid/view/View;
@@ -2173,7 +2173,7 @@
 
     check-cast p1, Landroid/widget/TextView;
 
-    .line 1310
+    .line 1313
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
@@ -2188,7 +2188,7 @@
 
     invoke-virtual {p1, v1}, Landroid/widget/TextView;->setMaxWidth(I)V
 
-    .line 1313
+    .line 1316
     :cond_5
     :goto_2
     sget p1, Lcom/android/settings/R$id;->arrow_right:I
@@ -2199,10 +2199,10 @@
 
     if-eqz p1, :cond_6
 
-    .line 1315
+    .line 1318
     invoke-virtual {p1, v0}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1318
+    .line 1321
     :cond_6
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
@@ -2212,7 +2212,7 @@
 
     if-nez p1, :cond_7
 
-    .line 1319
+    .line 1322
     filled-new-array {v3}, [Landroid/view/View;
 
     move-result-object p1
@@ -2235,7 +2235,7 @@
 
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
-    .line 1320
+    .line 1323
     invoke-virtual {v1}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -2256,30 +2256,30 @@
 
     move-result-object p1
 
-    .line 1321
+    .line 1324
     invoke-interface {p1, v2}, Lmiuix/animation/ITouchStyle;->setTintMode(I)Lmiuix/animation/ITouchStyle;
 
     move-result-object p1
 
     new-array v0, v0, [Lmiuix/animation/base/AnimConfig;
 
-    .line 1322
+    .line 1325
     invoke-interface {p1, v3, v0}, Lmiuix/animation/ITouchStyle;->handleTouchOf(Landroid/view/View;[Lmiuix/animation/base/AnimConfig;)V
 
     goto :goto_3
 
-    .line 1324
+    .line 1327
     :cond_7
     iget-object p1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     sget v0, Lcom/android/settings/R$attr;->navigationPreferenceItemForeground:I
 
-    .line 1325
+    .line 1328
     invoke-static {p1, v0}, Lmiuix/internal/util/AttributeResolver;->resolveDrawable(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object p1
 
-    .line 1326
+    .line 1329
     invoke-virtual {v3, p1}, Landroid/view/View;->setForeground(Landroid/graphics/drawable/Drawable;)V
 
     :goto_3
@@ -2287,7 +2287,7 @@
 
     goto :goto_4
 
-    .line 1290
+    .line 1293
     :cond_8
     iget-object v1, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mInflater:Landroid/view/LayoutInflater;
 
@@ -2297,7 +2297,7 @@
 
     move-result-object v0
 
-    .line 1349
+    .line 1352
     :cond_9
     :goto_4
     invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -2306,7 +2306,7 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 1350
+    .line 1353
     new-instance p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;
 
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
@@ -2319,14 +2319,14 @@
 .method public pause()V
     .locals 1
 
-    .line 1767
+    .line 1770
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
 
-    .line 1768
+    .line 1771
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2344,7 +2344,7 @@
 
     check-cast v0, Lcom/android/settings/BaseSettingsController;
 
-    .line 1769
+    .line 1772
     invoke-virtual {v0}, Lcom/android/settings/BaseSettingsController;->pause()V
 
     goto :goto_0
@@ -2356,14 +2356,14 @@
 .method public resume()V
     .locals 1
 
-    .line 1760
+    .line 1763
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
 
-    .line 1761
+    .line 1764
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2381,7 +2381,7 @@
 
     check-cast v0, Lcom/android/settings/BaseSettingsController;
 
-    .line 1762
+    .line 1765
     invoke-virtual {v0}, Lcom/android/settings/BaseSettingsController;->resume()V
 
     goto :goto_0
@@ -2393,7 +2393,7 @@
 .method public setClick(Lcom/android/settings/MiuiSettings$HeaderViewHolder;Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;I)V
     .locals 2
 
-    .line 1719
+    .line 1722
     iget-object v0, p1, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     new-instance v1, Lcom/android/settings/MiuiSettings$HeaderAdapter$1;
@@ -2410,12 +2410,12 @@
 
     if-eqz p1, :cond_4
 
-    .line 1686
+    .line 1689
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     if-eqz p0, :cond_4
 
-    .line 1687
+    .line 1690
     invoke-virtual {p0}, Landroid/widget/ImageView;->getVisibility()I
 
     move-result p0
@@ -2426,7 +2426,7 @@
 
     goto :goto_1
 
-    .line 1691
+    .line 1694
     :cond_0
     iget-object p0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->fragmentArguments:Landroid/os/Bundle;
 
@@ -2444,14 +2444,14 @@
 
     const-string v0, "account_type"
 
-    .line 1692
+    .line 1695
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 1698
+    .line 1701
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     sget v0, Lcom/android/settings/R$drawable;->xiaomi_account:I
@@ -2460,7 +2460,7 @@
 
     goto :goto_0
 
-    .line 1703
+    .line 1706
     :cond_1
     iget-wide v0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
 
@@ -2472,19 +2472,19 @@
 
     if-eqz p0, :cond_3
 
-    .line 1704
+    .line 1707
     iget p0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->iconRes:I
 
     if-eqz p0, :cond_2
 
-    .line 1705
+    .line 1708
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1706
+    .line 1709
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     iget v0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->iconRes:I
@@ -2493,7 +2493,7 @@
 
     goto :goto_0
 
-    .line 1708
+    .line 1711
     :cond_2
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
@@ -2501,7 +2501,7 @@
 
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1712
+    .line 1715
     :cond_3
     :goto_0
     iget-wide v0, p2, Lcom/android/settingslib/miuisettings/preference/PreferenceActivity$Header;->id:J
@@ -2524,7 +2524,7 @@
 
     if-eqz p0, :cond_4
 
-    .line 1713
+    .line 1716
     iget-object p0, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Landroid/widget/ImageView;->getResources()Landroid/content/res/Resources;
@@ -2537,7 +2537,7 @@
 
     move-result p0
 
-    .line 1714
+    .line 1717
     iget-object p1, p1, Lcom/android/settings/MiuiSettings$HeaderViewHolder;->icon:Landroid/widget/ImageView;
 
     invoke-virtual {p1}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
@@ -2558,14 +2558,14 @@
 .method public start()V
     .locals 2
 
-    .line 1781
+    .line 1784
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object v0
 
-    .line 1782
+    .line 1785
     invoke-interface {v0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object v0
@@ -2583,12 +2583,12 @@
 
     check-cast v1, Lcom/android/settings/BaseSettingsController;
 
-    .line 1783
+    .line 1786
     invoke-virtual {v1}, Lcom/android/settings/BaseSettingsController;->start()V
 
     goto :goto_0
 
-    .line 1785
+    .line 1788
     :cond_0
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -2602,7 +2602,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1786
+    .line 1789
     iget-object v0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {v0}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSettingsFragment(Lcom/android/settings/MiuiSettings;)Lcom/android/settings/SettingsFragment;
@@ -2623,7 +2623,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1787
+    .line 1790
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->this$0:Lcom/android/settings/MiuiSettings;
 
     invoke-static {p0}, Lcom/android/settings/MiuiSettings;->-$$Nest$fgetmSettingsFragment(Lcom/android/settings/MiuiSettings;)Lcom/android/settings/SettingsFragment;
@@ -2643,14 +2643,14 @@
 .method public stop()V
     .locals 1
 
-    .line 1774
+    .line 1777
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     invoke-virtual {p0}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
     move-result-object p0
 
-    .line 1775
+    .line 1778
     invoke-interface {p0}, Ljava/util/Collection;->iterator()Ljava/util/Iterator;
 
     move-result-object p0
@@ -2668,7 +2668,7 @@
 
     check-cast v0, Lcom/android/settings/BaseSettingsController;
 
-    .line 1776
+    .line 1779
     invoke-virtual {v0}, Lcom/android/settings/BaseSettingsController;->stop()V
 
     goto :goto_0
@@ -2680,12 +2680,12 @@
 .method public updateHeaderViewInfo()V
     .locals 2
 
-    .line 1552
+    .line 1555
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$HeaderAdapter;->mSettingsControllerMap:Ljava/util/HashMap;
 
     if-eqz p0, :cond_0
 
-    .line 1553
+    .line 1556
     sget v0, Lcom/android/settings/R$id;->mi_account_settings:I
 
     int-to-long v0, v0
@@ -2702,7 +2702,7 @@
 
     if-eqz p0, :cond_0
 
-    .line 1555
+    .line 1558
     invoke-virtual {p0}, Lcom/android/settings/BaseSettingsController;->updateStatus()V
 
     :cond_0

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/statusbar/notification/collection/notifcollection/NotifCollectionListener;
@@ -52,234 +52,231 @@
     invoke-static {p1, v2}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->setFold(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
     .line 11
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 14
-    invoke-static {v0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->access$shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 16
     move-result v0
 
-    .line 19
+    .line 17
     if-nez v0, :cond_0
 
-    .line 20
+    .line 18
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 22
+    .line 20
     invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->scheduleHistoryNotification(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
-    .line 24
+    .line 22
     :cond_0
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 27
+    .line 25
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->foldEntranceController:Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;
 
-    .line 29
+    .line 27
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->shouldShow()Z
 
-    .line 31
+    .line 29
     move-result v0
 
-    .line 34
+    .line 32
     iget-object v4, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 35
+    .line 33
     iget-object v4, v4, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 37
+    .line 35
     check-cast v4, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 39
+    .line 37
     invoke-virtual {v4}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 41
+    .line 39
     move-result-object v4
 
-    .line 44
+    .line 42
     invoke-virtual {v3, v4, v0}, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;->checkFoldEntrance(Landroid/os/UserHandle;Z)V
 
-    .line 45
+    .line 43
     :cond_1
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 48
+    .line 46
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->foldManager:Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;
 
-    .line 50
+    .line 48
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
 
-    .line 52
+    .line 50
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/ExpandedNotification;->getTargetPackageName()Ljava/lang/String;
 
-    .line 54
+    .line 52
     move-result-object p1
 
-    .line 57
+    .line 55
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 58
+    .line 56
     invoke-static {}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldSuppressFold()Z
 
-    .line 61
+    .line 59
     move-result v0
 
-    .line 64
+    .line 62
     if-eqz v0, :cond_2
 
-    .line 65
+    .line 63
     goto :goto_0
 
-    .line 67
+    .line 65
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->cache$delegate:Lkotlin/Lazy;
 
-    .line 68
+    .line 66
     invoke-interface {v0}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    .line 70
+    .line 68
     move-result-object v0
 
-    .line 73
+    .line 71
     check-cast v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;
 
-    .line 74
+    .line 72
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;->mPkgEntities:Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$RankLruCache;
 
-    .line 76
+    .line 74
     invoke-virtual {v3, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 78
+    .line 76
     move-result-object v3
 
-    .line 81
+    .line 79
     if-nez v3, :cond_3
 
-    .line 82
+    .line 80
     new-instance v3, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;
 
-    .line 84
+    .line 82
     invoke-direct {v3, p1}, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;-><init>(Ljava/lang/String;)V
 
-    .line 86
+    .line 84
     iget-object v4, v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;->mPkgEntities:Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$RankLruCache;
 
-    .line 89
+    .line 87
     invoke-virtual {v4, p1, v3}, Landroid/util/LruCache;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 91
+    .line 89
     new-instance v4, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$1;
 
-    .line 94
+    .line 92
     invoke-direct {v4, v0, v3}, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$1;-><init>(Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;)V
 
-    .line 96
+    .line 94
     iget-object v3, v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;->mExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 99
+    .line 97
     invoke-interface {v3, v4}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 101
+    .line 99
     :cond_3
     iget-object v0, v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;->mPkgEntities:Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$RankLruCache;
 
-    .line 104
+    .line 102
     invoke-virtual {v0, p1}, Landroid/util/LruCache;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 106
+    .line 104
     move-result-object p1
 
-    .line 109
+    .line 107
     check-cast p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;
 
-    .line 110
+    .line 108
     iget-object v0, p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;->mLock:Ljava/lang/Object;
 
-    .line 112
+    .line 110
     monitor-enter v0
 
-    .line 114
+    .line 112
     :try_start_0
     iget v3, p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;->mDailyShow:I
 
-    .line 115
+    .line 113
     add-int/2addr v3, v1
 
-    .line 117
+    .line 115
     iput v3, p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;->mDailyShow:I
 
-    .line 118
+    .line 116
     iput-boolean v1, p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageEntity;->mDataChanged:Z
 
-    .line 120
+    .line 118
     monitor-exit v0
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
+    .line 120
     iget p1, p0, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->count:I
 
-    .line 123
+    .line 121
     add-int/2addr p1, v1
 
-    .line 125
+    .line 123
     iput p1, p0, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->count:I
 
-    .line 126
+    .line 124
     const/4 v0, 0x5
 
-    .line 128
+    .line 126
     if-lt p1, v0, :cond_4
 
-    .line 129
+    .line 127
     iget-object p1, p0, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->cache$delegate:Lkotlin/Lazy;
 
-    .line 131
+    .line 129
     invoke-interface {p1}, Lkotlin/Lazy;->getValue()Ljava/lang/Object;
 
-    .line 133
+    .line 131
     move-result-object p1
 
-    .line 136
+    .line 134
     check-cast p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;
 
-    .line 137
+    .line 135
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 139
+    .line 137
     new-instance v0, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$$ExternalSyntheticLambda0;
 
-    .line 142
+    .line 140
     invoke-direct {v0, p1}, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache$$ExternalSyntheticLambda0;-><init>(Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;)V
 
-    .line 144
+    .line 142
     iget-object p1, p1, Lcom/android/systemui/statusbar/notification/unimportant/PackageScoreCache;->mExecutor:Ljava/util/concurrent/ExecutorService;
 
-    .line 147
+    .line 145
     invoke-interface {p1, v0}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 149
+    .line 147
     iput v2, p0, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->count:I
 
-    .line 152
+    .line 150
     :cond_4
     :goto_0
     return-void
 
-    .line 154
+    .line 152
     :catchall_0
     move-exception p0
 
-    .line 155
+    .line 153
     :try_start_1
     monitor-exit v0
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 156
+    .line 154
     throw p0
-    .line 157
+    .line 155
 .end method
 
 .method public final onEntryRemoved(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;I)V
@@ -367,28 +364,28 @@
     .locals 2
 
     .line 1
-    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
+    invoke-static {p1}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 2
-    invoke-static {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->access$shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 4
     move-result v0
 
-    .line 7
+    .line 5
     if-eqz v0, :cond_0
 
-    .line 8
+    .line 6
     return-void
 
-    .line 10
+    .line 8
     :cond_0
     const/4 v0, 0x0
 
-    .line 11
+    .line 9
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->setFold(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
-    .line 12
+    .line 10
+    iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$collectionListener$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
+
+    .line 13
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->scheduleHistoryNotification(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)V
 
     .line 15

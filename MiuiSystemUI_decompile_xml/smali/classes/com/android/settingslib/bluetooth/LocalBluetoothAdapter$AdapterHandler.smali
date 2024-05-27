@@ -1,6 +1,6 @@
 .class public final Lcom/android/settingslib/bluetooth/LocalBluetoothAdapter$AdapterHandler;
 .super Landroid/os/Handler;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # virtual methods
@@ -11,225 +11,225 @@
     const-string p0, "bluetooth_restricte_state_change"
 
     .line 2
-    const-string/jumbo v0, "received an unkown message : "
+    const-string v0, "received an unkown message : "
 
     .line 4
     new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 7
-    const-string/jumbo v2, "received message : "
+    .line 6
+    const-string v2, "received message : "
 
-    .line 9
+    .line 8
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 12
+    .line 10
     iget v2, p1, Landroid/os/Message;->what:I
 
-    .line 15
+    .line 13
     const-string v3, "LocalBluetoothAdapter"
 
-    .line 17
+    .line 15
     invoke-static {v1, v2, v3}, Lcom/android/keyguard/AwesomeLockScreen$2$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 
-    .line 19
+    .line 17
     :try_start_0
     iget v1, p1, Landroid/os/Message;->what:I
 
-    .line 22
+    .line 20
     const/16 v2, 0x14
 
-    .line 24
+    .line 22
     if-eq v1, v2, :cond_0
 
-    .line 26
+    .line 24
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 28
+    .line 26
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 30
+    .line 28
     iget p1, p1, Landroid/os/Message;->what:I
 
-    .line 33
+    .line 31
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 35
+    .line 33
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 38
+    .line 36
     move-result-object p0
 
-    .line 41
+    .line 39
     invoke-static {v3, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 42
+    .line 40
     goto :goto_0
 
-    .line 45
+    .line 43
     :cond_0
     iget v0, p1, Landroid/os/Message;->arg1:I
 
-    .line 46
+    .line 44
     iget v1, p1, Landroid/os/Message;->arg2:I
 
-    .line 48
+    .line 46
     iget-object p1, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
-    .line 50
+    .line 48
     check-cast p1, Landroid/content/Context;
 
-    .line 52
+    .line 50
     if-nez p1, :cond_1
 
-    .line 54
+    .line 52
     const-string p0, "error: context == null"
 
-    .line 56
+    .line 54
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 58
+    .line 56
     return-void
 
-    .line 61
+    .line 59
     :cond_1
     new-instance v2, Landroid/content/Intent;
 
-    .line 62
+    .line 60
     const-string v4, "android.xiaomi.bluetooth.WRITE_RESTRICT_STATE_CHANGED"
 
-    .line 64
+    .line 62
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 66
+    .line 64
     const-string v4, "com.android.bluetooth"
 
-    .line 69
+    .line 67
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 71
+    .line 69
     const-string v4, "android.bluetooth.adapter.extra.PREVIOUS_STATE"
 
-    .line 74
+    .line 72
     invoke-virtual {v2, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 76
+    .line 74
     const-string v0, "android.bluetooth.adapter.extra.STATE"
 
-    .line 79
+    .line 77
     invoke-virtual {v2, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 81
+    .line 79
     const-string v0, "android.xiaomi.bluetooth.BLUETOOTH_RESTRICT_STATE_WRITE"
 
-    .line 84
+    .line 82
     const/4 v4, 0x1
 
-    .line 86
+    .line 84
     invoke-virtual {v2, v0, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 87
+    .line 85
     const/high16 v0, 0x4000000
 
-    .line 90
+    .line 88
     invoke-virtual {v2, v0}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 92
+    .line 90
     const/high16 v0, 0x10000000
 
-    .line 95
+    .line 93
     invoke-virtual {v2, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 97
+    .line 95
     sget-object v0, Landroid/os/UserHandle;->ALL:Landroid/os/UserHandle;
 
-    .line 100
+    .line 98
     invoke-virtual {p1, v2, v0}, Landroid/content/Context;->sendBroadcastAsUser(Landroid/content/Intent;Landroid/os/UserHandle;)V
 
-    .line 102
+    .line 100
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 105
+    .line 103
     move-result-object v0
 
-    .line 108
+    .line 106
     const/4 v2, 0x0
 
-    .line 109
+    .line 107
     invoke-static {v0, p0, v2}, Landroid/provider/Settings$Global;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
 
-    .line 110
+    .line 108
     move-result v0
 
-    .line 113
+    .line 111
     const/16 v5, 0xa
 
-    .line 114
+    .line 112
     if-ne v1, v5, :cond_2
 
-    .line 116
+    .line 114
     if-eq v0, v4, :cond_2
 
-    .line 118
+    .line 116
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 120
+    .line 118
     move-result-object v5
 
-    .line 123
+    .line 121
     invoke-static {v5, p0, v4}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
 
-    .line 124
+    .line 122
     :cond_2
     const/16 v4, 0xc
 
-    .line 127
+    .line 125
     if-ne v1, v4, :cond_3
 
-    .line 129
+    .line 127
     if-eqz v0, :cond_3
 
-    .line 131
+    .line 129
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
-    .line 133
+    .line 131
     move-result-object p1
 
-    .line 136
+    .line 134
     invoke-static {p1, p0, v2}, Landroid/provider/Settings$Global;->putInt(Landroid/content/ContentResolver;Ljava/lang/String;I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
+    .line 135
     goto :goto_0
 
-    .line 140
+    .line 138
     :catch_0
     move-exception p0
 
-    .line 141
+    .line 139
     new-instance p1, Ljava/lang/StringBuilder;
 
-    .line 142
+    .line 140
     const-string v0, "handleMessage: Exception: "
 
-    .line 144
+    .line 142
     invoke-direct {p1, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 146
+    .line 144
     invoke-virtual {p1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
-    .line 149
+    .line 147
     invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 152
+    .line 150
     move-result-object p0
 
-    .line 155
+    .line 153
     invoke-static {v3, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 156
+    .line 154
     :cond_3
     :goto_0
     return-void
-    .line 159
+    .line 157
 .end method

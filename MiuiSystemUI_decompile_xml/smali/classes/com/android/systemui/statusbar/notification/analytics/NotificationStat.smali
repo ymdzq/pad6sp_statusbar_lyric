@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/PluginListener;
@@ -460,7 +460,7 @@
 
     if-eqz p3, :cond_0
 
-    .line 11
+    .line 10
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->SHADE_LOCKED:Lcom/miui/systemui/events/NotifSource;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -472,7 +472,7 @@
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 12
+    .line 11
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->FLOAT:Lcom/miui/systemui/events/NotifSource;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -484,7 +484,7 @@
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 13
+    .line 12
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->KEYGUARD:Lcom/miui/systemui/events/NotifSource;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -498,10 +498,10 @@
 
     if-eqz p0, :cond_3
 
-    .line 14
+    .line 13
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mSbn:Lcom/android/systemui/statusbar/notification/ExpandedNotification;
 
-    .line 15
+    .line 14
     invoke-static {p0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->isFold(Lcom/android/systemui/statusbar/notification/ExpandedNotification;)Z
 
     move-result p0
@@ -520,7 +520,7 @@
 
     goto :goto_1
 
-    .line 16
+    .line 15
     :cond_4
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->PANEL:Lcom/miui/systemui/events/NotifSource;
 
@@ -530,7 +530,7 @@
 
     return-object p0
 
-    .line 17
+    .line 16
     :cond_5
     :goto_1
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->UNIMPORTANT:Lcom/miui/systemui/events/NotifSource;
@@ -1023,25 +1023,31 @@
 .method public final getNotifSource(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)Ljava/lang/String;
     .locals 4
 
+    if-nez p1, :cond_0
+
+    const-string p0, "null"
+
+    return-object p0
+
     .line 1
-    iget-object v0, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
-    .line 2
-    iget-object v1, p0, Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;->mHeadsUpManager:Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
+    iget-object v1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->mKey:Ljava/lang/String;
 
-    invoke-virtual {v1, v0}, Lcom/android/systemui/statusbar/AlertingNotificationManager;->isAlerting(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/AlertingNotificationManager;->isAlerting(Ljava/lang/String;)Z
 
     move-result v0
 
-    .line 3
+    .line 2
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     check-cast v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;
 
-    .line 4
+    .line 3
     iget-boolean v1, v1, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->mShowing:Z
 
-    .line 5
+    .line 4
     const-class v2, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;
 
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -1050,10 +1056,10 @@
 
     check-cast v2, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;
 
-    .line 6
+    .line 5
     iget-boolean v2, v2, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->isShowingUnimportant:Z
 
-    .line 7
+    .line 6
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;->mStatusBarStateController:Lcom/android/systemui/plugins/statusbar/StatusBarStateController;
 
     invoke-interface {p0}, Lcom/android/systemui/plugins/statusbar/StatusBarStateController;->getState()I
@@ -1062,24 +1068,24 @@
 
     const/4 v3, 0x2
 
-    if-ne p0, v3, :cond_0
+    if-ne p0, v3, :cond_1
 
     const/4 p0, 0x1
 
     goto :goto_0
 
-    :cond_0
+    :cond_1
     const/4 p0, 0x0
 
-    .line 8
+    .line 7
     :goto_0
     invoke-static {p1, v0, v1, p0, v2}, Lcom/android/systemui/statusbar/notification/analytics/NotificationStat;->getNotifSource(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;ZZZZ)Ljava/lang/String;
 
     move-result-object p0
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
-    .line 9
+    .line 8
     sget-object p2, Lcom/miui/systemui/events/NotifSource;->PANEL:Lcom/miui/systemui/events/NotifSource;
 
     invoke-virtual {p2}, Ljava/lang/Enum;->name()Ljava/lang/String;
@@ -1090,20 +1096,20 @@
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     iget-boolean p1, p1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->isVisualInFloat:Z
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_2
 
-    .line 10
+    .line 9
     sget-object p0, Lcom/miui/systemui/events/NotifSource;->FLOAT:Lcom/miui/systemui/events/NotifSource;
 
     invoke-virtual {p0}, Ljava/lang/Enum;->name()Ljava/lang/String;
 
     move-result-object p0
 
-    :cond_1
+    :cond_2
     return-object p0
 .end method
 

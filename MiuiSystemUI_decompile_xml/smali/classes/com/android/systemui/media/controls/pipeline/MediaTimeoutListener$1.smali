@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/plugins/statusbar/StatusBarStateController$StateListener;
@@ -28,10 +28,10 @@
 
 # virtual methods
 .method public final onDozingChanged(Z)V
-    .locals 6
+    .locals 2
 
     .line 1
-    if-nez p1, :cond_3
+    if-nez p1, :cond_2
 
     .line 2
     iget-object p0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$1;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
@@ -55,7 +55,6 @@
     move-result-object p1
 
     .line 17
-    :cond_0
     :goto_0
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -63,7 +62,7 @@
     move-result v0
 
     .line 21
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
     .line 22
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
@@ -93,115 +92,79 @@
     check-cast v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;
 
     .line 40
-    iget-object v2, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     .line 42
-    if-eqz v2, :cond_0
-
-    .line 44
-    iget-wide v2, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expiration:J
-
-    .line 46
-    iget-object v4, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->systemClock:Lcom/android/systemui/util/time/SystemClock;
-
-    .line 48
-    check-cast v4, Lcom/android/systemui/util/time/SystemClockImpl;
-
-    .line 50
-    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 52
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    .line 55
-    move-result-wide v4
-
-    .line 58
-    cmp-long v2, v2, v4
-
-    .line 59
-    if-gtz v2, :cond_0
-
-    .line 61
-    const-string/jumbo v2, "timeout happened while dozing"
-
-    .line 63
-    invoke-virtual {v0, v1, v2}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expireMediaTimeout(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 66
-    invoke-virtual {v0}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->doTimeout()V
-
-    .line 69
     goto :goto_0
 
-    .line 72
-    :cond_1
+    .line 45
+    :cond_0
     iget-object p0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->recommendationListeners:Ljava/util/Map;
 
-    .line 73
+    .line 46
     check-cast p0, Ljava/util/LinkedHashMap;
 
-    .line 75
+    .line 48
     invoke-virtual {p0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
+
+    .line 50
+    move-result-object p0
+
+    .line 53
+    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    .line 54
+    move-result-object p0
+
+    .line 57
+    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
+
+    .line 58
+    move-result p1
+
+    .line 61
+    if-nez p1, :cond_1
+
+    .line 62
+    goto :goto_1
+
+    .line 64
+    :cond_1
+    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    .line 65
+    move-result-object p0
+
+    .line 68
+    check-cast p0, Ljava/util/Map$Entry;
+
+    .line 69
+    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
+
+    .line 71
+    move-result-object p1
+
+    .line 74
+    check-cast p1, Ljava/lang/String;
+
+    .line 75
+    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     .line 77
     move-result-object p0
 
     .line 80
-    invoke-interface {p0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    .line 81
-    move-result-object p0
-
-    .line 84
-    invoke-interface {p0}, Ljava/util/Iterator;->hasNext()Z
-
-    .line 85
-    move-result p1
-
-    .line 88
-    if-nez p1, :cond_2
-
-    .line 89
-    goto :goto_1
-
-    .line 91
-    :cond_2
-    invoke-interface {p0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    .line 92
-    move-result-object p0
-
-    .line 95
-    check-cast p0, Ljava/util/Map$Entry;
-
-    .line 96
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    .line 98
-    move-result-object p1
-
-    .line 101
-    check-cast p1, Ljava/lang/String;
-
-    .line 102
-    invoke-interface {p0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
-
-    .line 104
-    move-result-object p0
-
-    .line 107
     invoke-static {p0}, Landroidx/activity/ComponentActivity$2$$ExternalSyntheticOutline0;->m(Ljava/lang/Object;)V
 
-    .line 108
+    .line 81
     const/4 p0, 0x0
 
-    .line 111
+    .line 84
     throw p0
 
-    .line 112
-    :cond_3
+    .line 85
+    :cond_2
     :goto_1
     return-void
-    .line 113
+    .line 86
 .end method

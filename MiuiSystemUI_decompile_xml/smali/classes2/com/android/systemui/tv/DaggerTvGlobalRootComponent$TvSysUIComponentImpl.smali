@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/tv/TvSysUIComponent;
@@ -38879,32 +38879,32 @@
     iget-object v2, v0, Ldagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
     .line 237
-    const-string v3, "screenrecord"
+    const-string/jumbo v3, "screenrecord"
 
     .line 239
     invoke-interface {v2, v3, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
+    .line 242
     iget-object p0, p0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->quickAccessWalletTileProvider:Ljavax/inject/Provider;
 
-    .line 244
+    .line 245
     iget-object v1, v0, Ldagger/internal/MapBuilder;->contributions:Ljava/util/Map;
 
-    .line 246
+    .line 247
     const-string/jumbo v2, "wallet"
 
-    .line 248
+    .line 249
     invoke-interface {v1, v2, p0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
+    .line 252
     invoke-virtual {v0}, Ldagger/internal/MapBuilder;->build()Ljava/util/Map;
 
-    .line 254
+    .line 255
     move-result-object p0
 
-    .line 257
-    return-object p0
     .line 258
+    return-object p0
+    .line 259
 .end method
 
 .method public final mediaBrowserFactory()Lcom/android/systemui/media/controls/resume/MediaBrowserFactory;

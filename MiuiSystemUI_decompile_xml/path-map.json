@@ -593,23 +593,23 @@
   },
   {
     "name": "res/drawable-ldrtl-hdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-    "alias": "res/drawable-hdpi-ldrtl/abc_spinner_mtrl_am_alpha.9.png"
+    "alias": "res/drawable-ldrtl-hdpi/abc_spinner_mtrl_am_alpha.9.png"
   },
   {
     "name": "res/drawable-ldrtl-mdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-    "alias": "res/drawable-mdpi-ldrtl/abc_spinner_mtrl_am_alpha.9.png"
+    "alias": "res/drawable-ldrtl-mdpi/abc_spinner_mtrl_am_alpha.9.png"
   },
   {
     "name": "res/drawable-ldrtl-xhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-    "alias": "res/drawable-xhdpi-ldrtl/abc_spinner_mtrl_am_alpha.9.png"
+    "alias": "res/drawable-ldrtl-xhdpi/abc_spinner_mtrl_am_alpha.9.png"
   },
   {
     "name": "res/drawable-ldrtl-xxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-    "alias": "res/drawable-xxhdpi-ldrtl/abc_spinner_mtrl_am_alpha.9.png"
+    "alias": "res/drawable-ldrtl-xxhdpi/abc_spinner_mtrl_am_alpha.9.png"
   },
   {
     "name": "res/drawable-ldrtl-xxxhdpi-v17/abc_spinner_mtrl_am_alpha.9.png",
-    "alias": "res/drawable-xxxhdpi-ldrtl/abc_spinner_mtrl_am_alpha.9.png"
+    "alias": "res/drawable-ldrtl-xxxhdpi/abc_spinner_mtrl_am_alpha.9.png"
   },
   {
     "name": "res/drawable-mdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png",
@@ -909,63 +909,63 @@
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/app_note.webp",
-    "alias": "res/drawable-440dpi-night/app_note.webp"
+    "alias": "res/drawable-night-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/btn_clear_all.png",
-    "alias": "res/drawable-440dpi-night/btn_clear_all.png"
+    "alias": "res/drawable-night-440dpi/btn_clear_all.png"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/clickable_toast_frame.9.png",
-    "alias": "res/drawable-440dpi-night/clickable_toast_frame.9.png"
+    "alias": "res/drawable-night-440dpi/clickable_toast_frame.9.png"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fs_gesture_back_top.webp",
-    "alias": "res/drawable-440dpi-night/fs_gesture_back_top.webp"
+    "alias": "res/drawable-night-440dpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_drawer.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_drawer.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-440dpi-night/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-night-440dpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/icon_back.webp",
-    "alias": "res/drawable-440dpi-night/icon_back.webp"
+    "alias": "res/drawable-night-440dpi/icon_back.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/icon_home.webp",
-    "alias": "res/drawable-440dpi-night/icon_home.webp"
+    "alias": "res/drawable-night-440dpi/icon_home.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/icon_task.webp",
-    "alias": "res/drawable-440dpi-night/icon_task.webp"
+    "alias": "res/drawable-night-440dpi/icon_task.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/notifications_clear_all.webp",
-    "alias": "res/drawable-440dpi-night/notifications_clear_all.webp"
+    "alias": "res/drawable-night-440dpi/notifications_clear_all.webp"
   },
   {
     "name": "res/drawable-night-nxhdpi-v8/qs_tile_expand_indicator.webp",
-    "alias": "res/drawable-440dpi-night/qs_tile_expand_indicator.webp"
+    "alias": "res/drawable-night-440dpi/qs_tile_expand_indicator.webp"
   },
   {
     "name": "res/drawable-night-v8/caption_button_pressshape.xml",
@@ -1109,159 +1109,159 @@
   },
   {
     "name": "res/drawable-night-xhdpi-v8/app_note.webp",
-    "alias": "res/drawable-xhdpi-night/app_note.webp"
+    "alias": "res/drawable-night-xhdpi/app_note.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/btn_clear_all.png",
-    "alias": "res/drawable-xhdpi-night/btn_clear_all.png"
+    "alias": "res/drawable-night-xhdpi/btn_clear_all.png"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/clickable_toast_frame.9.png",
-    "alias": "res/drawable-xhdpi-night/clickable_toast_frame.9.png"
+    "alias": "res/drawable-night-xhdpi/clickable_toast_frame.9.png"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fs_gesture_back_top.webp",
-    "alias": "res/drawable-xhdpi-night/fs_gesture_back_top.webp"
+    "alias": "res/drawable-night-xhdpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_drawer.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_drawer.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-xhdpi-night/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-night-xhdpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/icon_back.webp",
-    "alias": "res/drawable-xhdpi-night/icon_back.webp"
+    "alias": "res/drawable-night-xhdpi/icon_back.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/icon_home.webp",
-    "alias": "res/drawable-xhdpi-night/icon_home.webp"
+    "alias": "res/drawable-night-xhdpi/icon_home.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/icon_task.webp",
-    "alias": "res/drawable-xhdpi-night/icon_task.webp"
+    "alias": "res/drawable-night-xhdpi/icon_task.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/notifications_clear_all.webp",
-    "alias": "res/drawable-xhdpi-night/notifications_clear_all.webp"
+    "alias": "res/drawable-night-xhdpi/notifications_clear_all.webp"
   },
   {
     "name": "res/drawable-night-xhdpi-v8/qs_tile_expand_indicator.webp",
-    "alias": "res/drawable-xhdpi-night/qs_tile_expand_indicator.webp"
+    "alias": "res/drawable-night-xhdpi/qs_tile_expand_indicator.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/app_note.webp",
-    "alias": "res/drawable-xxhdpi-night/app_note.webp"
+    "alias": "res/drawable-night-xxhdpi/app_note.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/btn_clear_all.png",
-    "alias": "res/drawable-xxhdpi-night/btn_clear_all.png"
+    "alias": "res/drawable-night-xxhdpi/btn_clear_all.png"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/clickable_toast_frame.9.png",
-    "alias": "res/drawable-xxhdpi-night/clickable_toast_frame.9.png"
+    "alias": "res/drawable-night-xxhdpi/clickable_toast_frame.9.png"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fs_gesture_back_top.webp",
-    "alias": "res/drawable-xxhdpi-night/fs_gesture_back_top.webp"
+    "alias": "res/drawable-night-xxhdpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_drawer.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_drawer.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-xxhdpi-night/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-night-xxhdpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/notifications_clear_all.webp",
-    "alias": "res/drawable-xxhdpi-night/notifications_clear_all.webp"
+    "alias": "res/drawable-night-xxhdpi/notifications_clear_all.webp"
   },
   {
     "name": "res/drawable-night-xxhdpi-v8/qs_tile_expand_indicator.webp",
-    "alias": "res/drawable-xxhdpi-night/qs_tile_expand_indicator.webp"
+    "alias": "res/drawable-night-xxhdpi/qs_tile_expand_indicator.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/app_note.webp",
-    "alias": "res/drawable-xxxhdpi-night/app_note.webp"
+    "alias": "res/drawable-night-xxxhdpi/app_note.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/btn_clear_all.png",
-    "alias": "res/drawable-xxxhdpi-night/btn_clear_all.png"
+    "alias": "res/drawable-night-xxxhdpi/btn_clear_all.png"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/clickable_toast_frame.9.png",
-    "alias": "res/drawable-xxxhdpi-night/clickable_toast_frame.9.png"
+    "alias": "res/drawable-night-xxxhdpi/clickable_toast_frame.9.png"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fs_gesture_back_top.webp",
-    "alias": "res/drawable-xxxhdpi-night/fs_gesture_back_top.webp"
+    "alias": "res/drawable-night-xxxhdpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_drawer.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_drawer.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-xxxhdpi-night/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-night-xxxhdpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/notifications_clear_all.webp",
-    "alias": "res/drawable-xxxhdpi-night/notifications_clear_all.webp"
+    "alias": "res/drawable-night-xxxhdpi/notifications_clear_all.webp"
   },
   {
     "name": "res/drawable-night-xxxhdpi-v8/qs_tile_expand_indicator.webp",
-    "alias": "res/drawable-xxxhdpi-night/qs_tile_expand_indicator.webp"
+    "alias": "res/drawable-night-xxxhdpi/qs_tile_expand_indicator.webp"
   },
   {
     "name": "res/drawable-nodpi-v4/android.xml",
@@ -2733,83 +2733,83 @@
   },
   {
     "name": "res/drawable-sw305dp-h852dp-nxhdpi-v13/app_note.webp",
-    "alias": "res/drawable-440dpi-sw305dp-h852dp/app_note.webp"
+    "alias": "res/drawable-sw305dp-h852dp-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw305dp-h852dp-nxhdpi-v13/fs_gesture_back_top.webp",
-    "alias": "res/drawable-440dpi-sw305dp-h852dp/fs_gesture_back_top.webp"
+    "alias": "res/drawable-sw305dp-h852dp-440dpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-sw305dp-h852dp-nxhdpi-v13/fsg_demo_drawer.png",
-    "alias": "res/drawable-440dpi-sw305dp-h852dp/fsg_demo_drawer.png"
+    "alias": "res/drawable-sw305dp-h852dp-440dpi/fsg_demo_drawer.png"
   },
   {
     "name": "res/drawable-sw305dp-h852dp-nxhdpi-v13/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-440dpi-sw305dp-h852dp/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-sw305dp-h852dp-440dpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/app_note.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/app_note.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fs_gesture_back_top.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fs_gesture_back_top.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_drawer.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_drawer.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_first_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_first_card_icon.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_first_card_icon.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_fourth_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_fourth_card_icon.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_fourth_card_icon.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_second_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_second_card_icon.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_second_card_icon.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/fsg_demo_recents_third_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/fsg_demo_recents_third_card_icon.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/fsg_demo_recents_third_card_icon.webp"
   },
   {
     "name": "res/drawable-sw392dp-h837dp-nxhdpi-v13/wallpaper.webp",
-    "alias": "res/drawable-440dpi-sw392dp-h837dp/wallpaper.webp"
+    "alias": "res/drawable-sw392dp-h837dp-440dpi/wallpaper.webp"
   },
   {
     "name": "res/drawable-sw392dp-night-nxhdpi-v13/app_note.webp",
-    "alias": "res/drawable-440dpi-night-sw392dp/app_note.webp"
+    "alias": "res/drawable-sw392dp-night-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw392dp-nxhdpi-v13/app_note.webp",
-    "alias": "res/drawable-440dpi-sw392dp/app_note.webp"
+    "alias": "res/drawable-sw392dp-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw600dp-night-v13/btn_clear_all.xml",
-    "alias": "res/drawable-night-sw600dp/btn_clear_all.xml"
+    "alias": "res/drawable-sw600dp-night/btn_clear_all.xml"
   },
   {
     "name": "res/drawable-sw600dp-v13/btn_clear_all.xml",
@@ -2817,167 +2817,167 @@
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/app_note.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/app_note.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/browser_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/browser_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/browser_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/calculator_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/calculator_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/calculator_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/calendar_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/calendar_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/calendar_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/camera_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/camera_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/camera_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/contacts_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/contacts_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/contacts_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/deskclock_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/deskclock_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/deskclock_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/email_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/email_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/email_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fileexplorer_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fileexplorer_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fileexplorer_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fs_gesture_back_top.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fs_gesture_back_top.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_drawer.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_drawer.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_first_card_icon.png",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_first_card_icon.png"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_first_card_icon.png"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_fourth_card_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_fourth_card_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_fourth_card_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_second_card_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_second_card_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_second_card_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/fsg_demo_recents_third_card_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/fsg_demo_recents_third_card_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/fsg_demo_recents_third_card_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/gallery_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/gallery_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/gallery_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/music_icon.png",
-    "alias": "res/drawable-xhdpi-sw600dp/music_icon.png"
+    "alias": "res/drawable-sw600dp-xhdpi/music_icon.png"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/note_icon.png",
-    "alias": "res/drawable-xhdpi-sw600dp/note_icon.png"
+    "alias": "res/drawable-sw600dp-xhdpi/note_icon.png"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/seekpoint_highlight.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/seekpoint_highlight.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/seekpoint_highlight.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/seekpoint_normal.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/seekpoint_normal.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/seekpoint_normal.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/settings_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/settings_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/settings_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/supermarket_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/supermarket_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/supermarket_icon.webp"
   },
   {
     "name": "res/drawable-sw600dp-xhdpi-v13/video_icon.webp",
-    "alias": "res/drawable-xhdpi-sw600dp/video_icon.webp"
+    "alias": "res/drawable-sw600dp-xhdpi/video_icon.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/app_note.webp",
-    "alias": "res/drawable-440dpi-sw676dp/app_note.webp"
+    "alias": "res/drawable-sw676dp-440dpi/app_note.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fs_gesture_back_top.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fs_gesture_back_top.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fs_gesture_back_top.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_drawer.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_drawer.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_drawer.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_drawer_main.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_drawer_main.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_drawer_main.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_first_card_content.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_first_card_content.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_first_card_content.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_first_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_first_card_icon.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_first_card_icon.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_fourth_card_content.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_fourth_card_content.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_fourth_card_content.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_fourth_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_fourth_card_icon.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_fourth_card_icon.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_second_card_content.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_second_card_content.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_second_card_content.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_second_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_second_card_icon.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_second_card_icon.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_third_card_content.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_third_card_content.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_third_card_content.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/fsg_demo_recents_third_card_icon.webp",
-    "alias": "res/drawable-440dpi-sw676dp/fsg_demo_recents_third_card_icon.webp"
+    "alias": "res/drawable-sw676dp-440dpi/fsg_demo_recents_third_card_icon.webp"
   },
   {
     "name": "res/drawable-sw676dp-nxhdpi-v13/wallpaper.webp",
-    "alias": "res/drawable-440dpi-sw676dp/wallpaper.webp"
+    "alias": "res/drawable-sw676dp-440dpi/wallpaper.webp"
   },
   {
     "name": "res/drawable-sw900dp-v13/ic_ime_switcher_default.xml",
@@ -6273,15 +6273,15 @@
   },
   {
     "name": "res/layout-sw600dp-xhdpi-v13/demo_intro_layout.xml",
-    "alias": "res/layout-xhdpi-sw600dp/demo_intro_layout.xml"
+    "alias": "res/layout-sw600dp-xhdpi/demo_intro_layout.xml"
   },
   {
     "name": "res/layout-sw600dp-xhdpi-v13/fs_gesture_demo_final_view.xml",
-    "alias": "res/layout-xhdpi-sw600dp/fs_gesture_demo_final_view.xml"
+    "alias": "res/layout-sw600dp-xhdpi/fs_gesture_demo_final_view.xml"
   },
   {
     "name": "res/layout-sw600dp-xhdpi-v13/home_demo_workspace_layout.xml",
-    "alias": "res/layout-xhdpi-sw600dp/home_demo_workspace_layout.xml"
+    "alias": "res/layout-sw600dp-xhdpi/home_demo_workspace_layout.xml"
   },
   {
     "name": "res/layout-television-v8/inattentive_sleep_warning.xml",

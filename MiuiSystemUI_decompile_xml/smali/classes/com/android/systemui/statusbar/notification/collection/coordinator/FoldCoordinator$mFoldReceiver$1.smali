@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$mFoldReceiver$1;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # instance fields
@@ -138,72 +138,69 @@
     if-eqz p2, :cond_2
 
     .line 72
-    iget-object v0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$mFoldReceiver$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
+    invoke-static {p2}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 74
-    invoke-static {v0, p2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->access$shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
-
-    .line 76
     move-result v0
 
-    .line 79
+    .line 77
     if-nez v0, :cond_2
 
-    .line 80
+    .line 78
     const/4 v0, 0x1
 
-    .line 82
+    .line 80
     invoke-static {p2, v0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->setFold(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
 
-    .line 83
+    .line 81
     :cond_2
     iget-object p2, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$mFoldReceiver$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 86
+    .line 84
     iget-object v0, p2, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->foldEntranceController:Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;
 
-    .line 88
+    .line 86
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->shouldShow()Z
 
-    .line 90
+    .line 88
     move-result p2
 
-    .line 93
+    .line 91
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$mFoldReceiver$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 94
+    .line 92
     iget-object v1, v1, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 96
+    .line 94
     check-cast v1, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 98
+    .line 96
     invoke-virtual {v1}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 100
+    .line 98
     move-result-object v1
 
-    .line 103
+    .line 101
     invoke-virtual {v0, v1, p2}, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;->checkFoldEntrance(Landroid/os/UserHandle;Z)V
 
-    .line 104
+    .line 102
     iget-object p0, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$mFoldReceiver$1;->this$0:Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;
 
-    .line 107
+    .line 105
     const-string p2, "foldToHistory for "
 
-    .line 109
+    .line 107
     invoke-virtual {p2, p1}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 111
+    .line 109
     move-result-object p1
 
-    .line 114
+    .line 112
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->invalidateListWithFold(Ljava/lang/String;)V
 
-    .line 115
+    .line 113
     :cond_3
     :goto_0
     return-void
-    .line 118
+    .line 116
 .end method

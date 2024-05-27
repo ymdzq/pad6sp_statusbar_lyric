@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Ljavax/inject/Provider;
@@ -43,7 +43,7 @@
 
 # virtual methods
 .method public final get()Ljava/lang/Object;
-    .locals 96
+    .locals 95
 
     move-object/from16 v0, p0
 
@@ -2230,47 +2230,45 @@
 
     new-instance v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusViewComponentFactory;
 
-    move-object/from16 v36, v1
+    move-object/from16 v36, v15
 
-    move-object/from16 v94, v2
+    iget-object v15, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    move-object/from16 v37, v14
 
-    move-object/from16 v95, v3
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    invoke-direct {v1, v15, v14}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusViewComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
 
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusViewComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
+    new-instance v15, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;
 
-    new-instance v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;
-
-    move-object/from16 v37, v1
-
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
-
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
-
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
-
-    new-instance v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardUserSwitcherComponentFactory;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
     move-object/from16 v38, v1
 
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    invoke-direct {v15, v14, v1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
 
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardUserSwitcherComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
+    new-instance v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardUserSwitcherComponentFactory;
 
-    new-instance v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusBarViewComponentFactory;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    move-object/from16 v39, v1
+    move-object/from16 v39, v15
 
-    iget-object v2, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v15, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v3, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    invoke-direct {v1, v14, v15}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardUserSwitcherComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
 
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusBarViewComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
+    new-instance v15, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusBarViewComponentFactory;
+
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+
+    move-object/from16 v40, v1
+
+    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+
+    invoke-direct {v15, v14, v1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$KeyguardStatusBarViewComponentFactory;-><init>(Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;)V
 
     iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
@@ -2280,659 +2278,681 @@
 
     move-result-object v1
 
-    move-object/from16 v40, v1
+    check-cast v1, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
-    check-cast v40, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->authControllerProvider:Ljavax/inject/Provider;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->authControllerProvider:Ljavax/inject/Provider;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    move-result-object v14
 
-    move-result-object v1
-
-    move-object/from16 v41, v1
+    move-object/from16 v41, v14
 
     check-cast v41, Lcom/android/systemui/biometrics/AuthController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v42, v1
+    move-object/from16 v42, v14
 
     check-cast v42, Lcom/android/systemui/statusbar/phone/ScrimController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideUserManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideUserManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v43, v1
+    move-object/from16 v43, v14
 
     check-cast v43, Landroid/os/UserManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->mediaDataManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v44, v1
+    move-object/from16 v44, v14
 
     check-cast v44, Lcom/android/systemui/media/controls/pipeline/MediaDataManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v45, v1
+    move-object/from16 v45, v14
 
     check-cast v45, Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v46, v1
+    move-object/from16 v46, v14
 
     check-cast v46, Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v47, v1
+    move-object/from16 v47, v14
 
     check-cast v47, Lcom/android/keyguard/LockIconViewController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v48, v1
+    move-object/from16 v48, v14
 
     check-cast v48, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->tapAgainViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->tapAgainViewControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v49, v1
+    move-object/from16 v49, v14
 
     check-cast v49, Lcom/android/systemui/statusbar/phone/TapAgainViewController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->navigationModeControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->navigationModeControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v50, v1
+    move-object/from16 v50, v14
 
     check-cast v50, Lcom/android/systemui/navigationbar/NavigationModeController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->navigationBarControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->navigationBarControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v51, v1
+    move-object/from16 v51, v14
 
     check-cast v51, Lcom/android/systemui/navigationbar/NavigationBarController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->quickSettingsControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->quickSettingsControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v52, v1
+    move-object/from16 v52, v14
 
     check-cast v52, Lcom/android/systemui/shade/QuickSettingsController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->fragmentServiceProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->fragmentServiceProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v53, v1
+    move-object/from16 v53, v14
 
     check-cast v53, Lcom/android/systemui/fragments/FragmentService;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideContentResolverProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideContentResolverProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v54, v1
+    move-object/from16 v54, v14
 
     check-cast v54, Landroid/content/ContentResolver;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->recordingControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->recordingControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    check-cast v1, Lcom/android/systemui/screenrecord/RecordingController;
+    check-cast v14, Lcom/android/systemui/screenrecord/RecordingController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeHeaderControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeHeaderControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v55, v1
+    move-object/from16 v55, v14
 
     check-cast v55, Lcom/android/systemui/shade/ShadeHeaderController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->screenOffAnimationControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->screenOffAnimationControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v56, v1
+    move-object/from16 v56, v14
 
     check-cast v56, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenGestureLoggerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenGestureLoggerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v57, v1
+    move-object/from16 v57, v14
 
     check-cast v57, Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v58, v1
+    move-object/from16 v58, v14
 
     check-cast v58, Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    check-cast v1, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
+    check-cast v14, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideSysUIUnfoldComponentProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideSysUIUnfoldComponentProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v59, v1
+    move-object/from16 v59, v14
 
     check-cast v59, Ljava/util/Optional;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideSysUiStateProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->provideSysUiStateProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v60, v1
+    move-object/from16 v60, v14
 
     check-cast v60, Lcom/android/systemui/model/SysUiState;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewControllerProvider:Ljavax/inject/Provider;
 
-    move-object/from16 v61, v1
+    move-object/from16 v61, v14
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v62, v1
+    move-object/from16 v62, v14
 
     check-cast v62, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardIndicationControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardIndicationControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v63, v1
+    move-object/from16 v63, v14
 
     check-cast v63, Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->provideListContainerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->provideListContainerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v64, v1
+    move-object/from16 v64, v14
 
     check-cast v64, Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v65, v1
+    move-object/from16 v65, v14
 
     check-cast v65, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->unlockedScreenOffAnimationControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->unlockedScreenOffAnimationControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v66, v1
+    move-object/from16 v66, v14
 
     check-cast v66, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeTransitionControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->shadeTransitionControllerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v67, v1
+    move-object/from16 v67, v14
 
     check-cast v67, Lcom/android/systemui/shade/transition/ShadeTransitionController;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v68, v1
+    move-object/from16 v68, v14
 
     check-cast v68, Lcom/android/internal/jank/InteractionJankMonitor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v69, v1
+    move-object/from16 v69, v14
 
     check-cast v69, Lcom/android/systemui/util/time/SystemClock;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    invoke-virtual {v1}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;
+    invoke-virtual {v14}, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;
 
     move-result-object v70
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardBottomAreaInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardBottomAreaInteractorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v71, v1
+    move-object/from16 v71, v14
 
     check-cast v71, Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->alternateBouncerInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->alternateBouncerInteractorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v72, v1
+    move-object/from16 v72, v14
 
     check-cast v72, Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->dreamingToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->dreamingToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v73, v1
+    move-object/from16 v73, v14
 
     check-cast v73, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->occludedToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->occludedToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v74, v1
+    move-object/from16 v74, v14
 
     check-cast v74, Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v75, v1
+    move-object/from16 v75, v14
 
     check-cast v75, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->goneToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->goneToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v76, v1
+    move-object/from16 v76, v14
 
     check-cast v76, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenToOccludedTransitionViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->lockscreenToOccludedTransitionViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v77, v1
+    move-object/from16 v77, v14
 
     check-cast v77, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->mainDispatcherProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->mainDispatcherProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v78, v1
+    move-object/from16 v78, v14
 
     check-cast v78, Lkotlinx/coroutines/CoroutineDispatcher;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v79, v1
+    move-object/from16 v79, v14
 
     check-cast v79, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
 
-    move-object/from16 v80, v1
+    move-object/from16 v80, v14
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceGlobalRootComponent:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v81, v1
+    move-object/from16 v81, v14
 
     check-cast v81, Lcom/android/systemui/dump/DumpManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardLongPressViewModelProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardLongPressViewModelProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v82, v1
+    move-object/from16 v82, v14
 
     check-cast v82, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardInteractorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v83, v1
+    move-object/from16 v83, v14
 
     check-cast v83, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v84, v1
+    move-object/from16 v84, v14
 
     check-cast v84, Lcom/android/systemui/plugins/ActivityStarter;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->systemUIKeyguardFaceAuthInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->systemUIKeyguardFaceAuthInteractorProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v85, v1
+    move-object/from16 v85, v14
 
     check-cast v85, Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->controlCenterControllerImplProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->controlCenterControllerImplProvider:Ljavax/inject/Provider;
 
-    invoke-static {v1}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
+    invoke-static {v14}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
 
     move-result-object v86
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardCommonSettingObserverProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardCommonSettingObserverProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v87, v1
+    move-object/from16 v87, v14
 
     check-cast v87, Lcom/android/keyguard/KeyguardCommonSettingObserver;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->wakefulnessLifecycleProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->wakefulnessLifecycleProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v88, v1
+    move-object/from16 v88, v14
 
     check-cast v88, Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->foldNotifManagerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->foldNotifManagerProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v89, v1
+    move-object/from16 v89, v14
 
     check-cast v89, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardEditorHelperProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->keyguardEditorHelperProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v90, v1
+    move-object/from16 v90, v14
 
     check-cast v90, Lcom/android/keyguard/KeyguardEditorHelper;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notifLiveDataStoreImplProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notifLiveDataStoreImplProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v91, v1
+    move-object/from16 v91, v14
 
     check-cast v91, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    move-object/from16 v92, v1
+    move-object/from16 v92, v14
 
     check-cast v92, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
-    iget-object v1, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v1, v1, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationSnapshotProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->notificationSnapshotProvider:Ljavax/inject/Provider;
 
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    move-result-object v1
+    move-result-object v14
 
-    check-cast v1, Lcom/android/systemui/statusbar/notification/NotificationSnapshot;
+    check-cast v14, Lcom/android/systemui/statusbar/notification/NotificationSnapshot;
+
+    iget-object v14, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
+
+    iget-object v14, v14, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->fakeStatusBarClockControllerProvider:Ljavax/inject/Provider;
+
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    move-result-object v14
+
+    move-object/from16 v93, v14
+
+    check-cast v93, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
 
     iget-object v0, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->referenceSysUIComponentImpl:Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;
 
-    iget-object v0, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->fakeStatusBarClockControllerProvider:Ljavax/inject/Provider;
+    iget-object v0, v0, Lcom/android/systemui/dagger/DaggerReferenceGlobalRootComponent$ReferenceSysUIComponentImpl;->zenModeControllerImplProvider:Ljavax/inject/Provider;
 
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     move-result-object v0
 
-    move-object/from16 v93, v0
+    move-object/from16 v94, v0
 
-    check-cast v93, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
+    check-cast v94, Lcom/android/systemui/statusbar/policy/ZenModeController;
 
-    move-object/from16 v2, v94
+    move-object/from16 v0, v61
 
-    move-object/from16 v3, v95
+    move-object/from16 v14, v37
 
-    invoke-static/range {v2 .. v93}, Lcom/android/systemui/statusbar/phone/MiuiNotificationModule_ProvideNotificationPanelViewControllerFactory;->provideNotificationPanelViewController(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
+    move-object/from16 v37, v39
+
+    move-object/from16 v39, v15
+
+    move-object/from16 v15, v36
+
+    move-object/from16 v36, v38
+
+    move-object/from16 v38, v40
+
+    move-object/from16 v40, v1
+
+    invoke-static/range {v2 .. v94}, Lcom/android/systemui/statusbar/phone/MiuiNotificationModule_ProvideNotificationPanelViewControllerFactory;->provideNotificationPanelViewController(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;Lcom/android/systemui/statusbar/policy/ZenModeController;)Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 
     move-result-object v0
 

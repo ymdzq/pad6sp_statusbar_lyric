@@ -1,6 +1,6 @@
 .class final Lcom/android/keyguard/logging/KeyguardUpdateMonitorLogger$logBroadcastReceived$2;
 .super Lkotlin/jvm/internal/Lambda;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lkotlin/jvm/functions/Function1;
@@ -57,15 +57,15 @@
     move-result-object p0
 
     .line 7
-    const-string/jumbo p1, "received broadcast "
+    const-string p1, "received broadcast "
 
     .line 8
     invoke-static {p1, p0}, Landroidx/constraintlayout/motion/widget/KeyAttributes$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 11
+    .line 10
     move-result-object p0
 
-    .line 14
+    .line 13
     return-object p0
-    .line 15
+    .line 14
 .end method

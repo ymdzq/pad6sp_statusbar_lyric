@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 .super Lcom/android/systemui/shade/NotificationPanelViewController;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/controlcenter/policy/NCSwitchController$PrepareForNCSwitcherListener;
@@ -225,9 +225,11 @@
 
 .field public final wakefulnessLifecycle:Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
+.field public final zenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
+
 
 # direct methods
-.method public constructor <init>(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/media/controls/ui/KeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)V
+.method public constructor <init>(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/media/controls/ui/KeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;Lcom/android/systemui/statusbar/policy/ZenModeController;)V
     .locals 81
 
     move-object/from16 v15, p0
@@ -467,7 +469,12 @@
     .line 13
     iput-object v6, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->fakeStatusBarClockController:Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
 
+    move-object/from16 v7, p93
+
     .line 14
+    iput-object v7, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->zenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
+
+    .line 15
     invoke-virtual/range {p1 .. p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -482,7 +489,7 @@
 
     iput v7, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mTouchSlop:I
 
-    .line 15
+    .line 16
     invoke-virtual/range {p1 .. p1}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
     move-result-object v7
@@ -501,7 +508,7 @@
 
     const v7, 0x7f0a06b6    # @id/notification_stack_scroller
 
-    .line 16
+    .line 17
     invoke-virtual {v1, v7}, Landroid/widget/FrameLayout;->findViewById(I)Landroid/view/View;
 
     move-result-object v7
@@ -510,7 +517,7 @@
 
     iput-object v7, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 17
+    .line 18
     iget-object v8, v0, Lcom/android/systemui/shade/NotificationPanelViewController;->mResources:Landroid/content/res/Resources;
 
     const v9, 0x7f070477    # @dimen/keyguard_edit_radius '41.0dp'
@@ -521,7 +528,7 @@
 
     iput v8, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mFinalRadius:F
 
-    .line 18
+    .line 19
     iget-object v8, v0, Lcom/android/systemui/shade/NotificationPanelViewController;->mResources:Landroid/content/res/Resources;
 
     const v9, 0x1050296    # @android:dimen/select_dialog_padding_start_material
@@ -532,19 +539,19 @@
 
     iput v8, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mDeviceRadius:F
 
-    .line 19
+    .line 20
     new-instance v8, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mBlurRatioChangedListener$1;
 
     invoke-direct {v8, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mBlurRatioChangedListener$1;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
 
     iput-object v8, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mBlurRatioChangedListener:Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mBlurRatioChangedListener$1;
 
-    .line 20
+    .line 21
     sget-object v9, Lcom/android/keyguard/KeyguardEditorHelper$EditorState;->IDEL:Lcom/android/keyguard/KeyguardEditorHelper$EditorState;
 
     iput-object v9, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mEditorState:Lcom/android/keyguard/KeyguardEditorHelper$EditorState;
 
-    .line 21
+    .line 22
     new-instance v9, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mEditorStateListener$1;
 
     move-object/from16 v10, p44
@@ -555,10 +562,10 @@
 
     const/4 v10, 0x1
 
-    .line 22
+    .line 23
     iput-boolean v10, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mIsDefaultTheme:Z
 
-    .line 23
+    .line 24
     sget-boolean v11, Lcom/miui/utils/configs/MiuiDebugConfig;->DEBUG_NOTIFICATION:Z
 
     const/16 v12, 0x14
@@ -567,7 +574,7 @@
 
     const-string v11, "debug.sysui.miui.minTouchRadius"
 
-    .line 24
+    .line 25
     invoke-static {v11, v12}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v11
@@ -577,11 +584,11 @@
     :cond_0
     move v11, v12
 
-    .line 25
+    .line 26
     :goto_0
     iput v11, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mMinTouchableRaduis:I
 
-    .line 26
+    .line 27
     new-instance v11, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mHidePanelRunnable$1;
 
     const/4 v13, 0x0
@@ -590,14 +597,14 @@
 
     iput-object v11, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mHidePanelRunnable:Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mHidePanelRunnable$1;
 
-    .line 27
+    .line 28
     new-instance v11, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mSetExpandedHeight$1;
 
     invoke-direct {v11, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mSetExpandedHeight$1;-><init>(Ljava/lang/Object;)V
 
     iput-object v11, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mSetExpandedHeight:Lkotlin/reflect/KFunction;
 
-    .line 28
+    .line 29
     const-class v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;
 
     invoke-static {v11}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -608,7 +615,7 @@
 
     iput-object v11, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mKeyguardPanelViewInjector:Lcom/android/keyguard/injector/KeyguardPanelViewInjector;
 
-    .line 29
+    .line 30
     const-class v14, Lcom/android/keyguard/injector/KeyguardClockInjector;
 
     invoke-static {v14}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -619,7 +626,7 @@
 
     iput-object v15, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mKeyguardClockInjector:Lcom/android/keyguard/injector/KeyguardClockInjector;
 
-    .line 30
+    .line 31
     const-class v15, Lcom/android/systemui/controlcenter/policy/NCSwitchController;
 
     invoke-static {v15}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -630,14 +637,14 @@
 
     iput-object v15, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->ncSwitchController:Lcom/android/systemui/controlcenter/policy/NCSwitchController;
 
-    .line 31
+    .line 32
     new-instance v12, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mKeyguardUpdateMonitorCallback$1;
 
     invoke-direct {v12, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mKeyguardUpdateMonitorCallback$1;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
 
     iput-object v12, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mKeyguardUpdateMonitorCallback:Lcom/android/keyguard/KeyguardUpdateMonitorCallback;
 
-    .line 32
+    .line 33
     new-instance v12, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mMiuiKeyguardUpdateMonitorCallback$1;
 
     move-object/from16 v10, p14
@@ -646,20 +653,20 @@
 
     iput-object v12, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mMiuiKeyguardUpdateMonitorCallback:Lcom/miui/interfaces/keyguard/MiuiKeyguardUpdateMonitorCallback;
 
-    .line 33
+    .line 34
     new-instance v12, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$1;
 
     invoke-direct {v12, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$1;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
 
     invoke-virtual {v2, v12}, Lcom/android/systemui/statusbar/CommandQueue;->addCallback(Lcom/android/systemui/statusbar/CommandQueue$Callbacks;)V
 
-    .line 34
+    .line 35
     iget-object v2, v0, Lcom/android/systemui/shade/NotificationPanelViewController;->mNotificationContainerParent:Lcom/android/systemui/shade/NotificationsQuickSettingsContainer;
 
-    .line 35
+    .line 36
     iput-object v2, v6, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;->fakeStatusBarClockContainer:Landroid/view/ViewGroup;
 
-    .line 36
+    .line 37
     iget-object v2, v0, Lcom/android/systemui/shade/NotificationPanelViewController;->mView:Lcom/android/systemui/shade/NotificationPanelView;
 
     invoke-virtual {v2}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
@@ -676,13 +683,13 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 37
+    .line 38
     iput-object v1, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mPanelView:Lcom/android/systemui/shade/NotificationPanelView;
 
-    .line 38
+    .line 39
     iput-object v0, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mPanelViewController:Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 
-    .line 39
+    .line 40
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mContext:Landroid/content/Context;
 
     invoke-virtual {v2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -695,12 +702,12 @@
 
     iget v2, v2, Landroid/content/res/Configuration;->orientation:I
 
-    .line 40
+    .line 41
     sget-boolean v2, Lcom/miui/utils/configs/MiuiConfigs;->IS_PAD:Z
 
     if-nez v2, :cond_1
 
-    .line 41
+    .line 42
     new-instance v2, Lcom/android/keyguard/KeyguardMoveHelper;
 
     iget-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mContext:Landroid/content/Context;
@@ -709,7 +716,7 @@
 
     iput-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardMoveHelper:Lcom/android/keyguard/KeyguardMoveHelper;
 
-    .line 42
+    .line 43
     :cond_1
     const-class v2, Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
@@ -719,19 +726,19 @@
 
     check-cast v6, Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 43
+    .line 44
     iput-object v0, v6, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mMiuiNotificationPanelViewController:Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 
-    .line 44
+    .line 45
     invoke-virtual {v6}, Lcom/android/keyguard/magazine/LockScreenMagazineController;->updateKeyguardSupportDisplayMagazineState()V
 
-    .line 45
+    .line 46
     invoke-virtual {v6}, Lcom/android/keyguard/magazine/LockScreenMagazineController;->updateLockScreenMagazineWallpaperInfo()V
 
-    .line 46
+    .line 47
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mLockScreenMagazineController:Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 47
+    .line 48
     const-class v6, Lcom/android/keyguard/injector/KeyguardUpdateMonitorInjector;
 
     invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -742,7 +749,7 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardUpdateMonitorInjector:Lcom/android/keyguard/injector/KeyguardUpdateMonitorInjector;
 
-    .line 48
+    .line 49
     const-class v6, Lcom/android/keyguard/KeyguardUpdateMonitor;
 
     invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -753,7 +760,7 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardUpdateMonitor:Lcom/android/keyguard/KeyguardUpdateMonitor;
 
-    .line 49
+    .line 50
     const-class v6, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
     invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -764,7 +771,7 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mNegative1PageController:Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
-    .line 50
+    .line 51
     const-class v6, Lcom/android/keyguard/wallpaper/MiuiKeyguardWallPaperManager;
 
     invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -775,7 +782,7 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mMiuiKeyguardWallPaperManager:Lcom/android/keyguard/wallpaper/MiuiKeyguardWallPaperManager;
 
-    .line 51
+    .line 52
     invoke-static {v14}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v6
@@ -784,7 +791,7 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardClockInjector:Lcom/android/keyguard/injector/KeyguardClockInjector;
 
-    .line 52
+    .line 53
     const-class v6, Lcom/android/keyguard/KeyguardEditorHelper;
 
     invoke-static {v6}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -795,26 +802,26 @@
 
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardEditorHelper:Lcom/android/keyguard/KeyguardEditorHelper;
 
-    .line 53
+    .line 54
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 54
+    .line 55
     iget-boolean v2, v2, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mIsSupportLockScreenMagazineLeft:Z
 
     const/4 v6, 0x0
 
     if-eqz v2, :cond_2
 
-    .line 55
+    .line 56
     new-instance v2, Lcom/android/keyguard/injector/KeyguardPanelViewInjector$setDrawableFromOtherApk$1;
 
     invoke-direct {v2, v11}, Lcom/android/keyguard/injector/KeyguardPanelViewInjector$setDrawableFromOtherApk$1;-><init>(Lcom/android/keyguard/injector/KeyguardPanelViewInjector;)V
 
-    .line 56
+    .line 57
     sget-object v12, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
     new-array v14, v13, [Ljava/lang/Void;
@@ -823,7 +830,7 @@
 
     goto :goto_1
 
-    .line 57
+    .line 58
     :cond_2
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mNegative1PageController:Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
@@ -831,16 +838,16 @@
 
     move-object v2, v6
 
-    .line 58
+    .line 59
     :cond_3
     iget-object v2, v2, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;->mKeyguardLeftView:Lcom/android/keyguard/negative/MiuiKeyguardMoveLeftViewContainer;
 
     if-eqz v2, :cond_4
 
-    .line 59
+    .line 60
     invoke-virtual {v2}, Lcom/android/keyguard/negative/MiuiKeyguardMoveLeftViewContainer;->setCustomBackground()V
 
-    .line 60
+    .line 61
     :cond_4
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mNegative1PageController:Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;
 
@@ -848,35 +855,35 @@
 
     move-object v2, v6
 
-    .line 61
+    .line 62
     :cond_5
     iget-object v2, v2, Lcom/android/keyguard/negative/KeyguardNegative1PageInjector;->mLeftTransferBgView:Landroid/widget/ImageView;
 
     if-eqz v2, :cond_7
 
-    .line 62
+    .line 63
     iget-object v12, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mMiuiKeyguardWallPaperManager:Lcom/android/keyguard/wallpaper/MiuiKeyguardWallPaperManager;
 
     if-nez v12, :cond_6
 
     move-object v12, v6
 
-    .line 63
+    .line 64
     :cond_6
     iget v12, v12, Lcom/android/keyguard/wallpaper/MiuiKeyguardWallPaperManager;->mWallpaperBlurColor:I
 
-    .line 64
+    .line 65
     invoke-virtual {v2, v12}, Landroid/widget/ImageView;->setBackgroundColor(I)V
 
-    .line 65
+    .line 66
     :cond_7
     :goto_1
     invoke-virtual {v11}, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->initKeyguardViewCollection()V
 
-    .line 66
+    .line 67
     invoke-virtual {v11}, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->initScreenSize()V
 
-    .line 67
+    .line 68
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mContext:Landroid/content/Context;
 
     const-string v12, "power"
@@ -889,7 +896,7 @@
 
     iput-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mPowerManager:Landroid/os/PowerManager;
 
-    .line 68
+    .line 69
     new-instance v2, Lcom/android/keyguard/DoubleTapHelper;
 
     iget-object v12, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mPanelView:Lcom/android/systemui/shade/NotificationPanelView;
@@ -902,12 +909,12 @@
 
     iput-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mDoubleTapHelper:Lcom/android/keyguard/DoubleTapHelper;
 
-    .line 69
+    .line 70
     sget-boolean v2, Lcom/miui/utils/configs/MiuiConfigs;->SUPPORT_GESTURE_WAKEUP:Z
 
     iput-boolean v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mSupportGestureWakeup:Z
 
-    .line 70
+    .line 71
     new-instance v2, Lcom/android/internal/widget/LockPatternUtils;
 
     iget-object v12, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mContext:Landroid/content/Context;
@@ -916,7 +923,7 @@
 
     iput-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mLockPatternUtils:Lcom/android/internal/widget/LockPatternUtils;
 
-    .line 71
+    .line 72
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mPanelView:Lcom/android/systemui/shade/NotificationPanelView;
 
     if-eqz v2, :cond_8
@@ -934,7 +941,7 @@
     :cond_8
     iput-object v6, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mColorRibbonsContainer:Lcom/android/keyguard/widget/ColorRibbonsContainer;
 
-    .line 72
+    .line 73
     const-class v2, Lcom/miui/systemui/controller/ForceBlackObserver;
 
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
@@ -945,20 +952,20 @@
 
     invoke-virtual {v6, v11}, Lcom/miui/systemui/controller/ForceBlackObserver;->addCallback(Lcom/miui/systemui/controller/ForceBlackObserver$Callback;)V
 
-    .line 73
+    .line 74
     invoke-static {v2}, Lcom/android/systemui/Dependency;->get(Ljava/lang/Class;)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lcom/miui/systemui/controller/ForceBlackObserver;
 
-    .line 74
+    .line 75
     iget-boolean v2, v2, Lcom/miui/systemui/controller/ForceBlackObserver;->mForceBlack:Z
 
-    .line 75
+    .line 76
     iput-boolean v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mForceBlack:Z
 
-    .line 76
+    .line 77
     iget-object v2, v11, Lcom/android/keyguard/injector/KeyguardPanelViewInjector;->mKeyguardStateController:Lcom/android/systemui/statusbar/policy/KeyguardStateController;
 
     new-instance v6, Lcom/android/keyguard/injector/KeyguardPanelViewInjector$init$3;
@@ -969,23 +976,23 @@
 
     invoke-virtual {v2, v6}, Lcom/android/systemui/statusbar/policy/KeyguardStateControllerImpl;->addCallback(Ljava/lang/Object;)V
 
-    .line 77
+    .line 78
     invoke-virtual {v1, v13}, Landroid/widget/FrameLayout;->setClipChildren(Z)V
 
-    .line 78
+    .line 79
     invoke-virtual {v1, v0}, Landroid/widget/FrameLayout;->addOnAttachStateChangeListener(Landroid/view/View$OnAttachStateChangeListener;)V
 
-    .line 79
+    .line 80
     invoke-virtual/range {p1 .. p1}, Landroid/widget/FrameLayout;->isAttachedToWindow()Z
 
     move-result v2
 
     if-eqz v2, :cond_9
 
-    .line 80
+    .line 81
     invoke-virtual/range {p0 .. p1}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->onViewAttachedToWindow(Landroid/view/View;)V
 
-    .line 81
+    .line 82
     :cond_9
     invoke-static {}, Lcom/miui/systemui/util/CommonUtil;->isDefaultLockScreenTheme()Z
 
@@ -995,7 +1002,7 @@
 
     const-string v1, "PanelViewSpring"
 
-    .line 82
+    .line 83
     filled-new-array {v1}, [Ljava/lang/Object;
 
     move-result-object v2
@@ -1018,10 +1025,10 @@
 
     invoke-interface {v2, v6}, Lmiuix/animation/IStateStyle;->setTo([Ljava/lang/Object;)Lmiuix/animation/IStateStyle;
 
-    .line 83
+    .line 84
     sget-object v2, Lcom/android/systemui/shade/MiuiNotificationPanelViewControllerKt;->SPRING_ANIM_CONFIG:Lmiuix/animation/base/AnimConfig;
 
-    .line 84
+    .line 85
     new-instance v6, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$linkageViewAnim$1;
 
     const/4 v11, 0x1
@@ -1034,7 +1041,7 @@
 
     invoke-virtual {v2, v6}, Lmiuix/animation/base/AnimConfig;->addListeners([Lmiuix/animation/listener/TransitionListener;)Lmiuix/animation/base/AnimConfig;
 
-    .line 85
+    .line 86
     invoke-static {v1}, Lmiuix/animation/Folme;->getValueTarget(Ljava/lang/Object;)Lmiuix/animation/ValueTarget;
 
     move-result-object v1
@@ -1049,13 +1056,13 @@
 
     invoke-virtual {v1, v6, v2}, Lmiuix/animation/IAnimTarget;->setMinVisibleChange(F[Ljava/lang/String;)Lmiuix/animation/IAnimTarget;
 
-    .line 86
+    .line 87
     iput-object v0, v5, Lcom/android/keyguard/KeyguardEditorHelper;->mMiuiNotificationPanelViewController:Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 
-    .line 87
+    .line 88
     invoke-virtual {v5, v9}, Lcom/android/keyguard/KeyguardEditorHelper;->addEditorStateListener(Lcom/android/keyguard/KeyguardEditorHelper$EditorStateListener;)V
 
-    .line 88
+    .line 89
     invoke-virtual {v7}, Landroid/view/ViewGroup;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -1066,7 +1073,7 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 89
+    .line 90
     invoke-interface/range {p85 .. p85}, Ldagger/Lazy;->get()Ljava/lang/Object;
 
     move-result-object v1
@@ -1079,10 +1086,10 @@
 
     invoke-virtual {v1, v2}, Lcom/android/systemui/controlcenter/policy/ControlCenterControllerImpl;->addCallback(Lcom/android/systemui/plugins/miui/controlcenter/ControlCenterController$UseControlCenterChangeListener;)V
 
-    .line 90
+    .line 91
     iput-object v0, v15, Lcom/android/systemui/controlcenter/policy/NCSwitchController;->panelViewController:Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
 
-    .line 91
+    .line 92
     iget-object v1, v15, Lcom/android/systemui/controlcenter/policy/NCSwitchController;->listeners:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -1091,25 +1098,25 @@
 
     if-nez v2, :cond_a
 
-    .line 92
+    .line 93
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 93
+    .line 94
     :cond_a
     iget-object v1, v0, Lcom/android/systemui/shade/NotificationPanelViewController;->mDepthController:Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
-    .line 94
+    .line 95
     iget-object v1, v1, Lcom/android/systemui/statusbar/NotificationShadeDepthController;->listeners:Ljava/util/List;
 
-    .line 95
+    .line 96
     check-cast v1, Ljava/util/ArrayList;
 
     invoke-virtual {v1, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
+    .line 97
     invoke-virtual {v4, v0}, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;->addListener(Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager$ShowingUnimportantChangeListener;)V
 
-    .line 97
+    .line 98
     new-instance v1, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$4;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$4;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
@@ -1118,14 +1125,14 @@
 
     check-cast v2, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;
 
-    .line 98
+    .line 99
     iput-object v1, v2, Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;->mBgBlurRadiusListener:Ljava/util/function/Consumer;
 
     const/4 v1, 0x2
 
     new-array v2, v1, [F
 
-    .line 99
+    .line 100
     fill-array-data v2, :array_0
 
     const/4 v3, -0x2
@@ -1138,7 +1145,7 @@
 
     new-array v2, v1, [F
 
-    .line 100
+    .line 101
     fill-array-data v2, :array_1
 
     invoke-static {v3, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
@@ -1149,7 +1156,7 @@
 
     new-array v2, v1, [F
 
-    .line 101
+    .line 102
     fill-array-data v2, :array_2
 
     invoke-static {v3, v2}, Lmiuix/animation/utils/EaseManager;->getStyle(I[F)Lmiuix/animation/utils/EaseManager$EaseStyle;
@@ -1158,14 +1165,14 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->translationYEaseStyle:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 102
+    .line 103
     new-instance v2, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$headsUpViewController$1;
 
     invoke-direct {v2, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$headsUpViewController$1;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->headsUpViewController:Lcom/android/systemui/shade/MiuiNotificationPanelViewController$headsUpViewController$1;
 
-    .line 103
+    .line 104
     new-instance v2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     new-array v4, v1, [F
@@ -1176,7 +1183,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->hideEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 104
+    .line 105
     new-instance v2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     new-array v4, v1, [F
@@ -1187,7 +1194,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->showEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 105
+    .line 106
     new-instance v2, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     const/4 v4, 0x1
@@ -1208,7 +1215,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->alphaHideEase:Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
-    .line 106
+    .line 107
     new-instance v2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     new-array v4, v1, [F
@@ -1219,7 +1226,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->alphaShowEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 107
+    .line 108
     new-instance v2, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     const/4 v4, 0x1
@@ -1240,7 +1247,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->blackHideEase:Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
-    .line 108
+    .line 109
     new-instance v2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     new-array v4, v1, [F
@@ -1251,7 +1258,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->blackShowEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 109
+    .line 110
     new-instance v2, Lmiuix/animation/utils/EaseManager$EaseStyle;
 
     new-array v1, v1, [F
@@ -1262,7 +1269,7 @@
 
     iput-object v2, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->lockscreenInfoAlphaShowEase:Lmiuix/animation/utils/EaseManager$EaseStyle;
 
-    .line 110
+    .line 111
     new-instance v1, Lmiuix/animation/utils/EaseManager$InterpolateEaseStyle;
 
     const/16 v2, 0xf
@@ -1281,10 +1288,10 @@
 
     const/4 v1, 0x1
 
-    .line 111
+    .line 112
     iput-boolean v1, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->panelViewVisible:Z
 
-    .line 112
+    .line 113
     new-instance v1, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mHidePanelRunnable$1;
 
     const/4 v2, 0x5
@@ -1293,7 +1300,7 @@
 
     iput-object v1, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->updateVisibilityOnFinishedSleep:Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mHidePanelRunnable$1;
 
-    .line 113
+    .line 114
     new-instance v1, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mKeyguardViewManagerCallback$1;
 
     invoke-direct {v1, v0}, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$mKeyguardViewManagerCallback$1;-><init>(Lcom/android/systemui/shade/MiuiNotificationPanelViewController;)V
@@ -1302,12 +1309,12 @@
 
     const/high16 v1, -0x40800000    # -1.0f
 
-    .line 114
+    .line 115
     iput v1, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mKeyguardBlurRatio:F
 
     const-string v1, "TransitionAlpha"
 
-    .line 115
+    .line 116
     iput-object v1, v0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->KEY_TRANSLATION_ALPHA:Ljava/lang/String;
 
     return-void
@@ -8653,7 +8660,7 @@
     if-eqz p1, :cond_3
 
     .line 238
-    const v0, 0x7f0816c3    # @drawable/notifications_clear_all 'res/drawable-440dpi-night/notifications_clear_all.webp'
+    const v0, 0x7f0816c3    # @drawable/notifications_clear_all 'res/drawable-night-440dpi/notifications_clear_all.webp'
 
     .line 240
     const v2, 0x7f080b98    # @drawable/btn_clear_all 'res/drawable-440dpi/btn_clear_all.webp'
@@ -14263,253 +14270,268 @@
     move-result p1
 
     .line 18
-    if-eqz p1, :cond_1
+    if-nez p1, :cond_0
 
     .line 19
+    iget-object p1, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->zenModeController:Lcom/android/systemui/statusbar/policy/ZenModeController;
+
+    .line 21
+    check-cast p1, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;
+
+    .line 23
+    invoke-virtual {p1}, Lcom/android/systemui/statusbar/policy/ZenModeControllerImpl;->isZenModeOn()Z
+
+    .line 25
+    move-result p1
+
+    .line 28
+    if-eqz p1, :cond_1
+
+    .line 29
     :cond_0
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 21
+    .line 31
     move-result-object p1
 
-    .line 24
+    .line 34
     iget-object v0, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->panelView:Lcom/android/systemui/shade/NotificationPanelView;
 
-    .line 25
+    .line 35
     invoke-static {p1, v0}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->applyContainerViewBlur(Landroid/content/Context;Landroid/view/View;)V
 
-    .line 27
+    .line 37
     iget-object p1, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->panelView:Lcom/android/systemui/shade/NotificationPanelView;
 
-    .line 30
+    .line 40
     :try_start_0
     const-string v0, "android.view.View"
 
-    .line 32
+    .line 42
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
-    .line 34
-    move-result-object v0
-
-    .line 37
-    const-string v1, "disableMiBackgroundContainBelow"
-
-    .line 38
-    new-array v2, p2, [Ljava/lang/Class;
-
-    .line 40
-    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
-
-    .line 42
-    const/4 v4, 0x0
-
     .line 44
-    aput-object v3, v2, v4
-
-    .line 45
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    move-result-object v0
 
     .line 47
-    move-result-object v0
+    const-string v1, "disableMiBackgroundContainBelow"
+
+    .line 48
+    new-array v2, p2, [Ljava/lang/Class;
 
     .line 50
-    new-array p2, p2, [Ljava/lang/Object;
+    sget-object v3, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
 
-    .line 51
-    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+    .line 52
+    const/4 v4, 0x0
 
-    .line 53
-    aput-object v1, p2, v4
+    .line 54
+    aput-object v3, v2, v4
 
     .line 55
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    .line 57
+    move-result-object v0
+
+    .line 60
+    new-array p2, p2, [Ljava/lang/Object;
+
+    .line 61
+    sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
+
+    .line 63
+    aput-object v1, p2, v4
+
+    .line 65
     invoke-virtual {v0, p1, p2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
+    .line 67
     goto :goto_0
 
-    .line 60
+    .line 70
     :catch_0
     const-string p1, "NotificationUtil"
 
-    .line 61
+    .line 71
     const-string p2, "disableMiBackgroundContainBelow  Method not found!"
 
-    .line 63
+    .line 73
     invoke-static {p1, p2}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 65
+    .line 75
     goto :goto_0
 
-    .line 68
+    .line 78
     :cond_1
     invoke-virtual {v0}, Landroid/widget/FrameLayout;->getContext()Landroid/content/Context;
 
-    .line 69
+    .line 79
     move-result-object p1
 
-    .line 72
+    .line 82
     iget-object p2, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->panelView:Lcom/android/systemui/shade/NotificationPanelView;
 
-    .line 73
+    .line 83
     invoke-static {p1, p2}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->clearContainerViewBlur(Landroid/content/Context;Landroid/view/View;)V
 
-    .line 75
+    .line 85
     :goto_0
     iget-object p1, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->pipeline:Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
-    .line 78
+    .line 88
     invoke-virtual {p1}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->getAllNotifs()Ljava/util/Collection;
 
-    .line 80
+    .line 90
     move-result-object p1
 
-    .line 83
+    .line 93
     new-instance p2, Ljava/util/ArrayList;
 
-    .line 84
+    .line 94
     invoke-direct {p2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 86
+    .line 96
     invoke-interface {p1}, Ljava/lang/Iterable;->iterator()Ljava/util/Iterator;
 
-    .line 89
+    .line 99
     move-result-object p1
 
-    .line 92
+    .line 102
     :cond_2
     :goto_1
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 93
+    .line 103
     move-result v0
 
-    .line 96
+    .line 106
     if-eqz v0, :cond_3
 
-    .line 97
+    .line 107
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 99
+    .line 109
     move-result-object v0
 
-    .line 102
+    .line 112
     move-object v1, v0
 
-    .line 103
+    .line 113
     check-cast v1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 104
+    .line 114
     iget-object v1, v1, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 106
+    .line 116
     instance-of v1, v1, Lcom/android/systemui/statusbar/notification/row/MiuiExpandableNotificationRow;
 
-    .line 108
+    .line 118
     if-eqz v1, :cond_2
 
-    .line 110
+    .line 120
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 112
+    .line 122
     goto :goto_1
 
-    .line 115
+    .line 125
     :cond_3
     invoke-virtual {p2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
-    .line 116
+    .line 126
     move-result-object p1
 
-    .line 119
+    .line 129
     :goto_2
     invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
 
-    .line 120
+    .line 130
     move-result p2
 
-    .line 123
+    .line 133
     if-eqz p2, :cond_4
 
-    .line 124
+    .line 134
     invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
-    .line 126
+    .line 136
     move-result-object p2
 
-    .line 129
+    .line 139
     check-cast p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
-    .line 130
+    .line 140
     iget-object p2, p2, Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;->row:Lcom/android/systemui/statusbar/notification/row/ExpandableNotificationRow;
 
-    .line 132
+    .line 142
     check-cast p2, Lcom/android/systemui/statusbar/notification/row/MiuiExpandableNotificationRow;
 
-    .line 134
+    .line 144
     invoke-virtual {p2}, Lcom/android/systemui/statusbar/notification/row/MiuiExpandableNotificationRow;->updateBackgroundBg()V
 
-    .line 136
+    .line 146
     goto :goto_2
 
-    .line 139
+    .line 149
     :cond_4
     iget-object p0, p0, Lcom/android/systemui/shade/MiuiNotificationPanelViewController;->mNotificationStackScroller:Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 140
+    .line 150
     invoke-static {p0}, Lcom/android/systemui/util/ConvenienceExtensionsKt;->getChildren(Landroid/view/ViewGroup;)Lkotlin/sequences/SequencesKt__SequenceBuilderKt$sequence$$inlined$Sequence$1;
 
-    .line 142
+    .line 152
     move-result-object p0
 
-    .line 145
+    .line 155
     sget-object p1, Lcom/android/systemui/shade/MiuiNotificationPanelViewController$toggleBlurBlend$3;->INSTANCE:Lcom/android/systemui/shade/MiuiNotificationPanelViewController$toggleBlurBlend$3;
 
-    .line 146
+    .line 156
     invoke-static {p0, p1}, Lkotlin/sequences/SequencesKt;->filter(Lkotlin/sequences/Sequence;Lkotlin/jvm/functions/Function1;)Lkotlin/sequences/FilteringSequence;
 
-    .line 148
+    .line 158
     move-result-object p0
 
-    .line 151
+    .line 161
     new-instance p1, Lkotlin/sequences/FilteringSequence$iterator$1;
 
-    .line 152
+    .line 162
     invoke-direct {p1, p0}, Lkotlin/sequences/FilteringSequence$iterator$1;-><init>(Lkotlin/sequences/FilteringSequence;)V
 
-    .line 154
+    .line 164
     :goto_3
     invoke-virtual {p1}, Lkotlin/sequences/FilteringSequence$iterator$1;->hasNext()Z
 
-    .line 157
+    .line 167
     move-result p0
 
-    .line 160
+    .line 170
     if-eqz p0, :cond_5
 
-    .line 161
+    .line 171
     invoke-virtual {p1}, Lkotlin/sequences/FilteringSequence$iterator$1;->next()Ljava/lang/Object;
 
-    .line 163
+    .line 173
     move-result-object p0
 
-    .line 166
+    .line 176
     check-cast p0, Landroid/view/View;
 
-    .line 167
+    .line 177
     check-cast p0, Lcom/android/systemui/statusbar/notification/zen/ZenModeView;
 
-    .line 169
+    .line 179
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/zen/ZenModeView;->updateBackgroundBg()V
 
-    .line 171
+    .line 181
     goto :goto_3
 
-    .line 174
+    .line 184
     :cond_5
     return-void
-    .line 175
+    .line 185
 .end method
 
 .method public final updateAwesomeState()V

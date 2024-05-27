@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;
 .super Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # static fields
@@ -225,1104 +225,1237 @@
 .end method
 
 .method private createHandleMenu(IZZLjava/lang/String;)V
-    .locals 22
+    .locals 21
 
     .line 1
     move-object/from16 v10, p0
 
     .line 2
-    new-instance v11, Landroid/view/SurfaceControl$Transaction;
+    move/from16 v6, p3
 
     .line 4
-    invoke-direct {v11}, Landroid/view/SurfaceControl$Transaction;-><init>()V
+    new-instance v11, Landroid/view/SurfaceControl$Transaction;
 
     .line 6
+    invoke-direct {v11}, Landroid/view/SurfaceControl$Transaction;-><init>()V
+
+    .line 8
     iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 9
+    .line 11
     invoke-virtual {v0}, Landroid/app/ActivityManager$RunningTaskInfo;->getConfiguration()Landroid/content/res/Configuration;
 
-    .line 11
+    .line 13
     move-result-object v0
 
-    .line 14
+    .line 16
     iget-object v0, v0, Landroid/content/res/Configuration;->windowConfiguration:Landroid/app/WindowConfiguration;
 
-    .line 15
+    .line 17
     invoke-virtual {v0}, Landroid/app/WindowConfiguration;->getBounds()Landroid/graphics/Rect;
 
-    .line 17
+    .line 19
     move-result-object v0
 
-    .line 20
+    .line 22
     iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 21
+    .line 23
     invoke-virtual {v1}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
-    .line 23
+    .line 25
     move-result v1
-
-    .line 26
-    const/4 v2, 0x5
-
-    .line 27
-    if-ne v1, v2, :cond_0
 
     .line 28
-    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mMiuiFreeformModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;
+    const/4 v2, 0x5
+
+    .line 29
+    if-ne v1, v2, :cond_0
 
     .line 30
-    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mMiuiFreeformModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;
 
     .line 32
-    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 34
-    invoke-virtual {v1, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;->getMiuiFreeformTaskInfo(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
+    iget v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
 
     .line 36
+    invoke-virtual {v1, v3}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;->getMiuiFreeformTaskInfo(I)Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;
+
+    .line 38
     move-result-object v1
 
-    .line 39
+    .line 41
     if-eqz v1, :cond_0
 
-    .line 40
+    .line 42
     invoke-virtual {v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationBounds()Landroid/graphics/Rect;
 
-    .line 42
+    .line 44
     move-result-object v0
 
-    .line 45
+    .line 47
     invoke-virtual {v1}, Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskInfo;->getDestinationScaleX()F
 
-    .line 46
+    .line 48
     move-result v1
 
-    .line 49
+    .line 51
     goto :goto_0
 
-    .line 50
+    .line 52
     :cond_0
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 51
-    :goto_0
-    move-object v6, v0
-
     .line 53
-    move v7, v1
-
-    .line 54
-    const/4 v0, 0x2
+    :goto_0
+    move-object v7, v0
 
     .line 55
-    if-eqz p3, :cond_1
+    move v8, v1
 
     .line 56
-    const/4 v3, 0x0
-
-    .line 58
-    goto :goto_1
-
-    .line 59
-    :cond_1
-    move v3, v0
-
-    .line 60
-    :goto_1
-    add-int/lit8 v3, v3, 0x3
-
-    .line 61
-    add-int v12, v3, p2
-
-    .line 63
-    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 65
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 67
-    move-result-object v3
-
-    .line 70
-    const v4, 0x7f070186    # @dimen/captionbutton_margin '8.0dp'
-
-    .line 71
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 74
-    move-result v13
-
-    .line 77
-    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 78
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 80
-    move-result-object v3
-
-    .line 83
-    const v4, 0x7f070188    # @dimen/captionbutton_width '52.0dp'
-
-    .line 84
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 87
-    move-result v14
-
-    .line 90
-    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 91
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 93
-    move-result-object v3
-
-    .line 96
-    const v4, 0x7f070184    # @dimen/captionbutton_height '44.0dp'
-
-    .line 97
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 100
-    move-result v3
-
-    .line 103
-    mul-int v4, v14, v12
-
-    .line 104
-    add-int v8, v4, v13
-
-    .line 106
-    add-int v15, v3, v13
-
-    .line 108
-    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 110
-    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    .line 112
-    move-result-object v3
-
-    .line 115
-    const v4, 0x7f070189    # @dimen/captionhandle_margin '10.0dp'
-
-    .line 116
-    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    .line 119
-    move-result v3
-
-    .line 122
-    const-string v9, "Caption Menu"
-
-    .line 123
-    iget-object v4, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 125
-    invoke-virtual {v4}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
-
-    .line 127
-    move-result v4
-
-    .line 130
-    const/high16 v5, 0x40000000    # 2.0f
-
-    .line 131
-    if-ne v4, v2, :cond_4
-
-    .line 133
-    iget v0, v6, Landroid/graphics/Rect;->left:I
-
-    .line 135
-    int-to-float v0, v0
-
-    .line 137
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    .line 138
-    move-result v2
-
-    .line 141
-    int-to-float v2, v2
-
-    .line 142
-    invoke-static {v2, v7, v5, v0}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
-
-    .line 143
-    move-result v0
-
-    .line 146
-    int-to-float v2, v8
-
-    .line 147
-    div-float v4, v2, v5
-
-    .line 148
-    sub-float/2addr v0, v4
-
-    .line 150
-    float-to-int v0, v0
-
-    .line 151
-    iget v1, v6, Landroid/graphics/Rect;->left:I
-
-    .line 152
-    int-to-float v1, v1
-
-    .line 154
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    .line 155
-    move-result v5
-
-    .line 158
-    int-to-float v5, v5
-
-    .line 159
-    mul-float/2addr v5, v7
-
-    .line 160
-    const/high16 v17, 0x40000000    # 2.0f
-
-    .line 161
-    div-float v5, v5, v17
-
-    .line 163
-    add-float/2addr v5, v1
-
-    .line 165
-    add-float/2addr v5, v4
-
-    .line 166
-    float-to-int v1, v5
-
-    .line 167
-    iget v4, v6, Landroid/graphics/Rect;->top:I
-
-    .line 168
-    add-int/2addr v4, v3
-
-    .line 170
-    iget-object v5, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
-
-    .line 171
-    move/from16 v18, v12
-
-    .line 173
-    const/4 v12, 0x0
-
-    .line 175
-    invoke-virtual {v5, v12}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
-
-    .line 176
-    move-result-object v5
-
-    .line 179
-    if-gez v0, :cond_2
-
-    .line 180
-    iget v0, v6, Landroid/graphics/Rect;->left:I
-
-    .line 182
-    add-int/2addr v0, v3
-
-    .line 184
-    goto :goto_2
-
-    .line 185
-    :cond_2
-    iget v5, v5, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
-
-    .line 186
-    if-le v1, v5, :cond_3
-
-    .line 188
-    iget v0, v6, Landroid/graphics/Rect;->left:I
-
-    .line 190
-    int-to-float v0, v0
-
-    .line 192
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    .line 193
-    move-result v1
-
-    .line 196
-    int-to-float v1, v1
-
-    .line 197
-    mul-float/2addr v1, v7
-
-    .line 198
-    add-float/2addr v1, v0
-
-    .line 199
-    sub-float/2addr v1, v2
-
-    .line 200
-    int-to-float v0, v3
-
-    .line 201
-    sub-float/2addr v1, v0
-
-    .line 202
-    float-to-int v0, v1
-
-    .line 203
-    :cond_3
-    :goto_2
-    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 204
-    invoke-virtual {v1, v0, v4}, Landroid/graphics/Point;->set(II)V
-
-    .line 206
-    const/high16 v5, 0x40000000    # 2.0f
-
-    .line 209
-    goto :goto_3
-
-    .line 211
-    :cond_4
-    move/from16 v18, v12
-
-    .line 212
-    const/4 v12, 0x0
-
-    .line 214
-    iget v1, v6, Landroid/graphics/Rect;->left:I
-
-    .line 215
-    int-to-float v1, v1
-
-    .line 217
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    .line 218
-    move-result v2
-
-    .line 221
-    int-to-float v2, v2
-
-    .line 222
-    const/high16 v5, 0x40000000    # 2.0f
-
-    .line 223
-    div-float/2addr v2, v5
-
-    .line 225
-    add-float/2addr v2, v1
-
-    .line 226
-    int-to-float v1, v8
-
-    .line 227
-    div-float/2addr v1, v5
-
-    .line 228
-    sub-float/2addr v2, v1
-
-    .line 229
-    float-to-int v1, v2
-
-    .line 230
-    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
-
-    .line 231
-    if-eqz v2, :cond_5
-
-    .line 233
-    iget v2, v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mCaptionOffsetY:I
-
-    .line 235
-    move v12, v2
-
-    .line 237
-    :cond_5
-    iget v2, v6, Landroid/graphics/Rect;->top:I
-
-    .line 238
-    add-int/2addr v2, v3
-
-    .line 240
-    add-int/2addr v2, v12
-
-    .line 241
-    iget-object v4, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 242
-    invoke-virtual {v4}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
-
-    .line 244
-    move-result v4
-
-    .line 247
-    const/4 v12, 0x6
-
-    .line 248
-    if-ne v4, v12, :cond_6
-
-    .line 249
-    iget-object v4, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
-
-    .line 251
-    invoke-virtual {v4}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getSoScState()I
-
-    .line 253
-    move-result v4
-
-    .line 256
-    if-ne v4, v0, :cond_6
-
-    .line 257
-    invoke-static {}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getInstance()Lcom/android/wm/shell/common/split/SplitUtilsStub;
-
-    .line 259
-    move-result-object v0
-
-    .line 262
-    const/4 v4, 0x0
-
-    .line 263
-    invoke-virtual {v0, v4}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getVerticalSplitBoolOrUpdate(Landroid/content/Context;)Z
-
-    .line 264
-    move-result v0
-
-    .line 267
-    if-nez v0, :cond_6
-
-    .line 268
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
-
-    .line 270
-    iget-object v4, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 272
-    iget v4, v4, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 274
-    invoke-virtual {v0, v4}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isTaskInSoScRightOrBottomScreen(I)Z
-
-    .line 276
-    move-result v0
-
-    .line 279
-    if-eqz v0, :cond_6
-
-    .line 280
-    iget v0, v6, Landroid/graphics/Rect;->top:I
-
-    .line 282
-    add-int v2, v0, v3
-
-    .line 284
-    :cond_6
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 286
-    invoke-virtual {v0}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
-
-    .line 288
-    move-result v0
-
-    .line 291
-    const/4 v4, 0x1
-
-    .line 292
-    if-ne v0, v4, :cond_7
-
-    .line 293
-    add-int/2addr v2, v3
-
-    .line 295
-    :cond_7
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 296
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Point;->set(II)V
-
-    .line 298
-    :goto_3
     iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
 
+    .line 57
+    invoke-static {v0}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->inKidSpace(Landroid/content/Context;)Z
+
+    .line 59
+    move-result v0
+
+    .line 62
+    if-eqz v0, :cond_1
+
+    .line 63
+    const/4 v1, 0x0
+
+    .line 65
+    move v12, v1
+
+    .line 66
+    goto :goto_1
+
+    .line 67
+    :cond_1
+    move/from16 v12, p2
+
+    .line 68
+    :goto_1
+    if-eqz v6, :cond_2
+
+    .line 70
+    const/4 v1, 0x0
+
+    .line 72
+    goto :goto_2
+
+    .line 73
+    :cond_2
+    const/4 v1, 0x2
+
+    .line 74
+    :goto_2
+    add-int/lit8 v1, v1, 0x3
+
+    .line 75
+    add-int v13, v1, v12
+
+    .line 77
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 79
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 81
+    move-result-object v1
+
+    .line 84
+    const v3, 0x7f070186    # @dimen/captionbutton_margin '8.0dp'
+
+    .line 85
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 88
+    move-result v14
+
+    .line 91
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 92
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 94
+    move-result-object v1
+
+    .line 97
+    const v3, 0x7f070188    # @dimen/captionbutton_width '52.0dp'
+
+    .line 98
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 101
+    move-result v15
+
+    .line 104
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 105
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 107
+    move-result-object v1
+
+    .line 110
+    const v3, 0x7f070184    # @dimen/captionbutton_height '44.0dp'
+
+    .line 111
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 114
+    move-result v1
+
+    .line 117
+    mul-int v3, v15, v13
+
+    .line 118
+    add-int v9, v3, v14
+
+    .line 120
+    add-int v5, v1, v14
+
+    .line 122
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 124
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 126
+    move-result-object v1
+
+    .line 129
+    const v3, 0x7f070189    # @dimen/captionhandle_margin '10.0dp'
+
+    .line 130
+    invoke-virtual {v1, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    .line 133
+    move-result v1
+
+    .line 136
+    const-string v16, "Caption Menu"
+
+    .line 137
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 139
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+
+    .line 141
+    move-result v3
+
+    .line 144
+    const/high16 v4, 0x40000000    # 2.0f
+
+    .line 145
+    if-ne v3, v2, :cond_5
+
+    .line 147
+    iget v2, v7, Landroid/graphics/Rect;->left:I
+
+    .line 149
+    int-to-float v2, v2
+
+    .line 151
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    .line 152
+    move-result v3
+
+    .line 155
+    int-to-float v3, v3
+
+    .line 156
+    invoke-static {v3, v8, v4, v2}, Landroidx/constraintlayout/core/motion/utils/StopLogicEngine$$ExternalSyntheticOutline0;->m$1(FFFF)F
+
+    .line 157
+    move-result v2
+
+    .line 160
+    int-to-float v3, v9
+
+    .line 161
+    div-float v17, v3, v4
+
+    .line 162
+    sub-float v2, v2, v17
+
+    .line 164
+    float-to-int v2, v2
+
+    .line 166
+    iget v4, v7, Landroid/graphics/Rect;->left:I
+
+    .line 167
+    int-to-float v4, v4
+
+    .line 169
+    move/from16 v18, v13
+
+    .line 170
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    .line 172
+    move-result v13
+
+    .line 175
+    int-to-float v13, v13
+
+    .line 176
+    mul-float/2addr v13, v8
+
+    .line 177
+    const/high16 v19, 0x40000000    # 2.0f
+
+    .line 178
+    div-float v13, v13, v19
+
+    .line 180
+    add-float/2addr v13, v4
+
+    .line 182
+    add-float v13, v13, v17
+
+    .line 183
+    float-to-int v4, v13
+
+    .line 185
+    iget v13, v7, Landroid/graphics/Rect;->top:I
+
+    .line 186
+    add-int/2addr v13, v1
+
+    .line 188
+    move/from16 v17, v14
+
+    .line 189
+    iget-object v14, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
+
+    .line 191
+    move/from16 v19, v15
+
+    .line 193
+    const/4 v15, 0x0
+
+    .line 195
+    invoke-virtual {v14, v15}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+
+    .line 196
+    move-result-object v14
+
+    .line 199
+    if-gez v2, :cond_3
+
+    .line 200
+    iget v2, v7, Landroid/graphics/Rect;->left:I
+
+    .line 202
+    add-int/2addr v2, v1
+
+    .line 204
+    goto :goto_3
+
+    .line 205
+    :cond_3
+    iget v14, v14, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+
+    .line 206
+    if-le v4, v14, :cond_4
+
+    .line 208
+    iget v2, v7, Landroid/graphics/Rect;->left:I
+
+    .line 210
+    int-to-float v2, v2
+
+    .line 212
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    .line 213
+    move-result v4
+
+    .line 216
+    int-to-float v4, v4
+
+    .line 217
+    mul-float/2addr v4, v8
+
+    .line 218
+    add-float/2addr v4, v2
+
+    .line 219
+    sub-float/2addr v4, v3
+
+    .line 220
+    int-to-float v2, v1
+
+    .line 221
+    sub-float/2addr v4, v2
+
+    .line 222
+    float-to-int v2, v4
+
+    .line 223
+    :cond_4
+    :goto_3
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
+
+    .line 224
+    invoke-virtual {v3, v2, v13}, Landroid/graphics/Point;->set(II)V
+
+    .line 226
+    const/high16 v4, 0x40000000    # 2.0f
+
+    .line 229
+    goto :goto_5
+
+    .line 231
+    :cond_5
+    move/from16 v18, v13
+
+    .line 232
+    move/from16 v17, v14
+
+    .line 234
+    move/from16 v19, v15
+
+    .line 236
+    iget v2, v7, Landroid/graphics/Rect;->left:I
+
+    .line 238
+    int-to-float v2, v2
+
+    .line 240
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    .line 241
+    move-result v3
+
+    .line 244
+    int-to-float v3, v3
+
+    .line 245
+    const/high16 v4, 0x40000000    # 2.0f
+
+    .line 246
+    div-float/2addr v3, v4
+
+    .line 248
+    add-float/2addr v3, v2
+
+    .line 249
+    int-to-float v2, v9
+
+    .line 250
+    div-float/2addr v2, v4
+
+    .line 251
+    sub-float/2addr v3, v2
+
+    .line 252
+    float-to-int v2, v3
+
+    .line 253
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+
+    .line 254
+    if-eqz v3, :cond_6
+
+    .line 256
+    iget v3, v3, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mCaptionOffsetY:I
+
+    .line 258
+    goto :goto_4
+
+    .line 260
+    :cond_6
+    const/4 v3, 0x0
+
+    .line 261
+    :goto_4
+    iget v13, v7, Landroid/graphics/Rect;->top:I
+
+    .line 262
+    add-int/2addr v13, v1
+
+    .line 264
+    add-int/2addr v13, v3
+
+    .line 265
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 266
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
+
+    .line 268
+    move-result v3
+
+    .line 271
+    const/4 v14, 0x6
+
+    .line 272
+    if-ne v3, v14, :cond_7
+
+    .line 273
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+
+    .line 275
+    invoke-virtual {v3}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->getSoScState()I
+
+    .line 277
+    move-result v3
+
+    .line 280
+    const/4 v14, 0x2
+
+    .line 281
+    if-ne v3, v14, :cond_7
+
+    .line 282
+    invoke-static {}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getInstance()Lcom/android/wm/shell/common/split/SplitUtilsStub;
+
+    .line 284
+    move-result-object v3
+
+    .line 287
+    const/4 v14, 0x0
+
+    .line 288
+    invoke-virtual {v3, v14}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getVerticalSplitBoolOrUpdate(Landroid/content/Context;)Z
+
+    .line 289
+    move-result v3
+
+    .line 292
+    if-nez v3, :cond_7
+
+    .line 293
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mSplitScreenController:Lcom/android/wm/shell/sosc/SoScSplitScreenController;
+
+    .line 295
+    iget-object v14, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 297
+    iget v14, v14, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 299
+    invoke-virtual {v3, v14}, Lcom/android/wm/shell/sosc/SoScSplitScreenController;->isTaskInSoScRightOrBottomScreen(I)Z
+
     .line 301
-    invoke-virtual {v0}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
+    move-result v3
 
-    .line 303
-    move-result-object v0
+    .line 304
+    if-eqz v3, :cond_7
 
-    .line 306
-    invoke-virtual {v0}, Landroid/view/Display;->getCutout()Landroid/view/DisplayCutout;
+    .line 305
+    iget v3, v7, Landroid/graphics/Rect;->top:I
 
     .line 307
-    move-result-object v0
+    add-int v13, v3, v1
 
-    .line 310
-    new-instance v1, Landroid/graphics/Rect;
+    .line 309
+    :cond_7
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 311
-    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
+    invoke-virtual {v3}, Landroid/app/ActivityManager$RunningTaskInfo;->getWindowingMode()I
 
     .line 313
-    iget v4, v2, Landroid/graphics/Point;->x:I
+    move-result v3
 
-    .line 315
-    iget v2, v2, Landroid/graphics/Point;->y:I
+    .line 316
+    const/4 v14, 0x1
 
     .line 317
-    add-int v12, v4, v8
+    if-ne v3, v14, :cond_8
 
-    .line 319
-    add-int v5, v2, v15
+    .line 318
+    add-int/2addr v13, v1
+
+    .line 320
+    :cond_8
+    iget-object v3, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
 
     .line 321
-    invoke-direct {v1, v4, v2, v12, v5}, Landroid/graphics/Rect;-><init>(IIII)V
+    invoke-virtual {v3, v2, v13}, Landroid/graphics/Point;->set(II)V
 
     .line 323
-    if-eqz v0, :cond_b
+    :goto_5
+    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
 
     .line 326
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
+    invoke-virtual {v2}, Landroid/content/Context;->getDisplay()Landroid/view/Display;
 
     .line 328
     move-result-object v2
 
     .line 331
-    invoke-virtual {v2}, Landroid/graphics/Rect;->isEmpty()Z
+    invoke-virtual {v2}, Landroid/view/Display;->getCutout()Landroid/view/DisplayCutout;
 
     .line 332
-    move-result v2
+    move-result-object v2
 
     .line 335
-    if-nez v2, :cond_b
+    new-instance v3, Landroid/graphics/Rect;
 
     .line 336
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
+    iget-object v13, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
 
     .line 338
-    move-result-object v2
+    iget v14, v13, Landroid/graphics/Point;->x:I
 
-    .line 341
-    invoke-static {v1, v2}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
+    .line 340
+    iget v13, v13, Landroid/graphics/Point;->y:I
 
     .line 342
-    move-result v2
+    add-int v15, v14, v9
 
-    .line 345
-    if-eqz v2, :cond_b
+    .line 344
+    add-int v4, v13, v5
 
     .line 346
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
+    invoke-direct {v3, v14, v13, v15, v4}, Landroid/graphics/Rect;-><init>(IIII)V
 
     .line 348
-    move-result-object v2
+    if-eqz v2, :cond_c
 
     .line 351
-    iget v2, v2, Landroid/graphics/Rect;->bottom:I
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 352
-    add-int/2addr v2, v3
-
-    .line 354
-    invoke-virtual {v1}, Landroid/graphics/Rect;->centerX()I
-
-    .line 355
-    move-result v3
-
-    .line 358
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
-
-    .line 359
+    .line 353
     move-result-object v4
 
-    .line 362
-    invoke-virtual {v4}, Landroid/graphics/Rect;->centerX()I
+    .line 356
+    invoke-virtual {v4}, Landroid/graphics/Rect;->isEmpty()Z
+
+    .line 357
+    move-result v4
+
+    .line 360
+    if-nez v4, :cond_c
+
+    .line 361
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
     .line 363
-    move-result v4
-
-    .line 366
-    sub-int/2addr v3, v4
-
-    .line 367
-    invoke-static {v3}, Ljava/lang/Math;->abs(I)I
-
-    .line 368
-    move-result v3
-
-    .line 371
-    iget-object v4, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 372
-    const/4 v5, 0x3
-
-    .line 374
-    invoke-static {v4, v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->dpToPx(Landroid/content/Context;I)I
-
-    .line 375
-    move-result v4
-
-    .line 378
-    if-ge v3, v4, :cond_8
-
-    .line 379
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 381
-    iput v2, v0, Landroid/graphics/Point;->y:I
-
-    .line 383
-    goto :goto_5
-
-    .line 385
-    :cond_8
-    invoke-virtual {v1}, Landroid/graphics/Rect;->centerX()I
-
-    .line 386
-    move-result v3
-
-    .line 389
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
-
-    .line 390
     move-result-object v4
 
-    .line 393
-    invoke-virtual {v4}, Landroid/graphics/Rect;->centerX()I
+    .line 366
+    invoke-static {v3, v4}, Landroid/graphics/Rect;->intersects(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z
 
-    .line 394
+    .line 367
     move-result v4
 
-    .line 397
-    if-lt v3, v4, :cond_9
+    .line 370
+    if-eqz v4, :cond_c
 
-    .line 398
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
+    .line 371
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 400
-    move-result-object v0
+    .line 373
+    move-result-object v4
 
-    .line 403
-    iget v0, v0, Landroid/graphics/Rect;->right:I
+    .line 376
+    iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
-    .line 404
-    iget v3, v1, Landroid/graphics/Rect;->top:I
+    .line 377
+    add-int/2addr v4, v1
 
-    .line 406
-    invoke-virtual {v1, v0, v3}, Landroid/graphics/Rect;->offsetTo(II)V
+    .line 379
+    invoke-virtual {v3}, Landroid/graphics/Rect;->centerX()I
 
-    .line 408
-    goto :goto_4
-
-    .line 411
-    :cond_9
-    invoke-virtual {v0}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
-
-    .line 412
-    move-result-object v0
-
-    .line 415
-    iget v0, v0, Landroid/graphics/Rect;->left:I
-
-    .line 416
-    sub-int/2addr v0, v8
-
-    .line 418
-    iget v3, v1, Landroid/graphics/Rect;->top:I
-
-    .line 419
-    invoke-virtual {v1, v0, v3}, Landroid/graphics/Rect;->offsetTo(II)V
-
-    .line 421
-    :goto_4
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
-
-    .line 424
-    const/4 v3, 0x0
-
-    .line 426
-    invoke-virtual {v0, v3}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
-
-    .line 427
-    move-result-object v0
-
-    .line 430
-    new-instance v4, Landroid/graphics/Rect;
-
-    .line 431
-    iget v5, v0, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
-
-    .line 433
-    iget v0, v0, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
-
-    .line 435
-    invoke-direct {v4, v3, v3, v5, v0}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    .line 437
-    invoke-virtual {v4, v1}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
-
-    .line 440
-    move-result v0
-
-    .line 443
-    if-eqz v0, :cond_a
-
-    .line 444
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 446
-    iget v1, v1, Landroid/graphics/Rect;->left:I
-
-    .line 448
-    iput v1, v0, Landroid/graphics/Point;->x:I
-
-    .line 450
-    goto :goto_5
-
-    .line 452
-    :cond_a
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 453
-    iput v2, v0, Landroid/graphics/Point;->y:I
-
-    .line 455
-    :cond_b
-    :goto_5
-    new-instance v12, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;
-
-    .line 457
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 459
-    invoke-direct {v12, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;-><init>(Landroid/content/Context;)V
-
-    .line 461
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 464
-    invoke-static {v0}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->supportedSplit(Landroid/app/ActivityManager$RunningTaskInfo;)Z
-
-    .line 466
-    move-result v16
-
-    .line 469
-    invoke-static {}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getInstance()Lcom/android/wm/shell/common/split/SplitUtilsStub;
-
-    .line 470
-    move-result-object v0
-
-    .line 473
-    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
-
-    .line 474
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getVerticalSplitBoolOrUpdate(Landroid/content/Context;)Z
-
-    .line 476
-    move-result v19
-
-    .line 479
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
-
-    .line 480
-    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 482
-    iget v1, v1, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
-
-    .line 484
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
-
-    .line 486
-    move-result v20
-
-    .line 489
-    move-object v0, v12
-
-    .line 490
-    move/from16 v1, p2
-
-    .line 491
-    move/from16 v2, v16
-
-    .line 493
-    move/from16 v3, v20
-
-    .line 495
-    move/from16 v4, v19
-
-    .line 497
-    move/from16 v21, v13
-
-    .line 499
-    const/high16 v13, 0x40000000    # 2.0f
-
-    .line 501
-    move/from16 v5, p3
-
-    .line 503
-    invoke-virtual/range {v0 .. v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->init(ZZZZZ)V
-
-    .line 505
-    move/from16 v0, p1
-
-    .line 508
-    invoke-virtual {v12, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->setSelectedPos(I)V
-
-    .line 510
-    move/from16 v0, p2
-
-    .line 513
-    move/from16 v1, v16
-
-    .line 515
-    move/from16 v2, v20
-
-    .line 517
-    move/from16 v3, v19
-
-    .line 519
-    move/from16 v4, p3
-
-    .line 521
-    move-object/from16 v5, p4
-
-    .line 523
-    invoke-static/range {v0 .. v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinTrackUtils;->trackWindowControlExpose(ZZZZZLjava/lang/String;)V
-
-    .line 525
-    iget v0, v6, Landroid/graphics/Rect;->left:I
-
-    .line 528
-    int-to-float v0, v0
-
-    .line 530
-    invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
-
-    .line 531
+    .line 380
     move-result v1
 
-    .line 534
-    int-to-float v1, v1
+    .line 383
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 535
-    invoke-static {v1, v13, v7, v0}, Lcom/android/keyguard/MiuiKeyguardCameraView$MiuiKeyguardCameraViewInternal$$ExternalSyntheticOutline0;->m(FFFF)F
+    .line 384
+    move-result-object v13
 
-    .line 536
-    move-result v0
+    .line 387
+    invoke-virtual {v13}, Landroid/graphics/Rect;->centerX()I
 
-    .line 539
-    iget v1, v6, Landroid/graphics/Rect;->top:I
+    .line 388
+    move-result v13
 
-    .line 540
-    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+    .line 391
+    sub-int/2addr v1, v13
 
-    .line 542
-    iget v3, v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mCaptionY:I
+    .line 392
+    invoke-static {v1}, Ljava/lang/Math;->abs(I)I
 
-    .line 544
-    add-int/2addr v1, v3
+    .line 393
+    move-result v1
 
-    .line 546
-    int-to-float v1, v1
+    .line 396
+    iget-object v13, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
 
-    .line 547
-    iget-object v2, v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
+    .line 397
+    const/4 v14, 0x3
 
-    .line 548
-    check-cast v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
+    .line 399
+    invoke-static {v13, v14}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->dpToPx(Landroid/content/Context;I)I
 
-    .line 550
-    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->getDotY()F
+    .line 400
+    move-result v13
 
-    .line 552
-    move-result v2
+    .line 403
+    if-ge v1, v13, :cond_9
 
-    .line 555
-    mul-float/2addr v2, v7
-
-    .line 556
-    add-float v16, v2, v1
-
-    .line 557
+    .line 404
     iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
 
-    .line 559
-    iget v4, v1, Landroid/graphics/Point;->x:I
+    .line 406
+    iput v4, v1, Landroid/graphics/Point;->y:I
 
-    .line 561
-    iget v5, v1, Landroid/graphics/Point;->y:I
+    .line 408
+    goto :goto_7
 
-    .line 563
-    int-to-float v1, v4
+    .line 410
+    :cond_9
+    invoke-virtual {v3}, Landroid/graphics/Rect;->centerX()I
 
-    .line 565
-    sub-float/2addr v0, v1
+    .line 411
+    move-result v1
 
-    .line 566
-    float-to-int v7, v0
+    .line 414
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 567
-    int-to-float v0, v5
+    .line 415
+    move-result-object v13
 
-    .line 568
-    sub-float v0, v16, v0
+    .line 418
+    invoke-virtual {v13}, Landroid/graphics/Rect;->centerX()I
 
-    .line 569
-    float-to-int v6, v0
+    .line 419
+    move-result v13
 
-    .line 571
-    move-object/from16 v0, p0
+    .line 422
+    if-lt v1, v13, :cond_a
 
-    .line 572
-    move-object v1, v12
+    .line 423
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 574
-    move-object v2, v9
+    .line 425
+    move-result-object v1
 
-    .line 575
-    move-object v3, v11
+    .line 428
+    iget v1, v1, Landroid/graphics/Rect;->right:I
 
-    .line 576
-    move v9, v6
+    .line 429
+    iget v2, v3, Landroid/graphics/Rect;->top:I
 
-    .line 577
-    move v6, v8
+    .line 431
+    invoke-virtual {v3, v1, v2}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 578
-    move v8, v7
+    .line 433
+    goto :goto_6
 
-    .line 579
-    move v7, v15
+    .line 436
+    :cond_a
+    invoke-virtual {v2}, Landroid/view/DisplayCutout;->getBoundingRectTop()Landroid/graphics/Rect;
 
-    .line 580
-    invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->addWindow(Landroid/view/View;Ljava/lang/String;Landroid/view/SurfaceControl$Transaction;IIIIII)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$AdditionalWindow;
+    .line 437
+    move-result-object v1
 
-    .line 581
-    move-result-object v0
+    .line 440
+    iget v1, v1, Landroid/graphics/Rect;->left:I
 
-    .line 584
-    iput-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenu:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$AdditionalWindow;
+    .line 441
+    sub-int/2addr v1, v9
 
-    .line 585
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+    .line 443
+    iget v2, v3, Landroid/graphics/Rect;->top:I
 
-    .line 587
-    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
+    .line 444
+    invoke-virtual {v3, v1, v2}, Landroid/graphics/Rect;->offsetTo(II)V
 
-    .line 589
-    check-cast v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
+    .line 446
+    :goto_6
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mDisplayController:Lcom/android/wm/shell/common/DisplayController;
 
-    .line 591
-    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
-
-    .line 593
-    iget v1, v1, Landroid/graphics/Point;->y:I
-
-    .line 595
-    int-to-float v1, v1
-
-    .line 597
-    int-to-float v2, v15
-
-    .line 598
-    div-float/2addr v2, v13
-
-    .line 599
-    add-float/2addr v2, v1
-
-    .line 600
-    sub-float v2, v2, v16
-
-    .line 601
-    invoke-virtual {v0, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->setMenuYOffset(F)V
-
-    .line 603
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
-
-    .line 606
-    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
-
-    .line 608
-    check-cast v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
-
-    .line 610
-    const/4 v1, 0x1
-
-    .line 612
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->startMenuAnimation(Z)V
-
-    .line 613
-    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mSyncQueue:Lcom/android/wm/shell/common/SyncTransactionQueue;
-
-    .line 616
-    new-instance v1, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$$ExternalSyntheticLambda0;
-
-    .line 618
+    .line 449
     const/4 v2, 0x0
 
+    .line 451
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/DisplayController;->getDisplayLayout(I)Lcom/android/wm/shell/common/DisplayLayout;
+
+    .line 452
+    move-result-object v1
+
+    .line 455
+    new-instance v13, Landroid/graphics/Rect;
+
+    .line 456
+    iget v14, v1, Lcom/android/wm/shell/common/DisplayLayout;->mWidth:I
+
+    .line 458
+    iget v1, v1, Lcom/android/wm/shell/common/DisplayLayout;->mHeight:I
+
+    .line 460
+    invoke-direct {v13, v2, v2, v14, v1}, Landroid/graphics/Rect;-><init>(IIII)V
+
+    .line 462
+    invoke-virtual {v13, v3}, Landroid/graphics/Rect;->contains(Landroid/graphics/Rect;)Z
+
+    .line 465
+    move-result v1
+
+    .line 468
+    if-eqz v1, :cond_b
+
+    .line 469
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
+
+    .line 471
+    iget v2, v3, Landroid/graphics/Rect;->left:I
+
+    .line 473
+    iput v2, v1, Landroid/graphics/Point;->x:I
+
+    .line 475
+    goto :goto_7
+
+    .line 477
+    :cond_b
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
+
+    .line 478
+    iput v4, v1, Landroid/graphics/Point;->y:I
+
+    .line 480
+    :cond_c
+    :goto_7
+    new-instance v13, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;
+
+    .line 482
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 484
+    invoke-direct {v13, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;-><init>(Landroid/content/Context;)V
+
+    .line 486
+    if-nez v0, :cond_d
+
+    .line 489
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 491
+    invoke-static {v1}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->supportedSplit(Landroid/app/ActivityManager$RunningTaskInfo;)Z
+
+    .line 493
+    move-result v1
+
+    .line 496
+    if-eqz v1, :cond_d
+
+    .line 497
+    const/4 v1, 0x1
+
+    .line 499
+    goto :goto_8
+
+    .line 500
+    :cond_d
+    const/4 v1, 0x0
+
+    .line 501
+    :goto_8
+    move v14, v1
+
+    .line 502
+    invoke-static {}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getInstance()Lcom/android/wm/shell/common/split/SplitUtilsStub;
+
+    .line 503
+    move-result-object v1
+
+    .line 506
+    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mContext:Landroid/content/Context;
+
+    .line 507
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/common/split/SplitUtilsStub;->getVerticalSplitBoolOrUpdate(Landroid/content/Context;)Z
+
+    .line 509
+    move-result v15
+
+    .line 512
+    if-nez v0, :cond_e
+
+    .line 513
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
+
+    .line 515
+    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
+
+    .line 517
+    iget v2, v2, Landroid/app/ActivityManager$RunningTaskInfo;->taskId:I
+
+    .line 519
+    invoke-virtual {v1, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;->isSupportFreeform(I)Z
+
+    .line 521
+    move-result v1
+
+    .line 524
+    if-eqz v1, :cond_e
+
+    .line 525
+    const/4 v1, 0x1
+
+    .line 527
+    goto :goto_9
+
+    .line 528
+    :cond_e
+    const/4 v1, 0x0
+
+    .line 529
+    :goto_9
+    move v4, v1
+
+    .line 530
+    const-string v1, "handleMenuView.init: inKidSpace="
+
+    .line 531
+    const-string v2, ", isSupportMultiInstance="
+
+    .line 533
+    const-string v3, ", isSupportSplit="
+
+    .line 535
+    invoke-static {v1, v0, v2, v12, v3}, Lcom/android/keyguard/MiuiLockPatternChecker$1$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ZLjava/lang/String;ZLjava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 537
+    move-result-object v0
+
+    .line 540
+    const-string v1, ", isSupportFreeform="
+
+    .line 541
+    const-string v2, ", isLeftRightSplit="
+
+    .line 543
+    invoke-static {v0, v14, v1, v4, v2}, Lcom/android/keyguard/KeyguardFaceListenModel$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ZLjava/lang/String;ZLjava/lang/String;)V
+
+    .line 545
+    invoke-virtual {v0, v15}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 548
+    const-string v1, ", inDesktopMode="
+
+    .line 551
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 553
+    invoke-virtual {v0, v6}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    .line 556
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 559
+    move-result-object v0
+
+    .line 562
+    const-string v1, "MiuiWindowDecoration"
+
+    .line 563
+    invoke-static {v1, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 565
+    move-object v0, v13
+
+    .line 568
+    move v1, v12
+
+    .line 569
+    move v2, v14
+
+    .line 570
+    move v3, v4
+
+    .line 571
+    move/from16 v20, v4
+
+    .line 572
+    const/high16 v6, 0x40000000    # 2.0f
+
+    .line 574
+    move v4, v15
+
+    .line 576
+    move/from16 p2, v5
+
+    .line 577
+    move/from16 v5, p3
+
+    .line 579
+    invoke-virtual/range {v0 .. v5}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->init(ZZZZZ)V
+
+    .line 581
+    move/from16 v0, p1
+
+    .line 584
+    invoke-virtual {v13, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->setSelectedPos(I)V
+
+    .line 586
+    move v0, v12
+
+    .line 589
+    move v1, v14
+
+    .line 590
+    move/from16 v2, v20
+
+    .line 591
+    move v3, v15
+
+    .line 593
+    move/from16 v4, p3
+
+    .line 594
+    move-object/from16 v5, p4
+
+    .line 596
+    invoke-static/range {v0 .. v5}, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinTrackUtils;->trackWindowControlExpose(ZZZZZLjava/lang/String;)V
+
+    .line 598
+    iget v0, v7, Landroid/graphics/Rect;->left:I
+
+    .line 601
+    int-to-float v0, v0
+
+    .line 603
+    invoke-virtual {v7}, Landroid/graphics/Rect;->width()I
+
+    .line 604
+    move-result v1
+
+    .line 607
+    int-to-float v1, v1
+
+    .line 608
+    invoke-static {v1, v6, v8, v0}, Lcom/android/keyguard/MiuiKeyguardCameraView$MiuiKeyguardCameraViewInternal$$ExternalSyntheticOutline0;->m(FFFF)F
+
+    .line 609
+    move-result v0
+
+    .line 612
+    iget v1, v7, Landroid/graphics/Rect;->top:I
+
+    .line 613
+    iget-object v2, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+
+    .line 615
+    iget v3, v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mCaptionY:I
+
+    .line 617
+    add-int/2addr v1, v3
+
+    .line 619
+    int-to-float v1, v1
+
     .line 620
-    invoke-direct {v1, v2, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$$ExternalSyntheticLambda0;-><init>(ILandroid/view/SurfaceControl$Transaction;)V
+    iget-object v2, v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
 
     .line 621
-    invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/SyncTransactionQueue;->runInSync(Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;)V
+    check-cast v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
 
-    .line 624
-    if-eqz p2, :cond_c
+    .line 623
+    invoke-virtual {v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->getDotY()F
 
-    .line 627
-    invoke-virtual {v12}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+    .line 625
+    move-result v2
+
+    .line 628
+    mul-float/2addr v2, v8
 
     .line 629
-    move-result-object v7
+    add-float v14, v2, v1
+
+    .line 630
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
 
     .line 632
-    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$3;
+    iget v4, v1, Landroid/graphics/Point;->x:I
 
-    .line 633
-    move-object v0, v8
-
-    .line 635
-    move-object/from16 v1, p0
+    .line 634
+    iget v5, v1, Landroid/graphics/Point;->y:I
 
     .line 636
-    move-object v2, v12
+    int-to-float v1, v4
 
     .line 638
-    move v3, v14
+    sub-float/2addr v0, v1
 
     .line 639
-    move/from16 v4, v21
+    float-to-int v8, v0
 
     .line 640
-    move/from16 v5, v18
+    int-to-float v0, v5
+
+    .line 641
+    sub-float v0, v14, v0
 
     .line 642
-    move v6, v15
+    float-to-int v15, v0
 
     .line 644
-    invoke-direct/range {v0 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$3;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;IIII)V
+    move-object/from16 v0, p0
 
     .line 645
-    invoke-virtual {v7, v8}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+    move-object v1, v13
+
+    .line 647
+    move-object/from16 v2, v16
 
     .line 648
-    :cond_c
-    invoke-direct {v10, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->setupHandleMenu(Landroid/view/ViewGroup;)V
+    move-object v3, v11
+
+    .line 650
+    move/from16 v16, v6
 
     .line 651
-    invoke-direct {v10, v12}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->setupHandleMenuHoverAnimation(Landroid/view/ViewGroup;)V
+    move v6, v9
+
+    .line 653
+    move/from16 v7, p2
 
     .line 654
-    return-void
+    move v9, v15
+
+    .line 656
+    invoke-virtual/range {v0 .. v9}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->addWindow(Landroid/view/View;Ljava/lang/String;Landroid/view/SurfaceControl$Transaction;IIIIII)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$AdditionalWindow;
+
     .line 657
+    move-result-object v0
+
+    .line 660
+    iput-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenu:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$AdditionalWindow;
+
+    .line 661
+    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+
+    .line 663
+    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
+
+    .line 665
+    check-cast v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
+
+    .line 667
+    iget-object v1, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mHandleMenuPosition:Landroid/graphics/Point;
+
+    .line 669
+    iget v1, v1, Landroid/graphics/Point;->y:I
+
+    .line 671
+    int-to-float v1, v1
+
+    .line 673
+    move/from16 v6, p2
+
+    .line 674
+    int-to-float v2, v6
+
+    .line 676
+    div-float v2, v2, v16
+
+    .line 677
+    add-float/2addr v2, v1
+
+    .line 679
+    sub-float/2addr v2, v14
+
+    .line 680
+    invoke-virtual {v0, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->setMenuYOffset(F)V
+
+    .line 681
+    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mResult:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;
+
+    .line 684
+    iget-object v0, v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration$RelayoutResult;->mRootView:Landroid/view/View;
+
+    .line 686
+    check-cast v0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;
+
+    .line 688
+    const/4 v1, 0x1
+
+    .line 690
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiDotView;->startMenuAnimation(Z)V
+
+    .line 691
+    iget-object v0, v10, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->mSyncQueue:Lcom/android/wm/shell/common/SyncTransactionQueue;
+
+    .line 694
+    new-instance v1, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$$ExternalSyntheticLambda0;
+
+    .line 696
+    const/4 v2, 0x0
+
+    .line 698
+    invoke-direct {v1, v2, v11}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$$ExternalSyntheticLambda0;-><init>(ILandroid/view/SurfaceControl$Transaction;)V
+
+    .line 699
+    invoke-virtual {v0, v1}, Lcom/android/wm/shell/common/SyncTransactionQueue;->runInSync(Lcom/android/wm/shell/common/SyncTransactionQueue$TransactionRunnable;)V
+
+    .line 702
+    if-eqz v12, :cond_f
+
+    .line 705
+    invoke-virtual {v13}, Landroid/widget/LinearLayout;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
+
+    .line 707
+    move-result-object v7
+
+    .line 710
+    new-instance v8, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$3;
+
+    .line 711
+    move-object v0, v8
+
+    .line 713
+    move-object/from16 v1, p0
+
+    .line 714
+    move-object v2, v13
+
+    .line 716
+    move/from16 v3, v19
+
+    .line 717
+    move/from16 v4, v17
+
+    .line 719
+    move/from16 v5, v18
+
+    .line 721
+    invoke-direct/range {v0 .. v6}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration$3;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;IIII)V
+
+    .line 723
+    invoke-virtual {v7, v8}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
+
+    .line 726
+    :cond_f
+    invoke-direct {v10, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->setupHandleMenu(Landroid/view/ViewGroup;)V
+
+    .line 729
+    invoke-direct {v10, v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->setupHandleMenuHoverAnimation(Landroid/view/ViewGroup;)V
+
+    .line 732
+    return-void
+    .line 735
 .end method
 
 .method private static synthetic lambda$createHandleMenu$2(Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;)V
@@ -2843,55 +2976,66 @@
     move-result v3
 
     .line 278
-    goto :goto_3
+    goto :goto_4
 
     .line 279
     :cond_e
     iget-object v3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiBaseWindowDecoration;->mTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
     .line 280
-    iget-object v3, v3, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
+    iget-object v6, v3, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
 
     .line 282
-    invoke-static {v3}, Landroid/app/ActivityTaskManager;->supportMultipleTask(Landroid/content/ComponentName;)Z
+    if-eqz v6, :cond_f
 
     .line 284
-    move-result v3
+    goto :goto_3
+
+    .line 286
+    :cond_f
+    iget-object v6, v3, Landroid/app/ActivityManager$RunningTaskInfo;->baseActivity:Landroid/content/ComponentName;
 
     .line 287
     :goto_3
-    new-instance v6, Ljava/lang/StringBuilder;
+    invoke-static {v6}, Landroid/app/ActivityTaskManager;->supportMultipleTask(Landroid/content/ComponentName;)Z
 
-    .line 288
-    const-string v7, "handleCaptionClicked: callers="
-
-    .line 290
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 289
+    move-result v3
 
     .line 292
-    invoke-static {v4}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+    :goto_4
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    .line 293
+    const-string v7, "handleCaptionClicked: callers="
 
     .line 295
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 297
+    invoke-static {v4}, Landroid/os/Debug;->getCallers(I)Ljava/lang/String;
+
+    .line 300
     move-result-object v4
 
-    .line 298
+    .line 303
     invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 299
+    .line 304
     invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 302
+    .line 307
     move-result-object v4
 
-    .line 305
+    .line 310
     invoke-static {v1, v4}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 306
+    .line 311
     invoke-direct {p0, v5, v3, v0, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecoration;->createHandleMenu(IZZLjava/lang/String;)V
 
-    .line 309
+    .line 314
     return-void
-    .line 312
+    .line 317
 .end method
 
 .method public hideCaption()V

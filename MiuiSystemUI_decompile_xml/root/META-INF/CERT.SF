@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA-256-Digest-Manifest: LE4BXJeUbacgAnszPJiA3IpTr3UWVXmFAoga3PzrKbw=
+SHA-256-Digest-Manifest: gD3f5rsRjJITl6sojNV7o+hBt5rIi/CpUPF22RAITTQ=
 X-Android-APK-Signed: 2, 3
 
 Name: AndroidManifest.xml
@@ -510,16 +510,16 @@ Name: assets/fonts/MitypeRoundedNormal.otf
 SHA-256-Digest: Asf83Q41eN4cT6CozlRJb8oxJQZyGGYCVj7p5T4w8Nk=
 
 Name: classes.dex
-SHA-256-Digest: mx6GxH3b/mq6BRVEFzOVsu2laKQllghqfNc7ExShwis=
+SHA-256-Digest: WiY/rj9Wos/9GBFCCxkVYEq9nara8Zxz4uwuNUgDzRk=
 
 Name: classes2.dex
-SHA-256-Digest: 8dnylfH/Nj6OOXb1RqXGafDJCxS1YxGIH1xk4OVQRvg=
+SHA-256-Digest: yf999VtIiUE4k3xCSWV5bX1MFMHbyJHdxxIRLAhthE4=
 
 Name: classes3.dex
-SHA-256-Digest: ZrmCRp64btatyFtrYYKUc6Pxv5EHrElHdstxsns55Uc=
+SHA-256-Digest: LTQHXFmgUCjvXALKYMwuU0BZLE5Y8aqZG4CBJf0fG9M=
 
 Name: classes4.dex
-SHA-256-Digest: KlmLyJctkL4pi+oEWGfP0bS3NIzhHmCFwuTm8tw/Rnk=
+SHA-256-Digest: cFUq1NYVjJoXr0VHFddcIA6QVFbIPa7qNb4Nz3+zZq8=
 
 Name: kotlin/annotation/annotation.kotlin_builtins
 SHA-256-Digest: 2kZfon1lRo0UGgaGv88sZi7sEP+awuzOStpYx9cLGdc=
@@ -23350,5 +23350,5 @@ Name: res/xml/tuner_prefs.xml
 SHA-256-Digest: 4FE4Z05zBLoeusNjU4EEoKTbWCZx18HXbNBSFVkbOeM=
 
 Name: resources.arsc
-SHA-256-Digest: +4781PsMD5bLUXknIkI+amgqRRQcjsDxsEf4F2agrfI=
+SHA-256-Digest: 3FPPz6OZEbI7LFu1nVlmyuZ0mqKyT3uBDmsIclVSpDk=
 

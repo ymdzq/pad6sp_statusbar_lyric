@@ -1,6 +1,6 @@
 .class public Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;
 .super Lcom/android/systemui/tv/TvBottomSheetActivity;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # static fields
@@ -562,228 +562,228 @@
     iget-object v1, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mGlobalSettings:Lcom/android/systemui/util/settings/GlobalSettings;
 
     .line 148
-    const-string/jumbo v2, "receive_explicit_user_interaction_audio_enabled"
+    const-string v2, "receive_explicit_user_interaction_audio_enabled"
 
     .line 150
     invoke-interface {v1, v2, v0}, Lcom/android/systemui/util/settings/SettingsProxy;->getInt(Ljava/lang/String;I)I
 
-    .line 153
+    .line 152
     move-result v1
 
-    .line 156
+    .line 155
     if-ne v1, v0, :cond_1
 
-    .line 157
+    .line 156
     goto :goto_1
 
-    .line 159
+    .line 158
     :cond_1
     const/4 v0, 0x0
 
-    .line 160
+    .line 159
     :goto_1
     if-eqz v0, :cond_2
 
-    .line 161
+    .line 160
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mContent:Landroid/widget/TextView;
 
-    .line 163
+    .line 162
     const v1, 0x7f130aba    # @string/sensor_privacy_mic_blocked_with_exception_dialog_content 'Microphone access is disabled for all apps and services. You can change this in Settings > Privacy > ...'
 
-    .line 165
+    .line 164
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 168
+    .line 167
     goto :goto_2
 
-    .line 171
+    .line 170
     :cond_2
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mContent:Landroid/widget/TextView;
 
-    .line 172
+    .line 171
     const v1, 0x7f130ab9    # @string/sensor_privacy_mic_blocked_no_exception_dialog_content 'Microphone access is disabled for all apps and services. You can enable microphone access in Setting ...'
 
-    .line 174
+    .line 173
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 177
+    .line 176
     :goto_2
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mIcon:Landroid/widget/ImageView;
 
-    .line 180
+    .line 179
     const v1, 0x7f081987    # @drawable/unblock_hw_sensor_microphone '@drawable/ic_mic_off'
 
-    .line 182
+    .line 181
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 185
+    .line 184
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mSecondIcon:Landroid/widget/ImageView;
 
-    .line 188
+    .line 187
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 190
+    .line 189
     goto :goto_3
 
-    .line 193
+    .line 192
     :cond_3
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mTitle:Landroid/widget/TextView;
 
-    .line 194
+    .line 193
     const v1, 0x7f130abd    # @string/sensor_privacy_mic_turned_on_dialog_title 'Microphone turned on'
 
-    .line 196
+    .line 195
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 199
+    .line 198
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mContent:Landroid/widget/TextView;
 
-    .line 202
+    .line 201
     const v1, 0x7f130abe    # @string/sensor_privacy_mic_unblocked_dialog_content 'Microphone is enabled for all apps and services.'
 
-    .line 204
+    .line 203
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 207
+    .line 206
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mIcon:Landroid/widget/ImageView;
 
-    .line 210
+    .line 209
     const v1, 0x1080512    # @android:drawable/ic_pan_tool
 
-    .line 212
+    .line 211
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 215
+    .line 214
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mSecondIcon:Landroid/widget/ImageView;
 
-    .line 218
+    .line 217
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 220
+    .line 219
     goto :goto_3
 
-    .line 223
+    .line 222
     :cond_4
     check-cast v1, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;
 
-    .line 224
+    .line 223
     invoke-virtual {v1, v2}, Lcom/android/systemui/statusbar/policy/IndividualSensorPrivacyControllerImpl;->isSensorBlockedByHardwareToggle(I)Z
 
-    .line 226
+    .line 225
     move-result v0
 
-    .line 229
+    .line 228
     if-eqz v0, :cond_5
 
-    .line 230
+    .line 229
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mTitle:Landroid/widget/TextView;
 
-    .line 232
+    .line 231
     const v1, 0x7f130ab3    # @string/sensor_privacy_camera_turned_off_dialog_title 'Camera turned off'
 
-    .line 234
+    .line 233
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 237
+    .line 236
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mContent:Landroid/widget/TextView;
 
-    .line 240
+    .line 239
     const v1, 0x7f130ab2    # @string/sensor_privacy_camera_blocked_dialog_content 'Camera access is disabled for all apps and services.'
 
-    .line 242
+    .line 241
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 245
+    .line 244
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mIcon:Landroid/widget/ImageView;
 
-    .line 248
+    .line 247
     const v1, 0x7f081986    # @drawable/unblock_hw_sensor_camera '@drawable/ic_videocam_off'
 
-    .line 250
+    .line 249
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 253
+    .line 252
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mSecondIcon:Landroid/widget/ImageView;
 
-    .line 256
+    .line 255
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 258
+    .line 257
     goto :goto_3
 
-    .line 261
+    .line 260
     :cond_5
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mTitle:Landroid/widget/TextView;
 
-    .line 262
+    .line 261
     const v1, 0x7f130ab4    # @string/sensor_privacy_camera_turned_on_dialog_title 'Camera turned on'
 
-    .line 264
+    .line 263
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 267
+    .line 266
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mContent:Landroid/widget/TextView;
 
-    .line 270
+    .line 269
     const v1, 0x7f130ab5    # @string/sensor_privacy_camera_unblocked_dialog_content 'Camera is enabled for all apps and services.'
 
-    .line 272
+    .line 271
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
-    .line 275
+    .line 274
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mIcon:Landroid/widget/ImageView;
 
-    .line 278
+    .line 277
     const v1, 0x108036a    # @android:drawable/ic_chooser_pin
 
-    .line 280
+    .line 279
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 283
+    .line 282
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mSecondIcon:Landroid/widget/ImageView;
 
-    .line 286
+    .line 285
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 288
+    .line 287
     :goto_3
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mIcon:Landroid/widget/ImageView;
 
-    .line 291
+    .line 290
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    .line 293
+    .line 292
     move-result-object v0
 
-    .line 296
+    .line 295
     instance-of v1, v0, Landroid/graphics/drawable/Animatable;
 
-    .line 297
+    .line 296
     if-eqz v1, :cond_6
 
-    .line 299
+    .line 298
     check-cast v0, Landroid/graphics/drawable/Animatable;
 
-    .line 301
+    .line 300
     invoke-interface {v0}, Landroid/graphics/drawable/Animatable;->start()V
 
-    .line 303
+    .line 302
     :cond_6
     iget-object v0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mPositiveButton:Landroid/widget/Button;
 
-    .line 306
+    .line 305
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 308
+    .line 307
     iget-object p0, p0, Lcom/android/systemui/sensorprivacy/television/TvSensorPrivacyChangedActivity;->mCancelButton:Landroid/widget/Button;
 
-    .line 311
+    .line 310
     const v0, 0x104000a    # @android:string/ok
 
-    .line 313
+    .line 312
     invoke-virtual {p0, v0}, Landroid/widget/Button;->setText(I)V
 
-    .line 316
+    .line 315
     return-void
-    .line 319
+    .line 318
 .end method

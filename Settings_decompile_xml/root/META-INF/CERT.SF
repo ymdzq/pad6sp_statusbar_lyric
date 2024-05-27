@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA-256-Digest-Manifest: axURDBBpXJAvVpsfspj3SDy6KL2aqvdUVldtOYBqGcI=
+SHA-256-Digest-Manifest: r9c9aGeEpAdKl3m1oiEKzopsP3jZo7zP/sT1T0v4bhU=
 X-Android-APK-Signed: 2, 3
 
 Name: AndroidManifest.xml
@@ -730,31 +730,31 @@ Name: assets/top_200_games.json
 SHA-256-Digest: SLKsVPlZUFUy4f1eYo7vLtOD1gmQ7nlp/PBRs3s1j4c=
 
 Name: classes.dex
-SHA-256-Digest: h3rFZVew1HVR1hrtETm/3EWrh8WV0xA8K2Vokd5pIBc=
+SHA-256-Digest: e44/5HcCL/4StUgQfPDQvJ3tef1Esr2hhNp+Dbe0C4U=
 
 Name: classes2.dex
-SHA-256-Digest: VwIXJxQuhXQ/2NKKgC5Q2JkF8H43GrXx56Ci34detbU=
+SHA-256-Digest: 6mQFpqNodswfKjPoQ7dMV6xkA5Hg5SEheV7iAGArva0=
 
 Name: classes3.dex
-SHA-256-Digest: KuHGxkTMmM0MX3Z/L8GZukk1dgNrxCMM7/DtFv8zeBo=
+SHA-256-Digest: o3UI2qQLLQOF5IXy+Dxc2RxQr1hIbeARYQoehjzoVIE=
 
 Name: classes4.dex
-SHA-256-Digest: nUBf3yWC4en1b2uXUUbbXwbwRicd6/XZApsAgMp5G7E=
+SHA-256-Digest: kX9KThV/M8ryEG9pK00+5SWGUepNN6V5xoucYvrN90Y=
 
 Name: classes5.dex
-SHA-256-Digest: +mzAB66rg5aPSW66hAC7I+kZVVev6SPtG3v7wflJCXE=
+SHA-256-Digest: LybmTWttR3b/dBkYy2xuM1X+5PgxTNWDHmF9GH1fUvs=
 
 Name: classes6.dex
-SHA-256-Digest: CUqs+t4N+aAh6Qx+iCyCc4Ns/iX1CHI+29sh9m2hpak=
+SHA-256-Digest: FWWGOYcXiCUssU+cftH2rmFL+76uSH3bo5aUy7JDSC8=
 
 Name: classes7.dex
-SHA-256-Digest: jBj5PorEj/iXEmA+vL9LZo8Gs99DJtI8z289GS2+iuw=
+SHA-256-Digest: 9flZMAvkYgVNFnBeP6ST/jB8h6pDj+ZfIYyv/Tuz29Q=
 
 Name: classes8.dex
-SHA-256-Digest: 8nCb3kLS9KDBWhUW4KuI5QSOCqJolhPNP3qCDkgv+64=
+SHA-256-Digest: HyDb2zSlo6YZwD/5nmINuC0KPtYsdFEeEkBIqirH8As=
 
 Name: classes9.dex
-SHA-256-Digest: E5jX7hzyqXdUR8Rfm7TDhWT2x84pq6qYXvQ6liNYNK0=
+SHA-256-Digest: GUe9gXboB1i99KeU+sCGU0fMveZsszbX9/RBI1KcX74=
 
 Name: com/android/settings/ChangeIds_compat_config.xml
 SHA-256-Digest: fRl8XRKHLBTfkd9tYzzaBBDWkjV+8kbM3WGI2YTDByQ=

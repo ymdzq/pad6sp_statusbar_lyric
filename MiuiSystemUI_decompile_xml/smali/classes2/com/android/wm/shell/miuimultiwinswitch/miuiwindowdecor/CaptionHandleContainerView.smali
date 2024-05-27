@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;
 .super Landroid/widget/LinearLayout;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # instance fields
@@ -331,569 +331,578 @@
     invoke-virtual {p5, v5}, Landroid/widget/FrameLayout;->setId(I)V
 
     .line 130
-    const v5, 0x7f1303b1    # @string/drag_shadow_split_unsupported 'Split screen isn't supported'
+    invoke-virtual {p5, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->setSupported(Z)V
 
     .line 133
-    if-eqz p4, :cond_1
+    const v5, 0x7f1303b1    # @string/drag_shadow_split_unsupported 'Split screen isn't supported'
 
     .line 136
+    if-eqz p4, :cond_1
+
+    .line 139
     if-eqz p2, :cond_0
 
-    .line 138
+    .line 141
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 140
+    .line 143
     move-result-object v8
 
-    .line 143
+    .line 146
     const v9, 0x7f080bd2    # @drawable/caption_selector_splitleft 'res/drawable/caption_selector_splitleft.xml'
 
-    .line 144
+    .line 147
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 147
+    .line 150
     invoke-virtual {p5, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 150
+    .line 153
     iget-object v8, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 153
+    .line 156
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 155
+    .line 158
     move-result-object v8
 
-    .line 158
+    .line 161
     const v9, 0x7f1303ae    # @string/drag_shadow_split_left_open 'Split screen (Left)'
 
-    .line 159
+    .line 162
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 162
+    .line 165
     move-result-object v8
 
-    .line 165
+    .line 168
     invoke-virtual {p5, v8}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 166
+    .line 169
     goto :goto_0
 
-    .line 169
+    .line 172
     :cond_0
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 170
+    .line 173
     move-result-object v8
 
-    .line 173
+    .line 176
     const v9, 0x7f080bd7    # @drawable/caption_unenable_splitleft 'res/drawable/caption_unenable_splitleft.xml'
 
-    .line 174
+    .line 177
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 177
+    .line 180
     iget-object v8, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 180
+    .line 183
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 182
+    .line 185
     move-result-object v8
 
-    .line 185
+    .line 188
     invoke-virtual {v8, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 186
+    .line 189
     move-result-object v8
 
-    .line 189
+    .line 192
     invoke-virtual {p5, v8}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 190
+    .line 193
     goto :goto_0
 
-    .line 193
+    .line 196
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 194
+    .line 197
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 196
+    .line 199
     move-result-object v8
 
-    .line 199
+    .line 202
     const v9, 0x7f080bd4    # @drawable/caption_selector_splittop 'res/drawable/caption_selector_splittop.xml'
 
-    .line 200
+    .line 203
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 203
+    .line 206
     invoke-virtual {p5, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 206
+    .line 209
     iget-object v8, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 209
+    .line 212
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 211
+    .line 214
     move-result-object v8
 
-    .line 214
+    .line 217
     const v9, 0x7f1303b0    # @string/drag_shadow_split_top_open 'Split screen (Top)'
 
-    .line 215
+    .line 218
     invoke-virtual {v8, v9}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 218
+    .line 221
     move-result-object v8
 
-    .line 221
+    .line 224
     invoke-virtual {p5, v8}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 222
+    .line 225
     goto :goto_0
 
-    .line 225
+    .line 228
     :cond_2
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 226
+    .line 229
     move-result-object v8
 
-    .line 229
+    .line 232
     const v9, 0x7f080bd9    # @drawable/caption_unenable_splittop 'res/drawable/caption_unenable_splittop.xml'
 
-    .line 230
+    .line 233
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 233
+    .line 236
     iget-object v8, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 236
+    .line 239
     invoke-virtual {v8}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 238
+    .line 241
     move-result-object v8
 
-    .line 241
+    .line 244
     invoke-virtual {v8, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 242
+    .line 245
     move-result-object v8
 
-    .line 245
+    .line 248
     invoke-virtual {p5, v8}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 246
+    .line 249
     :goto_0
     new-instance v8, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 249
+    .line 252
     invoke-direct {v8, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 251
+    .line 254
     invoke-direct {p0, p5, v8, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
 
-    .line 254
+    .line 257
     invoke-direct {p0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->createStateButton(II)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
 
-    .line 257
+    .line 260
     move-result-object p5
 
-    .line 260
+    .line 263
     const v8, 0x7f0a08d9    # @id/state_splitrightorbottom
 
-    .line 261
+    .line 264
     invoke-virtual {p5, v8}, Landroid/widget/FrameLayout;->setId(I)V
 
-    .line 264
+    .line 267
+    invoke-virtual {p5, p2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->setSupported(Z)V
+
+    .line 270
     if-eqz p4, :cond_4
 
-    .line 267
+    .line 273
     if-eqz p2, :cond_3
 
-    .line 269
+    .line 275
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 271
+    .line 277
     move-result-object p2
 
-    .line 274
+    .line 280
     const p4, 0x7f080bd3    # @drawable/caption_selector_splitright 'res/drawable/caption_selector_splitright.xml'
 
-    .line 275
+    .line 281
     invoke-virtual {p2, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 278
+    .line 284
     invoke-virtual {p5, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 281
+    .line 287
     iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 284
+    .line 290
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 286
+    .line 292
     move-result-object p2
 
-    .line 289
+    .line 295
     const p4, 0x7f1303af    # @string/drag_shadow_split_right_open 'Split screen (Right)'
 
-    .line 290
+    .line 296
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 293
+    .line 299
     move-result-object p2
 
-    .line 296
+    .line 302
     invoke-virtual {p5, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 297
+    .line 303
     goto :goto_1
 
-    .line 300
+    .line 306
     :cond_3
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 301
+    .line 307
     move-result-object p2
 
-    .line 304
+    .line 310
     const p4, 0x7f080bd8    # @drawable/caption_unenable_splitright 'res/drawable/caption_unenable_splitright.xml'
 
-    .line 305
+    .line 311
     invoke-virtual {p2, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 308
+    .line 314
     iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 311
+    .line 317
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 313
+    .line 319
     move-result-object p2
 
-    .line 316
+    .line 322
     invoke-virtual {p2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 317
+    .line 323
     move-result-object p2
 
-    .line 320
+    .line 326
     invoke-virtual {p5, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 321
+    .line 327
     goto :goto_1
 
-    .line 324
+    .line 330
     :cond_4
     if-eqz p2, :cond_5
 
-    .line 325
+    .line 331
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 327
+    .line 333
     move-result-object p2
 
-    .line 330
+    .line 336
     const p4, 0x7f080bd1    # @drawable/caption_selector_splitbottom 'res/drawable/caption_selector_splitbottom.xml'
 
-    .line 331
+    .line 337
     invoke-virtual {p2, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 334
+    .line 340
     invoke-virtual {p5, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 337
+    .line 343
     iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 340
+    .line 346
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 342
+    .line 348
     move-result-object p2
 
-    .line 345
+    .line 351
     const p4, 0x7f1303ad    # @string/drag_shadow_split_bottom_open 'Split screen (Bottom)'
 
-    .line 346
+    .line 352
     invoke-virtual {p2, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 349
+    .line 355
     move-result-object p2
 
-    .line 352
+    .line 358
     invoke-virtual {p5, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 353
+    .line 359
     goto :goto_1
 
-    .line 356
+    .line 362
     :cond_5
     invoke-virtual {p5, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 357
+    .line 363
     move-result-object p2
 
-    .line 360
+    .line 366
     const p4, 0x7f080bd6    # @drawable/caption_unenable_splitbottom 'res/drawable/caption_unenable_splitbottom.xml'
 
-    .line 361
+    .line 367
     invoke-virtual {p2, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 364
+    .line 370
     iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 367
+    .line 373
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 369
+    .line 375
     move-result-object p2
 
-    .line 372
+    .line 378
     invoke-virtual {p2, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 373
+    .line 379
     move-result-object p2
 
-    .line 376
+    .line 382
     invoke-virtual {p5, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 377
+    .line 383
     :goto_1
     new-instance p2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 380
+    .line 386
     invoke-direct {p2, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 382
+    .line 388
     invoke-direct {p0, p5, p2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
 
-    .line 385
+    .line 391
     :cond_6
     invoke-direct {p0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->createStateButton(II)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
 
-    .line 388
+    .line 394
     move-result-object p2
 
-    .line 391
+    .line 397
     const p4, 0x7f0a08d3    # @id/state_freeform
 
-    .line 392
+    .line 398
     invoke-virtual {p2, p4}, Landroid/widget/FrameLayout;->setId(I)V
 
-    .line 395
-    if-eqz p3, :cond_7
-
-    .line 398
-    invoke-virtual {p2, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
-
-    .line 400
-    move-result-object p3
-
-    .line 403
-    const p4, 0x7f080bcd    # @drawable/caption_selector_freeform 'res/drawable/caption_selector_freeform.xml'
+    .line 401
+    invoke-virtual {p2, p3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->setSupported(Z)V
 
     .line 404
-    invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
+    if-eqz p3, :cond_7
 
     .line 407
-    invoke-virtual {p2, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
+    invoke-virtual {p2, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 410
-    iget-object p3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
+    .line 409
+    move-result-object p3
+
+    .line 412
+    const p4, 0x7f080bcd    # @drawable/caption_selector_freeform 'res/drawable/caption_selector_freeform.xml'
 
     .line 413
-    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 415
-    move-result-object p3
-
-    .line 418
-    const p4, 0x7f1303a9    # @string/drag_shadow_freeform_open 'Floating window'
+    .line 416
+    invoke-virtual {p2, v7}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
     .line 419
-    invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    iget-object p3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
     .line 422
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 424
     move-result-object p3
 
-    .line 425
+    .line 427
+    const p4, 0x7f1303a9    # @string/drag_shadow_freeform_open 'Floating window'
+
+    .line 428
+    invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 431
+    move-result-object p3
+
+    .line 434
     invoke-virtual {p2, p3}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 426
+    .line 435
     goto :goto_2
 
-    .line 429
+    .line 438
     :cond_7
     invoke-virtual {p2, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 430
+    .line 439
     move-result-object p3
-
-    .line 433
-    const p4, 0x7f080bd5    # @drawable/caption_unenable_freeform 'res/drawable/caption_unenable_freeform.xml'
-
-    .line 434
-    invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
-
-    .line 437
-    iget-object p3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
-
-    .line 440
-    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     .line 442
-    move-result-object p3
+    const p4, 0x7f080bd5    # @drawable/caption_unenable_freeform 'res/drawable/caption_unenable_freeform.xml'
 
-    .line 445
-    const p4, 0x7f1303aa    # @string/drag_shadow_freeform_unsupported 'Floating windows aren't supported'
+    .line 443
+    invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
     .line 446
-    invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    iget-object p3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
     .line 449
+    invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 451
     move-result-object p3
 
-    .line 452
+    .line 454
+    const p4, 0x7f1303aa    # @string/drag_shadow_freeform_unsupported 'Floating windows aren't supported'
+
+    .line 455
+    invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    .line 458
+    move-result-object p3
+
+    .line 461
     invoke-virtual {p2, p3}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 453
+    .line 462
     :goto_2
     new-instance p3, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 456
+    .line 465
     invoke-direct {p3, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
-
-    .line 458
-    invoke-direct {p0, p2, p3, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
-
-    .line 461
-    const p2, 0x7f080bcf    # @drawable/caption_selector_press 'res/drawable/caption_selector_press.xml'
-
-    .line 464
-    if-eqz p1, :cond_8
 
     .line 467
-    invoke-direct {p0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->createStateButton(II)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
+    invoke-direct {p0, p2, p3, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
 
-    .line 469
-    move-result-object p1
-
-    .line 472
-    const p3, 0x7f0a08d6    # @id/state_newwindow
+    .line 470
+    const p2, 0x7f080bcf    # @drawable/caption_selector_press 'res/drawable/caption_selector_press.xml'
 
     .line 473
-    invoke-virtual {p1, p3}, Landroid/widget/FrameLayout;->setId(I)V
+    if-eqz p1, :cond_8
 
     .line 476
-    invoke-virtual {p1, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+    invoke-direct {p0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->createStateButton(II)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
 
-    .line 479
-    move-result-object p3
+    .line 478
+    move-result-object p1
+
+    .line 481
+    const p3, 0x7f0a08d6    # @id/state_newwindow
 
     .line 482
+    invoke-virtual {p1, p3}, Landroid/widget/FrameLayout;->setId(I)V
+
+    .line 485
+    invoke-virtual {p1, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
+
+    .line 488
+    move-result-object p3
+
+    .line 491
     const p4, 0x7f080bbf    # @drawable/caption_newwindow 'res/drawable/caption_newwindow.xml'
 
-    .line 483
+    .line 492
     invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 486
+    .line 495
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 489
+    .line 498
     iget-object p3, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 492
+    .line 501
     invoke-virtual {p3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 494
+    .line 503
     move-result-object p3
 
-    .line 497
+    .line 506
     const p4, 0x7f13084a    # @string/multiwin_newwindow 'New window'
 
-    .line 498
+    .line 507
     invoke-virtual {p3, p4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 501
+    .line 510
     move-result-object p3
 
-    .line 504
+    .line 513
     invoke-virtual {p1, p3}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 505
+    .line 514
     new-instance p3, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 508
+    .line 517
     invoke-direct {p3, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 510
+    .line 519
     invoke-direct {p0, p1, p3, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
 
-    .line 513
+    .line 522
     :cond_8
     invoke-direct {p0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->createStateButton(II)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
 
-    .line 516
+    .line 525
     move-result-object p1
 
-    .line 519
+    .line 528
     const p3, 0x7f0a08d2    # @id/state_close
 
-    .line 520
+    .line 529
     invoke-virtual {p1, p3}, Landroid/widget/FrameLayout;->setId(I)V
 
-    .line 523
+    .line 532
     invoke-virtual {p1, v6}, Landroid/widget/FrameLayout;->getChildAt(I)Landroid/view/View;
 
-    .line 526
+    .line 535
     move-result-object p3
 
-    .line 529
+    .line 538
     const p4, 0x7f080bbc    # @drawable/caption_close 'res/drawable/caption_close.xml'
 
-    .line 530
+    .line 539
     invoke-virtual {p3, p4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 533
+    .line 542
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 536
+    .line 545
     iget-object p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->mContext:Landroid/content/Context;
 
-    .line 539
+    .line 548
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
-    .line 541
+    .line 550
     move-result-object p2
 
-    .line 544
+    .line 553
     const p3, 0x7f130849    # @string/multiwin_closewindow 'Close window'
 
-    .line 545
+    .line 554
     invoke-virtual {p2, p3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 548
+    .line 557
     move-result-object p2
 
-    .line 551
+    .line 560
     invoke-virtual {p1, p2}, Landroid/widget/FrameLayout;->setContentDescription(Ljava/lang/CharSequence;)V
 
-    .line 552
+    .line 561
     new-instance p2, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 555
+    .line 564
     invoke-direct {p2, v0, v1}, Landroid/view/ViewGroup$MarginLayoutParams;-><init>(II)V
 
-    .line 557
+    .line 566
     invoke-direct {p0, p1, p2, v4}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionHandleContainerView;->addCaptionButton(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;Landroid/view/ViewGroup$LayoutParams;I)V
 
-    .line 560
+    .line 569
     return-void
-    .line 563
+    .line 572
 .end method
 
 .method public setFreeformButtonSelected()V

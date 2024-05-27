@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/wm/shell/transition/Transitions$TransitionHandler;
@@ -12121,284 +12121,293 @@
     move-result-object v2
 
     .line 127
-    invoke-virtual {v2}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
+    if-eqz v2, :cond_4
 
     .line 128
-    move-result v2
+    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getTaskInfo()Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 131
-    if-ne v2, v3, :cond_4
+    .line 130
+    move-result-object v2
 
-    .line 132
-    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
+    .line 133
+    invoke-virtual {v2}, Landroid/app/ActivityManager$RunningTaskInfo;->getActivityType()I
 
     .line 134
-    move-result-object v1
+    move-result v2
 
     .line 137
-    invoke-virtual {v13, v1, v12}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
+    if-ne v2, v3, :cond_4
 
     .line 138
+    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
+
+    .line 140
+    move-result-object v1
+
+    .line 143
+    invoke-virtual {v13, v1, v12}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
+
+    .line 144
     :cond_4
     :goto_1
     move-object v14, v13
 
-    .line 141
+    .line 147
     goto/16 :goto_3
 
-    .line 142
+    .line 148
     :cond_5
     :goto_2
     invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 144
+    .line 150
     move-result-object v0
-
-    .line 147
-    invoke-virtual {v13, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
-
-    .line 148
-    new-instance v4, Landroid/graphics/RectF;
-
-    .line 151
-    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
     .line 153
-    move-result-object v0
+    invoke-virtual {v13, v0}, Landroid/view/SurfaceControl$Transaction;->show(Landroid/view/SurfaceControl;)Landroid/view/SurfaceControl$Transaction;
 
-    .line 156
-    invoke-direct {v4, v0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+    .line 154
+    new-instance v4, Landroid/graphics/RectF;
 
     .line 157
-    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
+    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getEndAbsBounds()Landroid/graphics/Rect;
 
-    .line 160
-    move-result v0
-
-    .line 163
-    const/high16 v2, 0x40800000    # 4.0f
-
-    .line 164
-    div-float/2addr v0, v2
-
-    .line 166
-    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
-
-    .line 167
-    move-result v3
-
-    .line 170
-    div-float/2addr v3, v2
-
-    .line 171
-    new-instance v5, Landroid/graphics/RectF;
-
-    .line 172
-    iget v2, v4, Landroid/graphics/RectF;->left:F
-
-    .line 174
-    add-float/2addr v2, v0
-
-    .line 176
-    iget v6, v4, Landroid/graphics/RectF;->top:F
-
-    .line 177
-    add-float/2addr v6, v3
-
-    .line 179
-    iget v7, v4, Landroid/graphics/RectF;->right:F
-
-    .line 180
-    sub-float/2addr v7, v0
-
-    .line 182
-    iget v0, v4, Landroid/graphics/RectF;->bottom:F
-
-    .line 183
-    sub-float/2addr v0, v3
-
-    .line 185
-    invoke-direct {v5, v2, v6, v7, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
-
-    .line 186
-    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
-
-    .line 189
+    .line 159
     move-result-object v0
 
-    .line 192
+    .line 162
+    invoke-direct {v4, v0}, Landroid/graphics/RectF;-><init>(Landroid/graphics/Rect;)V
+
+    .line 163
     invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
 
-    .line 193
-    move-result v2
+    .line 166
+    move-result v0
 
-    .line 196
-    float-to-int v2, v2
+    .line 169
+    const/high16 v2, 0x40800000    # 4.0f
 
-    .line 197
+    .line 170
+    div-float/2addr v0, v2
+
+    .line 172
     invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
 
-    .line 198
+    .line 173
     move-result v3
 
-    .line 201
-    float-to-int v3, v3
+    .line 176
+    div-float/2addr v3, v2
 
-    .line 202
-    invoke-virtual {v13, v0, v2, v3}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
+    .line 177
+    new-instance v5, Landroid/graphics/RectF;
 
-    .line 203
+    .line 178
+    iget v2, v4, Landroid/graphics/RectF;->left:F
+
+    .line 180
+    add-float/2addr v2, v0
+
+    .line 182
+    iget v6, v4, Landroid/graphics/RectF;->top:F
+
+    .line 183
+    add-float/2addr v6, v3
+
+    .line 185
+    iget v7, v4, Landroid/graphics/RectF;->right:F
+
+    .line 186
+    sub-float/2addr v7, v0
+
+    .line 188
+    iget v0, v4, Landroid/graphics/RectF;->bottom:F
+
+    .line 189
+    sub-float/2addr v0, v3
+
+    .line 191
+    invoke-direct {v5, v2, v6, v7, v0}, Landroid/graphics/RectF;-><init>(FFFF)V
+
+    .line 192
     invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 206
-    move-result-object v1
+    .line 195
+    move-result-object v0
 
-    .line 209
-    invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
-
-    .line 210
-    move-result v0
-
-    .line 213
+    .line 198
     invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
 
-    .line 214
+    .line 199
     move-result v2
 
-    .line 217
-    div-float v6, v0, v2
+    .line 202
+    float-to-int v2, v2
 
-    .line 218
-    invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
-
-    .line 220
-    move-result v0
-
-    .line 223
+    .line 203
     invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
 
-    .line 224
+    .line 204
+    move-result v3
+
+    .line 207
+    float-to-int v3, v3
+
+    .line 208
+    invoke-virtual {v13, v0, v2, v3}, Landroid/view/SurfaceControl$Transaction;->setWindowCrop(Landroid/view/SurfaceControl;II)Landroid/view/SurfaceControl$Transaction;
+
+    .line 209
+    invoke-virtual {v1}, Landroid/window/TransitionInfo$Change;->getLeash()Landroid/view/SurfaceControl;
+
+    .line 212
+    move-result-object v1
+
+    .line 215
+    invoke-virtual {v5}, Landroid/graphics/RectF;->width()F
+
+    .line 216
+    move-result v0
+
+    .line 219
+    invoke-virtual {v4}, Landroid/graphics/RectF;->width()F
+
+    .line 220
     move-result v2
 
-    .line 227
-    div-float v7, v0, v2
+    .line 223
+    div-float v6, v0, v2
 
-    .line 228
-    const/high16 v8, 0x3f800000    # 1.0f
+    .line 224
+    invoke-virtual {v5}, Landroid/graphics/RectF;->height()F
+
+    .line 226
+    move-result v0
+
+    .line 229
+    invoke-virtual {v4}, Landroid/graphics/RectF;->height()F
 
     .line 230
-    const/high16 v9, 0x3f800000    # 1.0f
+    move-result v2
 
-    .line 232
-    const/high16 v17, 0x3f800000    # 1.0f
+    .line 233
+    div-float v7, v0, v2
 
     .line 234
-    iget v3, v14, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mSplitCornerRadius:F
+    const/high16 v8, 0x3f800000    # 1.0f
 
     .line 236
-    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler$$ExternalSyntheticLambda1;
+    const/high16 v9, 0x3f800000    # 1.0f
 
     .line 238
-    move-object/from16 v0, p4
+    const/high16 v17, 0x3f800000    # 1.0f
 
     .line 240
-    move-object/from16 v10, p5
+    iget v3, v14, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->mSplitCornerRadius:F
 
     .line 242
-    invoke-direct {v2, v14, v15, v10, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;Landroid/window/TransitionInfo;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;Landroid/view/SurfaceControl$Transaction;)V
+    new-instance v2, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler$$ExternalSyntheticLambda1;
 
     .line 244
+    move-object/from16 v0, p4
+
+    .line 246
+    move-object/from16 v10, p5
+
+    .line 248
+    invoke-direct {v2, v14, v15, v10, v0}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler$$ExternalSyntheticLambda1;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;Landroid/window/TransitionInfo;Lcom/android/wm/shell/transition/Transitions$TransitionFinishCallback;Landroid/view/SurfaceControl$Transaction;)V
+
+    .line 250
     move-object/from16 v0, p0
 
-    .line 247
+    .line 253
     move-object/from16 v18, v2
 
-    .line 249
+    .line 255
     move-object/from16 v2, p3
 
-    .line 251
+    .line 257
     move/from16 v19, v3
 
-    .line 253
+    .line 259
     move-object v3, v5
 
-    .line 255
+    .line 261
     move v5, v6
 
-    .line 256
+    .line 262
     move v6, v7
 
-    .line 257
+    .line 263
     move v7, v8
 
-    .line 258
+    .line 264
     move v8, v9
 
-    .line 259
+    .line 265
     const/4 v9, 0x0
 
-    .line 260
+    .line 266
     move/from16 v10, v17
 
-    .line 261
+    .line 267
     move/from16 v17, v11
 
-    .line 263
+    .line 269
     move/from16 v11, v19
 
-    .line 265
+    .line 271
     move/from16 v12, v19
 
-    .line 267
+    .line 273
     move-object v14, v13
 
-    .line 269
+    .line 275
     move-object/from16 v13, v18
 
-    .line 270
+    .line 276
     invoke-direct/range {v0 .. v13}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiTaskTransitionHandler;->startScaleAnimation(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Landroid/graphics/RectF;Landroid/graphics/RectF;FFFFFFFFLjava/lang/Runnable;)V
 
-    .line 272
+    .line 278
     move/from16 v0, v17
 
-    .line 275
+    .line 281
     :goto_3
     move-object v13, v14
 
-    .line 277
+    .line 283
     const/4 v12, 0x0
 
-    .line 278
+    .line 284
     move-object/from16 v14, p0
 
-    .line 279
+    .line 285
     goto/16 :goto_0
 
-    .line 281
+    .line 287
     :cond_6
     move v1, v12
 
-    .line 283
+    .line 289
     move-object v14, v13
 
-    .line 284
+    .line 290
     invoke-virtual {v15, v1}, Landroid/window/TransitionInfo;->getRoot(I)Landroid/window/TransitionInfo$Root;
 
-    .line 285
+    .line 291
     move-result-object v2
 
-    .line 288
+    .line 294
     invoke-virtual {v2}, Landroid/window/TransitionInfo$Root;->getLeash()Landroid/view/SurfaceControl;
 
-    .line 289
+    .line 295
     move-result-object v2
 
-    .line 292
+    .line 298
     invoke-virtual {v14, v2, v1}, Landroid/view/SurfaceControl$Transaction;->setLayer(Landroid/view/SurfaceControl;I)Landroid/view/SurfaceControl$Transaction;
 
-    .line 293
+    .line 299
     return v0
-    .line 296
+    .line 302
 .end method
 
 .method private startScaleAnimation(Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Landroid/graphics/RectF;Landroid/graphics/RectF;FFFFFFFFLjava/lang/Runnable;)V

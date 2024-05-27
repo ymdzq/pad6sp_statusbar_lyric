@@ -1,6 +1,6 @@
 .class public final Lcom/android/keyguard/magazine/LockScreenMagazineController$3;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # instance fields
@@ -37,165 +37,165 @@
     new-instance v0, Ljava/lang/StringBuilder;
 
     .line 6
-    const-string/jumbo v1, "received broadcast "
+    const-string v1, "received broadcast "
 
     .line 8
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 11
+    .line 10
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 14
+    .line 13
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 17
+    .line 16
     move-result-object v0
 
-    .line 20
+    .line 19
     const-string v1, "LockScreenMagazineController"
 
-    .line 21
+    .line 20
     invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 23
+    .line 22
     const-string v0, "android.intent.action.PACKAGE_ADDED"
 
-    .line 26
+    .line 25
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 28
+    .line 27
     move-result v0
+
+    .line 30
+    if-nez v0, :cond_0
 
     .line 31
-    if-nez v0, :cond_0
-
-    .line 32
     const-string v0, "android.intent.action.PACKAGE_REPLACED"
 
-    .line 34
+    .line 33
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 36
+    .line 35
     move-result v0
+
+    .line 38
+    if-nez v0, :cond_0
 
     .line 39
-    if-nez v0, :cond_0
-
-    .line 40
     const-string v0, "android.intent.action.PACKAGE_REMOVED"
 
-    .line 42
+    .line 41
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 44
+    .line 43
     move-result v0
 
-    .line 47
+    .line 46
     if-nez v0, :cond_0
 
-    .line 48
+    .line 47
     const-string v0, "android.intent.action.PACKAGE_CHANGED"
 
-    .line 50
+    .line 49
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 52
+    .line 51
     move-result p1
 
-    .line 55
+    .line 54
     if-eqz p1, :cond_2
 
-    .line 56
+    .line 55
     :cond_0
     invoke-virtual {p2}, Landroid/content/Intent;->getDataString()Ljava/lang/String;
 
-    .line 58
+    .line 57
     move-result-object p1
 
-    .line 61
+    .line 60
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 62
+    .line 61
     move-result p2
 
-    .line 65
+    .line 64
     if-eqz p2, :cond_1
 
-    .line 66
+    .line 65
     return-void
 
-    .line 68
+    .line 67
     :cond_1
     const/16 p2, 0x3a
 
-    .line 69
+    .line 68
     invoke-virtual {p1, p2}, Ljava/lang/String;->indexOf(I)I
 
-    .line 71
+    .line 70
     move-result p2
 
-    .line 74
+    .line 73
     const/4 v0, 0x1
 
-    .line 75
+    .line 74
     add-int/2addr p2, v0
 
-    .line 76
+    .line 75
     invoke-virtual {p1, p2}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
-    .line 77
+    .line 76
     move-result-object p1
 
-    .line 80
+    .line 79
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    .line 81
+    .line 80
     move-result p2
 
-    .line 84
+    .line 83
     if-nez p2, :cond_2
 
-    .line 85
+    .line 84
     sget-object p2, Lcom/android/keyguard/magazine/utils/LockScreenMagazineUtils;->LOCK_SCREEN_MAGAZINE_PACKAGE_NAME:Ljava/lang/String;
 
-    .line 87
+    .line 86
     invoke-virtual {p2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    .line 89
+    .line 88
     move-result p1
 
-    .line 92
+    .line 91
     if-eqz p1, :cond_2
 
-    .line 93
+    .line 92
     const-string p1, "lock screen magazine package changed"
 
-    .line 95
+    .line 94
     invoke-static {v1, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 97
+    .line 96
     iget-object p1, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController$3;->this$0:Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 100
+    .line 99
     iget-object p1, p1, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mHandler:Lcom/android/keyguard/magazine/LockScreenMagazineController$1;
 
-    .line 102
+    .line 101
     invoke-virtual {p1, v0}, Landroid/os/Handler;->removeMessages(I)V
 
-    .line 104
+    .line 103
     iget-object p0, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController$3;->this$0:Lcom/android/keyguard/magazine/LockScreenMagazineController;
 
-    .line 107
+    .line 106
     iget-object p0, p0, Lcom/android/keyguard/magazine/LockScreenMagazineController;->mHandler:Lcom/android/keyguard/magazine/LockScreenMagazineController$1;
 
-    .line 109
+    .line 108
     const-wide/16 p1, 0x3e8
 
-    .line 111
+    .line 110
     invoke-virtual {p0, v0, p1, p2}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 113
+    .line 112
     :cond_2
     return-void
-    .line 116
+    .line 115
 .end method

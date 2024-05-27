@@ -42,10 +42,10 @@
 .method public constructor <init>(Lcom/android/settings/MiuiSettings;)V
     .locals 1
 
-    .line 1985
+    .line 1988
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1986
+    .line 1989
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
@@ -70,14 +70,14 @@
 
     const-string v0, "intent"
 
-    .line 1991
+    .line 1994
     iget-object p0, p0, Lcom/android/settings/MiuiSettings$MiuiAccountManagerCallback;->activityRef:Ljava/lang/ref/WeakReference;
 
     if-nez p0, :cond_0
 
     return-void
 
-    .line 1994
+    .line 1997
     :cond_0
     invoke-virtual {p0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -87,7 +87,7 @@
 
     if-eqz p0, :cond_4
 
-    .line 1995
+    .line 1998
     invoke-virtual {p0}, Landroid/app/Activity;->isDestroyed()Z
 
     move-result v1
@@ -102,7 +102,7 @@
 
     goto :goto_0
 
-    .line 1999
+    .line 2002
     :cond_1
     :try_start_0
     invoke-interface {p1}, Landroid/accounts/AccountManagerFuture;->getResult()Ljava/lang/Object;
@@ -113,21 +113,21 @@
 
     if-eqz p1, :cond_4
 
-    .line 2000
+    .line 2003
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->containsKey(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_4
 
-    .line 2001
+    .line 2004
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getParcelable(Ljava/lang/String;)Landroid/os/Parcelable;
 
     move-result-object p1
 
     check-cast p1, Landroid/content/Intent;
 
-    .line 2002
+    .line 2005
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTabletDevice()Z
 
     move-result v0
@@ -143,10 +143,10 @@
     :cond_2
     const/16 v0, 0x10
 
-    .line 2003
+    .line 2006
     invoke-virtual {p1, v0}, Landroid/content/Intent;->addMiuiFlags(I)Landroid/content/Intent;
 
-    .line 2005
+    .line 2008
     :cond_3
     invoke-static {p0, p1}, Lcom/android/settings/MiuiSettings;->-$$Nest$mstartSplitActivityIfNeed(Lcom/android/settings/MiuiSettings;Landroid/content/Intent;)V
     :try_end_0
@@ -157,7 +157,7 @@
     :catch_0
     move-exception p0
 
-    .line 2008
+    .line 2011
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_4

@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/media/controls/pipeline/MediaDataManager$Listener;
@@ -355,7 +355,7 @@
     check-cast p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;
 
     .line 8
-    if-eqz p0, :cond_2
+    if-eqz p0, :cond_1
 
     .line 10
     iget-object p1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->mediaController:Landroid/media/session/MediaController;
@@ -368,25 +368,15 @@
 
     .line 16
     :cond_0
-    iget-object p1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 19
-    if-eqz p1, :cond_1
-
-    .line 21
-    invoke-virtual {p1}, Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;->run()V
-
-    .line 23
-    :cond_1
     const/4 p1, 0x1
 
-    .line 26
+    .line 19
     iput-boolean p1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->destroyed:Z
 
-    .line 27
-    :cond_2
+    .line 20
+    :cond_1
     return-void
-    .line 29
+    .line 22
 .end method
 
 .method public final onSmartspaceMediaDataLoaded(Ljava/lang/String;Lcom/android/systemui/media/controls/models/recommendation/SmartspaceMediaData;Z)V

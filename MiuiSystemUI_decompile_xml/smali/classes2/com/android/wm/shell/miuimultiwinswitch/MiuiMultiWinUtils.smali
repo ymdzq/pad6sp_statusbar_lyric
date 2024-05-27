@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # static fields
@@ -17,6 +17,8 @@
 .field public static final IS_PHONE:Z
 
 .field public static final IS_TABLET:Z
+
+.field private static final KID_SPACE_URI:Landroid/net/Uri;
 
 .field public static final MULTI_TASK_TYPE_MWS:Ljava/lang/String; = "MULTI_TASK_TYPE_MWS"
 
@@ -163,8 +165,20 @@
     sput-object v0, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->WPS_MULTIPLE_TASK_COMPONENT_NAME:Landroid/content/ComponentName;
 
     .line 49
-    return-void
+    const-string v0, "content://com.xiaomi.kidspace.providers.SpaceStateProvider.space_state"
+
     .line 51
+    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    .line 53
+    move-result-object v0
+
+    .line 56
+    sput-object v0, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->KID_SPACE_URI:Landroid/net/Uri;
+
+    .line 57
+    return-void
+    .line 59
 .end method
 
 .method public constructor <init>()V
@@ -4530,6 +4544,73 @@
     :cond_8
     return-void
     .line 121
+.end method
+
+.method public static inKidSpace(Landroid/content/Context;)Z
+    .locals 6
+
+    .line 1
+    invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    .line 2
+    move-result-object v0
+
+    .line 5
+    sget-object v1, Lcom/android/wm/shell/miuimultiwinswitch/MiuiMultiWinUtils;->KID_SPACE_URI:Landroid/net/Uri;
+
+    .line 6
+    const/4 v2, 0x0
+
+    .line 8
+    const/4 v3, 0x0
+
+    .line 9
+    const/4 v4, 0x0
+
+    .line 10
+    const/4 v5, 0x0
+
+    .line 11
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+
+    .line 12
+    move-result-object p0
+
+    .line 15
+    const/4 v0, 0x0
+
+    .line 16
+    if-eqz p0, :cond_1
+
+    .line 17
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 19
+    move-result v1
+
+    .line 22
+    if-eqz v1, :cond_1
+
+    .line 23
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    .line 25
+    move-result v1
+
+    .line 28
+    if-lez v1, :cond_0
+
+    .line 29
+    const/4 v0, 0x1
+
+    .line 31
+    :cond_0
+    invoke-interface {p0}, Landroid/database/Cursor;->close()V
+
+    .line 32
+    :cond_1
+    return v0
+    .line 35
 .end method
 
 .method public static isFoldInnerScreen(Landroid/content/Context;)Z

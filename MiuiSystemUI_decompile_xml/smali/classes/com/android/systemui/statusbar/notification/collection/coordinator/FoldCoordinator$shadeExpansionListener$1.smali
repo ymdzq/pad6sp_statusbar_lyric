@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator$shadeExpansionListener$1;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/systemui/shade/ShadeExpansionListener;
@@ -28,7 +28,7 @@
 
 # virtual methods
 .method public final onPanelExpansionChanged(Lcom/android/systemui/shade/ShadeExpansionChangeEvent;)V
-    .locals 5
+    .locals 4
 
     .line 1
     iget-boolean p1, p1, Lcom/android/systemui/shade/ShadeExpansionChangeEvent;->expanded:Z
@@ -86,6 +86,7 @@
     move-result-object v1
 
     .line 36
+    :cond_1
     :goto_0
     invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
 
@@ -108,88 +109,93 @@
     iget-object v3, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->mPipeline:Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
     .line 49
-    const/4 v4, 0x0
+    if-nez v3, :cond_2
 
     .line 51
-    if-nez v3, :cond_1
+    const/4 v3, 0x0
 
-    .line 52
-    move-object v3, v4
-
-    .line 54
-    :cond_1
-    if-eqz v3, :cond_2
-
-    .line 55
+    .line 53
+    :cond_2
     invoke-virtual {v3, v2}, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;->getEntry(Ljava/lang/String;)Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;
 
+    .line 54
+    move-result-object v2
+
     .line 57
-    move-result-object v4
+    if-eqz v2, :cond_1
+
+    .line 58
+    invoke-static {v2}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->shouldIgnoreEntry(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;)Z
 
     .line 60
-    :cond_2
-    const/4 v2, 0x1
+    move-result v3
 
-    .line 61
-    invoke-static {v4, v2}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->setFold(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
+    .line 63
+    if-nez v3, :cond_1
 
-    .line 62
+    .line 64
+    const/4 v3, 0x1
+
+    .line 66
+    invoke-static {v2, v3}, Lcom/android/systemui/statusbar/notification/NotificationUtil;->setFold(Lcom/android/systemui/statusbar/notification/collection/NotificationEntry;Z)V
+
+    .line 67
     goto :goto_0
 
-    .line 65
+    .line 70
     :cond_3
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 66
+    .line 71
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 68
+    .line 73
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->shouldShow()Z
 
-    .line 71
+    .line 76
     move-result v0
 
-    .line 74
+    .line 79
     iget-object v1, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->userTracker:Lcom/android/systemui/settings/UserTracker;
 
-    .line 75
+    .line 80
     check-cast v1, Lcom/android/systemui/settings/UserTrackerImpl;
 
-    .line 77
+    .line 82
     invoke-virtual {v1}, Lcom/android/systemui/settings/UserTrackerImpl;->getUserHandle()Landroid/os/UserHandle;
 
-    .line 79
+    .line 84
     move-result-object v1
 
-    .line 82
+    .line 87
     iget-object v2, p0, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->foldEntranceController:Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;
 
-    .line 83
+    .line 88
     invoke-virtual {v2, v1, v0}, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifController;->checkFoldEntrance(Landroid/os/UserHandle;Z)V
 
-    .line 85
+    .line 90
     new-instance v0, Ljava/lang/StringBuilder;
 
-    .line 88
+    .line 93
     const-string v1, "foldToHistory size: "
 
-    .line 90
+    .line 95
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 92
+    .line 97
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 95
+    .line 100
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 98
+    .line 103
     move-result-object p1
 
-    .line 101
+    .line 106
     invoke-virtual {p0, p1}, Lcom/android/systemui/statusbar/notification/collection/coordinator/FoldCoordinator;->invalidateListWithFold(Ljava/lang/String;)V
 
-    .line 102
+    .line 107
     :cond_4
     return-void
-    .line 105
+    .line 110
 .end method

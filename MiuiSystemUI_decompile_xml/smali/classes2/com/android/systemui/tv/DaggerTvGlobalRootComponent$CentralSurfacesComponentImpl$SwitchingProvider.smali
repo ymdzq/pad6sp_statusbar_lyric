@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Ljavax/inject/Provider;
@@ -43,7 +43,7 @@
 
 # virtual methods
 .method public final get()Ljava/lang/Object;
-    .locals 96
+    .locals 95
 
     .line 1
     move-object/from16 v0, p0
@@ -3289,2597 +3289,2627 @@
     new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusViewComponentFactory;
 
     .line 2081
-    move-object/from16 v36, v1
+    move-object/from16 v36, v15
 
     .line 2083
-    move-object/from16 v94, v2
+    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 2085
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    move-object/from16 v37, v14
 
     .line 2087
-    move-object/from16 v95, v3
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2089
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-direct {v1, v15, v14}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusViewComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
 
     .line 2091
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusViewComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+    new-instance v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;
 
-    .line 2093
-    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;
+    .line 2094
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 2096
-    move-object/from16 v37, v1
-
-    .line 2098
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
-
-    .line 2100
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 2102
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
-
-    .line 2104
-    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardUserSwitcherComponentFactory;
-
-    .line 2107
     move-object/from16 v38, v1
 
+    .line 2098
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2100
+    invoke-direct {v15, v14, v1}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardQsUserSwitchComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+
+    .line 2102
+    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardUserSwitcherComponentFactory;
+
+    .line 2105
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+
+    .line 2107
+    move-object/from16 v39, v15
+
     .line 2109
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2111
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-direct {v1, v14, v15}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardUserSwitcherComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
 
     .line 2113
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardUserSwitcherComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+    new-instance v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusBarViewComponentFactory;
 
-    .line 2115
-    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusBarViewComponentFactory;
+    .line 2116
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 2118
-    move-object/from16 v39, v1
-
-    .line 2120
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
-
-    .line 2122
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 2124
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusBarViewComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
-
-    .line 2126
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 2129
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
-
-    .line 2131
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 2133
-    move-result-object v1
-
-    .line 2136
     move-object/from16 v40, v1
 
+    .line 2120
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2122
+    invoke-direct {v15, v14, v1}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardStatusBarViewComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+
+    .line 2124
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2127
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
+
+    .line 2129
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 2131
+    move-result-object v1
+
+    .line 2134
+    check-cast v1, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+
+    .line 2135
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
     .line 2137
-    check-cast v40, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->authControllerProvider:Ljavax/inject/Provider;
 
     .line 2139
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2141
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->authControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2143
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2144
+    move-object/from16 v41, v14
 
     .line 2145
-    move-result-object v1
-
-    .line 2148
-    move-object/from16 v41, v1
-
-    .line 2149
     check-cast v41, Lcom/android/systemui/biometrics/AuthController;
 
+    .line 2147
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2149
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
+
     .line 2151
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2153
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2155
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2156
+    move-object/from16 v42, v14
 
     .line 2157
-    move-result-object v1
-
-    .line 2160
-    move-object/from16 v42, v1
-
-    .line 2161
     check-cast v42, Lcom/android/systemui/statusbar/phone/ScrimController;
 
+    .line 2159
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+
+    .line 2161
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideUserManagerProvider:Ljavax/inject/Provider;
+
     .line 2163
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2165
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideUserManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2167
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2168
+    move-object/from16 v43, v14
 
     .line 2169
-    move-result-object v1
-
-    .line 2172
-    move-object/from16 v43, v1
-
-    .line 2173
     check-cast v43, Landroid/os/UserManager;
 
+    .line 2171
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2173
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->mediaDataManagerProvider:Ljavax/inject/Provider;
+
     .line 2175
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2177
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->mediaDataManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2179
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2180
+    move-object/from16 v44, v14
 
     .line 2181
-    move-result-object v1
-
-    .line 2184
-    move-object/from16 v44, v1
-
-    .line 2185
     check-cast v44, Lcom/android/systemui/media/controls/pipeline/MediaDataManager;
 
+    .line 2183
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2185
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+
     .line 2187
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2189
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2191
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2192
+    move-object/from16 v45, v14
 
     .line 2193
-    move-result-object v1
-
-    .line 2196
-    move-object/from16 v45, v1
-
-    .line 2197
     check-cast v45, Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
+    .line 2195
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2197
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
+
     .line 2199
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2201
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2203
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2204
+    move-object/from16 v46, v14
 
     .line 2205
-    move-result-object v1
-
-    .line 2208
-    move-object/from16 v46, v1
-
-    .line 2209
     check-cast v46, Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 
+    .line 2207
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2209
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
+
     .line 2211
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2213
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2215
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2216
+    move-object/from16 v47, v14
 
     .line 2217
-    move-result-object v1
-
-    .line 2220
-    move-object/from16 v47, v1
-
-    .line 2221
     check-cast v47, Lcom/android/keyguard/LockIconViewController;
 
+    .line 2219
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2221
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+
     .line 2223
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2225
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2227
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2228
+    move-object/from16 v48, v14
 
     .line 2229
-    move-result-object v1
-
-    .line 2232
-    move-object/from16 v48, v1
-
-    .line 2233
     check-cast v48, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
 
+    .line 2231
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2233
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->tapAgainViewControllerProvider:Ljavax/inject/Provider;
+
     .line 2235
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2237
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->tapAgainViewControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2239
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2240
+    move-object/from16 v49, v14
 
     .line 2241
-    move-result-object v1
-
-    .line 2244
-    move-object/from16 v49, v1
-
-    .line 2245
     check-cast v49, Lcom/android/systemui/statusbar/phone/TapAgainViewController;
 
+    .line 2243
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2245
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->navigationModeControllerProvider:Ljavax/inject/Provider;
+
     .line 2247
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2249
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->navigationModeControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2251
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2252
+    move-object/from16 v50, v14
 
     .line 2253
-    move-result-object v1
-
-    .line 2256
-    move-object/from16 v50, v1
-
-    .line 2257
     check-cast v50, Lcom/android/systemui/navigationbar/NavigationModeController;
 
+    .line 2255
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2257
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->navigationBarControllerProvider:Ljavax/inject/Provider;
+
     .line 2259
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2261
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->navigationBarControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2263
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2264
+    move-object/from16 v51, v14
 
     .line 2265
-    move-result-object v1
-
-    .line 2268
-    move-object/from16 v51, v1
-
-    .line 2269
     check-cast v51, Lcom/android/systemui/navigationbar/NavigationBarController;
 
+    .line 2267
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+
+    .line 2269
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->quickSettingsControllerProvider:Ljavax/inject/Provider;
+
     .line 2271
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2273
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->quickSettingsControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2275
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2276
+    move-object/from16 v52, v14
 
     .line 2277
-    move-result-object v1
-
-    .line 2280
-    move-object/from16 v52, v1
-
-    .line 2281
     check-cast v52, Lcom/android/systemui/shade/QuickSettingsController;
 
+    .line 2279
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2281
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->fragmentServiceProvider:Ljavax/inject/Provider;
+
     .line 2283
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2285
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->fragmentServiceProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2287
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2288
+    move-object/from16 v53, v14
 
     .line 2289
-    move-result-object v1
-
-    .line 2292
-    move-object/from16 v53, v1
-
-    .line 2293
     check-cast v53, Lcom/android/systemui/fragments/FragmentService;
 
+    .line 2291
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+
+    .line 2293
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideContentResolverProvider:Ljavax/inject/Provider;
+
     .line 2295
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2297
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideContentResolverProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2299
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2300
+    move-object/from16 v54, v14
 
     .line 2301
-    move-result-object v1
-
-    .line 2304
-    move-object/from16 v54, v1
-
-    .line 2305
     check-cast v54, Landroid/content/ContentResolver;
 
+    .line 2303
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2305
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->recordingControllerProvider:Ljavax/inject/Provider;
+
     .line 2307
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2309
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->recordingControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2311
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2312
+    check-cast v14, Lcom/android/systemui/screenrecord/RecordingController;
 
     .line 2313
-    move-result-object v1
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 2316
-    check-cast v1, Lcom/android/systemui/screenrecord/RecordingController;
+    .line 2315
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeHeaderControllerProvider:Ljavax/inject/Provider;
 
     .line 2317
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2319
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeHeaderControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2321
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2322
+    move-object/from16 v55, v14
 
     .line 2323
-    move-result-object v1
-
-    .line 2326
-    move-object/from16 v55, v1
-
-    .line 2327
     check-cast v55, Lcom/android/systemui/shade/ShadeHeaderController;
 
+    .line 2325
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2327
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->screenOffAnimationControllerProvider:Ljavax/inject/Provider;
+
     .line 2329
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2331
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->screenOffAnimationControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2333
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2334
+    move-object/from16 v56, v14
 
     .line 2335
-    move-result-object v1
-
-    .line 2338
-    move-object/from16 v56, v1
-
-    .line 2339
     check-cast v56, Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;
 
+    .line 2337
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2339
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenGestureLoggerProvider:Ljavax/inject/Provider;
+
     .line 2341
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2343
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenGestureLoggerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2345
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2346
+    move-object/from16 v57, v14
 
     .line 2347
-    move-result-object v1
-
-    .line 2350
-    move-object/from16 v57, v1
-
-    .line 2351
     check-cast v57, Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;
 
+    .line 2349
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2351
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
+
     .line 2353
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2355
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2357
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2358
+    move-object/from16 v58, v14
 
     .line 2359
-    move-result-object v1
-
-    .line 2362
-    move-object/from16 v58, v1
-
-    .line 2363
     check-cast v58, Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
+    .line 2361
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2363
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
+
     .line 2365
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2367
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2369
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2370
+    check-cast v14, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
 
     .line 2371
-    move-result-object v1
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 2374
-    check-cast v1, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
+    .line 2373
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideSysUIUnfoldComponentProvider:Ljavax/inject/Provider;
 
     .line 2375
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2377
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideSysUIUnfoldComponentProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2379
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2380
+    move-object/from16 v59, v14
 
     .line 2381
-    move-result-object v1
-
-    .line 2384
-    move-object/from16 v59, v1
-
-    .line 2385
     check-cast v59, Ljava/util/Optional;
 
+    .line 2383
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2385
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideSysUiStateProvider:Ljavax/inject/Provider;
+
     .line 2387
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2389
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideSysUiStateProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2391
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2392
+    move-object/from16 v60, v14
 
     .line 2393
-    move-result-object v1
-
-    .line 2396
-    move-object/from16 v60, v1
-
-    .line 2397
     check-cast v60, Lcom/android/systemui/model/SysUiState;
 
+    .line 2395
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+
+    .line 2397
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewControllerProvider:Ljavax/inject/Provider;
+
     .line 2399
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    move-object/from16 v61, v14
 
     .line 2401
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2403
-    move-object/from16 v61, v1
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
 
     .line 2405
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2407
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2409
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2410
+    move-object/from16 v62, v14
 
     .line 2411
-    move-result-object v1
-
-    .line 2414
-    move-object/from16 v62, v1
-
-    .line 2415
     check-cast v62, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
+    .line 2413
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2415
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardIndicationControllerProvider:Ljavax/inject/Provider;
+
     .line 2417
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2419
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardIndicationControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2421
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2422
+    move-object/from16 v63, v14
 
     .line 2423
-    move-result-object v1
-
-    .line 2426
-    move-object/from16 v63, v1
-
-    .line 2427
     check-cast v63, Lcom/android/systemui/statusbar/KeyguardIndicationController;
 
+    .line 2425
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+
+    .line 2427
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->provideListContainerProvider:Ljavax/inject/Provider;
+
     .line 2429
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2431
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->provideListContainerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2433
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2434
+    move-object/from16 v64, v14
 
     .line 2435
-    move-result-object v1
-
-    .line 2438
-    move-object/from16 v64, v1
-
-    .line 2439
     check-cast v64, Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;
 
+    .line 2437
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2439
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
+
     .line 2441
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2443
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2445
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2446
+    move-object/from16 v65, v14
 
     .line 2447
-    move-result-object v1
-
-    .line 2450
-    move-object/from16 v65, v1
-
-    .line 2451
     check-cast v65, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
 
+    .line 2449
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2451
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->unlockedScreenOffAnimationControllerProvider:Ljavax/inject/Provider;
+
     .line 2453
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2455
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->unlockedScreenOffAnimationControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2457
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2458
+    move-object/from16 v66, v14
 
     .line 2459
-    move-result-object v1
-
-    .line 2462
-    move-object/from16 v66, v1
-
-    .line 2463
     check-cast v66, Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;
 
+    .line 2461
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2463
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeTransitionControllerProvider:Ljavax/inject/Provider;
+
     .line 2465
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2467
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeTransitionControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2469
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2470
+    move-object/from16 v67, v14
 
     .line 2471
-    move-result-object v1
-
-    .line 2474
-    move-object/from16 v67, v1
-
-    .line 2475
     check-cast v67, Lcom/android/systemui/shade/transition/ShadeTransitionController;
 
+    .line 2473
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+
+    .line 2475
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
+
     .line 2477
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2479
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2481
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2482
+    move-object/from16 v68, v14
 
     .line 2483
-    move-result-object v1
-
-    .line 2486
-    move-object/from16 v68, v1
-
-    .line 2487
     check-cast v68, Lcom/android/internal/jank/InteractionJankMonitor;
 
+    .line 2485
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2487
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
+
     .line 2489
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2491
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2493
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2494
+    move-object/from16 v69, v14
 
     .line 2495
-    move-result-object v1
-
-    .line 2498
-    move-object/from16 v69, v1
-
-    .line 2499
     check-cast v69, Lcom/android/systemui/util/time/SystemClock;
 
+    .line 2497
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+
+    .line 2499
+    invoke-virtual {v14}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;
+
     .line 2501
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
-
-    .line 2503
-    invoke-virtual {v1}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBottomAreaViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;
-
-    .line 2505
     move-result-object v70
 
-    .line 2508
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    .line 2504
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2505
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardBottomAreaInteractorProvider:Ljavax/inject/Provider;
+
+    .line 2507
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2509
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardBottomAreaInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2511
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2512
+    move-object/from16 v71, v14
 
     .line 2513
-    move-result-object v1
-
-    .line 2516
-    move-object/from16 v71, v1
-
-    .line 2517
     check-cast v71, Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;
 
+    .line 2515
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2517
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->alternateBouncerInteractorProvider:Ljavax/inject/Provider;
+
     .line 2519
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2521
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->alternateBouncerInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2523
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2524
+    move-object/from16 v72, v14
 
     .line 2525
-    move-result-object v1
-
-    .line 2528
-    move-object/from16 v72, v1
-
-    .line 2529
     check-cast v72, Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;
 
+    .line 2527
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2529
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dreamingToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+
     .line 2531
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2533
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dreamingToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2535
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2536
+    move-object/from16 v73, v14
 
     .line 2537
-    move-result-object v1
-
-    .line 2540
-    move-object/from16 v73, v1
-
-    .line 2541
     check-cast v73, Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;
 
+    .line 2539
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2541
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->occludedToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+
     .line 2543
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2545
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->occludedToLockscreenTransitionViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2547
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2548
+    move-object/from16 v74, v14
 
     .line 2549
-    move-result-object v1
-
-    .line 2552
-    move-object/from16 v74, v1
-
-    .line 2553
     check-cast v74, Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;
 
+    .line 2551
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2553
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+
     .line 2555
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2557
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2559
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2560
+    move-object/from16 v75, v14
 
     .line 2561
-    move-result-object v1
-
-    .line 2564
-    move-object/from16 v75, v1
-
-    .line 2565
     check-cast v75, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;
 
+    .line 2563
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2565
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->goneToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+
     .line 2567
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2569
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->goneToDreamingTransitionViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2571
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2572
+    move-object/from16 v76, v14
 
     .line 2573
-    move-result-object v1
-
-    .line 2576
-    move-object/from16 v76, v1
-
-    .line 2577
     check-cast v76, Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;
 
+    .line 2575
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2577
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenToOccludedTransitionViewModelProvider:Ljavax/inject/Provider;
+
     .line 2579
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2581
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenToOccludedTransitionViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2583
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2584
+    move-object/from16 v77, v14
 
     .line 2585
-    move-result-object v1
-
-    .line 2588
-    move-object/from16 v77, v1
-
-    .line 2589
     check-cast v77, Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;
 
+    .line 2587
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2589
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->mainDispatcherProvider:Ljavax/inject/Provider;
+
     .line 2591
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2593
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->mainDispatcherProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2595
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2596
+    move-object/from16 v78, v14
 
     .line 2597
-    move-result-object v1
-
-    .line 2600
-    move-object/from16 v78, v1
-
-    .line 2601
     check-cast v78, Lkotlinx/coroutines/CoroutineDispatcher;
 
+    .line 2599
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2601
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
+
     .line 2603
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2605
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2607
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2608
+    move-object/from16 v79, v14
 
     .line 2609
-    move-result-object v1
-
-    .line 2612
-    move-object/from16 v79, v1
-
-    .line 2613
     check-cast v79, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
+    .line 2611
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2613
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
+
     .line 2615
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    move-object/from16 v80, v14
 
     .line 2617
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 2619
-    move-object/from16 v80, v1
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
 
     .line 2621
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2623
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2625
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2626
+    move-object/from16 v81, v14
 
     .line 2627
-    move-result-object v1
-
-    .line 2630
-    move-object/from16 v81, v1
-
-    .line 2631
     check-cast v81, Lcom/android/systemui/dump/DumpManager;
 
+    .line 2629
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2631
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardLongPressViewModelProvider:Ljavax/inject/Provider;
+
     .line 2633
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2635
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardLongPressViewModelProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2637
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2638
+    move-object/from16 v82, v14
 
     .line 2639
-    move-result-object v1
-
-    .line 2642
-    move-object/from16 v82, v1
-
-    .line 2643
     check-cast v82, Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;
 
+    .line 2641
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2643
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardInteractorProvider:Ljavax/inject/Provider;
+
     .line 2645
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2647
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2649
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2650
+    move-object/from16 v83, v14
 
     .line 2651
-    move-result-object v1
-
-    .line 2654
-    move-object/from16 v83, v1
-
-    .line 2655
     check-cast v83, Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;
 
+    .line 2653
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2655
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
+
     .line 2657
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2659
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2661
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2662
+    move-object/from16 v84, v14
 
     .line 2663
-    move-result-object v1
-
-    .line 2666
-    move-object/from16 v84, v1
-
-    .line 2667
     check-cast v84, Lcom/android/systemui/plugins/ActivityStarter;
 
+    .line 2665
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2667
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->systemUIKeyguardFaceAuthInteractorProvider:Ljavax/inject/Provider;
+
     .line 2669
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2671
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->systemUIKeyguardFaceAuthInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2673
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2674
+    move-object/from16 v85, v14
 
     .line 2675
-    move-result-object v1
-
-    .line 2678
-    move-object/from16 v85, v1
-
-    .line 2679
     check-cast v85, Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;
 
+    .line 2677
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2679
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterControllerImplProvider:Ljavax/inject/Provider;
+
     .line 2681
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-static {v14}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
 
     .line 2683
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterControllerImplProvider:Ljavax/inject/Provider;
-
-    .line 2685
-    invoke-static {v1}, Ldagger/internal/DoubleCheck;->lazy(Ljavax/inject/Provider;)Ldagger/Lazy;
-
-    .line 2687
     move-result-object v86
 
-    .line 2690
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    .line 2686
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2687
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardCommonSettingObserverProvider:Ljavax/inject/Provider;
+
+    .line 2689
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2691
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardCommonSettingObserverProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2693
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2694
+    move-object/from16 v87, v14
 
     .line 2695
-    move-result-object v1
-
-    .line 2698
-    move-object/from16 v87, v1
-
-    .line 2699
     check-cast v87, Lcom/android/keyguard/KeyguardCommonSettingObserver;
 
+    .line 2697
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2699
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->wakefulnessLifecycleProvider:Ljavax/inject/Provider;
+
     .line 2701
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2703
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->wakefulnessLifecycleProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2705
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2706
+    move-object/from16 v88, v14
 
     .line 2707
-    move-result-object v1
-
-    .line 2710
-    move-object/from16 v88, v1
-
-    .line 2711
     check-cast v88, Lcom/android/systemui/keyguard/WakefulnessLifecycle;
 
+    .line 2709
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2711
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->foldNotifManagerProvider:Ljavax/inject/Provider;
+
     .line 2713
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2715
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->foldNotifManagerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2717
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2718
+    move-object/from16 v89, v14
 
     .line 2719
-    move-result-object v1
-
-    .line 2722
-    move-object/from16 v89, v1
-
-    .line 2723
     check-cast v89, Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;
 
+    .line 2721
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2723
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardEditorHelperProvider:Ljavax/inject/Provider;
+
     .line 2725
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2727
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardEditorHelperProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2729
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2730
+    move-object/from16 v90, v14
 
     .line 2731
-    move-result-object v1
-
-    .line 2734
-    move-object/from16 v90, v1
-
-    .line 2735
     check-cast v90, Lcom/android/keyguard/KeyguardEditorHelper;
 
+    .line 2733
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2735
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifLiveDataStoreImplProvider:Ljavax/inject/Provider;
+
     .line 2737
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2739
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifLiveDataStoreImplProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2741
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2742
+    move-object/from16 v91, v14
 
     .line 2743
-    move-result-object v1
-
-    .line 2746
-    move-object/from16 v91, v1
-
-    .line 2747
     check-cast v91, Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;
 
+    .line 2745
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2747
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
+
     .line 2749
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2751
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2753
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2754
+    move-object/from16 v92, v14
 
     .line 2755
-    move-result-object v1
-
-    .line 2758
-    move-object/from16 v92, v1
-
-    .line 2759
     check-cast v92, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
 
+    .line 2757
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2759
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationSnapshotProvider:Ljavax/inject/Provider;
+
     .line 2761
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2763
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationSnapshotProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2765
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2766
+    check-cast v14, Lcom/android/systemui/statusbar/notification/NotificationSnapshot;
 
     .line 2767
-    move-result-object v1
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 2770
-    check-cast v1, Lcom/android/systemui/statusbar/notification/NotificationSnapshot;
+    .line 2769
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->fakeStatusBarClockControllerProvider:Ljavax/inject/Provider;
 
     .line 2771
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2773
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->fakeStatusBarClockControllerProvider:Ljavax/inject/Provider;
+    move-result-object v14
 
-    .line 2775
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2776
+    move-object/from16 v93, v14
 
     .line 2777
-    move-result-object v0
-
-    .line 2780
-    move-object/from16 v93, v0
-
-    .line 2781
     check-cast v93, Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;
 
+    .line 2779
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 2781
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->zenModeControllerImplProvider:Ljavax/inject/Provider;
+
     .line 2783
-    move-object/from16 v2, v94
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2785
-    move-object/from16 v3, v95
-
-    .line 2787
-    invoke-static/range {v2 .. v93}, Lcom/android/systemui/statusbar/phone/MiuiNotificationModule_ProvideNotificationPanelViewControllerFactory;->provideNotificationPanelViewController(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;)Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
-
-    .line 2789
     move-result-object v0
 
-    .line 2792
-    return-object v0
+    .line 2788
+    move-object/from16 v94, v0
+
+    .line 2789
+    check-cast v94, Lcom/android/systemui/statusbar/policy/ZenModeController;
+
+    .line 2791
+    move-object/from16 v0, v61
 
     .line 2793
+    move-object/from16 v14, v37
+
+    .line 2795
+    move-object/from16 v37, v39
+
+    .line 2797
+    move-object/from16 v39, v15
+
+    .line 2799
+    move-object/from16 v15, v36
+
+    .line 2801
+    move-object/from16 v36, v38
+
+    .line 2803
+    move-object/from16 v38, v40
+
+    .line 2805
+    move-object/from16 v40, v1
+
+    .line 2807
+    invoke-static/range {v2 .. v94}, Lcom/android/systemui/statusbar/phone/MiuiNotificationModule_ProvideNotificationPanelViewControllerFactory;->provideNotificationPanelViewController(Lcom/android/systemui/shade/NotificationPanelView;Landroid/os/Handler;Landroid/view/LayoutInflater;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/NotificationWakeUpCoordinator;Lcom/android/systemui/statusbar/PulseExpansionHandler;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/plugins/FalsingManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/policy/KeyguardStateController;Lcom/android/systemui/plugins/statusbar/StatusBarStateController;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/systemui/shade/NotificationShadeWindowControllerImpl;Lcom/android/systemui/doze/DozeLog;Lcom/android/systemui/statusbar/phone/DozeParameters;Lcom/android/systemui/statusbar/CommandQueue;Lcom/android/systemui/statusbar/VibratorHelper;Lcom/android/internal/util/LatencyTracker;Landroid/os/PowerManager;Landroid/view/accessibility/AccessibilityManager;ILcom/android/keyguard/KeyguardUpdateMonitor;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/shade/ShadeLogger;Lcom/android/systemui/statusbar/policy/ConfigurationController;Ljavax/inject/Provider;Lcom/android/systemui/statusbar/phone/StatusBarTouchableRegionManager;Lcom/android/systemui/statusbar/notification/ConversationNotificationManager;Lcom/android/systemui/media/controls/ui/MediaHierarchyManager;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/shade/NotificationsQSContainerController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/keyguard/dagger/KeyguardStatusViewComponent$Factory;Lcom/android/keyguard/dagger/KeyguardQsUserSwitchComponent$Factory;Lcom/android/keyguard/dagger/KeyguardUserSwitcherComponent$Factory;Lcom/android/keyguard/dagger/KeyguardStatusBarViewComponent$Factory;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/biometrics/AuthController;Lcom/android/systemui/statusbar/phone/ScrimController;Landroid/os/UserManager;Lcom/android/systemui/media/controls/pipeline/MediaDataManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/TapAgainViewController;Lcom/android/systemui/navigationbar/NavigationModeController;Lcom/android/systemui/navigationbar/NavigationBarController;Lcom/android/systemui/shade/QuickSettingsController;Lcom/android/systemui/fragments/FragmentService;Landroid/content/ContentResolver;Lcom/android/systemui/shade/ShadeHeaderController;Lcom/android/systemui/statusbar/phone/ScreenOffAnimationController;Lcom/android/systemui/statusbar/phone/LockscreenGestureLogger;Lcom/android/systemui/shade/ShadeExpansionStateManager;Ljava/util/Optional;Lcom/android/systemui/model/SysUiState;Ljavax/inject/Provider;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/KeyguardIndicationController;Lcom/android/systemui/statusbar/notification/stack/NotificationListContainer;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/UnlockedScreenOffAnimationController;Lcom/android/systemui/shade/transition/ShadeTransitionController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBottomAreaViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardBottomAreaInteractor;Lcom/android/systemui/keyguard/domain/interactor/AlternateBouncerInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/DreamingToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/OccludedToLockscreenTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/GoneToDreamingTransitionViewModel;Lcom/android/systemui/keyguard/ui/viewmodel/LockscreenToOccludedTransitionViewModel;Lkotlinx/coroutines/CoroutineDispatcher;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Ljavax/inject/Provider;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardLongPressViewModel;Lcom/android/systemui/keyguard/domain/interactor/KeyguardInteractor;Lcom/android/systemui/plugins/ActivityStarter;Lcom/android/systemui/keyguard/domain/interactor/KeyguardFaceAuthInteractor;Ldagger/Lazy;Lcom/android/keyguard/KeyguardCommonSettingObserver;Lcom/android/systemui/keyguard/WakefulnessLifecycle;Lcom/android/systemui/statusbar/notification/unimportant/FoldNotifManager;Lcom/android/keyguard/KeyguardEditorHelper;Lcom/android/systemui/statusbar/notification/collection/NotifLiveDataStoreImpl;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/policy/FakeStatusBarClockController;Lcom/android/systemui/statusbar/policy/ZenModeController;)Lcom/android/systemui/shade/MiuiNotificationPanelViewController;
+
+    .line 2809
+    move-result-object v0
+
+    .line 2812
+    return-object v0
+
+    .line 2813
     :pswitch_c
     new-instance v29, Lcom/android/systemui/shade/NotificationShadeWindowViewController;
 
-    .line 2794
+    .line 2814
     move-object/from16 v1, v29
 
-    .line 2796
+    .line 2816
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 2798
+    .line 2818
     iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
 
-    .line 2800
+    .line 2820
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 2802
+    .line 2822
     move-result-object v2
 
-    .line 2805
+    .line 2825
     check-cast v2, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
-    .line 2806
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 2808
-    iget-object v3, v3, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingCollectorImplProvider:Ljavax/inject/Provider;
-
-    .line 2810
-    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 2812
-    move-result-object v3
-
-    .line 2815
-    check-cast v3, Lcom/android/systemui/classifier/FalsingCollector;
-
-    .line 2816
-    iget-object v4, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 2818
-    iget-object v4, v4, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarStateControllerImplProvider:Ljavax/inject/Provider;
-
-    .line 2820
-    invoke-interface {v4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 2822
-    move-result-object v4
-
-    .line 2825
-    check-cast v4, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
-
     .line 2826
-    iget-object v5, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2828
-    iget-object v5, v5, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dockManagerImplProvider:Ljavax/inject/Provider;
+    iget-object v3, v3, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingCollectorImplProvider:Ljavax/inject/Provider;
 
     .line 2830
-    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v3}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2832
-    move-result-object v5
+    move-result-object v3
 
     .line 2835
-    check-cast v5, Lcom/android/systemui/dock/DockManager;
+    check-cast v3, Lcom/android/systemui/classifier/FalsingCollector;
 
     .line 2836
-    iget-object v6, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v4, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2838
-    iget-object v6, v6, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
+    iget-object v4, v4, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarStateControllerImplProvider:Ljavax/inject/Provider;
 
     .line 2840
-    invoke-interface {v6}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v4}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2842
-    move-result-object v6
+    move-result-object v4
 
     .line 2845
-    check-cast v6, Lcom/android/systemui/statusbar/NotificationShadeDepthController;
+    check-cast v4, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
     .line 2846
-    iget-object v7, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v5, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2848
-    iget-object v7, v7, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesNotificationShadeWindowViewProvider:Ljavax/inject/Provider;
+    iget-object v5, v5, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dockManagerImplProvider:Ljavax/inject/Provider;
 
     .line 2850
-    invoke-interface {v7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v5}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2852
-    move-result-object v7
+    move-result-object v5
 
     .line 2855
-    check-cast v7, Lcom/android/systemui/shade/NotificationShadeWindowView;
+    check-cast v5, Lcom/android/systemui/dock/DockManager;
 
     .line 2856
-    iget-object v8, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v6, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2858
-    iget-object v8, v8, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->provideNotificationPanelViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v6, v6, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeDepthControllerProvider:Ljavax/inject/Provider;
 
     .line 2860
-    invoke-interface {v8}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v6}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2862
-    move-result-object v8
+    move-result-object v6
 
     .line 2865
-    check-cast v8, Lcom/android/systemui/shade/NotificationPanelViewController;
+    check-cast v6, Lcom/android/systemui/statusbar/NotificationShadeDepthController;
 
     .line 2866
-    iget-object v9, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v7, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2868
-    iget-object v9, v9, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
+    iget-object v7, v7, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesNotificationShadeWindowViewProvider:Ljavax/inject/Provider;
 
     .line 2870
-    invoke-interface {v9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v7}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2872
-    move-result-object v9
+    move-result-object v7
 
     .line 2875
-    check-cast v9, Lcom/android/systemui/shade/ShadeExpansionStateManager;
+    check-cast v7, Lcom/android/systemui/shade/NotificationShadeWindowView;
 
     .line 2876
-    iget-object v9, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    iget-object v8, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 2878
-    iget-object v9, v9, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationStackScrollLayoutControllerProvider:Ljavax/inject/Provider;
+    iget-object v8, v8, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->provideNotificationPanelViewControllerProvider:Ljavax/inject/Provider;
 
     .line 2880
-    invoke-interface {v9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v8}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2882
-    move-result-object v9
+    move-result-object v8
 
     .line 2885
-    check-cast v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
+    check-cast v8, Lcom/android/systemui/shade/NotificationPanelViewController;
 
     .line 2886
-    iget-object v10, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v9, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2888
-    iget-object v10, v10, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
+    iget-object v9, v9, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeExpansionStateManagerProvider:Ljavax/inject/Provider;
 
     .line 2890
-    invoke-interface {v10}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2892
-    move-result-object v10
+    move-result-object v9
 
     .line 2895
-    check-cast v10, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
+    check-cast v9, Lcom/android/systemui/shade/ShadeExpansionStateManager;
 
     .line 2896
-    iget-object v11, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v9, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 2898
-    iget-object v11, v11, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarWindowStateControllerProvider:Ljavax/inject/Provider;
+    iget-object v9, v9, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationStackScrollLayoutControllerProvider:Ljavax/inject/Provider;
 
     .line 2900
-    invoke-interface {v11}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v9}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2902
-    move-result-object v11
+    move-result-object v9
 
     .line 2905
-    check-cast v11, Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;
+    check-cast v9, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
 
     .line 2906
-    iget-object v12, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v10, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2908
-    iget-object v12, v12, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
+    iget-object v10, v10, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarKeyguardViewManagerProvider:Ljavax/inject/Provider;
 
     .line 2910
-    invoke-interface {v12}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v10}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2912
-    move-result-object v12
+    move-result-object v10
 
     .line 2915
-    check-cast v12, Lcom/android/keyguard/LockIconViewController;
+    check-cast v10, Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;
 
     .line 2916
-    iget-object v13, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v11, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2918
-    iget-object v13, v13, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
+    iget-object v11, v11, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarWindowStateControllerProvider:Ljavax/inject/Provider;
 
     .line 2920
-    invoke-interface {v13}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v11}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2922
-    move-result-object v13
+    move-result-object v11
 
     .line 2925
-    check-cast v13, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+    check-cast v11, Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;
 
     .line 2926
-    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v12, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2928
-    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeWindowControllerImplProvider:Ljavax/inject/Provider;
+    iget-object v12, v12, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockIconViewControllerProvider:Ljavax/inject/Provider;
 
     .line 2930
-    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v12}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2932
-    move-result-object v14
+    move-result-object v12
 
     .line 2935
-    check-cast v14, Lcom/android/systemui/statusbar/NotificationShadeWindowController;
+    check-cast v12, Lcom/android/keyguard/LockIconViewController;
 
     .line 2936
-    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    iget-object v13, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2938
-    iget-object v15, v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->unfoldTransitionProgressProvider:Ljavax/inject/Provider;
+    iget-object v13, v13, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
 
     .line 2940
-    invoke-interface {v15}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v13}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2942
-    move-result-object v15
+    move-result-object v13
 
     .line 2945
-    check-cast v15, Ljava/util/Optional;
+    check-cast v13, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
     .line 2946
-    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v14, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2948
-    iget-object v15, v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
+    iget-object v14, v14, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationShadeWindowControllerImplProvider:Ljavax/inject/Provider;
 
     .line 2950
-    invoke-interface {v15}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-interface {v14}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2952
-    move-result-object v15
+    move-result-object v14
 
     .line 2955
-    check-cast v15, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
+    check-cast v14, Lcom/android/systemui/statusbar/NotificationShadeWindowController;
 
     .line 2956
-    move-object/from16 v30, v1
+    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 2958
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v15, v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->unfoldTransitionProgressProvider:Ljavax/inject/Provider;
 
     .line 2960
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationInsetsImplProvider:Ljavax/inject/Provider;
+    invoke-interface {v15}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2962
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    move-result-object v15
 
-    .line 2964
-    move-result-object v1
+    .line 2965
+    check-cast v15, Ljava/util/Optional;
 
-    .line 2967
-    move-object/from16 v16, v1
+    .line 2966
+    iget-object v15, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2968
-    check-cast v16, Lcom/android/systemui/statusbar/NotificationInsetsController;
+    iget-object v15, v15, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardUnlockAnimationControllerProvider:Ljavax/inject/Provider;
 
     .line 2970
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v15}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2972
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
+    move-result-object v15
 
-    .line 2974
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2975
+    check-cast v15, Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;
 
     .line 2976
-    move-result-object v1
+    move-object/from16 v30, v1
 
-    .line 2979
-    move-object/from16 v17, v1
+    .line 2978
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2980
-    check-cast v17, Lcom/android/systemui/statusbar/notification/stack/AmbientState;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationInsetsImplProvider:Ljavax/inject/Provider;
 
     .line 2982
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2984
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->pulsingGestureListenerProvider:Ljavax/inject/Provider;
+    move-result-object v1
 
-    .line 2986
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 2987
+    move-object/from16 v16, v1
 
     .line 2988
-    move-result-object v1
+    check-cast v16, Lcom/android/systemui/statusbar/NotificationInsetsController;
 
-    .line 2991
-    move-object/from16 v18, v1
+    .line 2990
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 2992
-    check-cast v18, Lcom/android/systemui/shade/PulsingGestureListener;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->ambientStateProvider:Ljavax/inject/Provider;
 
     .line 2994
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 2996
-    invoke-virtual {v1}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBouncerViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBouncerViewModel;
+    move-result-object v1
 
-    .line 2998
-    move-result-object v19
+    .line 2999
+    move-object/from16 v17, v1
 
-    .line 3001
-    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardBouncerComponentFactory;
+    .line 3000
+    check-cast v17, Lcom/android/systemui/statusbar/notification/stack/AmbientState;
 
     .line 3002
-    move-object/from16 v20, v1
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 3004
-    move-object/from16 v31, v2
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->pulsingGestureListenerProvider:Ljavax/inject/Provider;
 
     .line 3006
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3008
-    move-object/from16 v32, v3
+    move-result-object v1
 
-    .line 3010
-    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    .line 3011
+    move-object/from16 v18, v1
 
     .line 3012
-    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardBouncerComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+    check-cast v18, Lcom/android/systemui/shade/PulsingGestureListener;
 
     .line 3014
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3017
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
+    .line 3016
+    invoke-virtual {v1}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->keyguardBouncerViewModel()Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBouncerViewModel;
 
-    .line 3019
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3018
+    move-result-object v19
 
     .line 3021
-    move-result-object v1
+    new-instance v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardBouncerComponentFactory;
+
+    .line 3022
+    move-object/from16 v20, v1
 
     .line 3024
-    move-object/from16 v21, v1
+    move-object/from16 v31, v2
 
-    .line 3025
-    check-cast v21, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
+    .line 3026
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
-    .line 3027
+    .line 3028
+    move-object/from16 v32, v3
+
+    .line 3030
+    iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3032
+    invoke-direct {v1, v2, v3}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$KeyguardBouncerComponentFactory;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
+
+    .line 3034
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3029
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->primaryBouncerToGoneTransitionViewModelProvider:Ljavax/inject/Provider;
-
-    .line 3031
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3033
-    move-result-object v1
-
-    .line 3036
-    move-object/from16 v22, v1
 
     .line 3037
-    check-cast v22, Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardTransitionInteractorProvider:Ljavax/inject/Provider;
 
     .line 3039
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3041
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->featureFlagsReleaseProvider:Ljavax/inject/Provider;
+    move-result-object v1
 
-    .line 3043
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3044
+    move-object/from16 v21, v1
 
     .line 3045
-    move-result-object v1
+    check-cast v21, Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;
 
-    .line 3048
-    move-object/from16 v23, v1
+    .line 3047
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3049
-    check-cast v23, Lcom/android/systemui/flags/FeatureFlags;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->primaryBouncerToGoneTransitionViewModelProvider:Ljavax/inject/Provider;
 
     .line 3051
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3053
-    iget-object v2, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
+    move-result-object v1
 
-    .line 3055
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
+    .line 3056
+    move-object/from16 v22, v1
 
     .line 3057
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    check-cast v22, Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;
 
     .line 3059
-    move-result-object v1
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3062
-    move-object/from16 v24, v1
+    .line 3061
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->featureFlagsReleaseProvider:Ljavax/inject/Provider;
 
     .line 3063
-    check-cast v24, Lcom/android/systemui/util/time/SystemClock;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3065
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    move-result-object v1
 
-    .line 3067
-    iget-object v2, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeMotionEventInteractorProvider:Ljavax/inject/Provider;
+    .line 3068
+    move-object/from16 v23, v1
 
     .line 3069
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlPanelWindowManagerProvider:Ljavax/inject/Provider;
+    check-cast v23, Lcom/android/systemui/flags/FeatureFlags;
 
     .line 3071
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3073
-    move-result-object v1
+    iget-object v2, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeInteractorProvider:Ljavax/inject/Provider;
 
-    .line 3076
-    move-object/from16 v25, v1
+    .line 3075
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
 
     .line 3077
-    check-cast v25, Lcom/android/systemui/controlcenter/phone/ControlPanelWindowManager;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3079
-    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    move-result-object v1
 
-    .line 3081
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->modalControllerProvider:Ljavax/inject/Provider;
+    .line 3082
+    move-object/from16 v24, v1
 
     .line 3083
-    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    check-cast v24, Lcom/android/systemui/util/time/SystemClock;
 
     .line 3085
-    move-result-object v1
-
-    .line 3088
-    move-object/from16 v26, v1
-
-    .line 3089
-    check-cast v26, Lcom/android/systemui/statusbar/notification/modal/ModalController;
-
-    .line 3091
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3093
-    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->nCSwitchControllerProvider:Ljavax/inject/Provider;
+    .line 3087
+    iget-object v2, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->multiShadeMotionEventInteractorProvider:Ljavax/inject/Provider;
 
-    .line 3095
+    .line 3089
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlPanelWindowManagerProvider:Ljavax/inject/Provider;
+
+    .line 3091
     invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3097
+    .line 3093
     move-result-object v1
 
-    .line 3100
-    move-object/from16 v27, v1
+    .line 3096
+    move-object/from16 v25, v1
+
+    .line 3097
+    check-cast v25, Lcom/android/systemui/controlcenter/phone/ControlPanelWindowManager;
+
+    .line 3099
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3101
-    check-cast v27, Lcom/android/systemui/controlcenter/policy/NCSwitchController;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->modalControllerProvider:Ljavax/inject/Provider;
 
     .line 3103
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3105
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+    move-result-object v1
 
-    .line 3107
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3108
+    move-object/from16 v26, v1
 
     .line 3109
-    move-result-object v0
+    check-cast v26, Lcom/android/systemui/statusbar/notification/modal/ModalController;
 
-    .line 3112
-    move-object/from16 v28, v0
+    .line 3111
+    iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3113
-    check-cast v28, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
+    iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->nCSwitchControllerProvider:Ljavax/inject/Provider;
 
     .line 3115
-    move-object/from16 v1, v30
+    invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3117
-    move-object/from16 v2, v31
+    move-result-object v1
 
-    .line 3119
-    move-object/from16 v3, v32
+    .line 3120
+    move-object/from16 v27, v1
 
     .line 3121
-    invoke-direct/range {v1 .. v28}, Lcom/android/systemui/shade/NotificationShadeWindowViewController;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/shade/NotificationShadeWindowView;Lcom/android/systemui/shade/NotificationPanelViewController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/NotificationInsetsController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/systemui/shade/PulsingGestureListener;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBouncerViewModel;Lcom/android/keyguard/dagger/KeyguardBouncerComponent$Factory;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/controlcenter/phone/ControlPanelWindowManager;Lcom/android/systemui/statusbar/notification/modal/ModalController;Lcom/android/systemui/controlcenter/policy/NCSwitchController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;)V
+    check-cast v27, Lcom/android/systemui/controlcenter/policy/NCSwitchController;
 
     .line 3123
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3125
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+
+    .line 3127
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3129
+    move-result-object v0
+
+    .line 3132
+    move-object/from16 v28, v0
+
+    .line 3133
+    check-cast v28, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
+
+    .line 3135
+    move-object/from16 v1, v30
+
+    .line 3137
+    move-object/from16 v2, v31
+
+    .line 3139
+    move-object/from16 v3, v32
+
+    .line 3141
+    invoke-direct/range {v1 .. v28}, Lcom/android/systemui/shade/NotificationShadeWindowViewController;-><init>(Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/dock/DockManager;Lcom/android/systemui/statusbar/NotificationShadeDepthController;Lcom/android/systemui/shade/NotificationShadeWindowView;Lcom/android/systemui/shade/NotificationPanelViewController;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;Lcom/android/systemui/statusbar/phone/StatusBarKeyguardViewManager;Lcom/android/systemui/statusbar/window/StatusBarWindowStateController;Lcom/android/keyguard/LockIconViewController;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/NotificationShadeWindowController;Lcom/android/systemui/keyguard/KeyguardUnlockAnimationController;Lcom/android/systemui/statusbar/NotificationInsetsController;Lcom/android/systemui/statusbar/notification/stack/AmbientState;Lcom/android/systemui/shade/PulsingGestureListener;Lcom/android/systemui/keyguard/ui/viewmodel/KeyguardBouncerViewModel;Lcom/android/keyguard/dagger/KeyguardBouncerComponent$Factory;Lcom/android/systemui/keyguard/domain/interactor/KeyguardTransitionInteractor;Lcom/android/systemui/keyguard/ui/viewmodel/PrimaryBouncerToGoneTransitionViewModel;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/controlcenter/phone/ControlPanelWindowManager;Lcom/android/systemui/statusbar/notification/modal/ModalController;Lcom/android/systemui/controlcenter/policy/NCSwitchController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;)V
+
+    .line 3143
     return-object v29
 
-    .line 3126
+    .line 3146
     :pswitch_d
     new-instance v1, Lcom/android/systemui/statusbar/notification/shelf/domain/interactor/NotificationShelfInteractor;
 
-    .line 3127
+    .line 3147
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3129
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardRepositoryImplProvider:Ljavax/inject/Provider;
-
-    .line 3131
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3133
-    move-result-object v2
-
-    .line 3136
-    move-object/from16 v34, v2
-
-    .line 3137
-    check-cast v34, Lcom/android/systemui/keyguard/data/repository/KeyguardRepository;
-
-    .line 3139
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3141
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->deviceEntryFaceAuthRepositoryImplProvider:Ljavax/inject/Provider;
-
-    .line 3143
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3145
-    move-result-object v2
-
-    .line 3148
-    move-object/from16 v35, v2
 
     .line 3149
-    check-cast v35, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFaceAuthRepository;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardRepositoryImplProvider:Ljavax/inject/Provider;
 
     .line 3151
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3153
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3155
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3156
+    move-object/from16 v34, v2
 
     .line 3157
-    move-result-object v2
+    check-cast v34, Lcom/android/systemui/keyguard/data/repository/KeyguardRepository;
 
-    .line 3160
-    move-object/from16 v36, v2
-
-    .line 3161
-    check-cast v36, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
-
-    .line 3163
+    .line 3159
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3165
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
+    .line 3161
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->deviceEntryFaceAuthRepositoryImplProvider:Ljavax/inject/Provider;
 
-    .line 3167
+    .line 3163
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3169
+    .line 3165
     move-result-object v2
 
-    .line 3172
-    move-object/from16 v37, v2
+    .line 3168
+    move-object/from16 v35, v2
+
+    .line 3169
+    check-cast v35, Lcom/android/systemui/keyguard/data/repository/DeviceEntryFaceAuthRepository;
+
+    .line 3171
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3173
-    check-cast v37, Lcom/android/systemui/util/time/SystemClock;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
 
     .line 3175
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3177
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3179
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3180
+    move-object/from16 v36, v2
 
     .line 3181
-    move-result-object v0
+    check-cast v36, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 3184
-    move-object/from16 v38, v0
+    .line 3183
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3185
-    check-cast v38, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->bindSystemClockProvider:Ljavax/inject/Provider;
 
     .line 3187
-    move-object/from16 v33, v1
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3189
+    move-result-object v2
+
+    .line 3192
+    move-object/from16 v37, v2
+
+    .line 3193
+    check-cast v37, Lcom/android/systemui/util/time/SystemClock;
+
+    .line 3195
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3197
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
+
+    .line 3199
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3201
+    move-result-object v0
+
+    .line 3204
+    move-object/from16 v38, v0
+
+    .line 3205
+    check-cast v38, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+
+    .line 3207
+    move-object/from16 v33, v1
+
+    .line 3209
     invoke-direct/range {v33 .. v38}, Lcom/android/systemui/statusbar/notification/shelf/domain/interactor/NotificationShelfInteractor;-><init>(Lcom/android/systemui/keyguard/data/repository/KeyguardRepository;Lcom/android/systemui/keyguard/data/repository/DeviceEntryFaceAuthRepository;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/util/time/SystemClock;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;)V
 
-    .line 3191
+    .line 3211
     return-object v1
 
-    .line 3194
+    .line 3214
     :pswitch_e
     new-instance v1, Lcom/android/systemui/statusbar/notification/shelf/ui/viewmodel/NotificationShelfViewModel;
 
-    .line 3195
+    .line 3215
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3197
+    .line 3217
     iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationShelfInteractorProvider:Ljavax/inject/Provider;
 
-    .line 3199
+    .line 3219
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3201
+    .line 3221
     move-result-object v2
 
-    .line 3204
+    .line 3224
     check-cast v2, Lcom/android/systemui/statusbar/notification/shelf/domain/interactor/NotificationShelfInteractor;
 
-    .line 3205
+    .line 3225
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3207
+    .line 3227
     invoke-virtual {v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->activatableNotificationViewModel()Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/ActivatableNotificationViewModel;
 
-    .line 3209
+    .line 3229
     move-result-object v0
 
-    .line 3212
+    .line 3232
     invoke-direct {v1, v2, v0}, Lcom/android/systemui/statusbar/notification/shelf/ui/viewmodel/NotificationShelfViewModel;-><init>(Lcom/android/systemui/statusbar/notification/shelf/domain/interactor/NotificationShelfInteractor;Lcom/android/systemui/statusbar/notification/row/ui/viewmodel/ActivatableNotificationViewModel;)V
 
-    .line 3213
+    .line 3233
     return-object v1
 
-    .line 3216
+    .line 3236
     :pswitch_f
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3217
+    .line 3237
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3219
+    .line 3239
     iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesNotificationStackScrollLayoutProvider:Ljavax/inject/Provider;
 
-    .line 3221
+    .line 3241
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3223
-    move-result-object v2
-
-    .line 3226
-    move-object v3, v2
-
-    .line 3227
-    check-cast v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
-
-    .line 3228
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3230
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideAllowNotificationLongPressProvider:Ljavax/inject/Provider;
-
-    .line 3232
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3234
-    move-result-object v2
-
-    .line 3237
-    check-cast v2, Ljava/lang/Boolean;
-
-    .line 3238
-    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
-
-    .line 3240
-    move-result v4
 
     .line 3243
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3244
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationGutsManagerProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
     .line 3246
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    move-object v3, v2
+
+    .line 3247
+    check-cast v3, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
     .line 3248
-    move-result-object v2
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3251
-    move-object v5, v2
+    .line 3250
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideAllowNotificationLongPressProvider:Ljavax/inject/Provider;
 
     .line 3252
-    check-cast v5, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3253
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3255
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationVisibilityProviderImplProvider:Ljavax/inject/Provider;
+    .line 3254
+    move-result-object v2
 
     .line 3257
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    check-cast v2, Ljava/lang/Boolean;
 
-    .line 3259
-    move-result-object v2
+    .line 3258
+    invoke-virtual {v2}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 3262
-    move-object v6, v2
+    .line 3260
+    move-result v4
 
     .line 3263
-    check-cast v6, Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3264
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationGutsManagerProvider:Ljavax/inject/Provider;
 
     .line 3266
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideHeadsUpManagerPhoneProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3268
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3270
     move-result-object v2
+
+    .line 3271
+    move-object v5, v2
+
+    .line 3272
+    check-cast v5, Lcom/android/systemui/statusbar/notification/row/NotificationGutsManager;
 
     .line 3273
-    move-object v7, v2
-
-    .line 3274
-    check-cast v7, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3275
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationVisibilityProviderImplProvider:Ljavax/inject/Provider;
 
     .line 3277
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationRoundnessManagerProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3279
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3281
     move-result-object v2
+
+    .line 3282
+    move-object v6, v2
+
+    .line 3283
+    check-cast v6, Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;
 
     .line 3284
-    move-object v8, v2
-
-    .line 3285
-    check-cast v8, Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3286
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideHeadsUpManagerPhoneProvider:Ljavax/inject/Provider;
 
     .line 3288
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->tunerServiceImplProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3290
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3292
     move-result-object v2
+
+    .line 3293
+    move-object v7, v2
+
+    .line 3294
+    check-cast v7, Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;
 
     .line 3295
-    move-object v9, v2
-
-    .line 3296
-    check-cast v9, Lcom/android/systemui/tuner/TunerService;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3297
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationRoundnessManagerProvider:Ljavax/inject/Provider;
 
     .line 3299
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesDeviceProvisionedControllerProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3301
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3303
     move-result-object v2
+
+    .line 3304
+    move-object v8, v2
+
+    .line 3305
+    check-cast v8, Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;
 
     .line 3306
-    move-object v10, v2
-
-    .line 3307
-    check-cast v10, Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3308
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->tunerServiceImplProvider:Ljavax/inject/Provider;
 
     .line 3310
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dynamicPrivacyControllerProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3312
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3314
     move-result-object v2
+
+    .line 3315
+    move-object v9, v2
+
+    .line 3316
+    check-cast v9, Lcom/android/systemui/tuner/TunerService;
 
     .line 3317
-    move-object v11, v2
-
-    .line 3318
-    check-cast v11, Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3319
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesDeviceProvisionedControllerProvider:Ljavax/inject/Provider;
 
     .line 3321
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->configurationControllerImplProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3323
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3325
     move-result-object v2
+
+    .line 3326
+    move-object v10, v2
+
+    .line 3327
+    check-cast v10, Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;
 
     .line 3328
-    move-object v12, v2
-
-    .line 3329
-    check-cast v12, Lcom/android/systemui/statusbar/policy/ConfigurationController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3330
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->dynamicPrivacyControllerProvider:Ljavax/inject/Provider;
 
     .line 3332
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarStateControllerImplProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3334
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3336
     move-result-object v2
+
+    .line 3337
+    move-object v11, v2
+
+    .line 3338
+    check-cast v11, Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;
 
     .line 3339
-    move-object v13, v2
-
-    .line 3340
-    check-cast v13, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3341
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->configurationControllerImplProvider:Ljavax/inject/Provider;
 
     .line 3343
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3345
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3347
     move-result-object v2
+
+    .line 3348
+    move-object v12, v2
+
+    .line 3349
+    check-cast v12, Lcom/android/systemui/statusbar/policy/ConfigurationController;
 
     .line 3350
-    move-object v14, v2
-
-    .line 3351
-    check-cast v14, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3352
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->statusBarStateControllerImplProvider:Ljavax/inject/Provider;
 
     .line 3354
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardBypassControllerProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3356
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3358
     move-result-object v2
+
+    .line 3359
+    move-object v13, v2
+
+    .line 3360
+    check-cast v13, Lcom/android/systemui/statusbar/SysuiStatusBarStateController;
 
     .line 3361
-    move-object v15, v2
-
-    .line 3362
-    check-cast v15, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3363
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->miuiKeyguardMediaControllerProvider:Ljavax/inject/Provider;
 
     .line 3365
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->zenModeControllerImplProvider:Ljavax/inject/Provider;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3367
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3369
     move-result-object v2
+
+    .line 3370
+    move-object v14, v2
+
+    .line 3371
+    check-cast v14, Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;
 
     .line 3372
-    move-object/from16 v16, v2
-
-    .line 3373
-    check-cast v16, Lcom/android/systemui/statusbar/policy/ZenModeController;
-
-    .line 3375
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3377
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationLockscreenUserManagerImplProvider:Ljavax/inject/Provider;
+    .line 3374
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->keyguardBypassControllerProvider:Ljavax/inject/Provider;
 
-    .line 3379
+    .line 3376
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3378
+    move-result-object v2
 
     .line 3381
-    move-result-object v2
+    move-object v15, v2
 
-    .line 3384
-    move-object/from16 v17, v2
+    .line 3382
+    check-cast v15, Lcom/android/systemui/statusbar/phone/KeyguardBypassController;
+
+    .line 3383
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3385
-    check-cast v17, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->zenModeControllerImplProvider:Ljavax/inject/Provider;
 
     .line 3387
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3389
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->optionalOfNotificationListViewModel()Ljava/util/Optional;
+    move-result-object v2
 
-    .line 3391
-    move-result-object v18
+    .line 3392
+    move-object/from16 v16, v2
 
-    .line 3394
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    .line 3393
+    check-cast v16, Lcom/android/systemui/statusbar/policy/ZenModeController;
 
     .line 3395
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideMetricsLoggerProvider:Ljavax/inject/Provider;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3397
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationLockscreenUserManagerImplProvider:Ljavax/inject/Provider;
 
     .line 3399
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3401
     move-result-object v2
 
-    .line 3402
-    move-object/from16 v19, v2
-
-    .line 3403
-    check-cast v19, Lcom/android/internal/logging/MetricsLogger;
+    .line 3404
+    move-object/from16 v17, v2
 
     .line 3405
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    check-cast v17, Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;
 
     .line 3407
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 3409
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->optionalOfNotificationListViewModel()Ljava/util/Optional;
 
     .line 3411
-    move-result-object v2
+    move-result-object v18
 
     .line 3414
-    move-object/from16 v20, v2
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 3415
-    check-cast v20, Lcom/android/systemui/dump/DumpManager;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideMetricsLoggerProvider:Ljavax/inject/Provider;
 
     .line 3417
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3419
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingCollectorImplProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3421
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3422
+    move-object/from16 v19, v2
 
     .line 3423
-    move-result-object v2
+    check-cast v19, Lcom/android/internal/logging/MetricsLogger;
 
-    .line 3426
-    move-object/from16 v21, v2
+    .line 3425
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 3427
-    check-cast v21, Lcom/android/systemui/classifier/FalsingCollector;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->dumpManagerProvider:Ljavax/inject/Provider;
 
     .line 3429
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3431
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingManagerProxyProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3433
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3434
+    move-object/from16 v20, v2
 
     .line 3435
-    move-result-object v2
+    check-cast v20, Lcom/android/systemui/dump/DumpManager;
 
-    .line 3438
-    move-object/from16 v22, v2
+    .line 3437
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3439
-    check-cast v22, Lcom/android/systemui/plugins/FalsingManager;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingCollectorImplProvider:Ljavax/inject/Provider;
 
     .line 3441
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3443
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->mainResources()Landroid/content/res/Resources;
+    move-result-object v2
 
-    .line 3445
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    .line 3446
+    move-object/from16 v21, v2
 
-    .line 3448
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationSwipeHelperBuilder()Ljava/lang/Object;
+    .line 3447
+    check-cast v21, Lcom/android/systemui/classifier/FalsingCollector;
 
-    .line 3450
-    move-result-object v23
+    .line 3449
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3451
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->falsingManagerProxyProvider:Ljavax/inject/Provider;
 
     .line 3453
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3454
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
-
-    .line 3456
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3455
+    move-result-object v2
 
     .line 3458
-    move-result-object v2
+    move-object/from16 v22, v2
+
+    .line 3459
+    check-cast v22, Lcom/android/systemui/plugins/FalsingManager;
 
     .line 3461
-    move-object/from16 v24, v2
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
-    .line 3462
-    check-cast v24, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
+    .line 3463
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->mainResources()Landroid/content/res/Resources;
 
-    .line 3464
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3466
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
+    .line 3465
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 3468
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationSwipeHelperBuilder()Ljava/lang/Object;
 
     .line 3470
-    move-result-object v2
+    move-result-object v23
 
     .line 3473
-    move-object/from16 v25, v2
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3474
-    check-cast v25, Lcom/android/systemui/statusbar/phone/ScrimController;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->centralSurfacesImplProvider:Ljavax/inject/Provider;
 
     .line 3476
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3478
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->groupExpansionManagerImplProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3480
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3481
+    move-object/from16 v24, v2
 
     .line 3482
-    move-result-object v2
+    check-cast v24, Lcom/android/systemui/statusbar/phone/CentralSurfaces;
 
-    .line 3485
-    move-object/from16 v26, v2
+    .line 3484
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3486
-    check-cast v26, Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->scrimControllerProvider:Ljavax/inject/Provider;
 
     .line 3488
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3490
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->silentHeaderSectionHeaderController()Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
+    move-result-object v2
 
-    .line 3492
-    move-result-object v27
+    .line 3493
+    move-object/from16 v25, v2
 
-    .line 3495
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    .line 3494
+    check-cast v25, Lcom/android/systemui/statusbar/phone/ScrimController;
 
     .line 3496
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3498
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->groupExpansionManagerImplProvider:Ljavax/inject/Provider;
 
     .line 3500
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3502
     move-result-object v2
 
-    .line 3503
-    move-object/from16 v28, v2
-
-    .line 3504
-    check-cast v28, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+    .line 3505
+    move-object/from16 v26, v2
 
     .line 3506
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    check-cast v26, Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;
 
     .line 3508
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineFlags()Lcom/android/systemui/statusbar/notification/NotifPipelineFlags;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3510
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->silentHeaderSectionHeaderController()Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;
 
-    .line 3513
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifCollectionProvider:Ljavax/inject/Provider;
+    .line 3512
+    move-result-object v27
 
     .line 3515
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3517
-    move-result-object v2
+    .line 3516
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineProvider:Ljavax/inject/Provider;
+
+    .line 3518
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3520
-    move-object/from16 v29, v2
-
-    .line 3521
-    check-cast v29, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;
+    move-result-object v2
 
     .line 3523
+    move-object/from16 v28, v2
+
+    .line 3524
+    check-cast v28, Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;
+
+    .line 3526
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3525
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
+    .line 3528
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifPipelineFlags()Lcom/android/systemui/statusbar/notification/NotifPipelineFlags;
 
-    .line 3527
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3529
-    move-result-object v2
-
-    .line 3532
-    move-object/from16 v30, v2
+    .line 3530
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3533
-    check-cast v30, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notifCollectionProvider:Ljavax/inject/Provider;
 
     .line 3535
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3537
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideUiEventLoggerProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3539
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3540
+    move-object/from16 v29, v2
 
     .line 3541
-    move-result-object v2
+    check-cast v29, Lcom/android/systemui/statusbar/notification/collection/NotifCollection;
 
-    .line 3544
-    move-object/from16 v31, v2
+    .line 3543
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3545
-    check-cast v31, Lcom/android/internal/logging/UiEventLogger;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->lockscreenShadeTransitionControllerProvider:Ljavax/inject/Provider;
 
     .line 3547
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3549
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3551
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3552
+    move-object/from16 v30, v2
 
     .line 3553
-    move-result-object v2
+    check-cast v30, Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;
 
-    .line 3556
-    move-object/from16 v32, v2
-
-    .line 3557
-    check-cast v32, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
-
-    .line 3559
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3561
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->visibilityLocationProviderDelegatorProvider:Ljavax/inject/Provider;
-
-    .line 3563
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3565
-    move-result-object v2
-
-    .line 3568
-    move-object/from16 v33, v2
-
-    .line 3569
-    check-cast v33, Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;
-
-    .line 3571
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3573
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->seenNotificationsProviderImplProvider:Ljavax/inject/Provider;
-
-    .line 3575
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3577
-    move-result-object v2
-
-    .line 3580
-    move-object/from16 v34, v2
-
-    .line 3581
-    check-cast v34, Lcom/android/systemui/statusbar/notification/collection/provider/SeenNotificationsProviderImpl;
-
-    .line 3583
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3585
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeControllerImplProvider:Ljavax/inject/Provider;
-
-    .line 3587
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
-
-    .line 3589
-    move-result-object v2
-
-    .line 3592
-    move-object/from16 v35, v2
-
-    .line 3593
-    check-cast v35, Lcom/android/systemui/shade/ShadeController;
-
-    .line 3595
+    .line 3555
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
-    .line 3597
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
+    .line 3557
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideUiEventLoggerProvider:Ljavax/inject/Provider;
 
-    .line 3599
+    .line 3559
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3561
+    move-result-object v2
+
+    .line 3564
+    move-object/from16 v31, v2
+
+    .line 3565
+    check-cast v31, Lcom/android/internal/logging/UiEventLogger;
+
+    .line 3567
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3569
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->provideNotificationRemoteInputManagerProvider:Ljavax/inject/Provider;
+
+    .line 3571
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3573
+    move-result-object v2
+
+    .line 3576
+    move-object/from16 v32, v2
+
+    .line 3577
+    check-cast v32, Lcom/android/systemui/statusbar/NotificationRemoteInputManager;
+
+    .line 3579
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3581
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->visibilityLocationProviderDelegatorProvider:Ljavax/inject/Provider;
+
+    .line 3583
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3585
+    move-result-object v2
+
+    .line 3588
+    move-object/from16 v33, v2
+
+    .line 3589
+    check-cast v33, Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;
+
+    .line 3591
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3593
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->seenNotificationsProviderImplProvider:Ljavax/inject/Provider;
+
+    .line 3595
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3597
+    move-result-object v2
+
+    .line 3600
+    move-object/from16 v34, v2
 
     .line 3601
-    move-result-object v2
+    check-cast v34, Lcom/android/systemui/statusbar/notification/collection/provider/SeenNotificationsProviderImpl;
 
-    .line 3604
-    move-object/from16 v36, v2
+    .line 3603
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3605
-    check-cast v36, Lcom/android/internal/jank/InteractionJankMonitor;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->shadeControllerImplProvider:Ljavax/inject/Provider;
 
     .line 3607
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3609
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->stackStateLogger()Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;
+    move-result-object v2
 
-    .line 3611
-    move-result-object v37
+    .line 3612
+    move-object/from16 v35, v2
 
-    .line 3614
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
+    .line 3613
+    check-cast v35, Lcom/android/systemui/shade/ShadeController;
 
     .line 3615
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationStackScrollLogger()Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
     .line 3617
-    move-result-object v38
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->provideInteractionJankMonitorProvider:Ljavax/inject/Provider;
 
-    .line 3620
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    .line 3619
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3621
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3623
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3624
+    move-object/from16 v36, v2
 
     .line 3625
-    move-result-object v2
+    check-cast v36, Lcom/android/internal/jank/InteractionJankMonitor;
 
-    .line 3628
-    move-object/from16 v39, v2
+    .line 3627
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 3629
-    check-cast v39, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->stackStateLogger()Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;
 
     .line 3631
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    move-result-object v37
 
-    .line 3633
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationIconAreaControllerProvider:Ljavax/inject/Provider;
+    .line 3634
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
     .line 3635
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationStackScrollLogger()Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;
 
     .line 3637
-    move-result-object v2
+    move-result-object v38
 
     .line 3640
-    move-object/from16 v40, v2
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3641
-    check-cast v40, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationStackSizeCalculatorProvider:Ljavax/inject/Provider;
 
     .line 3643
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3645
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->featureFlagsReleaseProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3647
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3648
+    move-object/from16 v39, v2
 
     .line 3649
-    move-result-object v2
+    check-cast v39, Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;
 
-    .line 3652
-    move-object/from16 v41, v2
+    .line 3651
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3653
-    check-cast v41, Lcom/android/systemui/flags/FeatureFlags;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationIconAreaControllerProvider:Ljavax/inject/Provider;
 
     .line 3655
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3657
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationTargetsHelperProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3659
-    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3660
+    move-object/from16 v40, v2
 
     .line 3661
-    move-result-object v2
+    check-cast v40, Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;
 
-    .line 3664
-    move-object/from16 v42, v2
+    .line 3663
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3665
-    check-cast v42, Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->featureFlagsReleaseProvider:Ljavax/inject/Provider;
 
     .line 3667
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3669
-    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->secureSettingsImpl()Ljava/lang/Object;
-
-    .line 3671
-    move-result-object v2
-
-    .line 3674
-    move-object/from16 v43, v2
-
-    .line 3675
-    check-cast v43, Lcom/android/systemui/util/settings/SecureSettings;
-
-    .line 3677
-    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
-
-    .line 3679
-    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationDismissibilityProviderImplProvider:Ljavax/inject/Provider;
-
-    .line 3681
     invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3683
+    .line 3669
     move-result-object v2
 
-    .line 3686
-    move-object/from16 v44, v2
+    .line 3672
+    move-object/from16 v41, v2
+
+    .line 3673
+    check-cast v41, Lcom/android/systemui/flags/FeatureFlags;
+
+    .line 3675
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+
+    .line 3677
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationTargetsHelperProvider:Ljavax/inject/Provider;
+
+    .line 3679
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3681
+    move-result-object v2
+
+    .line 3684
+    move-object/from16 v42, v2
+
+    .line 3685
+    check-cast v42, Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;
 
     .line 3687
-    check-cast v44, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProvider;
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3689
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
+    invoke-virtual {v2}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->secureSettingsImpl()Ljava/lang/Object;
 
     .line 3691
-    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
+    move-result-object v2
 
-    .line 3693
-    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+    .line 3694
+    move-object/from16 v43, v2
 
     .line 3695
-    move-result-object v0
+    check-cast v43, Lcom/android/systemui/util/settings/SecureSettings;
 
-    .line 3698
-    move-object/from16 v45, v0
+    .line 3697
+    iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3699
-    check-cast v45, Lcom/android/systemui/plugins/ActivityStarter;
+    iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->notificationDismissibilityProviderImplProvider:Ljavax/inject/Provider;
 
     .line 3701
-    invoke-static/range {v3 .. v45}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController_Factory;->newInstance(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;ZLcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/policy/ZenModeController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Ljava/util/Optional;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/plugins/FalsingManager;Ljava/lang/Object;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/phone/ScrimController;Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/notification/collection/NotifCollection;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;Lcom/android/systemui/statusbar/notification/collection/provider/SeenNotificationsProviderImpl;Lcom/android/systemui/shade/ShadeController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProvider;Lcom/android/systemui/plugins/ActivityStarter;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
+    invoke-interface {v2}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
     .line 3703
-    move-result-object v0
+    move-result-object v2
 
     .line 3706
-    invoke-virtual {v1, v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->injectNotificationStackScrollLayoutController(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
+    move-object/from16 v44, v2
 
     .line 3707
-    move-result-object v0
+    check-cast v44, Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProvider;
 
-    .line 3710
-    return-object v0
+    .line 3709
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
     .line 3711
+    iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->controlCenterActivityStarterProvider:Ljavax/inject/Provider;
+
+    .line 3713
+    invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
+
+    .line 3715
+    move-result-object v0
+
+    .line 3718
+    move-object/from16 v45, v0
+
+    .line 3719
+    check-cast v45, Lcom/android/systemui/plugins/ActivityStarter;
+
+    .line 3721
+    invoke-static/range {v3 .. v45}, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController_Factory;->newInstance(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;ZLcom/android/systemui/statusbar/notification/row/NotificationGutsManager;Lcom/android/systemui/statusbar/notification/collection/render/NotificationVisibilityProvider;Lcom/android/systemui/statusbar/phone/HeadsUpManagerPhone;Lcom/android/systemui/statusbar/notification/stack/NotificationRoundnessManager;Lcom/android/systemui/tuner/TunerService;Lcom/android/systemui/statusbar/policy/DeviceProvisionedController;Lcom/android/systemui/statusbar/notification/DynamicPrivacyController;Lcom/android/systemui/statusbar/policy/ConfigurationController;Lcom/android/systemui/statusbar/SysuiStatusBarStateController;Lcom/android/systemui/statusbar/notification/mediacontrol/MiuiKeyguardMediaController;Lcom/android/systemui/statusbar/phone/KeyguardBypassController;Lcom/android/systemui/statusbar/policy/ZenModeController;Lcom/android/systemui/statusbar/NotificationLockscreenUserManager;Ljava/util/Optional;Lcom/android/internal/logging/MetricsLogger;Lcom/android/systemui/dump/DumpManager;Lcom/android/systemui/classifier/FalsingCollector;Lcom/android/systemui/plugins/FalsingManager;Ljava/lang/Object;Lcom/android/systemui/statusbar/phone/CentralSurfaces;Lcom/android/systemui/statusbar/phone/ScrimController;Lcom/android/systemui/statusbar/notification/collection/render/GroupExpansionManagerImpl;Lcom/android/systemui/statusbar/notification/collection/render/SectionHeaderController;Lcom/android/systemui/statusbar/notification/collection/NotifPipeline;Lcom/android/systemui/statusbar/notification/collection/NotifCollection;Lcom/android/systemui/statusbar/LockscreenShadeTransitionController;Lcom/android/internal/logging/UiEventLogger;Lcom/android/systemui/statusbar/NotificationRemoteInputManager;Lcom/android/systemui/statusbar/notification/collection/provider/VisibilityLocationProviderDelegator;Lcom/android/systemui/statusbar/notification/collection/provider/SeenNotificationsProviderImpl;Lcom/android/systemui/shade/ShadeController;Lcom/android/internal/jank/InteractionJankMonitor;Lcom/android/systemui/statusbar/notification/stack/StackStateLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLogger;Lcom/android/systemui/statusbar/notification/stack/NotificationStackSizeCalculator;Lcom/android/systemui/statusbar/phone/NotificationIconAreaController;Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/stack/NotificationTargetsHelper;Lcom/android/systemui/util/settings/SecureSettings;Lcom/android/systemui/statusbar/notification/collection/provider/NotificationDismissibilityProvider;Lcom/android/systemui/plugins/ActivityStarter;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
+
+    .line 3723
+    move-result-object v0
+
+    .line 3726
+    invoke-virtual {v1, v0}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->injectNotificationStackScrollLayoutController(Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;)Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayoutController;
+
+    .line 3727
+    move-result-object v0
+
+    .line 3730
+    return-object v0
+
+    .line 3731
     :pswitch_10
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
-    .line 3712
+    .line 3732
     iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;->providerLayoutInflaterProvider:Ljavax/inject/Provider;
 
-    .line 3714
+    .line 3734
     invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3716
+    .line 3736
     move-result-object v1
 
-    .line 3719
+    .line 3739
     check-cast v1, Landroid/view/LayoutInflater;
 
-    .line 3720
+    .line 3740
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3722
+    .line 3742
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->providesNotificationStackScrollLayoutProvider:Ljavax/inject/Provider;
 
-    .line 3724
+    .line 3744
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3726
+    .line 3746
     move-result-object v0
 
-    .line 3729
+    .line 3749
     check-cast v0, Lcom/android/systemui/statusbar/notification/stack/NotificationStackScrollLayout;
 
-    .line 3730
+    .line 3750
     const v2, 0x7f0d035d    # @layout/status_bar_notification_shelf 'res/layout/status_bar_notification_shelf.xml'
 
-    .line 3732
+    .line 3752
     const/4 v3, 0x0
 
-    .line 3735
+    .line 3755
     invoke-virtual {v1, v2, v0, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 3736
+    .line 3756
     move-result-object v0
 
-    .line 3739
+    .line 3759
     check-cast v0, Lcom/android/systemui/statusbar/NotificationShelf;
 
-    .line 3740
+    .line 3760
     if-eqz v0, :cond_0
 
-    .line 3742
+    .line 3762
     return-object v0
 
-    .line 3744
+    .line 3764
     :cond_0
     new-instance v0, Ljava/lang/IllegalStateException;
 
-    .line 3745
+    .line 3765
     const-string v1, "R.layout.status_bar_notification_shelf could not be properly inflated"
 
-    .line 3747
+    .line 3767
     invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
 
-    .line 3749
+    .line 3769
     throw v0
 
-    .line 3752
+    .line 3772
     :pswitch_11
     new-instance v0, Lcom/android/systemui/statusbar/notification/shelf/ui/viewbinder/NotificationShelfViewBinderWrapperControllerImpl;
 
-    .line 3753
+    .line 3773
     invoke-direct {v0}, Lcom/android/systemui/statusbar/notification/shelf/ui/viewbinder/NotificationShelfViewBinderWrapperControllerImpl;-><init>()V
 
-    .line 3755
+    .line 3775
     return-object v0
 
-    .line 3758
+    .line 3778
     :pswitch_12
     iget-object v1, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3759
+    .line 3779
     iget-object v1, v1, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;->featureFlagsReleaseProvider:Ljavax/inject/Provider;
 
-    .line 3761
+    .line 3781
     invoke-interface {v1}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3763
+    .line 3783
     move-result-object v1
 
-    .line 3766
+    .line 3786
     check-cast v1, Lcom/android/systemui/flags/FeatureFlags;
 
-    .line 3767
+    .line 3787
     iget-object v2, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3769
+    .line 3789
     iget-object v2, v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->notificationShelfViewBinderWrapperControllerImplProvider:Ljavax/inject/Provider;
 
-    .line 3771
+    .line 3791
     new-instance v2, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$NotificationShelfComponentBuilder;
 
-    .line 3773
+    .line 3793
     iget-object v3, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvGlobalRootComponent:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;
 
-    .line 3775
+    .line 3795
     iget-object v4, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->tvSysUIComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;
 
-    .line 3777
+    .line 3797
     invoke-direct {v2, v3, v4}, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$NotificationShelfComponentBuilder;-><init>(Lcom/android/systemui/tv/DaggerTvGlobalRootComponent;Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$TvSysUIComponentImpl;)V
 
-    .line 3779
+    .line 3799
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl$SwitchingProvider;->centralSurfacesComponentImpl:Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;
 
-    .line 3782
+    .line 3802
     iget-object v0, v0, Lcom/android/systemui/tv/DaggerTvGlobalRootComponent$CentralSurfacesComponentImpl;->providesNotificationShelfProvider:Ljavax/inject/Provider;
 
-    .line 3784
+    .line 3804
     invoke-interface {v0}, Ljavax/inject/Provider;->get()Ljava/lang/Object;
 
-    .line 3786
+    .line 3806
     move-result-object v0
 
-    .line 3789
+    .line 3809
     check-cast v0, Lcom/android/systemui/statusbar/NotificationShelf;
 
-    .line 3790
+    .line 3810
     invoke-static {v1, v2, v0}, Lcom/android/systemui/statusbar/phone/dagger/StatusBarViewModule_ProvidesStatusBarWindowViewFactory;->providesStatusBarWindowView(Lcom/android/systemui/flags/FeatureFlags;Lcom/android/systemui/statusbar/notification/row/dagger/NotificationShelfComponent$Builder;Lcom/android/systemui/statusbar/NotificationShelf;)Lcom/android/systemui/statusbar/LegacyNotificationShelfControllerImpl;
 
-    .line 3792
+    .line 3812
     move-result-object v0
 
-    .line 3795
+    .line 3815
     return-object v0
 
-    .line 3796
+    .line 3816
     nop
 
     :pswitch_data_0

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/sosc/SoScStageCoordinator;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/wm/shell/common/split/SplitLayout$SplitLayoutHandler;
@@ -34465,208 +34465,211 @@
     invoke-virtual {p0, v0, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->setSideStagePosition(ILandroid/window/WindowContainerTransaction;)V
 
     .line 15
-    iget-object v1, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
+    invoke-virtual {p0, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->buildHomeToFrontWCT(Landroid/window/WindowContainerTransaction;)V
 
     .line 18
+    iget-object v1, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
+
+    .line 21
     invoke-virtual {v1, p2}, Lcom/android/wm/shell/ShellTaskOrganizer;->getRunningTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 20
+    .line 23
     move-result-object v1
 
-    .line 23
+    .line 26
     if-nez v1, :cond_1
 
-    .line 24
+    .line 27
     new-instance v1, Landroid/os/Bundle;
 
-    .line 26
+    .line 29
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 28
+    .line 31
     iget-object v2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSideStage:Lcom/android/wm/shell/sosc/SoScSideStage;
 
-    .line 31
+    .line 34
     invoke-direct {p0, v1, v2}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->addActivityOptions(Landroid/os/Bundle;Lcom/android/wm/shell/sosc/SoScStageTaskListener;)V
 
-    .line 33
+    .line 36
     invoke-virtual {v3, p2, v1}, Landroid/window/WindowContainerTransaction;->startTask(ILandroid/os/Bundle;)Landroid/window/WindowContainerTransaction;
 
-    .line 36
+    .line 39
     goto :goto_0
 
-    .line 39
+    .line 42
     :cond_1
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSideStage:Lcom/android/wm/shell/sosc/SoScSideStage;
 
-    .line 40
+    .line 43
     invoke-virtual {p2, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageTaskListener;->addTask(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
 
-    .line 42
+    .line 45
     :goto_0
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mMainStage:Lcom/android/wm/shell/sosc/SoScMainStage;
 
-    .line 45
+    .line 48
     invoke-virtual {p2}, Lcom/android/wm/shell/sosc/SoScMainStage;->isActive()Z
 
-    .line 47
+    .line 50
     move-result p2
 
-    .line 50
+    .line 53
     const/4 v1, 0x0
 
-    .line 51
+    .line 54
     if-nez p2, :cond_2
 
-    .line 52
+    .line 55
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mMainStage:Lcom/android/wm/shell/sosc/SoScMainStage;
 
-    .line 54
+    .line 57
     invoke-virtual {p2, v3, v1}, Lcom/android/wm/shell/sosc/SoScMainStage;->activate(Landroid/window/WindowContainerTransaction;Z)V
 
-    .line 56
+    .line 59
     :cond_2
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSplitLayout:Lcom/android/wm/shell/common/split/SplitLayout;
 
-    .line 59
+    .line 62
     const/high16 v2, 0x3f000000    # 0.5f
 
-    .line 61
+    .line 64
     invoke-virtual {p2, v2}, Lcom/android/wm/shell/common/split/SplitLayout;->setDivideRatio(F)V
 
-    .line 63
+    .line 66
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSplitLayout:Lcom/android/wm/shell/common/split/SplitLayout;
 
-    .line 66
+    .line 69
     invoke-direct {p0, p2, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->updateWindowBounds(Lcom/android/wm/shell/common/split/SplitLayout;Landroid/window/WindowContainerTransaction;)Z
 
-    .line 68
+    .line 71
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mRootTaskInfo:Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 71
+    .line 74
     iget-object p2, p2, Landroid/app/ActivityManager$RunningTaskInfo;->token:Landroid/window/WindowContainerToken;
 
-    .line 73
+    .line 76
     invoke-virtual {v3, p2, v0}, Landroid/window/WindowContainerTransaction;->reorder(Landroid/window/WindowContainerToken;Z)Landroid/window/WindowContainerTransaction;
 
-    .line 75
+    .line 78
     invoke-direct {p0, v1, v3}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->setRootForceTranslucent(ZLandroid/window/WindowContainerTransaction;)Z
 
-    .line 78
+    .line 81
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mTaskOrganizer:Lcom/android/wm/shell/ShellTaskOrganizer;
 
-    .line 81
+    .line 84
     invoke-virtual {p2, p1}, Lcom/android/wm/shell/ShellTaskOrganizer;->getRunningTaskInfo(I)Landroid/app/ActivityManager$RunningTaskInfo;
 
-    .line 83
+    .line 86
     move-result-object p2
 
-    .line 86
+    .line 89
     if-nez p2, :cond_3
 
-    .line 87
+    .line 90
     new-instance p2, Landroid/os/Bundle;
 
-    .line 89
+    .line 92
     invoke-direct {p2}, Landroid/os/Bundle;-><init>()V
 
-    .line 91
+    .line 94
     iget-object v2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mMainStage:Lcom/android/wm/shell/sosc/SoScMainStage;
 
-    .line 94
+    .line 97
     invoke-direct {p0, p2, v2}, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->addActivityOptions(Landroid/os/Bundle;Lcom/android/wm/shell/sosc/SoScStageTaskListener;)V
 
-    .line 96
+    .line 99
     invoke-virtual {v3, p1, p2}, Landroid/window/WindowContainerTransaction;->startTask(ILandroid/os/Bundle;)Landroid/window/WindowContainerTransaction;
 
-    .line 99
+    .line 102
     goto :goto_1
 
-    .line 102
+    .line 105
     :cond_3
     iget-object v2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mMainStage:Lcom/android/wm/shell/sosc/SoScMainStage;
 
-    .line 103
+    .line 106
     invoke-virtual {v2, p2, v3}, Lcom/android/wm/shell/sosc/SoScStageTaskListener;->addTask(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/window/WindowContainerTransaction;)V
 
-    .line 105
+    .line 108
     :goto_1
     iget-object p2, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mPausingTasks:Ljava/util/ArrayList;
 
-    .line 108
+    .line 111
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 110
+    .line 113
     move-result-object p1
 
-    .line 113
+    .line 116
     invoke-virtual {p2, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
 
-    .line 114
+    .line 117
     move-result p1
 
-    .line 117
+    .line 120
     if-eqz p1, :cond_4
 
-    .line 118
+    .line 121
     iget-object p1, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mPausingTasks:Ljava/util/ArrayList;
 
-    .line 120
+    .line 123
     invoke-virtual {p1}, Ljava/util/ArrayList;->clear()V
 
-    .line 122
+    .line 125
     :cond_4
     iput-boolean v0, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mIngoreUpdateSoScVisibility:Z
 
-    .line 125
+    .line 128
     iput-boolean v0, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mIsOpenPairs:Z
 
-    .line 127
+    .line 130
     iput-boolean v1, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSoScExit:Z
 
-    .line 129
+    .line 132
     iget-object v1, p0, Lcom/android/wm/shell/sosc/SoScStageCoordinator;->mSplitTransitions:Lcom/android/wm/shell/sosc/SoScSplitScreenTransitions;
 
-    .line 131
+    .line 134
     const/4 v2, 0x3
 
-    .line 133
+    .line 136
     const/4 v4, 0x0
 
-    .line 134
+    .line 137
     new-instance v6, Lcom/android/wm/shell/sosc/SoScStageCoordinator$$ExternalSyntheticLambda21;
 
-    .line 135
+    .line 138
     const/4 p1, 0x6
 
-    .line 137
+    .line 140
     invoke-direct {v6, p1, p0}, Lcom/android/wm/shell/sosc/SoScStageCoordinator$$ExternalSyntheticLambda21;-><init>(ILjava/lang/Object;)V
 
-    .line 138
+    .line 141
     new-instance v7, Lcom/android/wm/shell/sosc/SoScStageCoordinator$$ExternalSyntheticLambda21;
 
-    .line 141
+    .line 144
     const/4 p1, 0x7
 
-    .line 143
+    .line 146
     invoke-direct {v7, p1, p0}, Lcom/android/wm/shell/sosc/SoScStageCoordinator$$ExternalSyntheticLambda21;-><init>(ILjava/lang/Object;)V
 
-    .line 144
+    .line 147
     const/16 v8, 0x3ec
 
-    .line 147
+    .line 150
     const/4 v9, 0x0
 
-    .line 149
+    .line 152
     move-object v5, p0
 
-    .line 150
+    .line 153
     invoke-virtual/range {v1 .. v9}, Lcom/android/wm/shell/sosc/SoScSplitScreenTransitions;->startEnterTransition(ILandroid/window/WindowContainerTransaction;Landroid/window/RemoteTransition;Lcom/android/wm/shell/transition/Transitions$TransitionHandler;Lcom/android/wm/shell/sosc/SoScSplitScreenTransitions$TransitionConsumedCallback;Lcom/android/wm/shell/sosc/SoScSplitScreenTransitions$TransitionFinishedCallback;IZ)Landroid/os/IBinder;
 
-    .line 151
+    .line 154
     :cond_5
     :goto_2
     return-void
-    .line 154
+    .line 157
 .end method
 
 .method public startTasksWithLegacyTransition(ILandroid/os/Bundle;ILandroid/os/Bundle;IFLandroid/view/RemoteAnimationAdapter;Lcom/android/internal/logging/InstanceId;)V

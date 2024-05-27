@@ -136,10 +136,20 @@
     .end annotation
 .end field
 
+.field public static final unsupportedKidSpaceDevice:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+.end field
+
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 8
+    .locals 9
 
     const-string/jumbo v0, "support_smart_fps"
 
@@ -619,80 +629,102 @@
 
     sput-object v7, Lcom/android/settings/utils/SettingsFeatures;->supportLiteOptimizationDeviceSet:Ljava/util/Set;
 
-    const-string v7, "dandelion"
+    .line 192
+    new-instance v7, Ljava/util/ArrayList;
 
-    .line 195
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    const-string v7, "angelica"
+    sput-object v7, Lcom/android/settings/utils/SettingsFeatures;->unsupportedKidSpaceDevice:Ljava/util/List;
+
+    const-string v8, "dandelion"
 
     .line 196
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "angelicain"
+    const-string v8, "angelica"
 
     .line 197
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "cattail"
+    const-string v8, "angelicain"
 
     .line 198
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "angelican"
+    const-string v8, "cattail"
 
     .line 199
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "frost"
+    const-string v8, "angelican"
 
     .line 200
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "earth"
+    const-string v8, "frost"
 
     .line 201
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "aether"
+    const-string v8, "earth"
 
     .line 202
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "gale"
+    const-string v8, "aether"
 
     .line 203
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string v7, "gust"
+    const-string v8, "gale"
 
     .line 204
-    invoke-interface {v5, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string v8, "gust"
+
+    .line 205
+    invoke-interface {v5, v8}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     const-string/jumbo v5, "venus"
-
-    .line 206
-    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    const-string/jumbo v5, "star"
 
     .line 207
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
+    const-string/jumbo v5, "star"
+
+    .line 208
+    invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
     const-string v5, "elish"
-
-    .line 211
-    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
-
-    const-string v5, "enuma"
 
     .line 212
     invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
+    const-string v5, "enuma"
+
     .line 213
+    invoke-interface {v4, v5}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
+
+    .line 214
     invoke-interface {v4, v3}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
-    .line 412
+    const-string v3, "dizi"
+
+    .line 215
+    invoke-interface {v7, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string/jumbo v3, "ruan"
+
+    .line 216
+    invoke-interface {v7, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    const-string/jumbo v3, "sheng"
+
+    .line 217
+    invoke-interface {v7, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 416
     sget-boolean v3, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
 
     if-eqz v3, :cond_11
@@ -717,7 +749,7 @@
     :goto_11
     sput-boolean v3, Lcom/android/settings/utils/SettingsFeatures;->IS_NEED_REMOVE_WAKE_UP_VOICE_ASSISTANT:Z
 
-    .line 472
+    .line 476
     sget-boolean v3, Lmiui/os/Build;->IS_TABLET:Z
 
     sget-boolean v3, Landroid/provider/MiuiSettings$SilenceMode;->isSupported:Z
@@ -736,7 +768,7 @@
 
     const-string/jumbo v3, "support_edge_handgrip"
 
-    .line 476
+    .line 480
     invoke-static {v3, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -747,7 +779,7 @@
 
     const-string/jumbo v3, "ro.support_one_handed_mode"
 
-    .line 479
+    .line 483
     invoke-static {v3, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
@@ -758,21 +790,21 @@
 
     const-string/jumbo v3, "support_true_color"
 
-    .line 483
+    .line 487
     invoke-static {v3, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
 
     sput-boolean v3, Lcom/android/settings/utils/SettingsFeatures;->IS_SUPPORT_TRUE_COLOR:Z
 
-    .line 486
+    .line 490
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSupportFoldScreenSettings()Z
 
     move-result v3
 
     sput-boolean v3, Lcom/android/settings/utils/SettingsFeatures;->IS_SUPPORT_FOLD_SCREEN_SETTINGS:Z
 
-    .line 493
+    .line 497
     sget-boolean v3, Lmiui/os/Build;->IS_TABLET:Z
 
     if-eqz v3, :cond_13
@@ -793,7 +825,7 @@
     :goto_13
     sput-boolean v3, Lcom/android/settings/utils/SettingsFeatures;->IS_SUPPORT_TABLET_SCREEN_SETTINGS:Z
 
-    .line 496
+    .line 500
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSupportTwoAutoRotate()Z
 
     move-result v3
@@ -804,7 +836,7 @@
 
     const/4 v4, -0x1
 
-    .line 503
+    .line 507
     invoke-static {v3, v4}, Lmiui/util/FeatureParser;->getInteger(Ljava/lang/String;I)I
 
     move-result v3
@@ -820,14 +852,14 @@
 
     const-string v1, "cetus"
 
-    .line 1388
+    .line 1392
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     sput-boolean v2, Lcom/android/settings/utils/SettingsFeatures;->IS_NEED_REMOVE_SEARCH_DC_LIGHT:Z
 
-    .line 1391
+    .line 1395
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -842,13 +874,13 @@
 
     const/4 v0, 0x0
 
-    .line 335
+    .line 339
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 336
+    .line 340
     invoke-virtual {p0, p1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
 
     move-result-object p0
@@ -866,7 +898,7 @@
     :catch_0
     move-exception p0
 
-    .line 339
+    .line 343
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -895,14 +927,14 @@
 .method public static checkGlobalFontSettingEnable(Landroid/content/Context;)Z
     .locals 4
 
-    .line 1053
+    .line 1057
     sget-boolean v0, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 1056
+    .line 1060
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -910,7 +942,7 @@
 
     const-string v0, "content://com.android.thememanager.theme_provider"
 
-    .line 1057
+    .line 1061
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -919,7 +951,7 @@
 
     const/4 v3, 0x0
 
-    .line 1056
+    .line 1060
     invoke-virtual {p0, v0, v2, v3, v3}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -928,7 +960,7 @@
 
     const-string/jumbo v0, "theme_font_access"
 
-    .line 1059
+    .line 1063
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -942,7 +974,7 @@
     :catch_0
     move-exception p0
 
-    .line 1062
+    .line 1066
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -953,14 +985,14 @@
 .method public static checkGlobalJumpThemeEnable(Landroid/content/Context;)Z
     .locals 4
 
-    .line 1073
+    .line 1077
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 1075
+    .line 1079
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -968,7 +1000,7 @@
 
     const-string v0, "content://com.android.thememanager.theme_provider"
 
-    .line 1076
+    .line 1080
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
@@ -977,7 +1009,7 @@
 
     const/4 v3, 0x0
 
-    .line 1075
+    .line 1079
     invoke-virtual {p0, v0, v2, v3, v3}, Landroid/content/ContentResolver;->call(Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
 
     move-result-object p0
@@ -986,7 +1018,7 @@
 
     const-string/jumbo v0, "online_font_access"
 
-    .line 1078
+    .line 1082
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;)Z
 
     move-result p0
@@ -1000,7 +1032,7 @@
     :catch_0
     move-exception p0
 
-    .line 1081
+    .line 1085
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     :cond_0
@@ -1017,7 +1049,7 @@
 
     const/4 v2, 0x0
 
-    .line 241
+    .line 245
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -1031,14 +1063,14 @@
 
     const-string v4, "boolean"
 
-    .line 242
+    .line 246
     invoke-virtual {p0, v3, v4, v0}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 243
+    .line 247
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getBoolean(I)Z
 
     move-result p0
@@ -1054,7 +1086,7 @@
     :catch_0
     move-exception p0
 
-    .line 246
+    .line 250
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -1081,7 +1113,7 @@
 
     const-string/jumbo p0, "veux"
 
-    .line 248
+    .line 252
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1103,7 +1135,7 @@
 .method public static getBugreportIntent()Landroid/content/Intent;
     .locals 3
 
-    .line 326
+    .line 330
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "miui.intent.action.BUGREPORT"
@@ -1114,19 +1146,19 @@
 
     const-string v2, "com.android.settings"
 
-    .line 327
+    .line 331
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "extra_category"
 
     const/4 v2, 0x2
 
-    .line 328
+    .line 332
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
-    .line 329
+    .line 333
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
     return-object v0
@@ -1135,14 +1167,14 @@
 .method public static getFeedbackIntent(Landroid/content/Context;)Landroid/content/Intent;
     .locals 2
 
-    .line 311
+    .line 315
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "miui.intent.action.BUGREPORT_HOME"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 312
+    .line 316
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->canFindActivityStatic(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v1
@@ -1151,7 +1183,7 @@
 
     return-object v0
 
-    .line 316
+    .line 320
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -1159,7 +1191,7 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 317
+    .line 321
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->canFindActivityStatic(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result p0
@@ -1177,7 +1209,7 @@
 .method public static getNtfSingleState(Landroid/content/Context;)Z
     .locals 3
 
-    .line 1292
+    .line 1296
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1205,31 +1237,31 @@
 .method public static getPasswordTypes(Landroid/content/Context;)I
     .locals 2
 
-    .line 669
+    .line 673
     new-instance v0, Lcom/android/settings/FingerprintHelper;
 
     invoke-direct {v0, p0}, Lcom/android/settings/FingerprintHelper;-><init>(Landroid/content/Context;)V
 
-    .line 675
+    .line 679
     invoke-virtual {v0}, Lcom/android/settings/FingerprintHelper;->isHardwareDetected()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 676
+    .line 680
     invoke-static {p0}, Lcom/android/settings/faceunlock/KeyguardSettingsFaceUnlockUtils;->isSupportFaceUnlock(Landroid/content/Context;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 677
+    .line 681
     sget p0, Lcom/android/settings/R$string;->fingerprint_face_password_unlock_new:I
 
     return p0
 
-    .line 678
+    .line 682
     :cond_0
     invoke-virtual {v0}, Lcom/android/settings/FingerprintHelper;->isHardwareDetected()Z
 
@@ -1237,12 +1269,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 679
+    .line 683
     sget p0, Lcom/android/settings/R$string;->fingerprint_password_unlock:I
 
     return p0
 
-    .line 680
+    .line 684
     :cond_1
     invoke-static {p0}, Lcom/android/settings/faceunlock/KeyguardSettingsFaceUnlockUtils;->isSupportFaceUnlock(Landroid/content/Context;)Z
 
@@ -1250,12 +1282,12 @@
 
     if-eqz p0, :cond_2
 
-    .line 681
+    .line 685
     sget p0, Lcom/android/settings/R$string;->face_password_unlock_new:I
 
     return p0
 
-    .line 683
+    .line 687
     :cond_2
     sget p0, Lcom/android/settings/R$string;->password_unlock:I
 
@@ -1265,7 +1297,7 @@
 .method public static getPowerModeOpenStatus(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1605
+    .line 1610
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1291,7 +1323,7 @@
 .method public static getPowerSaveModeOpenStatus(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1610
+    .line 1615
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1317,12 +1349,12 @@
 .method public static getScreenDpiMode(Landroid/content/Context;)I
     .locals 2
 
-    .line 1529
+    .line 1533
     sget-boolean v0, Lcom/android/settings/utils/SettingsFeatures;->FPS_SWITCH_DEFAULT:Z
 
     if-eqz v0, :cond_0
 
-    .line 1531
+    .line 1535
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1337,7 +1369,7 @@
 
     return p0
 
-    .line 1538
+    .line 1542
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -1347,7 +1379,7 @@
 
     move-result-object p0
 
-    .line 1539
+    .line 1543
     iget p0, p0, Landroid/content/res/Configuration;->screenLayout:I
 
     and-int/lit8 p0, p0, 0xf
@@ -1360,7 +1392,7 @@
 
     sget-object v0, Landroid/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 1540
+    .line 1544
     invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result p0
@@ -1377,7 +1409,7 @@
     :goto_0
     if-eqz p0, :cond_2
 
-    .line 1542
+    .line 1546
     sget p0, Lcom/android/settings/utils/SettingsFeatures;->SCREEN_DEFAULT_FPS:I
 
     return p0
@@ -1385,7 +1417,7 @@
     :cond_2
     const-string/jumbo p0, "persist.vendor.dfps.level"
 
-    .line 1544
+    .line 1548
     sget v0, Lcom/android/settings/utils/SettingsFeatures;->SCREEN_DEFAULT_FPS:I
 
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
@@ -1398,7 +1430,7 @@
 .method public static getSuperSavePowerModeOpenStatus(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1614
+    .line 1619
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -1424,14 +1456,14 @@
 .method public static getWifiTetherPlacement(Landroid/content/Context;)I
     .locals 3
 
-    .line 646
+    .line 650
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
     const/4 v1, 0x0
 
     if-eqz v0, :cond_0
 
-    .line 648
+    .line 652
     invoke-static {p0}, Landroid/os/UserManager;->get(Landroid/content/Context;)Landroid/os/UserManager;
 
     move-result-object v0
@@ -1446,7 +1478,7 @@
 
     const-string v0, "connectivity"
 
-    .line 650
+    .line 654
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
@@ -1461,7 +1493,7 @@
 
     return v1
 
-    .line 655
+    .line 659
     :cond_0
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTablet(Landroid/content/Context;)Z
 
@@ -1473,7 +1505,7 @@
 
     return v2
 
-    .line 658
+    .line 662
     :cond_1
     invoke-static {p0}, Landroidx/preference/PreferenceManager;->getDefaultSharedPreferences(Landroid/content/Context;)Landroid/content/SharedPreferences;
 
@@ -1481,7 +1513,7 @@
 
     const-string/jumbo v0, "wifi_tether_opened"
 
-    .line 659
+    .line 663
     invoke-interface {p0, v0, v1}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -1499,7 +1531,7 @@
 
     const-string/jumbo v0, "sensor"
 
-    .line 1153
+    .line 1157
     invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
@@ -1508,7 +1540,7 @@
 
     const v0, 0x1fa2665
 
-    .line 1154
+    .line 1158
     invoke-virtual {p0, v0}, Landroid/hardware/SensorManager;->getDefaultSensor(I)Landroid/hardware/Sensor;
 
     move-result-object p0
@@ -1531,7 +1563,7 @@
 
     const-string/jumbo v0, "ro.product.marketname"
 
-    .line 1090
+    .line 1094
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1550,7 +1582,7 @@
 
     const-string/jumbo v0, "star"
 
-    .line 1384
+    .line 1388
     sget-object v1, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -1565,19 +1597,19 @@
 
     const-string/jumbo v0, "window"
 
-    .line 416
+    .line 420
     invoke-static {v0}, Landroid/os/ServiceManager;->getService(Ljava/lang/String;)Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 415
+    .line 419
     invoke-static {v0}, Landroid/view/IWindowManager$Stub;->asInterface(Landroid/os/IBinder;)Landroid/view/IWindowManager;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    .line 419
+    .line 423
     :try_start_0
     invoke-interface {v0, v1}, Landroid/view/IWindowManager;->hasNavigationBar(I)Z
 
@@ -1590,7 +1622,7 @@
     :catch_0
     move-exception v0
 
-    .line 421
+    .line 425
     invoke-virtual {v0}, Landroid/os/RemoteException;->printStackTrace()V
 
     :goto_0
@@ -1600,14 +1632,14 @@
 .method public static hasNfcDispatchOptimFeature(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1134
+    .line 1138
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const-string v0, "android.hardware.nfc"
 
-    .line 1135
+    .line 1139
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
@@ -1623,7 +1655,7 @@
 
     const-string v0, "0"
 
-    .line 1139
+    .line 1143
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1640,14 +1672,14 @@
 .method public static hasNfcRepairFeature(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1125
+    .line 1129
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const-string v0, "android.hardware.nfc"
 
-    .line 1126
+    .line 1130
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
@@ -1663,7 +1695,7 @@
 
     const-string v0, ""
 
-    .line 1130
+    .line 1134
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -1682,7 +1714,7 @@
 
     const-string/jumbo v0, "ro.miui.product.home"
 
-    .line 1046
+    .line 1050
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1699,7 +1731,7 @@
 .method public static hasSplitScreen()Z
     .locals 2
 
-    .line 1195
+    .line 1199
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isMiuiLiteVersion()Z
 
     move-result v0
@@ -1714,7 +1746,7 @@
 
     goto :goto_0
 
-    .line 1198
+    .line 1202
     :cond_0
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->sNotSupportToolBoxDevices:Ljava/util/List;
 
@@ -1740,7 +1772,7 @@
 
     const-string/jumbo v0, "sys.haptic.device_type"
 
-    .line 1507
+    .line 1511
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -1757,7 +1789,7 @@
 .method public static isAlienTablet()Z
     .locals 1
 
-    .line 979
+    .line 983
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
     if-nez v0, :cond_0
@@ -1782,7 +1814,7 @@
 .method public static isBackupNeeded(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1642
+    .line 1647
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isBackupNeededInternal(Landroid/content/Context;)Z
 
     move-result v0
@@ -1811,14 +1843,14 @@
 .method public static isBackupNeededInternal(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1637
+    .line 1642
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1638
+    .line 1643
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isDeviceManaged(Landroid/content/Context;)Z
 
     move-result v0
@@ -1846,12 +1878,12 @@
 .method public static isBubbleNotificationOpen(Landroid/content/Context;)Z
     .locals 3
 
-    .line 956
+    .line 960
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
 
-    .line 959
+    .line 963
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -1860,7 +1892,7 @@
 
     const/4 v2, 0x1
 
-    .line 956
+    .line 960
     invoke-static {p0, v1, v2, v0}, Landroid/provider/Settings$Secure;->getIntForUser(Landroid/content/ContentResolver;Ljava/lang/String;II)I
 
     move-result p0
@@ -1888,14 +1920,14 @@
     :cond_0
     const-string v1, "device_policy"
 
-    .line 1348
+    .line 1352
     invoke-virtual {p0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object p0
 
     check-cast p0, Landroid/app/admin/DevicePolicyManager;
 
-    .line 1349
+    .line 1353
     invoke-virtual {p0}, Landroid/app/admin/DevicePolicyManager;->getActiveAdmins()Ljava/util/List;
 
     move-result-object p0
@@ -1904,7 +1936,7 @@
 
     return v0
 
-    .line 1353
+    .line 1357
     :cond_1
     invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -1923,7 +1955,7 @@
 
     check-cast v1, Landroid/content/ComponentName;
 
-    .line 1354
+    .line 1358
     invoke-virtual {v1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
@@ -1947,7 +1979,7 @@
 .method public static isConversationSupport(Landroid/content/Context;)Z
     .locals 0
 
-    .line 942
+    .line 946
     invoke-static {p0}, Lcom/android/settings/utils/MiuiDockUtils;->isConversationSupport(Landroid/content/Context;)Z
 
     move-result p0
@@ -1967,7 +1999,7 @@
     :cond_0
     const-string/jumbo v1, "ro.device.lock.need"
 
-    .line 1366
+    .line 1370
     invoke-static {v1, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -1978,7 +2010,7 @@
 
     return v2
 
-    .line 1369
+    .line 1373
     :cond_1
     sget-boolean v1, Lcom/android/settings/RegionUtils;->IS_DLC_GLOBAL:Z
 
@@ -1986,7 +2018,7 @@
 
     return v2
 
-    .line 1372
+    .line 1376
     :cond_2
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -2000,12 +2032,12 @@
 
     if-eqz p0, :cond_3
 
-    .line 1373
+    .line 1377
     array-length v1, p0
 
     if-lez v1, :cond_3
 
-    .line 1374
+    .line 1378
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -2025,7 +2057,7 @@
 .method public static isFeedbackNeeded(Landroid/content/Context;)Z
     .locals 1
 
-    .line 306
+    .line 310
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isFeedbackNeededInternal(Landroid/content/Context;)Z
 
     move-result v0
@@ -2056,7 +2088,7 @@
 
     const-string v0, "com.miui.miservice"
 
-    .line 363
+    .line 367
     invoke-static {p0, v0}, Lcom/android/settings/utils/SettingsFeatures;->appExist(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
@@ -2090,7 +2122,7 @@
     :try_start_0
     const-string/jumbo v2, "miui.util.MiuiMultiDisplayTypeInfo"
 
-    .line 1245
+    .line 1249
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
@@ -2122,13 +2154,13 @@
     :catch_0
     move-exception v2
 
-    .line 1247
+    .line 1251
     invoke-static {v1, v0, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 1248
+    .line 1252
     sget-boolean v2, Lcom/android/settings/utils/SettingsFeatures;->SUPPORT_FOLD:Z
 
-    .line 1250
+    .line 1254
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -2150,7 +2182,7 @@
 .method public static isFrontAssistantSupport(Landroid/content/Context;)Z
     .locals 0
 
-    .line 937
+    .line 941
     invoke-static {p0}, Lcom/android/settings/utils/MiuiDockUtils;->isFrontAssistantSupport(Landroid/content/Context;)Z
 
     move-result p0
@@ -2161,7 +2193,7 @@
 .method public static isHealthGlobalItemNeedHide(Landroid/content/Context;)Z
     .locals 2
 
-    .line 584
+    .line 588
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_1
@@ -2183,7 +2215,7 @@
     :cond_0
     const-string v0, "com.mi.healthglobal"
 
-    .line 585
+    .line 589
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isAppInstalledAndEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -2209,7 +2241,7 @@
 
     return v0
 
-    .line 1274
+    .line 1278
     :cond_0
     invoke-static {p0}, Lcom/android/settingslib/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
@@ -2217,14 +2249,14 @@
 
     if-nez v1, :cond_2
 
-    .line 1275
+    .line 1279
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 1276
+    .line 1280
     invoke-static {p0}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result p0
@@ -2250,7 +2282,7 @@
 
     return v0
 
-    .line 1282
+    .line 1286
     :cond_0
     invoke-static {p0}, Lcom/android/settingslib/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
@@ -2258,7 +2290,7 @@
 
     if-nez v1, :cond_2
 
-    .line 1283
+    .line 1287
     invoke-static {p0}, Lcom/android/settings/Utils;->isVoiceCapable(Landroid/content/Context;)Z
 
     move-result p0
@@ -2278,7 +2310,7 @@
 .method public static isIncallShowNeeded(Landroid/content/Context;)Z
     .locals 4
 
-    .line 219
+    .line 223
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isMiuiMiddleVersion()Z
 
     move-result v0
@@ -2289,7 +2321,7 @@
 
     return v1
 
-    .line 220
+    .line 224
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -2297,19 +2329,19 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 221
+    .line 225
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
     const/high16 v3, 0x10000
 
-    .line 222
+    .line 226
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 223
+    .line 227
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -2338,7 +2370,7 @@
 
     if-nez v0, :cond_1
 
-    .line 224
+    .line 228
     invoke-static {}, Lmiui/telephony/TelephonyManager;->getDefault()Lmiui/telephony/TelephonyManager;
 
     move-result-object v0
@@ -2349,7 +2381,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 225
+    .line 229
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->disableVideoWallpaper(Landroid/content/Context;)Z
 
     move-result p0
@@ -2365,7 +2397,7 @@
 .method public static isLargeMemoryDevice()Z
     .locals 4
 
-    .line 1190
+    .line 1194
     invoke-static {}, Lmiui/util/HardwareInfo;->getTotalPhysicalMemory()J
 
     move-result-wide v0
@@ -2394,7 +2426,7 @@
 .method public static isLocationNeeded(Landroid/content/Context;)Z
     .locals 0
 
-    .line 358
+    .line 362
     sget-boolean p0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     return p0
@@ -2403,7 +2435,7 @@
 .method public static isManagePasswordNeeded(Landroid/content/Context;)Z
     .locals 3
 
-    .line 291
+    .line 295
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -2412,22 +2444,22 @@
 
     const-string v2, "com.miui.contentcatcher.autofill.activitys.AutofillSettingActivity"
 
-    .line 292
+    .line 296
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 294
+    .line 298
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 295
+    .line 299
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 296
+    .line 300
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -2443,7 +2475,7 @@
 .method public static isMisoundShowNeeded(Landroid/content/Context;)Z
     .locals 3
 
-    .line 282
+    .line 286
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -2452,22 +2484,22 @@
 
     const-string v2, "com.miui.misound.HeadsetSettingsActivity"
 
-    .line 283
+    .line 287
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 284
+    .line 288
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/4 v1, 0x0
 
-    .line 285
+    .line 289
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 286
+    .line 290
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -2483,7 +2515,7 @@
 .method public static isMiuiDeskTopMode(Landroid/content/Context;)Z
     .locals 2
 
-    .line 538
+    .line 542
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -2509,7 +2541,7 @@
 .method public static isMiuiLabNeedHide(Landroid/content/Context;)Z
     .locals 2
 
-    .line 609
+    .line 613
     sget-boolean v0, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
 
     const/4 v1, 0x1
@@ -2518,7 +2550,7 @@
 
     return v1
 
-    .line 612
+    .line 616
     :cond_0
     invoke-static {}, Lcom/android/settings/lab/MiuiAiPreloadController;->isNotSupported()Z
 
@@ -2526,28 +2558,28 @@
 
     if-eqz v0, :cond_1
 
-    .line 613
+    .line 617
     invoke-static {p0}, Lcom/android/settings/lab/MiuiDriveModeController;->isNeedHideDriveMode(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 614
+    .line 618
     invoke-static {}, Lcom/android/settings/lab/MiuiLabGestureController;->isNotSupported()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 615
+    .line 619
     invoke-static {p0}, Lcom/android/settings/lab/MiuiAiAsstCallScreenController;->isNeedHideCallScreen(Landroid/content/Context;)Z
 
     move-result p0
 
     if-eqz p0, :cond_1
 
-    .line 616
+    .line 620
     invoke-static {}, Lcom/android/settings/lab/MiuiFlashbackController;->isNotSupported()Z
 
     move-result p0
@@ -2565,7 +2597,7 @@
 .method public static isMiuiLiteAndStokeDevice()Ljava/lang/Boolean;
     .locals 1
 
-    .line 232
+    .line 236
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isMiuiLiteVersion()Z
 
     move-result v0
@@ -2596,7 +2628,7 @@
 .method public static isMiuiLiteFontSetting(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1477
+    .line 1481
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->supportLiteFontSettingDeviceSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -2605,26 +2637,26 @@
 
     if-eqz v1, :cond_0
 
-    .line 1478
+    .line 1482
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     sget v1, Lcom/android/settings/R$array;->suppot_lite_font_page_device:I
 
-    .line 1479
+    .line 1483
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1480
+    .line 1484
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
     invoke-interface {v0, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 1483
+    .line 1487
     :cond_0
     sget-boolean p0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
@@ -2664,14 +2696,14 @@
     :try_start_0
     const-string/jumbo v0, "miui.util.DeviceLevel"
 
-    .line 1165
+    .line 1169
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_MIUI_LITE_VERSION"
 
-    .line 1166
+    .line 1170
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -2699,7 +2731,7 @@
 
     const-string/jumbo v2, "reflect error when get DeviceLevel IS_MIUI_LITE_VERSION"
 
-    .line 1168
+    .line 1172
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -2714,14 +2746,14 @@
     :try_start_0
     const-string/jumbo v0, "miui.util.DeviceLevel"
 
-    .line 1181
+    .line 1185
     invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
     const-string v1, "IS_MIUI_MIDDLE_VERSION"
 
-    .line 1182
+    .line 1186
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
@@ -2749,7 +2781,7 @@
 
     const-string/jumbo v2, "reflect error when get DeviceLevel IS_MIUI_MIDDLE_VERSION"
 
-    .line 1184
+    .line 1188
     invoke-static {v1, v2, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     const/4 v0, 0x0
@@ -2761,7 +2793,7 @@
 .method public static final isNeedESIMCustmized()Z
     .locals 2
 
-    .line 1429
+    .line 1433
     sget-boolean v0, Lcom/android/settings/RegionUtils;->IS_JP_SB:Z
 
     if-eqz v0, :cond_0
@@ -2785,7 +2817,7 @@
 
     const-string/jumbo v1, "veux"
 
-    .line 1430
+    .line 1434
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2801,7 +2833,7 @@
 
     const-string v1, "XIG03"
 
-    .line 1431
+    .line 1435
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -2832,7 +2864,7 @@
     :try_start_0
     const-string/jumbo v3, "miui.telephony.TelephonyManagerEx"
 
-    .line 1414
+    .line 1418
     invoke-static {v3}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v3
@@ -2841,7 +2873,7 @@
 
     new-array v5, v2, [Ljava/lang/Class;
 
-    .line 1415
+    .line 1419
     invoke-virtual {v3, v4, v5}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v4
@@ -2854,21 +2886,21 @@
 
     move-result-object v4
 
-    .line 1416
+    .line 1420
     invoke-static {}, Lcom/android/settings/RegionUtils;->getRegion()Ljava/lang/String;
 
     move-result-object v5
 
     new-array v6, v1, [Ljava/lang/Class;
 
-    .line 1417
+    .line 1421
     const-class v7, Ljava/lang/String;
 
     aput-object v7, v6, v2
 
     const-string v7, "isSupportEsimForCountry"
 
-    .line 1418
+    .line 1422
     invoke-virtual {v3, v7, v6}, Ljava/lang/Class;->getMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v3
@@ -2889,7 +2921,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1419
+    .line 1423
     :try_start_1
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -2930,13 +2962,13 @@
     :goto_0
     const-string v5, "isNeedESIMFeature: "
 
-    .line 1421
+    .line 1425
     invoke-static {v0, v5, v4}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_1
     const-string/jumbo v0, "ro.vendor.miui.support_esim"
 
-    .line 1424
+    .line 1428
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -2959,12 +2991,12 @@
 
     const-string/jumbo v0, "settings_flash_notifications"
 
-    .line 1654
+    .line 1659
     invoke-static {p0, v0}, Landroid/util/FeatureFlagUtils;->isEnabled(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
 
-    .line 1656
+    .line 1661
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -3005,7 +3037,7 @@
 
     return v0
 
-    .line 1398
+    .line 1402
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -3019,7 +3051,7 @@
 
     move-result-wide v1
 
-    .line 1400
+    .line 1404
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -3041,13 +3073,13 @@
     :cond_1
     move p0, v3
 
-    .line 1401
+    .line 1405
     :goto_0
     sget-boolean v4, Lmiui/os/Build;->IS_TABLET:Z
 
     if-nez v4, :cond_3
 
-    .line 1402
+    .line 1406
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isFoldDevice()Z
 
     move-result v4
@@ -3060,14 +3092,14 @@
 
     if-eqz p0, :cond_3
 
-    .line 1404
+    .line 1408
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result p0
 
     if-nez p0, :cond_3
 
-    .line 1405
+    .line 1409
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -3078,7 +3110,7 @@
 
     if-gtz p0, :cond_3
 
-    .line 1406
+    .line 1410
     invoke-static {}, Lcom/android/settings/device/MiuiAboutPhoneUtils;->isLocalCnAndChinese()Z
 
     move-result p0
@@ -3098,7 +3130,7 @@
 .method public static isNeedHideSosForCarrier()Z
     .locals 2
 
-    .line 1452
+    .line 1456
     sget-boolean v0, Lcom/android/settings/RegionUtils;->IS_JP_SB:Z
 
     if-eqz v0, :cond_0
@@ -3136,7 +3168,7 @@
 .method public static isNeedRemoveContentExtension(Landroid/content/Context;)Z
     .locals 3
 
-    .line 520
+    .line 524
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
     const/4 v1, 0x1
@@ -3145,7 +3177,7 @@
 
     return v1
 
-    .line 524
+    .line 528
     :cond_0
     new-instance v0, Landroid/content/Intent;
 
@@ -3153,15 +3185,15 @@
 
     const-string v2, "com.miui.contentextension.action.TAPLUS_SETTINGS"
 
-    .line 525
+    .line 529
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v2, "com.miui.contentextension"
 
-    .line 526
+    .line 530
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 527
+    .line 531
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v2
@@ -3191,7 +3223,7 @@
 .method public static isNeedRemoveEasyMode(Landroid/content/Context;)Z
     .locals 4
 
-    .line 1094
+    .line 1098
     sget-boolean v0, Lcom/android/settings/RegionUtils;->IS_JP_SB:Z
 
     const/4 v1, 0x1
@@ -3200,7 +3232,7 @@
 
     return v1
 
-    .line 1097
+    .line 1101
     :cond_0
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->hasPocoLauncherDefault()Z
 
@@ -3210,7 +3242,7 @@
 
     return v1
 
-    .line 1100
+    .line 1104
     :cond_1
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTabletDevice()Z
 
@@ -3226,7 +3258,7 @@
 
     goto :goto_0
 
-    .line 1104
+    .line 1108
     :cond_2
     invoke-static {}, Lcom/android/settings/MiuiUtils;->isLowMemoryMachine()Z
 
@@ -3245,7 +3277,7 @@
 
     const-string/jumbo v2, "miui.home.settings.simplified"
 
-    .line 1110
+    .line 1114
     invoke-static {v0, p0, v2}, Lcom/android/settings/MiuiUtils;->isPackagesSupportMetaDataFeature(Ljava/lang/String;Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
@@ -3254,7 +3286,7 @@
 
     return v1
 
-    .line 1115
+    .line 1119
     :cond_4
     new-instance v0, Landroid/content/Intent;
 
@@ -3262,19 +3294,19 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 1116
+    .line 1120
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v2
 
     const/high16 v3, 0x20000
 
-    .line 1117
+    .line 1121
     invoke-virtual {v2, v0, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
 
-    .line 1118
+    .line 1122
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isSecondSpace(Landroid/content/Context;)Z
 
     move-result p0
@@ -3297,7 +3329,7 @@
 .method public static isNeedRemoveGmsCoreSettings(Landroid/content/Context;)Z
     .locals 3
 
-    .line 706
+    .line 710
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v0, :cond_0
@@ -3316,7 +3348,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 707
+    .line 711
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "miui.intent.action.APP_SETTINGS"
@@ -3327,10 +3359,10 @@
 
     const-string v2, "com.miui.googlebase.ui.GmsCoreSettings"
 
-    .line 708
+    .line 712
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 709
+    .line 713
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -3356,7 +3388,7 @@
 .method public static isNeedRemoveKidSpace(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1586
+    .line 1590
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isNeedRemoveKidSpaceInternal(Landroid/content/Context;)Z
 
     move-result v0
@@ -3365,7 +3397,7 @@
 
     const-string v0, "ex_func_kid_space"
 
-    .line 1587
+    .line 1591
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isVisibleWithExtensionFuncKey(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result p0
@@ -3388,9 +3420,9 @@
 .end method
 
 .method public static isNeedRemoveKidSpaceInternal(Landroid/content/Context;)Z
-    .locals 3
+    .locals 4
 
-    .line 1591
+    .line 1595
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
@@ -3399,23 +3431,23 @@
 
     const-string v2, "com.miui.greenguard"
 
-    .line 1592
+    .line 1596
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1593
+    .line 1597
     invoke-virtual {v0, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
     const/high16 v1, 0x10000000
 
-    .line 1594
+    .line 1598
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1595
+    .line 1599
     invoke-static {p0}, Lcom/android/settings/special/KidModeDisplayController;->isNewKidSpace(Landroid/content/Context;)Z
 
     move-result v1
 
-    .line 1596
+    .line 1600
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
@@ -3426,8 +3458,19 @@
 
     if-nez v2, :cond_2
 
-    .line 1598
+    .line 1602
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isFoldDevice()Z
+
+    move-result v2
+
+    if-nez v2, :cond_2
+
+    sget-object v2, Lcom/android/settings/utils/SettingsFeatures;->unsupportedKidSpaceDevice:Ljava/util/List;
+
+    sget-object v3, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
+
+    .line 1603
+    invoke-interface {v2, v3}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v2
 
@@ -3435,7 +3478,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 1599
+    .line 1604
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v2
@@ -3449,7 +3492,7 @@
     :cond_0
     if-nez v1, :cond_1
 
-    .line 1600
+    .line 1605
     invoke-static {}, Lmiui/securityspace/ConfigUtils;->isSupportSecuritySpace()Z
 
     move-result p0
@@ -3478,7 +3521,7 @@
 
     const/4 v1, 0x0
 
-    .line 628
+    .line 632
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3487,7 +3530,7 @@
 
     const-string/jumbo v0, "support_led_colorful"
 
-    .line 629
+    .line 633
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3496,7 +3539,7 @@
 
     const-string/jumbo v0, "support_color_lamp"
 
-    .line 630
+    .line 634
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3513,7 +3556,7 @@
 .method public static isNeedRemoveMiCloud(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1633
+    .line 1638
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isNeedRemoveMiCloudInternal(Landroid/content/Context;)Z
 
     move-result v0
@@ -3546,24 +3589,24 @@
 .method public static isNeedRemoveMiCloudInternal(Landroid/content/Context;)Z
     .locals 3
 
-    .line 1626
+    .line 1631
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string/jumbo v1, "miui.intent.action.APP_SETTINGS"
 
-    .line 1627
+    .line 1632
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.miui.cloudservice"
 
     const-string v2, "com.miui.cloudservice.ui.MiCloudMainActivity"
 
-    .line 1628
+    .line 1633
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 1629
+    .line 1634
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isDeviceManaged(Landroid/content/Context;)Z
 
     move-result v1
@@ -3598,7 +3641,7 @@
 .method public static isNeedRemoveMiCoin(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1622
+    .line 1627
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isNeedRemoveMiCoinInternal(Landroid/content/Context;)Z
 
     move-result v0
@@ -3631,7 +3674,7 @@
 .method public static isNeedRemoveMiCoinInternal(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1618
+    .line 1623
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
     if-nez v0, :cond_1
@@ -3670,7 +3713,7 @@
 .method public static isNeedRemoveOldmanMode(Landroid/content/Context;)Z
     .locals 6
 
-    .line 455
+    .line 459
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x1
@@ -3689,7 +3732,7 @@
 
     const-string/jumbo v0, "support_simple_launcher"
 
-    .line 456
+    .line 460
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3701,24 +3744,24 @@
     :cond_0
     const-string/jumbo v0, "remove_oldman_mode_device_list"
 
-    .line 459
+    .line 463
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->queryStringArray(Landroid/content/Context;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 460
+    .line 464
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     if-eqz p0, :cond_2
 
-    .line 461
+    .line 465
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 462
+    .line 466
     array-length v3, p0
 
     move v4, v2
@@ -3728,7 +3771,7 @@
 
     aget-object v5, p0, v4
 
-    .line 463
+    .line 467
     invoke-virtual {v0, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
     move-result v5
@@ -3753,7 +3796,7 @@
 .method public static isNeedRemoveOneKeyMigrate(Landroid/content/Context;)Z
     .locals 2
 
-    .line 692
+    .line 696
     invoke-static {}, Lmiui/enterprise/RestrictionsHelperStub;->getInstance()Lmiui/enterprise/IRestrictionsHelper;
 
     move-result-object v0
@@ -3772,12 +3815,12 @@
 
     const-string v0, "Device is in enterprise mode, oneKeyMigrate is restricted by enterprise!"
 
-    .line 694
+    .line 698
     invoke-static {p0, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     return v1
 
-    .line 699
+    .line 703
     :cond_0
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
@@ -3812,14 +3855,14 @@
 .method public static isNeedRemoveSOS(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1457
+    .line 1461
     invoke-static {}, Lcom/android/settings/security/SecuritySettingsController;->hasSecurityCenterSecureEntry()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 1458
+    .line 1462
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isSupportSOS(Landroid/content/Context;)Z
 
     move-result p0
@@ -3844,7 +3887,7 @@
 .method public static isNeedRemoveSmsReceivedSound(Landroid/content/Context;)Z
     .locals 1
 
-    .line 636
+    .line 640
     invoke-static {p0}, Lcom/android/settingslib/Utils;->isWifiOnly(Landroid/content/Context;)Z
 
     move-result p0
@@ -3859,7 +3902,7 @@
 
     const-string/jumbo p0, "ro.miui.google.csp"
 
-    .line 637
+    .line 641
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -3876,22 +3919,22 @@
 .method public static isNeedRemoveTouchAssistant(Landroid/content/Context;)Z
     .locals 2
 
-    .line 509
+    .line 513
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string/jumbo v1, "miui.intent.action.TOUCH_ASSISTANT_SETTINGS"
 
-    .line 510
+    .line 514
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
     const-string v1, "com.miui.touchassistant"
 
-    .line 511
+    .line 515
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 512
+    .line 516
     invoke-static {}, Lcom/android/settings/MiuiUtils;->getInstance()Lcom/android/settings/MiuiUtils;
 
     move-result-object v1
@@ -3928,7 +3971,7 @@
 
     const-string/jumbo v0, "ro.miui.build.region"
 
-    .line 990
+    .line 994
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3948,7 +3991,7 @@
     :cond_0
     const-string/jumbo v0, "ro.miui.region"
 
-    .line 994
+    .line 998
     invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -3968,12 +4011,12 @@
 
     const-string v2, "/system/etc/NOTICE_GPL.html.gz"
 
-    .line 998
+    .line 1002
     invoke-static {v0, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 999
+    .line 1003
     invoke-static {v0}, Lcom/android/settings/MiuiUtils;->isFilePathValid(Ljava/lang/String;)Z
 
     move-result v0
@@ -3990,7 +4033,7 @@
 
     const/4 v1, 0x0
 
-    .line 268
+    .line 272
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -3999,7 +4042,7 @@
 
     const-string/jumbo v0, "support_led_colorful_game"
 
-    .line 269
+    .line 273
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -4015,7 +4058,7 @@
 .method public static isNeedShowColorLamp()Z
     .locals 1
 
-    .line 273
+    .line 277
     sget-boolean v0, Lcom/android/settings/utils/SettingsFeatures;->IS_SUPPORT_COLOR_LAMP_DEVICE:Z
 
     return v0
@@ -4028,7 +4071,7 @@
 
     const/4 v1, 0x0
 
-    .line 263
+    .line 267
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -4037,7 +4080,7 @@
 
     const-string/jumbo v0, "support_led_colorful_game"
 
-    .line 264
+    .line 268
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -4053,29 +4096,29 @@
 .method public static isNeedShowMishare(Landroid/content/Context;)Z
     .locals 2
 
-    .line 964
+    .line 968
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v1, "com.miui.mishare.action.MiShareSettings"
 
-    .line 965
+    .line 969
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 966
+    .line 970
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/high16 v1, 0x10000
 
-    .line 967
+    .line 971
     invoke-virtual {p0, v0, v1}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 968
+    .line 972
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -4100,7 +4143,7 @@
 
     const/4 v1, 0x0
 
-    .line 1443
+    .line 1447
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -4122,7 +4165,7 @@
 
     const/4 v1, 0x0
 
-    .line 1436
+    .line 1440
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -4140,7 +4183,7 @@
 .method public static isNoveltyHaptic()Z
     .locals 2
 
-    .line 1447
+    .line 1451
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string/jumbo v1, "nuwa"
@@ -4179,7 +4222,7 @@
 
     return v0
 
-    .line 533
+    .line 537
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4204,7 +4247,7 @@
 .method public static isOtherSpecialFeatureItemNeedHide()Z
     .locals 1
 
-    .line 596
+    .line 600
     invoke-static {}, Lcom/android/settings/MiuiUtils;->isLowMemoryMachine()Z
 
     move-result v0
@@ -4231,7 +4274,7 @@
 
     const/4 v0, 0x0
 
-    .line 1299
+    .line 1303
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -4241,12 +4284,12 @@
 
     const/16 v2, 0x80
 
-    .line 1300
+    .line 1304
     invoke-virtual {p0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
 
     move-result-object p0
 
-    .line 1302
+    .line 1306
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-nez p0, :cond_0
@@ -4256,7 +4299,7 @@
     :cond_0
     const-string/jumbo v1, "miui.settings.show_gesture_on_launcher"
 
-    .line 1306
+    .line 1310
     invoke-virtual {p0, v1, v0}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -4268,7 +4311,7 @@
     :catch_0
     move-exception p0
 
-    .line 1310
+    .line 1314
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
     return v0
@@ -4277,7 +4320,7 @@
 .method public static isPrivacyNeeded(Landroid/content/Context;)Z
     .locals 2
 
-    .line 348
+    .line 352
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     const/4 v1, 0x0
@@ -4286,7 +4329,7 @@
 
     return v1
 
-    .line 351
+    .line 355
     :cond_0
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isInternationalM2M3AndIsSafetyCenterEnabled(Landroid/content/Context;)Z
 
@@ -4305,21 +4348,21 @@
 .method public static isPrivacyProtectionNeeded(Landroid/content/Context;)Z
     .locals 3
 
-    .line 394
+    .line 398
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "miui.intent.action.PRIVACY_SETTINGS"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 395
+    .line 399
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     const/high16 v2, 0x10000
 
-    .line 396
+    .line 400
     invoke-virtual {v1, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v0
@@ -4328,7 +4371,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 397
+    .line 401
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
@@ -4337,7 +4380,7 @@
 
     goto :goto_0
 
-    .line 400
+    .line 404
     :cond_0
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
 
@@ -4347,7 +4390,7 @@
 
     return v1
 
-    .line 403
+    .line 407
     :cond_1
     invoke-static {p0}, Lcom/android/settings/MiuiUtils;->isInternationalM2M3AndIsSafetyCenterEnabled(Landroid/content/Context;)Z
 
@@ -4370,7 +4413,7 @@
 .method public static isRemoveConfirmSIMDeletion()Z
     .locals 2
 
-    .line 1512
+    .line 1516
     sget-boolean v0, Lcom/android/settings/RegionUtils;->IS_JP_SB:Z
 
     if-eqz v0, :cond_0
@@ -4405,7 +4448,7 @@
 
     return v0
 
-    .line 1332
+    .line 1336
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4437,7 +4480,7 @@
 .method public static isSecondSpaceItemNeedHide(Landroid/content/Context;)Z
     .locals 4
 
-    .line 561
+    .line 565
     sget-boolean v0, Lcom/android/settings/RegionUtils;->IS_JP_SB:Z
 
     const/4 v1, 0x1
@@ -4446,7 +4489,7 @@
 
     return v1
 
-    .line 565
+    .line 569
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -4454,33 +4497,33 @@
 
     const/4 v2, 0x0
 
-    .line 564
+    .line 568
     invoke-static {v0, v2}, Landroid/provider/MiuiSettings$Secure;->getSecondSpaceEntranceStatus(Landroid/content/ContentResolver;I)I
 
     move-result v0
 
-    .line 566
+    .line 570
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isOtherSpecialFeatureItemNeedHide()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 567
+    .line 571
     invoke-static {}, Lmiui/securityspace/ConfigUtils;->isSupportSecuritySpace()Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
-    .line 568
+    .line 572
     invoke-static {}, Lcom/android/settingslib/OldmanHelper;->isOldmanMode()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 569
+    .line 573
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v3
@@ -4491,7 +4534,7 @@
 
     if-nez v3, :cond_3
 
-    .line 570
+    .line 574
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v3
@@ -4509,7 +4552,7 @@
 
     if-nez v0, :cond_3
 
-    .line 575
+    .line 579
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
 
     move-result p0
@@ -4533,7 +4576,7 @@
 
     const/4 v1, 0x0
 
-    .line 1020
+    .line 1024
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -4556,7 +4599,7 @@
 
     const-string v4, ""
 
-    .line 1021
+    .line 1025
     invoke-static {v2, v4}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
@@ -4581,7 +4624,7 @@
 .method public static isShowDesktop(Landroid/content/Context;)Z
     .locals 3
 
-    .line 543
+    .line 547
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -4610,7 +4653,7 @@
 
     return v2
 
-    .line 547
+    .line 551
     :cond_1
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
 
@@ -4620,7 +4663,7 @@
 
     return v2
 
-    .line 550
+    .line 554
     :cond_2
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isMiuiDeskTopMode(Landroid/content/Context;)Z
 
@@ -4637,12 +4680,12 @@
 .method public static isShowFreeformGuideSetting(Landroid/content/Context;)Z
     .locals 2
 
-    .line 734
+    .line 738
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->supportQuickReply()Z
 
     move-result v0
 
-    .line 735
+    .line 739
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->supportFreeform()Z
 
     move-result v1
@@ -4651,7 +4694,7 @@
 
     if-eqz v1, :cond_0
 
-    .line 736
+    .line 740
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
 
     move-result p0
@@ -4674,7 +4717,7 @@
 
     const-string v0, "ex_func_game_booster"
 
-    .line 848
+    .line 852
     invoke-static {p0, v0}, Lcom/android/settings/MiuiUtils;->isVisibleWithExtensionFuncKey(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
@@ -4685,7 +4728,7 @@
 
     return p0
 
-    .line 852
+    .line 856
     :cond_0
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isShowGameTurboInternal(Landroid/content/Context;)Z
 
@@ -4697,7 +4740,7 @@
 .method public static isShowGameTurboInternal(Landroid/content/Context;)Z
     .locals 3
 
-    .line 856
+    .line 860
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isSupportDock(Landroid/content/Context;)Z
 
     move-result v0
@@ -4714,7 +4757,7 @@
 
     goto :goto_1
 
-    .line 861
+    .line 865
     :cond_0
     :try_start_0
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->sNotSupportToolBoxDevices:Ljava/util/List;
@@ -4729,7 +4772,7 @@
 
     const-string v0, "#Intent;action=com.miui.gamebooster.action.ACCESS_MAINACTIVITY;S.jump_target=gamebox;end"
 
-    .line 862
+    .line 866
     invoke-static {v0, v1}, Landroid/content/Intent;->parseUri(Ljava/lang/String;I)Landroid/content/Intent;
 
     move-result-object v0
@@ -4742,7 +4785,7 @@
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 864
+    .line 868
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v2
@@ -4765,7 +4808,7 @@
 
     const-string v0, "URI invalid"
 
-    .line 866
+    .line 870
     invoke-static {p0, v0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_3
@@ -4776,7 +4819,7 @@
 .method public static isShowMyDevice()Z
     .locals 2
 
-    .line 974
+    .line 978
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_1
@@ -4809,17 +4852,17 @@
 .method public static isShowQuickReplySetting()Z
     .locals 3
 
-    .line 819
+    .line 823
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->supportFreeform()Z
 
     move-result v0
 
-    .line 820
+    .line 824
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->supportQuickReply()Z
 
     move-result v1
 
-    .line 821
+    .line 825
     sget-boolean v2, Lmiui/os/Build;->IS_TABLET:Z
 
     if-nez v2, :cond_0
@@ -4842,7 +4885,7 @@
 .method public static isShowSlotDevice()Z
     .locals 2
 
-    .line 1517
+    .line 1521
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v1, "lilac"
@@ -4883,7 +4926,7 @@
 .method public static isShowVideoToolBoxSetting(Landroid/content/Context;)Z
     .locals 5
 
-    .line 876
+    .line 880
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isSupportDock(Landroid/content/Context;)Z
 
     move-result v0
@@ -4894,7 +4937,7 @@
 
     return v1
 
-    .line 880
+    .line 884
     :cond_0
     :try_start_0
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->isOnPcMode(Landroid/content/Context;)Z
@@ -4905,7 +4948,7 @@
 
     return v1
 
-    .line 883
+    .line 887
     :cond_1
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->sNotSupportToolBoxDevices:Ljava/util/List;
 
@@ -4922,7 +4965,7 @@
     :cond_2
     const-string v0, "is_support_video_tool_box"
 
-    .line 887
+    .line 891
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -4933,27 +4976,27 @@
 
     if-eqz v0, :cond_4
 
-    .line 890
+    .line 894
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v4, "com.miui.gamebooster.action.VIDEOBOX_SETTINGS"
 
-    .line 891
+    .line 895
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 892
+    .line 896
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 893
+    .line 897
     invoke-virtual {p0, v0, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 894
+    .line 898
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -4965,7 +5008,7 @@
     :cond_3
     return v1
 
-    .line 897
+    .line 901
     :cond_4
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSupportBasicFeatures()Z
 
@@ -4973,27 +5016,27 @@
 
     if-eqz v0, :cond_5
 
-    .line 899
+    .line 903
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
     const-string v4, "com.miui.gamebooster.action.VIDEOBOX_SETTINGS_ALL"
 
-    .line 900
+    .line 904
     invoke-virtual {v0, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 901
+    .line 905
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
-    .line 902
+    .line 906
     invoke-virtual {p0, v0, v3}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 903
+    .line 907
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -5014,7 +5057,7 @@
 
     const-string/jumbo v2, "reflect error when get video tool box support state"
 
-    .line 907
+    .line 911
     invoke-static {v0, v2, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     return v1
@@ -5023,7 +5066,7 @@
 .method public static isSplitTablet(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1325
+    .line 1329
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSplitTabletDevice()Z
 
     move-result v0
@@ -5060,7 +5103,7 @@
 .method public static isSplitTabletDevice()Z
     .locals 2
 
-    .line 1317
+    .line 1321
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string v1, "enuma"
@@ -5081,7 +5124,7 @@
 
     const-string/jumbo v1, "nabu"
 
-    .line 1318
+    .line 1322
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -5098,7 +5141,7 @@
 
     const-string/jumbo v1, "yunluo"
 
-    .line 1319
+    .line 1323
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v1
@@ -5115,7 +5158,7 @@
 
     const-string/jumbo v1, "pipa"
 
-    .line 1320
+    .line 1324
     invoke-static {v0, v1}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -5144,7 +5187,7 @@
 .method public static isSupportAccessibilityHaptic(Landroid/content/Context;)Z
     .locals 2
 
-    .line 427
+    .line 431
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->supportAccessibilityHapticDeviceSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -5153,26 +5196,26 @@
 
     if-eqz v1, :cond_0
 
-    .line 428
+    .line 432
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     sget v1, Lcom/android/settings/R$array;->support_accessibility_haptic_device_list:I
 
-    .line 429
+    .line 433
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 430
+    .line 434
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
     invoke-interface {v0, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 432
+    .line 436
     :cond_0
     sget-object p0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -5206,7 +5249,7 @@
 
     return v0
 
-    .line 1551
+    .line 1555
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
@@ -5215,7 +5258,7 @@
     :try_start_0
     const-string v1, "com.xiaomi.aicr"
 
-    .line 1553
+    .line 1557
     invoke-virtual {p0, v1, v0}, Landroid/content/pm/PackageManager;->getPackageInfo(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
     :try_end_0
     .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
@@ -5229,7 +5272,7 @@
 
     const-string v1, "isSupportAiEngine: false"
 
-    .line 1555
+    .line 1559
     invoke-static {p0, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
     return v0
@@ -5249,14 +5292,14 @@
     :cond_0
     const-string v2, "content://com.xiaomi.aiasst.vision/pickSoundState"
 
-    .line 1565
+    .line 1569
     invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v4
 
     const/4 v2, 0x0
 
-    .line 1568
+    .line 1572
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -5276,14 +5319,14 @@
 
     if-eqz v2, :cond_2
 
-    .line 1569
+    .line 1573
     invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result p0
 
     if-eqz p0, :cond_2
 
-    .line 1570
+    .line 1574
     invoke-interface {v2, v1}, Landroid/database/Cursor;->getInt(I)I
 
     move-result p0
@@ -5297,7 +5340,7 @@
     :cond_1
     move p0, v1
 
-    .line 1571
+    .line 1575
     :goto_0
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -5318,7 +5361,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1578
+    .line 1582
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     return p0
@@ -5340,7 +5383,7 @@
     :try_start_1
     const-string p0, "invoke isSupportAiPickSound error!"
 
-    .line 1575
+    .line 1579
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -5356,10 +5399,10 @@
     :goto_3
     if-eqz v2, :cond_4
 
-    .line 1578
+    .line 1582
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
-    .line 1580
+    .line 1584
     :cond_4
     throw p0
 .end method
@@ -5367,7 +5410,7 @@
 .method public static isSupportAod(Landroid/content/Context;)Z
     .locals 4
 
-    .line 1646
+    .line 1651
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5384,7 +5427,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1648
+    .line 1653
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
@@ -5406,7 +5449,7 @@
 
     const/4 v0, 0x0
 
-    .line 921
+    .line 925
     :try_start_0
     const-class v1, Lcom/milink/api/v1/MilinkClientManager;
 
@@ -5427,7 +5470,7 @@
 .method public static isSupportBubblesNotification(Landroid/content/Context;)Z
     .locals 0
 
-    .line 949
+    .line 953
     invoke-static {p0}, Lcom/android/settings/utils/MiuiDockUtils;->isSupportBubblesNotification(Landroid/content/Context;)Z
 
     move-result p0
@@ -5442,7 +5485,7 @@
 
     const/4 v1, 0x0
 
-    .line 277
+    .line 281
     invoke-static {v0, v1}, Lmiui/util/FeatureParser;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -5453,7 +5496,7 @@
 .method public static isSupportDifferentLight()Z
     .locals 2
 
-    .line 1264
+    .line 1268
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string/jumbo v1, "zizhan"
@@ -5490,7 +5533,7 @@
 .method public static isSupportDifferentLightViceScreen(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1267
+    .line 1271
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isSupportDifferentLight()Z
 
     move-result v0
@@ -5517,7 +5560,7 @@
 .method public static isSupportDock(Landroid/content/Context;)Z
     .locals 0
 
-    .line 932
+    .line 936
     invoke-static {p0}, Lcom/android/settings/utils/MiuiDockUtils;->isDockSupport(Landroid/content/Context;)Z
 
     move-result p0
@@ -5532,7 +5575,7 @@
 
     const/4 v1, 0x0
 
-    .line 1004
+    .line 1008
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -5554,7 +5597,7 @@
 .method private static isSupportFoldScreenSettings()Z
     .locals 2
 
-    .line 489
+    .line 493
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isFoldDevice()Z
 
     move-result v0
@@ -5589,7 +5632,7 @@
 
     const/4 v1, 0x0
 
-    .line 786
+    .line 790
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManager;->getCurrentUser()I
 
@@ -5610,14 +5653,14 @@
     :try_start_1
     const-string/jumbo v3, "ro.config.miui_desktop_mode_enabled"
 
-    .line 787
+    .line 791
     invoke-static {v3, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
 
-    .line 788
+    .line 792
     :try_start_2
     sget v4, Lmiui/util/DeviceLevel;->TOTAL_RAM:I
     :try_end_2
@@ -5638,10 +5681,10 @@
     :try_start_3
     const-string/jumbo v5, "persist.sys.mi.ep.activated"
 
-    .line 789
+    .line 793
     invoke-static {v5, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
-    .line 791
+    .line 795
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -5689,7 +5732,7 @@
     :goto_2
     move v4, v3
 
-    .line 793
+    .line 797
     :goto_3
     invoke-virtual {p0}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -5724,7 +5767,7 @@
 
     const-string v2, "2.0"
 
-    .line 1499
+    .line 1503
     invoke-static {v1, v2}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
@@ -5754,7 +5797,7 @@
 
     const-string v3, "isSupportMultiLevelExtm: get isSupportExtm3 error"
 
-    .line 1501
+    .line 1505
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :cond_0
@@ -5769,7 +5812,7 @@
 
     const/4 v1, 0x0
 
-    .line 1041
+    .line 1045
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -5785,7 +5828,7 @@
     :try_start_0
     const-string/jumbo v1, "miui.app.MiuiFreeFormManager"
 
-    .line 831
+    .line 835
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -5794,14 +5837,14 @@
 
     const/4 v3, 0x0
 
-    .line 832
+    .line 836
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 833
+    .line 837
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -5823,7 +5866,7 @@
 
     const-string/jumbo v3, "reflect error when get isSupportPin state"
 
-    .line 835
+    .line 839
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -5833,7 +5876,7 @@
 .method public static isSupportSOS(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1462
+    .line 1466
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isNeedHideSosForCarrier()Z
 
     move-result v0
@@ -5844,7 +5887,7 @@
 
     return v1
 
-    .line 1465
+    .line 1469
     :cond_0
     sget-boolean v0, Lmiui/os/Build;->IS_TABLET:Z
 
@@ -5852,13 +5895,13 @@
 
     return v1
 
-    .line 1468
+    .line 1472
     :cond_1
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_2
 
-    .line 1472
+    .line 1476
     invoke-static {p0}, Lcom/android/settings/emergency/util/Config;->isSosEnable(Landroid/content/Context;)Z
 
     move-result p0
@@ -5874,7 +5917,7 @@
 .method public static isSupportScreenPinning(Landroid/content/Context;)Z
     .locals 2
 
-    .line 841
+    .line 845
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -5887,14 +5930,14 @@
 
     if-eqz v0, :cond_1
 
-    .line 842
+    .line 846
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->showingMiuiDesktopMode(Landroid/content/Context;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 843
+    .line 847
     invoke-static {p0}, Lcom/android/settings/device/MiuiAboutPhoneUtils;->getInstance(Landroid/content/Context;)Lcom/android/settings/device/MiuiAboutPhoneUtils;
 
     move-result-object v0
@@ -5941,7 +5984,7 @@
 
     return v0
 
-    .line 437
+    .line 441
     :cond_0
     sget-object v1, Lcom/android/settings/utils/SettingsFeatures;->supportSettingHapticDeviceSet:Ljava/util/Set;
 
@@ -5951,26 +5994,26 @@
 
     if-eqz v2, :cond_1
 
-    .line 438
+    .line 442
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
     sget v3, Lcom/android/settings/R$array;->support_settings_haptic_device_list:I
 
-    .line 439
+    .line 443
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v2
 
-    .line 440
+    .line 444
     invoke-static {v2}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v2
 
     invoke-interface {v1, v2}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 447
+    .line 451
     :cond_1
     new-instance v2, Lmiui/util/HapticFeedbackUtil;
 
@@ -5988,7 +6031,7 @@
 
     move-result v2
 
-    .line 448
+    .line 452
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -6007,7 +6050,7 @@
 
     invoke-static {v5, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 449
+    .line 453
     sget-boolean v3, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-nez v3, :cond_3
@@ -6020,7 +6063,7 @@
 
     sget-object p0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
-    .line 450
+    .line 454
     invoke-interface {v1, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
     move-result p0
@@ -6039,19 +6082,19 @@
 .method public static isSupportSpeakerAutoClean(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1012
+    .line 1016
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     sget v0, Lcom/android/settings/R$array;->support_speaker_auto_clean_device_list:I
 
-    .line 1013
+    .line 1017
     invoke-virtual {p0, v0}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1014
+    .line 1018
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
@@ -6068,7 +6111,7 @@
 
     const/4 v0, 0x0
 
-    .line 1015
+    .line 1019
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -6085,7 +6128,7 @@
 .method private static isSupportTwoAutoRotate()Z
     .locals 2
 
-    .line 499
+    .line 503
     invoke-static {}, Lcom/android/settings/utils/SettingsFeatures;->isFoldDevice()Z
 
     move-result v0
@@ -6116,7 +6159,7 @@
 .method public static isSupportUninstallSysApp(Landroid/content/Context;)Z
     .locals 2
 
-    .line 600
+    .line 604
     sget-boolean v0, Lmiui/os/Build;->IS_INTERNATIONAL_BUILD:Z
 
     if-eqz v0, :cond_0
@@ -6147,7 +6190,7 @@
 .method public static isSystemHapticNeeded()Z
     .locals 1
 
-    .line 301
+    .line 305
     invoke-static {}, Lmiui/util/HapticFeedbackUtil;->isSupportLinearMotorVibrate()Z
 
     move-result v0
@@ -6158,7 +6201,7 @@
 .method public static isVipServiceNeededInternal(Landroid/content/Context;)Z
     .locals 3
 
-    .line 379
+    .line 383
     invoke-static {}, Landroid/os/UserHandle;->myUserId()I
 
     move-result v0
@@ -6169,7 +6212,7 @@
 
     return v1
 
-    .line 383
+    .line 387
     :cond_0
     invoke-static {}, Lcom/android/settings/device/MiuiAboutPhoneUtils;->isLocalCnAndChinese()Z
 
@@ -6179,7 +6222,7 @@
 
     return v1
 
-    .line 386
+    .line 390
     :cond_1
     new-instance v0, Landroid/content/Intent;
 
@@ -6187,19 +6230,19 @@
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 387
+    .line 391
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const/high16 v2, 0x10000
 
-    .line 388
+    .line 392
     invoke-virtual {p0, v0, v2}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object p0
 
-    .line 389
+    .line 393
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result p0
@@ -6215,7 +6258,7 @@
 .method public static isZenModeRuleOn(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1207
+    .line 1211
     invoke-static {p0}, Lcom/android/settings/notification/SilentModeUtils;->getZenModeConfig(Landroid/content/Context;)Landroid/service/notification/ZenModeConfig;
 
     move-result-object p0
@@ -6226,7 +6269,7 @@
 
     return v0
 
-    .line 1211
+    .line 1215
     :cond_0
     iget-object p0, p0, Landroid/service/notification/ZenModeConfig;->automaticRules:Landroid/util/ArrayMap;
 
@@ -6234,7 +6277,7 @@
 
     return v0
 
-    .line 1215
+    .line 1219
     :cond_1
     invoke-virtual {p0}, Landroid/util/ArrayMap;->values()Ljava/util/Collection;
 
@@ -6257,7 +6300,7 @@
 
     check-cast v1, Landroid/service/notification/ZenModeConfig$ZenRule;
 
-    .line 1216
+    .line 1220
     iget-boolean v1, v1, Landroid/service/notification/ZenModeConfig$ZenRule;->enabled:Z
 
     if-eqz v1, :cond_2
@@ -6273,7 +6316,7 @@
 .method public static shouldShowAutoUIModeSetting()Z
     .locals 4
 
-    .line 1034
+    .line 1038
     sget-object v0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
     const-string/jumbo v1, "yudi"
@@ -6310,7 +6353,7 @@
     :goto_1
     const-string/jumbo v1, "persist.miui.auto_ui_enable"
 
-    .line 1035
+    .line 1039
     invoke-static {v1, v3}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
@@ -6335,7 +6378,7 @@
 
     const/4 v1, 0x0
 
-    .line 1027
+    .line 1031
     invoke-static {v0, v1}, Landroid/os/SystemProperties;->getInt(Ljava/lang/String;I)I
 
     move-result v0
@@ -6356,7 +6399,7 @@
     :goto_0
     const-string/jumbo v2, "ro.config.miui_hover_enable"
 
-    .line 1028
+    .line 1032
     invoke-static {v2, v1}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
@@ -6376,7 +6419,7 @@
 
     const/16 v0, 0x78
 
-    .line 1522
+    .line 1526
     invoke-static {p0}, Lcom/android/settings/utils/SettingsFeatures;->getScreenDpiMode(Landroid/content/Context;)I
 
     move-result v1
@@ -6393,7 +6436,7 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1523
+    .line 1527
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -6413,7 +6456,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1524
+    .line 1528
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -6428,7 +6471,7 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 1525
+    .line 1529
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object p0
@@ -6454,7 +6497,7 @@
 
     const/4 v0, 0x0
 
-    .line 1288
+    .line 1292
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result p0
@@ -6467,7 +6510,7 @@
 
     const/4 v0, 0x0
 
-    .line 760
+    .line 764
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
@@ -6491,7 +6534,7 @@
     :catch_0
     move-exception p0
 
-    .line 764
+    .line 768
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -6521,7 +6564,7 @@
     :try_start_0
     const-string/jumbo v1, "miui.app.MiuiFreeFormManager"
 
-    .line 746
+    .line 750
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -6530,14 +6573,14 @@
 
     const/4 v3, 0x0
 
-    .line 747
+    .line 751
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 748
+    .line 752
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -6559,7 +6602,7 @@
 
     const-string/jumbo v3, "reflect error when get supportFreeform"
 
-    .line 750
+    .line 754
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0
@@ -6571,13 +6614,13 @@
 
     const/4 v0, 0x0
 
-    .line 253
+    .line 257
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object p0
 
-    .line 254
+    .line 258
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
@@ -6592,7 +6635,7 @@
 
     move-result-object p0
 
-    .line 255
+    .line 259
     iget-object p0, p0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
 
     if-eqz p0, :cond_0
@@ -6617,7 +6660,7 @@
     :catch_0
     move-exception p0
 
-    .line 257
+    .line 261
     invoke-virtual {p0}, Landroid/content/pm/PackageManager$NameNotFoundException;->printStackTrace()V
 
     return v0
@@ -6626,7 +6669,7 @@
 .method public static supportLiteOptimization(Landroid/content/Context;)Z
     .locals 2
 
-    .line 1487
+    .line 1491
     sget-object v0, Lcom/android/settings/utils/SettingsFeatures;->supportLiteOptimizationDeviceSet:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->isEmpty()Z
@@ -6635,26 +6678,26 @@
 
     if-eqz v1, :cond_0
 
-    .line 1488
+    .line 1492
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object p0
 
     sget v1, Lcom/android/settings/R$array;->support_lite_Optimization_device:I
 
-    .line 1489
+    .line 1493
     invoke-virtual {p0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object p0
 
-    .line 1490
+    .line 1494
     invoke-static {p0}, Ljava/util/Arrays;->asList([Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object p0
 
     invoke-interface {v0, p0}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    .line 1492
+    .line 1496
     :cond_0
     sget-object p0, Lmiui/os/Build;->DEVICE:Ljava/lang/String;
 
@@ -6690,14 +6733,14 @@
 .method public static supportNfcNotificationFeature(Landroid/content/Context;)Z
     .locals 1
 
-    .line 1143
+    .line 1147
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object p0
 
     const-string v0, "android.hardware.nfc"
 
-    .line 1144
+    .line 1148
     invoke-virtual {p0, v0}, Landroid/content/pm/PackageManager;->hasSystemFeature(Ljava/lang/String;)Z
 
     move-result p0
@@ -6713,7 +6756,7 @@
 
     const-string v0, "0"
 
-    .line 1148
+    .line 1152
     invoke-static {p0, v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
@@ -6735,7 +6778,7 @@
     :try_start_0
     const-string v1, "android.util.MiuiMultiWindowUtils"
 
-    .line 806
+    .line 810
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
@@ -6744,14 +6787,14 @@
 
     const/4 v3, 0x0
 
-    .line 807
+    .line 811
     invoke-virtual {v1, v2, v3}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v2
 
     new-array v3, v0, [Ljava/lang/Object;
 
-    .line 808
+    .line 812
     invoke-virtual {v2, v1, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -6773,7 +6816,7 @@
 
     const-string/jumbo v3, "reflect error when get supportQuickReply state"
 
-    .line 810
+    .line 814
     invoke-static {v2, v3, v1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     :goto_0

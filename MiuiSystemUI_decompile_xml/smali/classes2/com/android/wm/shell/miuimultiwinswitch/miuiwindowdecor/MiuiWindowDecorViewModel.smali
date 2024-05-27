@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;
 .super Ljava/lang/Object;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Lcom/android/wm/shell/windowdecor/WindowDecorViewModel;
@@ -331,17 +331,6 @@
 
     .line 1
     iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;->mMiuiFreeformModeTaskRepository:Lcom/android/wm/shell/miuifreeform/MiuiFreeformModeTaskRepository;
-
-    .line 2
-    return-object p0
-    .line 4
-.end method
-
-.method public static bridge synthetic -$$Nest$fgetmMiuiMultiWinSwitchUtils(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;)Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
-    .locals 0
-
-    .line 1
-    iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;->mMiuiMultiWinSwitchUtils:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiMultiWinSwitchUtils;
 
     .line 2
     return-object p0
@@ -1212,65 +1201,62 @@
     iget-object v1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;->mInputMonitorFactory:Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel$InputMonitorFactory;
 
     .line 12
-    iget-object v2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;->mContext:Landroid/content/Context;
+    invoke-virtual {v1, v0, p1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel$InputMonitorFactory;->create(Landroid/hardware/input/InputManager;I)Landroid/view/InputMonitor;
 
     .line 14
-    invoke-virtual {v1, v0, v2}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel$InputMonitorFactory;->create(Landroid/hardware/input/InputManager;Landroid/content/Context;)Landroid/view/InputMonitor;
-
-    .line 16
     move-result-object v0
 
-    .line 19
+    .line 17
     new-instance v1, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel$EventReceiver;
 
-    .line 20
+    .line 18
     invoke-virtual {v0}, Landroid/view/InputMonitor;->getInputChannel()Landroid/view/InputChannel;
 
-    .line 22
+    .line 20
     move-result-object v2
 
-    .line 25
+    .line 23
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
-    .line 26
+    .line 24
     move-result-object v3
 
-    .line 29
+    .line 27
     invoke-direct {v1, p0, v0, v2, v3}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel$EventReceiver;-><init>(Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;Landroid/view/InputMonitor;Landroid/view/InputChannel;Landroid/os/Looper;)V
 
-    .line 30
+    .line 28
     iget-object p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/MiuiWindowDecorViewModel;->mEventReceiversByDisplay:Landroid/util/SparseArray;
 
-    .line 33
+    .line 31
     invoke-virtual {p0, p1, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 35
+    .line 33
     new-instance p0, Ljava/lang/StringBuilder;
 
-    .line 38
+    .line 36
     const-string v0, "createInputChannel displayId="
 
-    .line 40
+    .line 38
     invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 42
+    .line 40
     invoke-virtual {p0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 45
+    .line 43
     invoke-virtual {p0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 48
+    .line 46
     move-result-object p0
 
-    .line 51
+    .line 49
     const-string p1, "MiuiWindowDecorViewModel"
 
-    .line 52
+    .line 50
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 54
+    .line 52
     return-void
-    .line 57
+    .line 55
 .end method
 
 .method private createWindowDecoration(Landroid/app/ActivityManager$RunningTaskInfo;Landroid/view/SurfaceControl;Landroid/view/SurfaceControl$Transaction;Landroid/view/SurfaceControl$Transaction;)V

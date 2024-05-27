@@ -1,14 +1,10 @@
 .class public final Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;
 .super Landroid/media/session/MediaController$Callback;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # instance fields
-.field public cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
 .field public destroyed:Z
-
-.field public expiration:J
 
 .field public key:Ljava/lang/String;
 
@@ -19,8 +15,6 @@
 .field public resumption:Ljava/lang/Boolean;
 
 .field public final synthetic this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-.field public timedOut:Z
 
 
 # direct methods
@@ -37,174 +31,15 @@
     iput-object p2, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
 
     .line 7
-    const-wide p1, 0x7fffffffffffffffL
-
-    .line 9
-    iput-wide p1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expiration:J
-
-    .line 14
     invoke-virtual {p0, p3}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->setMediaData(Lcom/android/systemui/media/controls/models/player/MediaData;)V
 
-    .line 16
+    .line 9
     return-void
-    .line 19
+    .line 12
 .end method
 
 
 # virtual methods
-.method public final doTimeout()V
-    .locals 6
-
-    .line 1
-    const/4 v0, 0x0
-
-    .line 2
-    iput-object v0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 3
-    iget-object v1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 5
-    iget-object v1, v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->logger:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;
-
-    .line 7
-    iget-object v2, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
-
-    .line 9
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
-    sget-object v3, Lcom/android/systemui/log/LogLevel;->DEBUG:Lcom/android/systemui/log/LogLevel;
-
-    .line 14
-    sget-object v4, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logTimeout$2;->INSTANCE:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logTimeout$2;
-
-    .line 16
-    const-string v5, "MediaTimeout"
-
-    .line 18
-    iget-object v1, v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    .line 20
-    invoke-virtual {v1, v5, v3, v4, v0}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/LogMessage;
-
-    .line 22
-    move-result-object v3
-
-    .line 25
-    invoke-interface {v3, v2}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
-
-    .line 26
-    invoke-virtual {v1, v3}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/LogMessage;)V
-
-    .line 29
-    const/4 v1, 0x1
-
-    .line 32
-    iput-boolean v1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->timedOut:Z
-
-    .line 33
-    const-wide v2, 0x7fffffffffffffffL
-
-    .line 35
-    iput-wide v2, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expiration:J
-
-    .line 40
-    iget-object v2, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 42
-    iget-object v2, v2, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->timeoutCallback:Lkotlin/jvm/functions/Function2;
-
-    .line 44
-    if-eqz v2, :cond_0
-
-    .line 46
-    move-object v0, v2
-
-    .line 48
-    :cond_0
-    iget-object p0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
-
-    .line 49
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    .line 51
-    move-result-object v1
-
-    .line 54
-    invoke-interface {v0, p0, v1}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 55
-    return-void
-    .line 58
-.end method
-
-.method public final expireMediaTimeout(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 6
-
-    .line 1
-    iget-object v0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 2
-    const/4 v1, 0x0
-
-    .line 4
-    if-eqz v0, :cond_0
-
-    .line 5
-    iget-object v2, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 7
-    iget-object v2, v2, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->logger:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;
-
-    .line 9
-    invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 11
-    sget-object v3, Lcom/android/systemui/log/LogLevel;->VERBOSE:Lcom/android/systemui/log/LogLevel;
-
-    .line 14
-    sget-object v4, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logTimeoutCancelled$2;->INSTANCE:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logTimeoutCancelled$2;
-
-    .line 16
-    const-string v5, "MediaTimeout"
-
-    .line 18
-    iget-object v2, v2, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    .line 20
-    invoke-virtual {v2, v5, v3, v4, v1}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/LogMessage;
-
-    .line 22
-    move-result-object v3
-
-    .line 25
-    invoke-interface {v3, p1}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
-
-    .line 26
-    invoke-interface {v3, p2}, Lcom/android/systemui/log/LogMessage;->setStr2(Ljava/lang/String;)V
-
-    .line 29
-    invoke-virtual {v2, v3}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/LogMessage;)V
-
-    .line 32
-    invoke-virtual {v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;->run()V
-
-    .line 35
-    :cond_0
-    const-wide p1, 0x7fffffffffffffffL
-
-    .line 38
-    iput-wide p1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expiration:J
-
-    .line 43
-    iput-object v1, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 45
-    return-void
-    .line 47
-.end method
-
 .method public final isPlaying$1()Z
     .locals 0
 
@@ -317,7 +152,7 @@
     iget-object v0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->mediaController:Landroid/media/session/MediaController;
 
     .line 40
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_3
 
     .line 42
     invoke-virtual {v0, p0}, Landroid/media/session/MediaController;->unregisterCallback(Landroid/media/session/MediaController$Callback;)V
@@ -356,26 +191,15 @@
 
     .line 64
     :cond_2
-    iget-object v0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 67
-    if-eqz v0, :cond_3
-
-    .line 69
-    invoke-virtual {v0}, Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;->run()V
-
-    .line 71
-    :cond_3
     const/4 v0, 0x1
 
-    .line 74
+    .line 67
     iput-boolean v0, p0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->destroyed:Z
 
-    .line 75
-    :cond_4
+    .line 68
+    :cond_3
     :goto_0
     return-void
-    .line 77
 .end method
 
 .method public final processState(Landroid/media/session/PlaybackState;ZLjava/lang/Boolean;)V
@@ -1076,282 +900,137 @@
     move-result v3
 
     .line 408
-    const-string v5, ", "
+    if-nez v3, :cond_19
 
     .line 409
-    if-nez v3, :cond_1a
+    iget-object v4, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
 
     .line 411
-    iget-object v6, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
+    iget-object v4, v4, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->logger:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;
 
     .line 413
-    iget-object v6, v6, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->logger:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;
+    iget-object v5, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
 
     .line 415
-    iget-object v9, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
+    iget-object v6, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->resumption:Ljava/lang/Boolean;
 
     .line 417
-    iget-object v10, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->resumption:Ljava/lang/Boolean;
+    invoke-static {v6}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
 
     .line 419
-    invoke-static {v10}, Lkotlin/jvm/internal/Intrinsics;->checkNotNull(Ljava/lang/Object;)V
+    invoke-virtual {v6}, Ljava/lang/Boolean;->booleanValue()Z
 
-    .line 421
-    invoke-virtual {v10}, Ljava/lang/Boolean;->booleanValue()Z
+    .line 422
+    move-result v6
 
-    .line 424
-    move-result v10
+    .line 425
+    invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 427
-    invoke-virtual {v6}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 426
+    sget-object v9, Lcom/android/systemui/log/LogLevel;->DEBUG:Lcom/android/systemui/log/LogLevel;
 
-    .line 428
-    sget-object v11, Lcom/android/systemui/log/LogLevel;->DEBUG:Lcom/android/systemui/log/LogLevel;
+    .line 429
+    sget-object v10, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logScheduleTimeout$2;->INSTANCE:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logScheduleTimeout$2;
 
     .line 431
-    sget-object v12, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logScheduleTimeout$2;->INSTANCE:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logScheduleTimeout$2;
+    iget-object v4, v4, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
 
     .line 433
-    iget-object v6, v6, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
+    invoke-virtual {v4, v7, v9, v10, v8}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/LogMessage;
 
     .line 435
-    invoke-virtual {v6, v7, v11, v12, v8}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/LogMessage;
+    move-result-object v7
 
-    .line 437
-    move-result-object v12
+    .line 438
+    invoke-interface {v7, v5}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
 
-    .line 440
-    invoke-interface {v12, v9}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
+    .line 439
+    invoke-interface {v7, v3}, Lcom/android/systemui/log/LogMessage;->setBool1(Z)V
 
-    .line 441
-    invoke-interface {v12, v3}, Lcom/android/systemui/log/LogMessage;->setBool1(Z)V
+    .line 442
+    invoke-interface {v7, v6}, Lcom/android/systemui/log/LogMessage;->setBool2(Z)V
 
-    .line 444
-    invoke-interface {v12, v10}, Lcom/android/systemui/log/LogMessage;->setBool2(Z)V
+    .line 445
+    invoke-virtual {v4, v7}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/LogMessage;)V
 
-    .line 447
-    invoke-virtual {v6, v12}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/LogMessage;)V
+    .line 448
+    invoke-static/range {p1 .. p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
 
-    .line 450
-    iget-object v3, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 453
-    if-eqz v3, :cond_18
-
-    .line 455
-    if-nez v4, :cond_18
-
-    .line 457
-    iget-object v1, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 459
-    iget-object v1, v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->logger:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;
-
-    .line 461
-    iget-object v0, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
-
-    .line 463
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
-
-    .line 465
-    sget-object v2, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logCancelIgnored$2;->INSTANCE:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger$logCancelIgnored$2;
-
-    .line 468
-    iget-object v1, v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutLogger;->buffer:Lcom/android/systemui/log/LogBuffer;
-
-    .line 470
-    invoke-virtual {v1, v7, v11, v2, v8}, Lcom/android/systemui/log/LogBuffer;->obtain(Ljava/lang/String;Lcom/android/systemui/log/LogLevel;Lkotlin/jvm/functions/Function1;Ljava/lang/Throwable;)Lcom/android/systemui/log/LogMessage;
-
-    .line 472
-    move-result-object v2
-
-    .line 475
-    invoke-interface {v2, v0}, Lcom/android/systemui/log/LogMessage;->setStr1(Ljava/lang/String;)V
-
-    .line 476
-    invoke-virtual {v1, v2}, Lcom/android/systemui/log/LogBuffer;->commit(Lcom/android/systemui/log/LogMessage;)V
-
-    .line 479
-    return-void
-
-    .line 482
-    :cond_18
-    iget-object v3, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
-
-    .line 483
-    iget-object v4, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->resumption:Ljava/lang/Boolean;
-
-    .line 485
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    .line 487
-    const-string v7, "PLAYBACK STATE CHANGED - "
-
-    .line 489
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 491
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 494
-    invoke-virtual {v6, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 497
-    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 500
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 503
-    move-result-object v1
-
-    .line 506
-    invoke-virtual {v0, v3, v1}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expireMediaTimeout(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 507
+    .line 451
     sget-object v1, Ljava/lang/Boolean;->TRUE:Ljava/lang/Boolean;
 
-    .line 510
+    .line 454
     invoke-static {v2, v1}, Lkotlin/jvm/internal/Intrinsics;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
-    .line 512
+    .line 456
     move-result v1
 
-    .line 515
-    if-eqz v1, :cond_19
+    .line 459
+    if-eqz v1, :cond_18
 
-    .line 516
-    sget-wide v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListenerKt;->RESUME_MEDIA_TIMEOUT:J
+    .line 460
+    sget v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListenerKt;->$r8$clinit:I
 
-    .line 518
+    .line 462
     goto :goto_10
 
-    .line 520
-    :cond_19
-    sget-wide v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListenerKt;->PAUSED_MEDIA_TIMEOUT:J
+    .line 464
+    :cond_18
+    sget v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListenerKt;->$r8$clinit:I
 
-    .line 521
+    .line 465
     :goto_10
-    iget-object v3, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
+    iget-object v0, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
 
-    .line 523
-    iget-object v3, v3, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->systemClock:Lcom/android/systemui/util/time/SystemClock;
+    .line 467
+    iget-object v0, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->systemClock:Lcom/android/systemui/util/time/SystemClock;
 
-    .line 525
-    check-cast v3, Lcom/android/systemui/util/time/SystemClockImpl;
+    .line 469
+    check-cast v0, Lcom/android/systemui/util/time/SystemClockImpl;
 
-    .line 527
-    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 471
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    .line 529
+    .line 473
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
-    .line 532
-    move-result-wide v3
-
-    .line 535
-    add-long/2addr v3, v1
-
-    .line 536
-    iput-wide v3, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expiration:J
-
-    .line 537
-    iget-object v3, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 539
-    iget-object v3, v3, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->mainExecutor:Lcom/android/systemui/util/concurrency/DelayableExecutor;
-
-    .line 541
-    new-instance v4, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener$processState$1;
-
-    .line 543
-    const/4 v5, 0x0
-
-    .line 545
-    invoke-direct {v4, v5, v0}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener$processState$1;-><init>(ILjava/lang/Object;)V
-
-    .line 546
-    invoke-interface {v3, v4, v1, v2}, Lcom/android/systemui/util/concurrency/DelayableExecutor;->executeDelayed(Ljava/lang/Runnable;J)Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 549
-    move-result-object v1
-
-    .line 552
-    iput-object v1, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->cancellation:Lcom/android/systemui/util/concurrency/ExecutorImpl$ExecutionToken;
-
-    .line 553
+    .line 476
     goto :goto_11
 
-    .line 555
+    .line 479
+    :cond_19
+    invoke-static/range {p1 .. p1}, Ljava/util/Objects;->toString(Ljava/lang/Object;)Ljava/lang/String;
+
+    .line 480
+    if-eqz p2, :cond_1b
+
+    .line 483
+    iget-object v1, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
+
+    .line 485
+    iget-object v1, v1, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->timeoutCallback:Lkotlin/jvm/functions/Function2;
+
+    .line 487
+    if-eqz v1, :cond_1a
+
+    .line 489
+    move-object v8, v1
+
+    .line 491
     :cond_1a
-    iget-object v2, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
-
-    .line 556
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    .line 558
-    const-string v4, "playback started - "
-
-    .line 560
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    .line 562
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    .line 565
-    invoke-virtual {v3, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 568
-    invoke-virtual {v3, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 571
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    .line 574
-    move-result-object v1
-
-    .line 577
-    invoke-virtual {v0, v2, v1}, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->expireMediaTimeout(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 578
-    const/4 v1, 0x0
-
-    .line 581
-    iput-boolean v1, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->timedOut:Z
-
-    .line 582
-    if-eqz p2, :cond_1c
-
-    .line 584
-    iget-object v2, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->this$0:Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;
-
-    .line 586
-    iget-object v2, v2, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener;->timeoutCallback:Lkotlin/jvm/functions/Function2;
-
-    .line 588
-    if-eqz v2, :cond_1b
-
-    .line 590
-    move-object v8, v2
-
-    .line 592
-    :cond_1b
     iget-object v0, v0, Lcom/android/systemui/media/controls/pipeline/MediaTimeoutListener$PlaybackStateListener;->key:Ljava/lang/String;
 
-    .line 593
-    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 492
+    sget-object v1, Ljava/lang/Boolean;->FALSE:Ljava/lang/Boolean;
 
-    .line 595
-    move-result-object v1
-
-    .line 598
+    .line 494
     invoke-interface {v8, v0, v1}, Lkotlin/jvm/functions/Function2;->invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 599
-    :cond_1c
+    .line 496
+    :cond_1b
     :goto_11
     return-void
-    .line 602
+    .line 499
 .end method
 
 .method public final setMediaData(Lcom/android/systemui/media/controls/models/player/MediaData;)V

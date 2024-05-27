@@ -1,6 +1,6 @@
 .class public final Lcom/android/systemui/toast/MIUIStrongToastControl$5;
 .super Landroid/content/BroadcastReceiver;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 
 # instance fields
@@ -98,210 +98,210 @@
     new-instance v2, Ljava/lang/StringBuilder;
 
     .line 45
-    const-string/jumbo v3, "receive soc decimal, battery:"
+    const-string v3, "receive soc decimal, battery:"
 
     .line 47
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 50
+    .line 49
     iget-object v3, p0, Lcom/android/systemui/toast/MIUIStrongToastControl$5;->this$0:Lcom/android/systemui/toast/MIUIStrongToastControl;
 
-    .line 53
+    .line 52
     iget-object v3, v3, Lcom/android/systemui/toast/MIUIStrongToastControl;->mBatteryStatus:Lcom/miui/charge/MiuiBatteryStatus;
 
-    .line 55
+    .line 54
     iget v3, v3, Lcom/miui/charge/MiuiBatteryStatus;->level:I
 
-    .line 57
+    .line 56
     const-string v4, ",level:"
 
-    .line 59
+    .line 58
     const-string v5, ";rate="
 
-    .line 61
+    .line 60
     invoke-static {v2, v3, v4, p1, v5}, Landroidx/viewpager/widget/OriginalViewPager$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;ILjava/lang/String;)V
 
-    .line 63
+    .line 62
     invoke-virtual {v2, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 66
+    .line 65
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 69
+    .line 68
     move-result-object v2
 
-    .line 72
+    .line 71
     invoke-static {v0, v2}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 73
+    .line 72
     iget-object v2, p0, Lcom/android/systemui/toast/MIUIStrongToastControl$5;->this$0:Lcom/android/systemui/toast/MIUIStrongToastControl;
 
-    .line 76
+    .line 75
     iget-object v3, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mBatteryStatus:Lcom/miui/charge/MiuiBatteryStatus;
 
-    .line 78
+    .line 77
     iget v4, v3, Lcom/miui/charge/MiuiBatteryStatus;->level:I
 
-    .line 80
+    .line 79
     const/16 v5, 0x64
 
-    .line 82
+    .line 81
     if-gt v4, v5, :cond_5
 
-    .line 84
+    .line 83
     int-to-float v6, v4
 
-    .line 86
+    .line 85
     int-to-float p1, p1
 
-    .line 87
+    .line 86
     const/high16 v7, 0x42c80000    # 100.0f
 
-    .line 88
+    .line 87
     div-float/2addr p1, v7
 
-    .line 90
+    .line 89
     add-float/2addr p1, v6
 
-    .line 91
+    .line 90
     iput p1, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mRapidLevel:F
 
-    .line 92
+    .line 91
     int-to-float p1, p2
 
-    .line 94
+    .line 93
     div-float/2addr p1, v7
 
-    .line 95
+    .line 94
     iput p1, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mRapidRate:F
 
-    .line 96
+    .line 95
     if-ne v4, v5, :cond_1
 
-    .line 98
+    .line 97
     iput v6, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mRapidLevel:F
 
-    .line 100
+    .line 99
     :cond_1
     const/4 p1, 0x1
 
-    .line 102
+    .line 101
     iput-boolean p1, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mDecimal:Z
 
-    .line 103
+    .line 102
     iget-object p2, v2, Lcom/android/systemui/toast/MIUIStrongToastControl;->mMiuiStrongToastCallBack:Lcom/android/systemui/toast/MIUIStrongToast;
 
-    .line 105
+    .line 104
     if-nez p2, :cond_2
 
-    .line 107
+    .line 106
     move v2, p1
 
-    .line 109
+    .line 108
     goto :goto_0
 
-    .line 110
+    .line 109
     :cond_2
     iget-boolean v2, p2, Lcom/android/systemui/toast/MIUIStrongToast;->mCheckInOutStrongToasting:Z
 
-    .line 111
+    .line 110
     :goto_0
     if-eqz v2, :cond_3
 
-    .line 113
+    .line 112
     const-string p0, "exit toast not show   decimal "
 
-    .line 115
+    .line 114
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 117
+    .line 116
     return-void
 
-    .line 120
+    .line 119
     :cond_3
     iget v2, v3, Lcom/miui/charge/MiuiBatteryStatus;->maxChargingWattage:I
 
-    .line 121
+    .line 120
     const/16 v3, 0x32
 
-    .line 123
+    .line 122
     if-lt v2, v3, :cond_5
 
-    .line 125
+    .line 124
     if-eqz p2, :cond_4
 
-    .line 127
+    .line 126
     iget-boolean v2, p2, Lcom/android/systemui/toast/MIUIStrongToast;->mStrongToastShow:Z
 
-    .line 129
+    .line 128
     if-eqz v2, :cond_4
 
-    .line 131
+    .line 130
     iget-object p2, p2, Lcom/android/systemui/toast/MIUIStrongToast;->mCurrentToastCategory:Ljava/lang/String;
 
-    .line 133
+    .line 132
     const-string v2, "charge"
 
-    .line 135
+    .line 134
     invoke-static {p2, v2}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
-    .line 137
+    .line 136
     move-result p2
 
-    .line 140
+    .line 139
     if-eqz p2, :cond_4
 
-    .line 141
+    .line 140
     move v1, p1
 
-    .line 143
+    .line 142
     :cond_4
     if-eqz v1, :cond_5
 
-    .line 144
+    .line 143
     iget-object p1, p0, Lcom/android/systemui/toast/MIUIStrongToastControl$5;->this$0:Lcom/android/systemui/toast/MIUIStrongToastControl;
 
-    .line 146
+    .line 145
     iget-object p2, p1, Lcom/android/systemui/toast/MIUIStrongToastControl;->mBatteryStatus:Lcom/miui/charge/MiuiBatteryStatus;
 
-    .line 148
+    .line 147
     const/4 v1, 0x2
 
-    .line 150
+    .line 149
     invoke-virtual {p1, p2, v1}, Lcom/android/systemui/toast/MIUIStrongToastControl;->structureChargeStrongToast(Lcom/miui/charge/MiuiBatteryStatus;I)Landroid/os/Bundle;
 
-    .line 151
+    .line 150
     move-result-object p1
 
-    .line 154
+    .line 153
     new-instance p2, Ljava/lang/StringBuilder;
 
-    .line 155
+    .line 154
     const-string/jumbo v1, "registerBatteryForSOC  \u66f4\u65b0\u5145\u7535\u74e6\u6570: "
 
-    .line 157
+    .line 156
     invoke-direct {p2, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 160
+    .line 159
     iget-object v1, p0, Lcom/android/systemui/toast/MIUIStrongToastControl$5;->this$0:Lcom/android/systemui/toast/MIUIStrongToastControl;
 
-    .line 163
+    .line 162
     iget-object v1, v1, Lcom/android/systemui/toast/MIUIStrongToastControl;->mBatteryStatus:Lcom/miui/charge/MiuiBatteryStatus;
 
-    .line 165
+    .line 164
     iget v1, v1, Lcom/miui/charge/MiuiBatteryStatus;->maxChargingWattage:I
 
-    .line 167
+    .line 166
     invoke-static {p2, v1, v0}, Lcom/android/keyguard/AwesomeLockScreen$2$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;ILjava/lang/String;)V
 
-    .line 169
+    .line 168
     iget-object p0, p0, Lcom/android/systemui/toast/MIUIStrongToastControl$5;->this$0:Lcom/android/systemui/toast/MIUIStrongToastControl;
 
-    .line 172
+    .line 171
     invoke-virtual {p0, p1}, Lcom/android/systemui/toast/MIUIStrongToastControl;->showCustomStrongToast(Landroid/os/Bundle;)V
 
-    .line 174
+    .line 173
     :cond_5
     return-void
-    .line 177
+    .line 176
 .end method

@@ -1,6 +1,6 @@
 .class public Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;
 .super Landroid/widget/FrameLayout;
-.source "go/retraceme e7558815e25cb1959e836ae9383455b734c349815074b190772e288d6382ec17"
+.source "go/retraceme 2c48ed8d437877f8e776d6c1dd4a4fc5a3a35dbc3a9814f36dcf804b4354d6b1"
 
 # interfaces
 .implements Landroid/view/GestureDetector$OnGestureListener;
@@ -8,6 +8,8 @@
 
 # instance fields
 .field private mGestureDetector:Landroid/view/GestureDetector;
+
+.field private mSupported:Z
 
 .field private mTouchSlop:I
 
@@ -43,7 +45,12 @@
     .line 3
     invoke-direct {p0, p1, p2, p3, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;II)V
 
+    const/4 p2, 0x1
+
     .line 4
+    iput-boolean p2, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->mSupported:Z
+
+    .line 5
     invoke-direct {p0, p1}, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->init(Landroid/content/Context;)V
 
     return-void
@@ -95,6 +102,17 @@
     .line 5
     return p0
     .line 6
+.end method
+
+.method public isSupported()Z
+    .locals 0
+
+    .line 1
+    iget-boolean p0, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->mSupported:Z
+
+    .line 2
+    return p0
+    .line 4
 .end method
 
 .method public onDown(Landroid/view/MotionEvent;)Z
@@ -349,4 +367,15 @@
     :goto_0
     return p0
     .line 44
+.end method
+
+.method public setSupported(Z)V
+    .locals 0
+
+    .line 1
+    iput-boolean p1, p0, Lcom/android/wm/shell/miuimultiwinswitch/miuiwindowdecor/CaptionStateButton;->mSupported:Z
+
+    .line 2
+    return-void
+    .line 4
 .end method
